@@ -39,6 +39,26 @@ const dataPaths = {
     }
 };
 
+// Reading data paths
+const readingDataPaths = {
+    simplified: {
+        hsk1: 'data/simplified/reading_hsk1.json',
+        hsk2: 'data/simplified/reading_hsk2.json',
+        hsk3: 'data/simplified/reading_hsk3.json',
+        hsk4: 'data/simplified/reading_hsk4.json',
+        hsk5: 'data/simplified/reading_hsk5.json',
+        hsk6: 'data/simplified/reading_hsk6.json'
+    },
+    traditional: {
+        tocfl_a1: 'data/traditional/reading_tocfl_a1.json',
+        tocfl_a2: 'data/traditional/reading_tocfl_a2.json',
+        tocfl_b1: 'data/traditional/reading_tocfl_b1.json',
+        tocfl_b2: 'data/traditional/reading_tocfl_b2.json',
+        tocfl_c1: 'data/traditional/reading_tocfl_c1.json',
+        tocfl_c2: 'data/traditional/reading_tocfl_c2.json'
+    }
+};
+
 // ===================================
 // INITIALIZATION
 // ===================================
@@ -69,6 +89,9 @@ function initializeApp() {
     
     // Setup event listeners
     setupEventListeners();
+    
+    // Initialize reading game level options
+    updateReadingLevelOptions();
     
     // Load initial data
     loadDictionaryData();
@@ -441,6 +464,12 @@ function setupEventListeners() {
 function startGame(mode) {
     gameMode = mode;
     
+    // Hide reading game area
+    const readingGameArea = document.getElementById('readingGameArea');
+    if (readingGameArea) {
+        readingGameArea.style.display = 'none';
+    }
+    
     // Show game area
     document.getElementById('gameArea').style.display = 'block';
     document.getElementById('gameResults').style.display = 'none';
@@ -619,6 +648,7 @@ function restartGame() {
 
 function exitGame() {
     document.getElementById('gameArea').style.display = 'none';
+    gameMode = null;
     navigateToSection('games');
 }
 
@@ -841,6 +871,293 @@ window.addEventListener('keydown', function(e) {
 });
 
 // ===================================
+// READING GAME
+// ===================================
+
+let readingData = [];
+let currentDialog = null;
+let supportVisible = false;
+let currentReadingPage = 1;
+const topicsPerPage = 8;
+
+function startReadingGame() {
+    // Hide vocabulary game area
+    const gameArea = document.getElementById('gameArea');
+    if (gameArea) {
+        gameArea.style.display = 'none';
+    }
+    
+    document.getElementById('readingGameArea').style.display = 'block';
+    
+    // Scroll to reading game area
+    setTimeout(() => {
+        document.getElementById('readingGameArea').scrollIntoView({ behavior: 'smooth' });
+        // Load initial reading data
+        loadReadingData();
+    }, 100);
+}
+
+function updateReadingLevelOptions() {
+    const scriptType = document.getElementById('readingScriptType')?.value || 'simplified';
+    const levelSelect = document.getElementById('readingLevelSelect');
+    
+    if (!levelSelect) return;
+    
+    levelSelect.innerHTML = '';
+    
+    if (scriptType === 'simplified') {
+        levelSelect.innerHTML = `
+            <option value="hsk1">HSK 1</option>
+            <option value="hsk2">HSK 2</option>
+            <option value="hsk3">HSK 3</option>
+            <option value="hsk4">HSK 4</option>
+            <option value="hsk5">HSK 5</option>
+            <option value="hsk6">HSK 6</option>
+        `;
+    } else {
+        levelSelect.innerHTML = `
+            <option value="tocfl_a1">TOCFL A1</option>
+            <option value="tocfl_a2">TOCFL A2</option>
+            <option value="tocfl_b1">TOCFL B1</option>
+            <option value="tocfl_b2">TOCFL B2</option>
+            <option value="tocfl_c1">TOCFL C1</option>
+            <option value="tocfl_c2">TOCFL C2</option>
+        `;
+    }
+}
+
+async function loadReadingData() {
+    const scriptType = document.getElementById('readingScriptType').value;
+    const level = document.getElementById('readingLevelSelect').value;
+    
+    const dataPath = readingDataPaths[scriptType][level];
+    
+    try {
+        const response = await fetch(dataPath);
+        const data = await response.json();
+        readingData = data.dialogs || [];
+        
+        displayTopics();
+    } catch (error) {
+        console.error('Error loading reading data:', error);
+        document.getElementById('topicsList').innerHTML = `
+            <div class="glass-card p-4 text-center">
+                <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: var(--warning-color);"></i>
+                <h3 class="mt-3">Không thể tải dữ liệu</h3>
+                <p class="text-secondary">Vui lòng kiểm tra lại đường dẫn file JSON hoặc tạo dữ liệu đọc hiểu.</p>
+            </div>
+        `;
+    }
+}
+
+function displayTopics() {
+    const topicsList = document.getElementById('topicsList');
+    
+    if (!readingData || readingData.length === 0) {
+        topicsList.innerHTML = `
+            <div class="glass-card p-4 text-center">
+                <i class="fas fa-inbox" style="font-size: 3rem; color: var(--text-secondary);"></i>
+                <h3 class="mt-3">Chưa có dữ liệu</h3>
+                <p class="text-secondary">Vui lòng tạo dữ liệu đọc hiểu cho cấp độ này.</p>
+            </div>
+        `;
+        return;
+    }
+    
+    // Calculate pagination
+    const totalTopics = readingData.length;
+    const totalPages = Math.ceil(totalTopics / topicsPerPage);
+    const startIndex = (currentReadingPage - 1) * topicsPerPage;
+    const endIndex = Math.min(startIndex + topicsPerPage, totalTopics);
+    const currentPageTopics = readingData.slice(startIndex, endIndex);
+    
+    topicsList.innerHTML = currentPageTopics.map((dialog, index) => {
+        const actualIndex = startIndex + index;
+        return `
+            <div class="topic-card glass-card" onclick="showDialog(${actualIndex})">
+                <div class="topic-icon">
+                    <i class="fas ${getTopicIcon(dialog.topic)}"></i>
+                </div>
+                <h4>${dialog.topic}</h4>
+                <p>${dialog.description || ''}</p>
+            </div>
+        `;
+    }).join('');
+    
+    // Add pagination controls
+    if (totalPages <= 1) {
+        // No pagination needed
+        const readingGameArea = document.getElementById('readingGameArea');
+        let paginationContainer = readingGameArea.querySelector('.reading-pagination');
+        if (paginationContainer) {
+            paginationContainer.innerHTML = '';
+        }
+    } else {
+        let paginationHTML = `
+            <div class="col-12">
+                <div class="pagination-container mt-4">
+                    <button class="page-btn" onclick="changeReadingPage(${currentReadingPage - 1})" ${currentReadingPage === 1 ? 'disabled' : ''}>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+        `;
+        
+        // Page numbers with smart display (like dictionary)
+        for (let i = 1; i <= totalPages; i++) {
+            if (i === 1 || i === totalPages || (i >= currentReadingPage - 1 && i <= currentReadingPage + 1)) {
+                paginationHTML += `
+                    <button class="page-btn ${i === currentReadingPage ? 'active' : ''}" onclick="changeReadingPage(${i})">
+                        ${i}
+                    </button>
+                `;
+            } else if (i === currentReadingPage - 2 || i === currentReadingPage + 2) {
+                paginationHTML += '<span class="page-btn" disabled>...</span>';
+            }
+        }
+        
+        paginationHTML += `
+                    <button class="page-btn" onclick="changeReadingPage(${currentReadingPage + 1})" ${currentReadingPage === totalPages ? 'disabled' : ''}>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        // Insert pagination after topics list
+        const readingGameArea = document.getElementById('readingGameArea');
+        let paginationContainer = readingGameArea.querySelector('.reading-pagination');
+        if (!paginationContainer) {
+            paginationContainer = document.createElement('div');
+            paginationContainer.className = 'row reading-pagination';
+            topicsList.parentElement.appendChild(paginationContainer);
+        }
+        paginationContainer.innerHTML = paginationHTML;
+    }
+    
+    // Show topics, hide dialog
+    document.getElementById('topicsList').style.display = 'grid';
+    document.getElementById('dialogDisplay').style.display = 'none';
+}
+
+function changeReadingPage(page) {
+    const totalPages = Math.ceil(readingData.length / topicsPerPage);
+    if (page < 1 || page > totalPages) return;
+    
+    currentReadingPage = page;
+    displayTopics();
+    
+    // Scroll to top of topics list
+    document.getElementById('topicsList').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function getTopicIcon(topic) {
+    const icons = {
+        '自我介绍': 'fa-user',
+        '自我介紹': 'fa-user',
+        '问候': 'fa-handshake',
+        '問候': 'fa-handshake',
+        '购物': 'fa-shopping-cart',
+        '購物': 'fa-shopping-cart',
+        '餐厅': 'fa-utensils',
+        '餐廳': 'fa-utensils',
+        '交通': 'fa-bus',
+        '学习': 'fa-graduation-cap',
+        '學習': 'fa-graduation-cap',
+        '工作': 'fa-briefcase',
+        '家庭': 'fa-home',
+        '旅游': 'fa-plane',
+        '旅遊': 'fa-plane',
+        '健康': 'fa-heartbeat',
+        '天气': 'fa-cloud-sun',
+        '天氣': 'fa-cloud-sun',
+        '爱好': 'fa-palette',
+        '愛好': 'fa-palette',
+        '运动': 'fa-running',
+        '運動': 'fa-running',
+        '节日': 'fa-calendar-alt',
+        '節日': 'fa-calendar-alt'
+    };
+    
+    for (let key in icons) {
+        if (topic.includes(key)) {
+            return icons[key];
+        }
+    }
+    
+    return 'fa-comments';
+}
+
+function showDialog(index) {
+    currentDialog = readingData[index];
+    supportVisible = false;
+    
+    document.getElementById('dialogTitle').textContent = currentDialog.topic;
+    
+    // Display dialog lines
+    const dialogContent = document.getElementById('dialogContent');
+    dialogContent.innerHTML = currentDialog.lines.map(line => `
+        <div class="dialog-line">
+            ${line.speaker ? `<div class="dialog-speaker">${line.speaker}</div>` : ''}
+            <div class="dialog-text">${line.text}</div>
+        </div>
+    `).join('');
+    
+    // Hide support panel initially
+    document.getElementById('supportPanel').style.display = 'none';
+    document.getElementById('supportBtn').innerHTML = '<i class="fas fa-question-circle"></i> Hỗ trợ';
+    
+    // Show dialog, hide topics
+    document.getElementById('topicsList').style.display = 'none';
+    document.getElementById('dialogDisplay').style.display = 'block';
+}
+
+function toggleSupport() {
+    supportVisible = !supportVisible;
+    const supportPanel = document.getElementById('supportPanel');
+    const supportBtn = document.getElementById('supportBtn');
+    
+    if (supportVisible) {
+        // Show support
+        const supportContent = document.getElementById('supportContent');
+        supportContent.innerHTML = currentDialog.lines.map(line => `
+            <div class="support-item">
+                <div class="support-text">${line.text}</div>
+                <div class="support-pinyin">${line.pinyin}</div>
+                <div class="support-translation">${line.translation}</div>
+            </div>
+        `).join('');
+        
+        supportPanel.style.display = 'block';
+        supportBtn.innerHTML = '<i class="fas fa-eye-slash"></i> Ẩn hỗ trợ';
+    } else {
+        // Hide support
+        supportPanel.style.display = 'none';
+        supportBtn.innerHTML = '<i class="fas fa-question-circle"></i> Hỗ trợ';
+    }
+}
+
+function backToTopics() {
+    currentReadingPage = 1; // Reset to first page when going back
+    displayTopics();
+}
+function exitReadingGame() {
+    document.getElementById('readingGameArea').style.display = 'none';
+    // Reset display and page
+    currentReadingPage = 1;
+    document.getElementById('topicsList').style.display = 'grid';
+    document.getElementById('dialogDisplay').style.display = 'none';
+    navigateToSection('games');
+}   navigateToSection('games');
+
+// Event listeners for reading game
+document.getElementById('readingScriptType')?.addEventListener('change', function() {
+    updateReadingLevelOptions();
+});
+
+document.getElementById('applyReadingSettings')?.addEventListener('click', function() {
+    loadReadingData();
+});
+
+// ===================================
 // EXPORT FUNCTIONS (for HTML onclick)
 // ===================================
 
@@ -854,3 +1171,9 @@ window.restartGame = restartGame;
 window.exitGame = exitGame;
 window.showWordDetail = showWordDetail;
 window.closeWordModal = closeWordModal;
+window.startReadingGame = startReadingGame;
+window.exitReadingGame = exitReadingGame;
+window.showDialog = showDialog;
+window.toggleSupport = toggleSupport;
+window.backToTopics = backToTopics;
+window.changeReadingPage = changeReadingPage;
