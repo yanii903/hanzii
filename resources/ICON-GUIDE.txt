@@ -1,0 +1,53 @@
+HƯỚNG DẪN THÊM ICON CHO APP HANZII
+=====================================
+
+📱 ICON APP (BẮT BUỘC)
+Đặt các file icon vào: resources/android/icon/
+
+Kích thước cần chuẩn bị:
+├── drawable-ldpi-icon.png     (36x36 px)
+├── drawable-mdpi-icon.png     (48x48 px)
+├── drawable-hdpi-icon.png     (72x72 px)
+├── drawable-xhdpi-icon.png    (96x96 px)
+├── drawable-xxhdpi-icon.png   (144x144 px)
+└── drawable-xxxhdpi-icon.png  (192x192 px)
+
+🎨 SPLASH SCREEN (Tùy chọn)
+Đặt vào: resources/android/splash/
+
+Kích thước landscape (ngang):
+├── drawable-land-ldpi-screen.png    (320x240 px)
+├── drawable-land-mdpi-screen.png    (480x320 px)
+├── drawable-land-hdpi-screen.png    (800x480 px)
+├── drawable-land-xhdpi-screen.png   (1280x720 px)
+├── drawable-land-xxhdpi-screen.png  (1600x960 px)
+└── drawable-land-xxxhdpi-screen.png (1920x1280 px)
+
+Kích thước portrait (dọc):
+├── drawable-port-ldpi-screen.png    (240x320 px)
+├── drawable-port-mdpi-screen.png    (320x480 px)
+├── drawable-port-hdpi-screen.png    (480x800 px)
+├── drawable-port-xhdpi-screen.png   (720x1280 px)
+├── drawable-port-xxhdpi-screen.png  (960x1600 px)
+└── drawable-port-xxxhdpi-screen.png (1280x1920 px)
+
+🔧 CÁCH TẠO NHANH:
+1. Chuẩn bị 1 icon gốc kích thước lớn (1024x1024 px)
+2. Dùng tool online để generate các kích thước:
+   - https://icon.kitchen/
+   - https://romannurik.github.io/AndroidAssetStudio/
+   - https://www.appicon.co/
+   
+3. Hoặc dùng Photoshop/GIMP resize thủ công
+
+⚠️ LƯU Ý:
+- Icon phải là file PNG có nền trong suốt
+- Tên file phải CHÍNH XÁC như trên
+- Nếu không có icon, VoltBuilder sẽ dùng icon mặc định của Cordova
+- Splash screen không bắt buộc, có thể bỏ qua
+
+💡 NHANH NHẤT:
+Chỉ cần chuẩn bị icon 192x192 px, đặt tên:
+  drawable-xxxhdpi-icon.png
+  
+Còn lại Android sẽ tự scale (không đẹp lắm nhưng hoạt động được)

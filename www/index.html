@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Học tiếng Trung Giản thể và Phồn thể - HSK & TOCFL"
+    />
+    <title>Hanzii - Học Tiếng Trung Hiện Đại</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    
+    <!-- Cordova Script (Required for VoltBuilder) -->
+    <script src="cordova.js"></script>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="preloader-content">
+        <div class="spinner-wrapper">
+          <div class="spinner"></div>
+          <div class="spinner-glow"></div>
+        </div>
+        <h2 class="preloader-text">Hanzii</h2>
+        <p class="preloader-subtext">学习中文 · Học Tiếng Trung</p>
+        <div class="loading-bar">
+          <div class="loading-progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand brand-logo" href="#">
+          <i class="fas fa-language brand-icon"></i>
+          <span class="brand-text">Hanzii</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home" data-section="home">
+                <i class="fas fa-home"></i> Trang chủ
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dictionary" data-section="dictionary">
+                <i class="fas fa-book"></i> Từ điển
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#games" data-section="games">
+                <i class="fas fa-gamepad"></i> Trò chơi
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about" data-section="about">
+                <i class="fas fa-info-circle"></i> Giới thiệu
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Home Section -->
+      <section id="home" class="section-container active">
+        <div class="hero-section">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6 hero-text">
+                <h1 class="hero-title animate-fade-in">
+                  Học Tiếng Trung
+                  <span class="gradient-text">Hiện Đại</span>
+                </h1>
+                <p class="hero-subtitle animate-fade-in delay-1">
+                  Khám phá thế giới chữ Hán với Giản thể (简体) và Phồn thể
+                  (繁體)
+                </p>
+                <div class="hero-buttons animate-fade-in delay-2">
+                  <button
+                    class="btn btn-primary btn-lg btn-glow"
+                    onclick="navigateToSection('dictionary')"
+                  >
+                    <i class="fas fa-book-open"></i> Bắt đầu học
+                  </button>
+                  <button
+                    class="btn btn-outline-light btn-lg"
+                    onclick="navigateToSection('games')"
+                  >
+                    <i class="fas fa-play"></i> Chơi game
+                  </button>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="hero-image animate-fade-in delay-3">
+                  <div class="floating-card card-1">
+                    <span class="hanzi">你好</span>
+                    <span class="meaning">Xin chào</span>
+                  </div>
+                  <div class="floating-card card-2">
+                    <span class="hanzi">学习</span>
+                    <span class="meaning">Học tập</span>
+                  </div>
+                  <div class="floating-card card-3">
+                    <span class="hanzi">中文</span>
+                    <span class="meaning">Tiếng Trung</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+          </div>
+        </div>
+
+        <!-- Features -->
+        <div class="container py-5">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="feature-card glass-card">
+                <div class="feature-icon">
+                  <i class="fas fa-book-reader"></i>
+                </div>
+                <h3>Từ điển đa cấp độ</h3>
+                <p>HSK 1-6 (Giản thể) và TOCFL A1-B2 (Phồn thể)</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-card glass-card">
+                <div class="feature-icon">
+                  <i class="fas fa-gamepad"></i>
+                </div>
+                <h3>Trò chơi tương tác</h3>
+                <p>Luyện tập qua game nhận diện chữ và nghĩa</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-card glass-card">
+                <div class="feature-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Responsive Design</h3>
+                <p>Hoạt động mượt mà trên mọi thiết bị</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dictionary Section -->
+      <section id="dictionary" class="section-container">
+        <div class="container py-5">
+          <div class="section-header text-center mb-5">
+            <h2 class="section-title">
+              <i class="fas fa-book"></i> Từ điển chữ Hán
+            </h2>
+            <p class="section-subtitle">
+              Tra cứu từ vựng theo cấp độ HSK và TOCFL
+            </p>
+          </div>
+
+          <!-- Dictionary Controls -->
+          <div class="glass-card p-4 mb-4">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label">Loại chữ</label>
+                <select id="scriptType" class="form-select custom-select">
+                  <option value="simplified">Giản thể (简体)</option>
+                  <option value="traditional">Phồn thể (繁體)</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Cấp độ</label>
+                <select id="levelSelect" class="form-select custom-select">
+                  <!-- Options will be populated by JavaScript -->
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Tìm kiếm</label>
+                <input
+                  type="text"
+                  id="searchInput"
+                  class="form-control custom-input"
+                  placeholder="Nhập chữ Hán hoặc nghĩa..."
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Dictionary Results -->
+          <div id="dictionaryResults" class="row g-3">
+            <!-- Results will be loaded here -->
+          </div>
+
+          <!-- Pagination -->
+          <div id="pagination" class="pagination-container mt-4">
+            <!-- Pagination will be loaded here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Games Section -->
+      <section id="games" class="section-container">
+        <div class="container py-5">
+          <div class="section-header text-center mb-5">
+            <h2 class="section-title">
+              <i class="fas fa-gamepad"></i> Trò chơi học tập
+            </h2>
+            <p class="section-subtitle">
+              Học tiếng Trung qua trò chơi vui nhộn
+            </p>
+          </div>
+
+          <!-- Game Mode Selection -->
+          <div class="row g-4 mb-5">
+            <div class="col-md-6">
+              <div
+                class="game-mode-card glass-card"
+                onclick="startGame('hanzi-to-meaning')"
+              >
+                <div class="game-icon">
+                  <i class="fas fa-spell-check"></i>
+                </div>
+                <h3>Chữ Hán → Nghĩa</h3>
+                <p>Nhìn chữ Hán và nhập nghĩa tiếng Việt</p>
+                <button class="btn btn-primary btn-game">
+                  <i class="fas fa-play"></i> Chơi ngay
+                </button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div
+                class="game-mode-card glass-card"
+                onclick="startGame('meaning-to-hanzi')"
+              >
+                <div class="game-icon">
+                  <i class="fas fa-language"></i>
+                </div>
+                <h3>Nghĩa → Chữ Hán</h3>
+                <p>Nhìn nghĩa tiếng Việt và nhập chữ Hán</p>
+                <button class="btn btn-primary btn-game">
+                  <i class="fas fa-play"></i> Chơi ngay
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game Area -->
+          <div id="gameArea" class="game-area glass-card" style="display: none">
+            <div class="game-header">
+              <div class="game-info">
+                <span class="badge bg-primary">
+                  <i class="fas fa-star"></i> Điểm:
+                  <span id="gameScore">0</span>
+                </span>
+                <span class="badge bg-success">
+                  <i class="fas fa-check"></i> Đúng:
+                  <span id="correctCount">0</span>
+                </span>
+                <span class="badge bg-danger">
+                  <i class="fas fa-times"></i> Sai:
+                  <span id="wrongCount">0</span>
+                </span>
+              </div>
+              <button class="btn btn-sm btn-outline-light" onclick="exitGame()">
+                <i class="fas fa-times"></i> Thoát
+              </button>
+            </div>
+
+            <div class="game-content">
+              <div class="game-settings mb-4">
+                <div class="row g-3 align-items-end">
+                  <div class="col-md-4">
+                    <select
+                      id="gameScriptType"
+                      class="form-select custom-select"
+                    >
+                      <option value="simplified">Giản thể (简体)</option>
+                      <option value="traditional">Phồn thể (繁體)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <select
+                      id="gameLevelSelect"
+                      class="form-select custom-select"
+                    >
+                      <!-- Options will be populated by JavaScript -->
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <select
+                      id="questionCount"
+                      class="form-select custom-select"
+                    >
+                      <option value="5">5 câu hỏi</option>
+                      <option value="10" selected>10 câu hỏi</option>
+                      <option value="15">15 câu hỏi</option>
+                      <option value="20">20 câu hỏi</option>
+                      <option value="30">30 câu hỏi</option>
+                      <option value="50">50 câu hỏi</option>
+                    </select>
+                  </div>
+                  <div
+                    class="col-md-auto d-flex align-items-stretch justify-content-end w-100"
+                  >
+                    <button
+                      id="applyGameSettings"
+                      class="btn btn-warning w-100"
+                    >
+                      <i class="fas fa-sync"></i> Cập nhật
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="question-card">
+                <div class="question-number">
+                  Câu <span id="questionNumber">1</span>/<span
+                    id="totalQuestions"
+                    >10</span
+                  >
+                </div>
+                <div class="question-text" id="questionText">...</div>
+                <div class="pinyin-hint" id="pinyinHint"></div>
+              </div>
+
+              <div class="answer-input-wrapper">
+                <input
+                  type="text"
+                  id="answerInput"
+                  class="form-control answer-input"
+                  placeholder="Nhập câu trả lời..."
+                />
+                <button
+                  class="btn btn-primary btn-submit"
+                  onclick="submitAnswer()"
+                >
+                  <i class="fas fa-paper-plane"></i> Trả lời
+                </button>
+                <button class="btn btn-danger btn-submit" onclick="giveUp()">
+                  <i class="fas fa-flag"></i> Từ bỏ
+                </button>
+              </div>
+
+              <div id="feedbackMessage" class="feedback-message"></div>
+            </div>
+
+            <!-- Game Results -->
+            <div id="gameResults" class="game-results" style="display: none">
+              <div class="results-content">
+                <div class="results-icon">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <h2>Hoàn thành!</h2>
+                <div class="results-stats">
+                  <div class="stat-item">
+                    <div class="stat-number" id="finalScore">0</div>
+                    <div class="stat-label">Điểm số</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number" id="finalCorrect">0</div>
+                    <div class="stat-label">Câu đúng</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number" id="finalWrong">0</div>
+                    <div class="stat-label">Câu sai</div>
+                  </div>
+                </div>
+                <div class="results-actions">
+                  <button
+                    class="btn btn-primary btn-lg"
+                    onclick="restartGame()"
+                  >
+                    <i class="fas fa-redo"></i> Chơi lại
+                  </button>
+                  <button
+                    class="btn btn-outline-light btn-lg"
+                    onclick="exitGame()"
+                  >
+                    <i class="fas fa-home"></i> Về trang chủ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section-container">
+        <div class="container py-5">
+          <div class="section-header text-center mb-5">
+            <h2 class="section-title">
+              <i class="fas fa-info-circle"></i> Giới thiệu
+            </h2>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="glass-card p-5 text-center">
+                <h3 class="mb-4">Về Hanzii</h3>
+                <p class="lead mb-4">
+                  Hanzii là nền tảng học tiếng Trung hiện đại, hỗ trợ cả chữ
+                  Giản thể và Phồn thể.
+                </p>
+                <p>
+                  Chúng tôi cung cấp từ điển đa cấp độ từ HSK 1-6 (Giản thể) và
+                  TOCFL A1-B2 (Phồn thể), cùng với các trò chơi tương tác giúp
+                  bạn học tiếng Trung một cách thú vị và hiệu quả.
+                </p>
+                <div class="mt-4">
+                  <div class="badge bg-primary m-1">HSK 1-6</div>
+                  <div class="badge bg-success m-1">TOCFL A1-B2</div>
+                  <div class="badge bg-info m-1">Giản thể</div>
+                  <div class="badge bg-warning m-1">Phồn thể</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer glass-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Hanzii</h5>
+            <p>Học tiếng Trung hiện đại và hiệu quả</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p>&copy; 2025 Hanzii. All rights reserved.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
