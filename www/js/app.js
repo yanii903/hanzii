@@ -5,6 +5,7 @@
 
 // Global Variables
 let currentData = [];
+let allScriptData = []; // All data for current script type (all levels combined)
 let currentPage = 1;
 let itemsPerPage = 12;
 let gameMode = null;
@@ -15,6 +16,8 @@ let correctAnswers = 0;
 let wrongAnswers = 0;
 let currentAnswer = null;
 let wrongAttempts = 0;
+let searchCache = {};
+let lastSearchTerm = '';
 
 // Data paths
 const dataPaths = {
@@ -150,12 +153,16 @@ function setupDictionary() {
     
     scriptType.addEventListener('change', function() {
         updateLevelOptions();
+        updateSearchPlaceholder();
         loadDictionaryData();
     });
     
     levelSelect.addEventListener('change', function() {
         loadDictionaryData();
     });
+    
+    // Set initial placeholder
+    updateSearchPlaceholder();
 }
 
 function updateLevelOptions() {
@@ -189,12 +196,24 @@ async function loadDictionaryData() {
     const scriptType = document.getElementById('scriptType').value;
     const level = document.getElementById('levelSelect').value;
     
-    const dataPath = dataPaths[scriptType][level];
-    
     try {
-        const response = await fetch(dataPath);
-        const data = await response.json();
-        currentData = data.entries || [];
+        // Load all levels for current script type
+        const levelPaths = dataPaths[scriptType];
+        const allPromises = Object.values(levelPaths).map(path => 
+            fetch(path).then(res => res.json())
+        );
+        
+        const allData = await Promise.all(allPromises);
+        
+        // Combine all entries from all levels
+        allScriptData = allData.flatMap(data => data.entries || []);
+        
+        // Current level data for display when no search
+        const currentLevelPath = levelPaths[level];
+        const currentLevelResponse = await fetch(currentLevelPath);
+        const currentLevelData = await currentLevelResponse.json();
+        currentData = currentLevelData.entries || [];
+        
         currentPage = 1;
         displayDictionary();
     } catch (error) {
@@ -212,16 +231,29 @@ async function loadDictionaryData() {
 }
 
 function displayDictionary() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const searchTerm = document.getElementById('searchInput').value.trim();
+    const normalizedSearch = normalizeText(searchTerm);
     
-    // Filter data based on search
-    let filteredData = currentData;
+    // Filter data based on search with normalized text
+    // If searching, search ALL levels; otherwise show current level only
+    let filteredData;
     if (searchTerm) {
-        filteredData = currentData.filter(entry => 
-            entry.hanzi.toLowerCase().includes(searchTerm) ||
-            entry.pinyin.toLowerCase().includes(searchTerm) ||
-            entry.meaning_vi.toLowerCase().includes(searchTerm)
-        );
+        // Search across ALL levels of current script type
+        filteredData = allScriptData.filter(entry => {
+            const normalizedHanzi = normalizeText(entry.hanzi);
+            const normalizedPinyin = normalizeText(entry.pinyin);
+            const normalizedMeaning = normalizeText(entry.meaning_vi);
+            
+            return normalizedHanzi.includes(normalizedSearch) ||
+                   normalizedPinyin.includes(normalizedSearch) ||
+                   normalizedMeaning.includes(normalizedSearch) ||
+                   entry.hanzi.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                   entry.pinyin.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                   entry.meaning_vi.toLowerCase().includes(searchTerm.toLowerCase());
+        });
+    } else {
+        // No search, show current level only
+        filteredData = currentData;
     }
     
     // Calculate pagination
@@ -238,7 +270,7 @@ function displayDictionary() {
                 <div class="glass-card p-4 text-center">
                     <i class="fas fa-search" style="font-size: 3rem; color: var(--text-secondary);"></i>
                     <h3 class="mt-3">Không tìm thấy kết quả</h3>
-                    <p class="text-secondary">Thử tìm kiếm với từ khóa khác.</p>
+                    <p class="text-secondary">${searchTerm ? 'Thử tìm kiếm với từ khóa khác.' : 'Nhập từ khóa để tìm kiếm.'}</p>
                 </div>
             </div>
         `;
@@ -246,16 +278,33 @@ function displayDictionary() {
         return;
     }
     
-    resultsContainer.innerHTML = paginatedData.map(entry => `
+    // Display with highlighting
+    resultsContainer.innerHTML = paginatedData.map((entry, index) => `
         <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="word-card">
-                <div class="word-hanzi">${entry.hanzi}</div>
-                <div class="word-pinyin">${entry.pinyin}</div>
-                <div class="word-meaning">${entry.meaning_vi}</div>
+            <div class="word-card" onclick='showWordDetail(${JSON.stringify(entry).replace(/'/g, "&apos;")})'>
+                <div class="word-hanzi">${highlightText(entry.hanzi, searchTerm)}</div>
+                <div class="word-pinyin">${highlightText(entry.pinyin, searchTerm)}</div>
+                <div class="word-meaning">${highlightText(entry.meaning_vi, searchTerm)}</div>
                 <span class="word-level">${entry.level}</span>
             </div>
         </div>
     `).join('');
+    
+    // Update result count
+    if (searchTerm) {
+        const countText = `<small class="text-secondary">Tìm thấy ${filteredData.length} kết quả cho "${searchTerm}"</small>`;
+        if (!document.querySelector('.search-result-count')) {
+            const countDiv = document.createElement('div');
+            countDiv.className = 'search-result-count text-center mb-3';
+            countDiv.innerHTML = countText;
+            resultsContainer.parentElement.insertBefore(countDiv, resultsContainer);
+        } else {
+            document.querySelector('.search-result-count').innerHTML = countText;
+        }
+    } else {
+        const countEl = document.querySelector('.search-result-count');
+        if (countEl) countEl.remove();
+    }
     
     // Display pagination
     displayPagination(filteredData.length);
@@ -314,15 +363,58 @@ function changePage(page) {
 
 function setupEventListeners() {
     const searchInput = document.getElementById('searchInput');
+    const clearBtn = document.getElementById('clearSearch');
+    const searchLoading = document.querySelector('.search-loading');
     let searchTimeout;
     
+    // Input event with optimized debounce
     searchInput.addEventListener('input', function() {
+        const value = this.value;
+        
+        // Show/hide clear button
+        if (clearBtn) {
+            clearBtn.style.display = value ? 'flex' : 'none';
+        }
+        
+        // Show loading indicator
+        if (searchLoading) {
+            searchLoading.style.display = 'flex';
+        }
+        
         clearTimeout(searchTimeout);
         searchTimeout = setTimeout(() => {
             currentPage = 1;
             displayDictionary();
-        }, 300);
+            
+            // Hide loading
+            if (searchLoading) {
+                searchLoading.style.display = 'none';
+            }
+        }, 250);
     });
+    
+    // Enter key support
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            clearTimeout(searchTimeout);
+            currentPage = 1;
+            displayDictionary();
+            if (searchLoading) {
+                searchLoading.style.display = 'none';
+            }
+        }
+    });
+    
+    // Clear button
+    if (clearBtn) {
+        clearBtn.addEventListener('click', function() {
+            searchInput.value = '';
+            this.style.display = 'none';
+            currentPage = 1;
+            displayDictionary();
+            searchInput.focus();
+        });
+    }
 
     // Apply game settings button: reinitialize game with current selections
     const applyBtn = document.getElementById('applyGameSettings');
@@ -423,8 +515,16 @@ function showQuestion() {
     
     // Clear input and feedback
     document.getElementById('answerInput').value = '';
-    document.getElementById('feedbackMessage').innerHTML = '';
+    const feedbackElement = document.getElementById('feedbackMessage');
+    feedbackElement.innerHTML = '';
+    feedbackElement.className = 'feedback-message'; // Remove correct/wrong classes
     document.getElementById('answerInput').focus();
+    
+    // Reset button visibility
+    document.getElementById('submitBtn').style.display = 'inline-block';
+    document.getElementById('giveUpBtn').style.display = 'inline-block';
+    document.getElementById('nextBtn').style.display = 'none';
+    document.getElementById('answerInput').disabled = false;
 }
 
 function submitAnswer() {
@@ -457,16 +557,13 @@ function submitAnswer() {
         
         updateGameUI();
         
-        // Move to next question after delay
-        setTimeout(() => {
-            currentQuestion++;
-            showQuestion();
-        }, 2500);
+        // Show next button instead of auto-advancing
+        showNextButton();
     } else {
         wrongAnswers++;
         wrongAttempts++;
         
-        // Nếu sai quá 5 lần, hiển thị đáp án và chuyển câu
+        // Nếu sai quá 5 lần, hiển thị đáp án và hiện nút tiếp theo
         if (wrongAttempts >= 5) {
             const correctAnswer = gameMode === 'hanzi-to-meaning' ? currentAnswer.meaning_vi : currentAnswer.hanzi;
             showFeedback(`
@@ -477,11 +574,8 @@ function submitAnswer() {
             
             updateGameUI();
             
-            // Move to next question after delay
-            setTimeout(() => {
-                currentQuestion++;
-                showQuestion();
-            }, 3000);
+            // Show next button instead of auto-advancing
+            showNextButton();
         } else {
             const correctAnswer = gameMode === 'hanzi-to-meaning' ? currentAnswer.meaning_vi : currentAnswer.hanzi;
             showFeedback(`
@@ -582,7 +676,7 @@ document.getElementById('questionCount')?.addEventListener('change', function() 
     if (totalSpan) totalSpan.textContent = actual;
 });
 
-// Give up: reveal the correct answer immediately and advance like 5 failed attempts
+// Give up: reveal the correct answer immediately and show next button
 function giveUp() {
     if (!gameData.length || currentQuestion >= gameData.length) return;
     wrongAnswers++;
@@ -594,10 +688,21 @@ function giveUp() {
         <small>${currentAnswer.hanzi} (${currentAnswer.pinyin}) = ${currentAnswer.meaning_vi}</small>
     `, 'wrong');
     updateGameUI();
-    setTimeout(() => {
-        currentQuestion++;
-        showQuestion();
-    }, 3000);
+    showNextButton();
+}
+
+// Show next button and hide submit/give up buttons
+function showNextButton() {
+    document.getElementById('submitBtn').style.display = 'none';
+    document.getElementById('giveUpBtn').style.display = 'none';
+    document.getElementById('nextBtn').style.display = 'inline-block';
+    document.getElementById('answerInput').disabled = true;
+}
+
+// Move to next question
+function nextQuestion() {
+    currentQuestion++;
+    showQuestion();
 }
 
 // ===================================
@@ -613,6 +718,128 @@ function shuffleArray(array) {
     return shuffled;
 }
 
+// Normalize text for better search (remove Vietnamese accents)
+function normalizeText(text) {
+    return text
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/đ/g, 'd')
+        .replace(/Đ/g, 'd');
+}
+
+// Highlight search term in text
+function highlightText(text, searchTerm) {
+    if (!searchTerm) return text;
+    
+    const regex = new RegExp(`(${searchTerm})`, 'gi');
+    return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+}
+
+// Update search placeholder based on script type
+function updateSearchPlaceholder() {
+    const scriptType = document.getElementById('scriptType').value;
+    const searchInput = document.getElementById('searchInput');
+    
+    if (scriptType === 'simplified') {
+        searchInput.placeholder = 'Tìm trong tất cả HSK (Giản thể)...';
+    } else {
+        searchInput.placeholder = 'Tìm trong tất cả TOCFL (Phồn thể)...';
+    }
+}
+
+// ===================================
+// WORD DETAIL MODAL
+// ===================================
+
+function showWordDetail(entry) {
+    const modal = document.getElementById('wordModal');
+    
+    // Set basic info
+    document.getElementById('modalHanzi').textContent = entry.hanzi;
+    document.getElementById('modalPinyin').textContent = entry.pinyin;
+    document.getElementById('modalMeaning').textContent = entry.meaning_vi;
+    document.getElementById('modalLevel').textContent = entry.level;
+    
+    // Set grammar if available
+    const grammarSection = document.getElementById('modalGrammar');
+    if (entry.grammar && entry.grammar.trim()) {
+        document.getElementById('modalGrammarText').textContent = entry.grammar;
+        grammarSection.style.display = 'block';
+    } else {
+        grammarSection.style.display = 'none';
+    }
+    
+    // Set usage if available
+    const usageSection = document.getElementById('modalUsage');
+    if (entry.usage && entry.usage.trim()) {
+        document.getElementById('modalUsageText').textContent = entry.usage;
+        usageSection.style.display = 'block';
+    } else {
+        usageSection.style.display = 'none';
+    }
+    
+    // Set examples if available
+    const examplesSection = document.getElementById('modalExamples');
+    const examplesList = document.getElementById('modalExamplesList');
+    
+    if (entry.examples && entry.examples.length > 0) {
+        examplesList.innerHTML = entry.examples.map(ex => `
+            <div class="modal-example-item">
+                <div class="modal-example-hanzi">${ex.hanzi}</div>
+                <div class="modal-example-pinyin">${ex.pinyin}</div>
+                <div class="modal-example-meaning">${ex.meaning_vi}</div>
+            </div>
+        `).join('');
+        examplesSection.style.display = 'block';
+    } else {
+        examplesSection.style.display = 'none';
+    }
+    
+    // Show modal
+    modal.style.display = 'flex';
+    
+    // Hide scrollbar only on mobile devices (width < 768px)
+    if (window.innerWidth < 768) {
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeWordModal() {
+    const modal = document.getElementById('wordModal');
+    const modalContent = modal.querySelector('.word-modal-content');
+    
+    // Add fadeout and slide down animation
+    modal.style.animation = 'modalFadeOut 0.3s ease';
+    modalContent.style.animation = 'modalSlideDown 0.3s ease';
+    
+    setTimeout(() => {
+        modal.style.display = 'none';
+        modal.style.animation = '';
+        modalContent.style.animation = '';
+        
+        // Restore scrollbar (only needed if it was hidden on mobile)
+        if (window.innerWidth < 768) {
+            document.body.style.overflow = 'auto';
+        }
+    }, 300);
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', function(e) {
+    const modal = document.getElementById('wordModal');
+    if (e.target === modal) {
+        closeWordModal();
+    }
+});
+
+// Close modal with ESC key
+window.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeWordModal();
+    }
+});
+
 // ===================================
 // EXPORT FUNCTIONS (for HTML onclick)
 // ===================================
@@ -622,5 +849,8 @@ window.changePage = changePage;
 window.startGame = startGame;
 window.submitAnswer = submitAnswer;
 window.giveUp = giveUp;
+window.nextQuestion = nextQuestion;
 window.restartGame = restartGame;
 window.exitGame = exitGame;
+window.showWordDetail = showWordDetail;
+window.closeWordModal = closeWordModal;
