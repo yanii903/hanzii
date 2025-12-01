@@ -253,7 +253,7 @@
 
           <!-- Game Mode Selection -->
           <div class="row g-4 mb-5">
-            <div class="col-md-6">
+            <div class="col-md-4">
               <div
                 class="game-mode-card glass-card"
                 onclick="startGame('hanzi-to-meaning')"
@@ -268,7 +268,7 @@
                 </button>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
               <div
                 class="game-mode-card glass-card"
                 onclick="startGame('meaning-to-hanzi')"
@@ -278,6 +278,21 @@
                 </div>
                 <h3>Nghĩa → Chữ Hán</h3>
                 <p>Nhìn nghĩa tiếng Việt và nhập chữ Hán</p>
+                <button class="btn btn-primary btn-game">
+                  <i class="fas fa-play"></i> Chơi ngay
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div
+                class="game-mode-card glass-card"
+                onclick="startReadingGame()"
+              >
+                <div class="game-icon reading-icon">
+                  <i class="fas fa-book-reader"></i>
+                </div>
+                <h3>Đọc đoạn văn</h3>
+                <p>Đọc hội thoại tiếng Trung theo chủ đề</p>
                 <button class="btn btn-primary btn-game">
                   <i class="fas fa-play"></i> Chơi ngay
                 </button>
@@ -422,6 +437,72 @@
                   >
                     <i class="fas fa-home"></i> Về trang chủ
                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reading Game Area -->
+          <div id="readingGameArea" class="game-area glass-card" style="display: none">
+            <div class="game-header">
+              <h3><i class="fas fa-book-reader"></i> Đọc đoạn văn</h3>
+              <button class="btn btn-sm btn-outline-light" onclick="exitReadingGame()">
+                <i class="fas fa-times"></i> Thoát
+              </button>
+            </div>
+
+            <div class="game-content">
+              <div class="game-settings mb-4">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Loại chữ</label>
+                    <select id="readingScriptType" class="form-select custom-select">
+                      <option value="simplified">Giản thể (简体)</option>
+                      <option value="traditional">Phồn thể (繁體)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Cấp độ</label>
+                    <select id="readingLevelSelect" class="form-select custom-select">
+                      <!-- Options will be populated by JavaScript -->
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <button id="applyReadingSettings" class="btn btn-warning w-100">
+                      <i class="fas fa-sync"></i> Cập nhật
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Topics List -->
+              <div id="topicsList" class="topics-list">
+                <!-- Topics will be loaded here -->
+              </div>
+
+              <!-- Dialog Display -->
+              <div id="dialogDisplay" class="dialog-display" style="display: none">
+                <div class="dialog-header">
+                  <h4 id="dialogTitle"></h4>
+                  <button class="btn btn-sm btn-outline-light" onclick="backToTopics()">
+                    <i class="fas fa-arrow-left"></i> Quay lại
+                  </button>
+                </div>
+                <div id="dialogContent" class="dialog-content">
+                  <!-- Dialog will be displayed here -->
+                </div>
+                <div class="dialog-actions">
+                  <button id="supportBtn" class="btn btn-info" onclick="toggleSupport()">
+                    <i class="fas fa-question-circle"></i> Hỗ trợ
+                  </button>
+                </div>
+                <div id="supportPanel" class="support-panel" style="display: none">
+                  <div class="support-header">
+                    <h5><i class="fas fa-lightbulb"></i> Hỗ trợ đọc hiểu</h5>
+                  </div>
+                  <div id="supportContent" class="support-content">
+                    <!-- Support content will be displayed here -->
+                  </div>
                 </div>
               </div>
             </div>

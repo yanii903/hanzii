@@ -1,0 +1,232 @@
+{
+  "dialogs": [
+    {
+      "topic": "新同学",
+      "description": "Bạn học mới",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "今天我们班来了一位新同学。他叫张华，今年十八岁。他以前在另外一个学校学习，现在搬到我们这个城市了。张华很高，也很帅。他穿着一件白色的衬衫和黑色的裤子。老师让他站在教室前面介绍自己。他用中文说话说得很流利。他告诉我们，他喜欢运动，尤其喜欢打篮球和踢足球。他还说他会弹吉他，唱歌也唱得很好。下课以后，我走过去跟他聊天。我问他觉得我们学校怎么样。他笑着说，这里的环境很好，同学们都很友好。我们很快就成为了好朋友。中午休息的时候，我带他去食堂吃午饭。我们一边吃一边聊天，聊了很多有趣的事情。张华真是一个有意思的人！",
+          "pinyin": "Jīn tiān wǒ men bān lái le yī wèi xīn tóng xué。 Tā jiào zhāng huá， Jīn nián shí bā suì。 Tā yǐ qián zài lìng wài yí gè xué xiào xué xí， Xiàn zài bān dào wǒ men zhè ge chéng shì le。 Zhāng huá hěn gāo， Yě hěn shuài。 Tā chuān zhe yī jiàn bái sè de chèn shān hé hēi sè de kù zi。 Lǎo shī ràng tā zhàn zài jiào shì qián miàn jiè shào zì jǐ。 Tā yòng zhōng wén shuō huà shuō dé hěn liú lì。 Tā gào sù wǒ men， Tā xǐ huān yùn dòng， Yóu qí xǐ huān dǎ lán qiú hé tī zú qiú。 Tā hái shuō tā huì dàn jí tā， Chàng gē yě chàng dé hěn hǎo。 Xià kè yǐ hòu， Wǒ zǒu guò qù gēn tā liáo tiān。 Wǒ wèn tā jué de wǒ men xué xiào zěn me yàng。 Tā xiào zhe shuō， Zhè lǐ de huán jìng hěn hǎo， Tóng xué men dōu hěn yǒu hǎo。 Wǒ men hěn kuài jiù chéng wéi le hǎo péng yǒu。 Zhōng wǔ xiū xī de shí hòu， Wǒ dài tā qù shí táng chī wǔ fàn。 Wǒ men yī biān chī yī biān liáo tiān， Liáo le hěn duō yǒu qù de shì qíng。 Zhāng huá zhēn shì yí gè yǒu yì si de rén！",
+          "translation": "Hôm nay lớp chúng tôi có một bạn học mới. Bạn ấy tên là Trương Hoa, năm nay 18 tuổi. Trước đây bạn ấy học ở một trường khác, bây giờ chuyển đến thành phố của chúng tôi. Trương Hoa rất cao, cũng rất đẹp trai. Bạn ấy mặc một chiếc áo sơ mi trắng và quần đen. Giáo viên để bạn ấy đứng ở phía trước lớp tự giới thiệu. Bạn ấy nói tiếng Trung rất lưu loát. Bạn ấy nói với chúng tôi rằng bạn ấy thích thể thao, đặc biệt thích chơi bóng rổ và đá bóng. Bạn ấy còn nói bạn ấy biết chơi guitar, hát cũng rất hay. Sau khi tan học, tôi đi lại trò chuyện với bạn ấy. Tôi hỏi bạn ấy thấy trường chúng tôi thế nào. Bạn ấy cười nói, môi trường ở đây rất tốt, các bạn đều rất thân thiện. Chúng tôi rất nhanh trở thành bạn tốt. Giờ nghỉ trưa, tôi dẫn bạn ấy đi nhà ăn ăn trưa. Chúng tôi vừa ăn vừa trò chuyện, nói về nhiều chuyện thú vị. Trương Hoa thật là một người thú vị!"
+        }
+      ]
+    },
+    {
+      "topic": "在超市",
+      "description": "Ở siêu thị",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "昨天下午，我和妹妹一起去超市买东西。超市离我家不远，走路只要十分钟。我们进去以后，先拿了一个购物车。超市里的东西真多啊！有新鲜的水果和蔬菜，有各种各样的零食，还有生活用品。妹妹看见她最爱吃的巧克力，马上放进购物车里。我告诉她不要买太多甜食，对牙齿不好。我们买了一些苹果、香蕉、橙子，还有一些蔬菜。然后我们去了日用品区，买了洗发水、牙膏和毛巾。妹妹还想买一个新的杯子，因为她的旧杯子坏了。我们挑了一个粉红色的杯子，很漂亮。最后我们去收银台付钱。服务员问我们要不要袋子，我说不用，我们自己带了环保袋。一共花了一百二十块钱。回家的路上，我们提着东西，觉得有点儿累，但是很开心。",
+          "pinyin": "Zuó tiān xià wǔ， Wǒ hé mèi mèi yì qǐ qù chāo shì mǎi dōng xī。 Chāo shì lí wǒ jiā bù yuǎn， Zǒu lù zhǐ yào shí fēn zhōng。 Wǒ men jìn qù yǐ hòu， Xiān ná le yí gè gòu wù chē。 Chāo shì lǐ de dōng xī zhēn duō a！ Yǒu xīn xiān de shuǐ guǒ hé shū cài， Yǒu gè zhǒng gè yàng de líng shí， Hái yǒu shēng huó yòng pǐn。 Mèi mèi kàn jiàn tā zuì ài chī de qiǎo kè lì， Mǎ shàng fàng jìn gòu wù chē lǐ。 Wǒ gào sù tā bú yào mǎi tài duō tián shí， Duì yá chǐ bù hǎo。 Wǒ men mǎi le yī xiē píng guǒ 、 xiāng jiāo 、 chéng zi， Hái yǒu yī xiē shū cài。 Rán hòu wǒ men qù le rì yòng pǐn qū， Mǎi le xǐ fà shuǐ 、 yá gāo hé máo jīn。 Mèi mèi hái xiǎng mǎi yí gè xīn de bēi zi， Yīn wèi tā de jiù bēi zi huài le。 Wǒ men tiāo le yí gè fěn hóng sè de bēi zi， Hěn piào liàng。 Zuì hòu wǒ men qù shōu yín tái fù qián。 Fú wù yuán wèn wǒ men yào bù yào dài zi， Wǒ shuō bù yòng， Wǒ men zì jǐ dài le huán bǎo dài。 Yī gòng huā le yì bǎi èr shí kuài qián。 Huí jiā de lù shàng， Wǒ men tí zhe dōng xī， Jué de yǒu diǎn ér lèi， Dàn shì hěn kāi xīn。",
+          "translation": "Chiều hôm qua, tôi và em gái cùng đi siêu thị mua đồ. Siêu thị cách nhà tôi không xa, đi bộ chỉ mất 10 phút. Sau khi chúng tôi vào, đầu tiên lấy một xe đẩy hàng. Đồ trong siêu thị thật nhiều! Có hoa quả và rau tươi, có đủ loại đồ ăn vặt, còn có đồ dùng sinh hoạt. Em gái thấy socola mà em ấy thích nhất, lập tức bỏ vào xe đẩy. Tôi nói với em ấy đừng mua quá nhiều đồ ngọt, không tốt cho răng. Chúng tôi mua một ít táo, chuối, cam, còn có một ít rau. Sau đó chúng tôi đến khu đồ dùng hàng ngày, mua dầu gội, kem đánh răng và khăn. Em gái còn muốn mua một cái cốc mới, vì cái cốc cũ của em ấy hỏng rồi. Chúng tôi chọn một cái cốc màu hồng, rất đẹp. Cuối cùng chúng tôi đến quầy thu ngân trả tiền. Nhân viên hỏi chúng tôi có cần túi không, tôi nói không cần, chúng tôi tự mang túi môi trường. Tổng cộng tốn 120 tệ. Trên đường về nhà, chúng tôi xách đồ, thấy hơi mệt, nhưng rất vui."
+        }
+      ]
+    },
+    {
+      "topic": "去医院看病",
+      "description": "Đi bệnh viện khám bệnh",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "上个星期，我感冒了。开始的时候只是有点儿不舒服，后来越来越严重。我发烧了，头也很疼，嗓子也疼。妈妈说我应该去医院看医生。我们早上八点就到了医院。医院里人很多，我们等了一个小时才轮到我。医生问我哪儿不舒服，我告诉他我的情况。医生给我检查了一下，说我感冒了，需要休息。他给我开了一些药，让我按时吃药，多喝水，好好休息。医生还说，如果三天以后还不好，要再来医院。我们在医院的药房拿了药，然后就回家了。回到家，我马上吃了药，然后躺在床上休息。妈妈给我做了一些清淡的饭菜。我吃完饭就睡觉了。第二天，我觉得好多了。第三天，我的病基本上好了。我很高兴，可以继续上学了。",
+          "pinyin": "Shàng gè xīng qī， Wǒ gǎn mào le。 Kāi shǐ de shí hòu zhǐ shì yǒu diǎn ér bù shū fú， Hòu lái yuè lái yuè yán zhòng。 Wǒ fā shāo le， Tóu yě hěn téng， Sǎng zi yě téng。 Mā mā shuō wǒ yīng gāi qù yī yuàn kàn yī shēng。 Wǒ men zǎo shàng bā diǎn jiù dào le yī yuàn。 Yī yuàn lǐ rén hěn duō， Wǒ men děng le yí gè xiǎo shí cái lún dào wǒ。 Yī shēng wèn wǒ nǎ ér bù shū fú， Wǒ gào sù tā wǒ de qíng kuàng。 Yī shēng gěi wǒ jiǎn chá le yī xià， Shuō wǒ gǎn mào le， Xū yào xiū xī。 Tā gěi wǒ kāi le yī xiē yào， Ràng wǒ àn shí chī yào， Duō hē shuǐ， Hǎo hǎo xiū xī。 Yī shēng huán shuō， Rú guǒ sān tiān yǐ hòu hái bù hǎo， Yào zài lái yī yuàn。 Wǒ men zài yī yuàn de yào fáng ná le yào， Rán hòu jiù huí jiā le。 Huí dào jiā， Wǒ mǎ shàng chī le yào， Rán hòu tǎng zài chuáng shàng xiū xī。 Mā mā gěi wǒ zuò le yī xiē qīng dàn de fàn cài。 Wǒ chī wán fàn jiù shuì jiào le。 Dì èr tiān， Wǒ jué de hǎo duō le。 Dì sān tiān， Wǒ de bìng jī běn shàng hǎo le。 Wǒ hěn gāo xìng， Kě yǐ jì xù shàng xué le。",
+          "translation": "Tuần trước, tôi bị cảm. Ban đầu chỉ hơi khó chịu, sau đó càng ngày càng nghiêm trọng. Tôi sốt, đầu cũng rất đau, cổ họng cũng đau. Mẹ nói tôi nên đi bệnh viện khám bác sĩ. Chúng tôi 8 giờ sáng đã đến bệnh viện. Trong bệnh viện người rất đông, chúng tôi đợi một tiếng mới đến lượt tôi. Bác sĩ hỏi tôi đâu khó chịu, tôi nói cho bác sĩ tình hình của tôi. Bác sĩ khám cho tôi một chút, nói tôi bị cảm, cần nghỉ ngơi. Bác sĩ kê cho tôi một ít thuốc, bảo tôi uống thuốc đúng giờ, uống nhiều nước, nghỉ ngơi tốt. Bác sĩ còn nói, nếu ba ngày sau vẫn không khỏi, phải đến bệnh viện lại. Chúng tôi lấy thuốc ở phòng thuốc của bệnh viện, sau đó về nhà. Về đến nhà, tôi lập tức uống thuốc, sau đó nằm trên giường nghỉ. Mẹ nấu cho tôi một ít cơm nhạt. Tôi ăn xong cơm liền ngủ. Ngày thứ hai, tôi thấy khỏe hơn nhiều. Ngày thứ ba, bệnh của tôi cơ bản đã khỏi. Tôi rất vui, có thể tiếp tục đi học."
+        }
+      ]
+    },
+    {
+      "topic": "周末去爬山",
+      "description": "Cuối tuần đi leo núi",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "这个周末天气特别好，阳光明媚，我决定和几个朋友一起去爬山。我们早上六点就起床了，准备好水和食物，然后坐公共汽车去山脚下。山不是很高，但是风景很美。我们开始往上爬。刚开始的时候觉得很容易，但是爬到一半的时候，我们都累了。大家都出汗了，需要休息一下。我们坐在大树下面，喝水、吃东西、聊天。休息了十五分钟以后，我们继续往上爬。虽然累，但是我们都很开心。终于，我们爬到了山顶！站在山顶上，我们可以看到整个城市。风吹过来，非常凉快舒服。我们在山顶拍了很多照片。下午两点，我们开始下山。下山比上山容易多了。回到家已经是晚上五点了。虽然很累，但是今天过得真充实！",
+          "pinyin": "Zhè ge zhōu mò tiān qì tè bié hǎo， Yáng guāng míng mèi， Wǒ jué dìng hé jǐ gè péng yǒu yì qǐ qù pá shān。 Wǒ men zǎo shàng liù diǎn jiù qǐ chuáng le， Zhǔn bèi hǎo shuǐ hé shí wù， Rán hòu zuò gōng gòng qì chē qù shān jiǎo xià。 Shān bú shì hěn gāo， Dàn shì fēng jǐng hěn měi。 Wǒ men kāi shǐ wǎng shàng pá。 Gāng kāi shǐ de shí hòu jué de hěn róng yì， Dàn shì pá dào yí bàn de shí hòu， Wǒ men dōu lèi le。 Dà jiā dōu chū hàn le， Xū yào xiū xī yī xià。 Wǒ men zuò zài dà shù xià miàn， Hē shuǐ 、 chī dōng xī 、 liáo tiān。 Xiū xī le shí wǔ fēn zhōng yǐ hòu， Wǒ men jì xù wǎng shàng pá。 Suī rán lèi， Dàn shì wǒ men dōu hěn kāi xīn。 Zhōng yú， Wǒ men pá dào le shān dǐng！ Zhàn zài shān dǐng shàng， Wǒ men kě yǐ kàn dào zhěng gè chéng shì。 Fēng chuī guò lái， Fēi cháng liáng kuài shū fú。 Wǒ men zài shān dǐng pāi le hěn duō zhào piān。 Xià wǔ liǎng diǎn， Wǒ men kāi shǐ xià shān。 Xià shān bǐ shàng shān róng yì duō le。 Huí dào jiā yǐ jīng shì wǎn shàng wǔ diǎn le。 Suī rán hěn lèi， Dàn shì jīn tiān guò dé zhēn chōng shí！",
+          "translation": "Cuối tuần này thời tiết đặc biệt tốt, nắng đẹp, tôi quyết định cùng mấy người bạn đi leo núi. Chúng tôi 6 giờ sáng đã dậy, chuẩn bị nước và thức ăn, sau đó đi xe buýt đến chân núi. Núi không cao lắm, nhưng phong cảnh rất đẹp. Chúng tôi bắt đầu leo lên. Ban đầu thấy rất dễ, nhưng leo đến nửa chừng, chúng tôi đều mệt. Mọi người đều đổ mồ hôi, cần nghỉ một chút. Chúng tôi ngồi dưới cây lớn, uống nước, ăn đồ, trò chuyện. Nghỉ 15 phút sau, chúng tôi tiếp tục leo lên. Mặc dù mệt, nhưng chúng tôi đều rất vui. Cuối cùng, chúng tôi leo đến đỉnh núi! Đứng trên đỉnh núi, chúng tôi có thể nhìn thấy cả thành phố. Gió thổi qua, rất mát mẻ thoải mái. Chúng tôi chụp rất nhiều ảnh ở đỉnh núi. Chiều 2 giờ, chúng tôi bắt đầu xuống núi. Xuống núi dễ hơn leo núi nhiều. Về đến nhà đã 5 giờ tối. Mặc dù rất mệt, nhưng hôm nay thật là trọn vẹn!"
+        }
+      ]
+    },
+    {
+      "topic": "我的房间",
+      "description": "Phòng của tôi",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "我的房间不大，但是很温馨。房间里有一张床、一张桌子、一把椅子和一个衣柜。床在房间的左边，旁边有一个小桌子，上面放着台灯和闹钟。每天早上，闹钟会叫我起床。我的书桌在窗户旁边，这样学习的时候光线比较好。桌子上面有我的电脑、一些书和笔记本。墙上贴着一张世界地图，还有几张我和朋友的照片。衣柜在门的后面，里面放着我的衣服和鞋子。我每个星期都会整理一次房间，把东西收拾干净。窗台上有几盆花，是我自己种的。每天我都会给它们浇水。房间的墙是浅蓝色的，地板是木头的，看起来很舒服。晚上，我会打开台灯，坐在书桌前看书或者做作业。累了就躺在床上听音乐。这就是我的小天地，我非常喜欢它！",
+          "pinyin": "Wǒ de fáng jiān bù dà， Dàn shì hěn wēn xīn。 Fáng jiān lǐ yǒu yī zhāng chuáng 、 yī zhāng zhuō zi 、 yī bǎ yǐ zi hé yí gè yī guì。 Chuáng zài fáng jiān de zuǒ biān， Páng biān yǒu yí gè xiǎo zhuō zi， Shàng miàn fàng zhe tái dēng hé nào zhōng。 Měi tiān zǎo shàng， Nào zhōng huì jiào wǒ qǐ chuáng。 Wǒ de shū zhuō zài chuāng hù páng biān， Zhè yàng xué xí de shí hòu guāng xiàn bǐ jiào hǎo。 Zhuō zi shàng miàn yǒu wǒ de diàn nǎo 、 yī xiē shū hé bǐ jì běn。 Qiáng shàng tiē zhe yī zhāng shì jiè dì tú， Hái yǒu jǐ zhāng wǒ hé péng yǒu de zhào piān。 Yī guì zài mén de hòu miàn， Lǐ miàn fàng zhe wǒ de yī fú hé xié zi。 Wǒ měi gè xīng qī dū huì zhěng lǐ yī cì fáng jiān， Bǎ dōng xī shōu shí gān jìng。 Chuāng tái shàng yǒu jǐ pén huā， Shì wǒ zì jǐ zhǒng de。 Měi tiān wǒ dū huì gěi tā men jiāo shuǐ。 Fáng jiān de qiáng shì qiǎn lán sè de， Dì bǎn shì mù tou de， Kàn qǐ lái hěn shū fú。 Wǎn shàng， Wǒ huì dǎ kāi tái dēng， Zuò zài shū zhuō qián kàn shū huò zhě zuò zuò yè。 Lèi le jiù tǎng zài chuáng shàng tīng yīn yuè。 Zhè jiù shì wǒ de xiǎo tiān dì， Wǒ fēi cháng xǐ huān tā！",
+          "translation": "Phòng của tôi không lớn, nhưng rất ấm cúng. Trong phòng có một cái giường, một cái bàn, một cái ghế và một tủ quần áo. Giường ở bên trái phòng, bên cạnh có một cái bàn nhỏ, trên đó đặt đèn bàn và đồng hồ báo thức. Mỗi sáng, đồng hồ báo thức sẽ gọi tôi dậy. Bàn học của tôi ở cạnh cửa sổ, như vậy khi học ánh sáng khá tốt. Trên bàn có máy tính của tôi, một số sách và vở. Tường dán một tấm bản đồ thế giới, còn có mấy tấm ảnh tôi và bạn bè. Tủ quần áo ở phía sau cửa, bên trong đặt quần áo và giày của tôi. Mỗi tuần tôi đều dọn dẹp phòng một lần, thu xếp đồ đạc sạch sẽ. Trên bệ cửa sổ có mấy chậu hoa, là tôi tự trồng. Mỗi ngày tôi đều tưới nước cho chúng. Tường phòng màu xanh nhạt, sàn là gỗ, nhìn rất thoải mái. Buổi tối, tôi sẽ bật đèn bàn, ngồi trước bàn học đọc sách hoặc làm bài tập. Mệt thì nằm trên giường nghe nhạc. Đây là thiên đường nhỏ của tôi, tôi rất thích nó!"
+        }
+      ]
+    },
+    {
+      "topic": "坐地铁",
+      "description": "Đi tàu điện ngầm",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "我每天上班都坐地铁。地铁站离我家很近，出门走五分钟就到了。早上七点半，地铁站里已经有很多人了。大家都在等地铁。我先去自动售票机买票。现在很多人都用手机支付，很方便。买好票以后，我通过闸机进入站台。站台上的屏幕显示下一趟地铁还有三分钟到达。我站在黄线后面等待。很快，地铁来了。车门打开，先让里面的乘客下车，然后我们才上去。车厢里人很多，我只能站着。我抓住扶手，以免摔倒。地铁开动了，速度很快。每到一站，广播会报站名。我要坐八站才到公司。车上有的人在看手机，有的人在睡觉，还有的人在看报纸。大约二十分钟后，我到了目的地。下车的时候要小心，注意脚下。走出地铁站，我就到公司了。坐地铁真的很快很方便！",
+          "pinyin": "Wǒ měi tiān shàng bān dōu zuò dì tiě。 Dì tiě zhàn lí wǒ jiā hěn jìn， Chū mén zǒu wǔ fēn zhōng jiù dào le。 Zǎo shàng qī diǎn bàn， Dì tiě zhàn lǐ yǐ jīng yǒu hěn duō rén le。 Dà jiā dōu zài děng dì tiě。 Wǒ xiān qù zì dòng shòu piào jī mǎi piào。 Xiàn zài hěn duō rén dōu yòng shǒu jī zhī fù， Hěn fāng biàn。 Mǎi hǎo piào yǐ hòu， Wǒ tōng guò zhá jī jìn rù zhàn tái。 Zhàn tái shàng de píng mù xiǎn shì xià yī tāng dì tiě hái yǒu sān fēn zhōng dào dá。 Wǒ zhàn zài huáng xiàn hòu miàn děng dài。 Hěn kuài， Dì tiě lái le。 Chē mén dǎ kāi， Xiān ràng lǐ miàn de chéng kè xià chē， Rán hòu wǒ men cái shàng qù。 Chē xiāng lǐ rén hěn duō， Wǒ zhǐ néng zhàn zhe。 Wǒ zhuā zhù fú shǒu， Yǐ miǎn shuāi dǎo。 Dì tiě kāi dòng le， Sù dù hěn kuài。 Měi dào yī zhàn， Guǎng bō huì bào zhàn míng。 Wǒ yào zuò bā zhàn cái dào gōng sī。 Chē shàng yǒu de rén zài kàn shǒu jī， Yǒu de rén zài shuì jiào， Hái yǒu de rén zài kàn bào zhǐ。 Dà yuē èr shí fēn zhōng hòu， Wǒ dào le mù dì dì。 Xià chē de shí hòu yào xiǎo xīn， Zhù yì jiǎo xià。 Zǒu chū dì tiě zhàn， Wǒ jiù dào gōng sī le。 Zuò dì tiě zhēn de hěn kuài hěn fāng biàn！",
+          "translation": "Tôi mỗi ngày đi làm đều đi tàu điện ngầm. Ga tàu điện ngầm cách nhà tôi rất gần, ra khỏi nhà đi 5 phút là đến. Sáng 7 giờ rưỡi, trong ga tàu điện ngầm đã có rất nhiều người. Mọi người đều đang đợi tàu điện ngầm. Tôi trước tiên đến máy bán vé tự động mua vé. Bây giờ nhiều người đều dùng điện thoại thanh toán, rất tiện. Mua xong vé, tôi đi qua cổng soát vé vào sân ga. Màn hình trên sân ga hiển thị chuyến tàu điện ngầm tiếp theo còn 3 phút nữa đến. Tôi đứng sau vạch vàng chờ. Rất nhanh, tàu điện ngầm đến. Cửa tàu mở, để hành khách bên trong xuống trước, sau đó chúng tôi mới lên. Trong toa tàu người rất đông, tôi chỉ có thể đứng. Tôi nắm tay vịn, để tránh té ngã. Tàu điện ngầm chạy, tốc độ rất nhanh. Mỗi đến một ga, loa phát thanh sẽ báo tên ga. Tôi phải đi 8 ga mới đến công ty. Trên xe có người xem điện thoại, có người ngủ, còn có người đọc báo. Khoảng 20 phút sau, tôi đến nơi. Khi xuống xe phải cẩn thận, chú ý chân. Đi ra khỏi ga tàu điện ngầm, tôi đến công ty. Đi tàu điện ngầm thật sự rất nhanh rất tiện!"
+        }
+      ]
+    },
+    {
+      "topic": "学做菜",
+      "description": "Học nấu ăn",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "最近我想学做菜。以前我总是吃外卖或者去饭馆吃饭，既不健康也很贵。所以我决定自己学做饭。上个周末，我去超市买了很多食材：蔬菜、肉、鸡蛋、米、油、盐等等。回家以后，我在网上找了一个简单的菜谱。我决定先做西红柿炒鸡蛋。我把西红柿洗干净，切成小块。然后打了两个鸡蛋，放点儿盐。先把鸡蛋炒好，然后放西红柿。虽然第一次做，但是味道还不错！我很高兴。晚上，我又做了米饭和一个青菜汤。虽然做得不太好看，但是自己做的饭吃起来特别香。现在我每天都自己做饭。妈妈说我进步很快，做的菜越来越好吃了。我还学会了做很多菜：炒土豆丝、红烧肉、糖醋鱼等等。做菜不仅能省钱，还很有意思。我喜欢做菜！",
+          "pinyin": "Zuì jìn wǒ xiǎng xué zuò cài。 Yǐ qián wǒ zǒng shì chī wài mài huò zhě qù fàn guǎn chī fàn， Jì bù jiàn kāng yě hěn guì。 Suǒ yǐ wǒ jué dìng zì jǐ xué zuò fàn。 Shàng gè zhōu mò， Wǒ qù chāo shì mǎi le hěn duō shí cái： Shū cài 、 ròu 、 jī dàn 、 mǐ 、 yóu 、 yán děng děng。 Huí jiā yǐ hòu， Wǒ zài wǎng shàng zhǎo le yí gè jiǎn dān de cài pǔ。 Wǒ jué dìng xiān zuò xī hóng shì chǎo jī dàn。 Wǒ bǎ xī hóng shì xǐ gān jìng， Qiè chéng xiǎo kuài。 Rán hòu dǎ le liǎng gè jī dàn， Fàng diǎn ér yán。 Xiān bǎ jī dàn chǎo hǎo， Rán hòu fàng xī hóng shì。 Suī rán dì yī cì zuò， Dàn shì wèi dào hái bú cuò！ Wǒ hěn gāo xìng。 Wǎn shàng， Wǒ yòu zuò le mǐ fàn hé yí gè qīng cài tāng。 Suī rán zuò dé bù tài hǎo kàn， Dàn shì zì jǐ zuò de fàn chī qǐ lái tè bié xiāng。 Xiàn zài wǒ měi tiān dōu zì jǐ zuò fàn。 Mā mā shuō wǒ jìn bù hěn kuài， Zuò de cài yuè lái yuè hǎo chī le。 Wǒ hái xué huì le zuò hěn duō cài： Chǎo tǔ dòu sī 、 hóng shāo ròu 、 táng cù yú děng děng。 Zuò cài bù jǐn néng shěng qián， Hái hěn yǒu yì si。 Wǒ xǐ huān zuò cài！",
+          "translation": "Gần đây tôi muốn học nấu ăn. Trước đây tôi luôn ăn đồ giao hay đi nhà hàng ăn, vừa không lành mạnh lại rất đắt. Vì vậy tôi quyết định tự học nấu cơm. Cuối tuần trước, tôi đi siêu thị mua rất nhiều nguyên liệu: rau, thịt, trứng, gạo, dầu, muối v.v. Về nhà sau, tôi tìm một công thức đơn giản trên mạng. Tôi quyết định làm cà chua xào trứng trước. Tôi rửa sạch cà chua, cắt thành miếng nhỏ. Sau đó đập hai quả trứng, cho một chút muối. Trước tiên xào trứng, sau đó cho cà chua vào. Mặc dù là lần đầu làm, nhưng hương vị cũng không tệ! Tôi rất vui. Buổi tối, tôi lại nấu cơm và một canh rau xanh. Mặc dù làm không đẹp lắm, nhưng cơm tự làm ăn đặc biệt thơm. Bây giờ tôi mỗi ngày đều tự nấu cơm. Mẹ nói tôi tiến bộ rất nhanh, món làm càng ngày càng ngon. Tôi còn học được nhiều món: xào khoai tây sợi, thịt kho đỏ, cá sốt chua ngọt v.v. Nấu ăn không chỉ tiết kiệm tiền, còn rất thú vị. Tôi thích nấu ăn!"
+        }
+      ]
+    },
+    {
+      "topic": "考试",
+      "description": "Thi cử",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "下个星期我们要期中考试了。我有点儿紧张，因为这次考试很重要。这几天我一直在认真复习。我每天早上六点就起床，开始看书。白天在学校上课的时候，我也认真听讲，做好笔记。晚上回家以后，我会把今天学的内容再复习一遍。遇到不懂的问题，我会问老师或者同学。我的朋友小李也在努力准备考试。我们经常一起学习，互相帮助。有时候我们会去图书馆，那里很安静，适合学习。妈妈很关心我，每天都给我做营养的饭菜。她还告诉我不要太紧张，只要努力就好。考试的前一天晚上，我把所有的复习资料都看了一遍，然后早点儿睡觉，保证第二天精神好。考试的时候，我要仔细审题，认真答题。我相信只要好好准备，一定能考出好成绩！",
+          "pinyin": "Xià gè xīng qī wǒ men yào qī zhōng kǎo shì le。 Wǒ yǒu diǎn ér jǐn zhāng， Yīn wèi zhè cì kǎo shì hěn zhòng yào。 Zhè jǐ tiān wǒ yì zhí zài rèn zhēn fù xí。 Wǒ měi tiān zǎo shàng liù diǎn jiù qǐ chuáng， Kāi shǐ kàn shū。 Bái tiān zài xué xiào shàng kè de shí hòu， Wǒ yě rèn zhēn tīng jiǎng， Zuò hǎo bǐ jì。 Wǎn shàng huí jiā yǐ hòu， Wǒ huì bǎ jīn tiān xué de nèi róng zài fù xí yī biàn。 Yù dào bù dǒng de wèn tí， Wǒ huì wèn lǎo shī huò zhě tóng xué。 Wǒ de péng yǒu xiǎo lǐ yě zài nǔ lì zhǔn bèi kǎo shì。 Wǒ men jīng cháng yì qǐ xué xí， Hù xiāng bāng zhù。 Yǒu shí hòu wǒ men huì qù tú shū guǎn， Nà lǐ hěn ān jìng， Shì hé xué xí。 Mā mā hěn guān xīn wǒ， Měi tiān dōu gěi wǒ zuò yíng yǎng de fàn cài。 Tā hái gào sù wǒ bú yào tài jǐn zhāng， Zhǐ yào nǔ lì jiù hǎo。 Kǎo shì de qián yī tiān wǎn shàng， Wǒ bǎ suǒ yǒu de fù xí zī liào dōu kàn le yī biàn， Rán hòu zǎo diǎn ér shuì jiào， Bǎo zhèng dì èr tiān jīng shén hǎo。 Kǎo shì de shí hòu， Wǒ yào zǐ xì shěn tí， Rèn zhēn dá tí。 Wǒ xiāng xìn zhǐ yào hǎo hǎo zhǔn bèi， Yí dìng néng kǎo chū hǎo chéng jì！",
+          "translation": "Tuần sau chúng tôi sẽ thi giữa kỳ. Tôi hơi lo, vì kỳ thi này rất quan trọng. Mấy ngày này tôi luôn ôn tập chăm chỉ. Tôi mỗi sáng 6 giờ đã dậy, bắt đầu xem sách. Ban ngày ở trường khi học, tôi cũng chăm chú nghe giảng, ghi chú tốt. Buổi tối về nhà sau, tôi sẽ ôn lại một lần nội dung hôm nay học. Gặp vấn đề không hiểu, tôi sẽ hỏi thầy cô hoặc bạn học. Bạn tôi Tiểu Lý cũng đang cố gắng chuẩn bị thi. Chúng tôi thường cùng học, giúp đỡ lẫn nhau. Có lúc chúng tôi sẽ đi thư viện, đó rất yên tĩnh, thích hợp để học. Mẹ rất quan tâm tôi, mỗi ngày đều nấu cơm dinh dưỡng cho tôi. Mẹ còn nói với tôi đừng quá lo lắng, chỉ cần cố gắng là được. Buổi tối trước ngày thi, tôi xem hết tất cả tài liệu ôn tập một lần, sau đó ngủ sớm, đảm bảo ngày hôm sau tinh thần tốt. Khi thi, tôi phải xem đề cẩn thận, trả lời nghiêm túc. Tôi tin chỉ cần chuẩn bị tốt, nhất định có thể thi được điểm tốt!"
+        }
+      ]
+    },
+    {
+      "topic": "生日聚会",
+      "description": "Tiệc sinh nhật",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "昨天是我的生日，我邀请了一些好朋友来家里开生日聚会。下午三点，朋友们陆续到了。他们都带来了礼物，有书、有巧克力、还有一个漂亮的相框。我很感动，谢谢大家。我们先在客厅聊天。大家聊得很开心，说了很多有趣的事情。然后我们一起玩游戏、唱歌、跳舞。房间里充满了欢笑声。到了晚上六点，妈妈端出了一个大蛋糕。蛋糕上插着十九根蜡烛，因为我今年十九岁了。朋友们围着我，一起唱生日快乐歌。我闭上眼睛，许了一个愿望，然后吹灭了蜡烛。大家一起鼓掌。我们切蛋糕，每个人都分到了一块。蛋糕很甜，很好吃。晚饭时间，妈妈准备了很多好吃的菜。我们一边吃一边聊，度过了一个愉快的夜晚。朋友们离开的时候，都说今天玩得很高兴。这是我最难忘的生日！",
+          "pinyin": "Zuó tiān shì wǒ de shēng rì， Wǒ yāo qǐng le yī xiē hǎo péng yǒu lái jiā lǐ kāi shēng rì jù huì。 Xià wǔ sān diǎn， Péng yǒu men lù xù dào le。 Tā men dōu dài lái le lǐ wù， Yǒu shū 、 yǒu qiǎo kè lì 、 hái yǒu yí gè piào liàng de xiāng kuāng。 Wǒ hěn gǎn dòng， Xiè xiè dà jiā。 Wǒ men xiān zài kè tīng liáo tiān。 Dà jiā liáo dé hěn kāi xīn， Shuō le hěn duō yǒu qù de shì qíng。 Rán hòu wǒ men yì qǐ wán yóu xì 、 chàng gē 、 tiào wǔ。 Fáng jiān lǐ chōng mǎn le huān xiào shēng。 Dào le wǎn shàng liù diǎn， Mā mā duān chū le yí gè dà dàn gāo。 Dàn gāo shàng chā zhe shí jiǔ gēn là zhú， Yīn wèi wǒ jīn nián shí jiǔ suì le。 Péng yǒu men wéi zhe wǒ， Yì qǐ chàng shēng rì kuài lè gē。 Wǒ bì shàng yǎn jīng， Xǔ le yí gè yuàn wàng， Rán hòu chuī miè le là zhú。 Dà jiā yì qǐ gǔ zhǎng。 Wǒ men qiè dàn gāo， Měi gè rén dōu fēn dào le yī kuài。 Dàn gāo hěn tián， Hěn hǎo chī。 Wǎn fàn shí jiān， Mā mā zhǔn bèi le hěn duō hǎo chī de cài。 Wǒ men yī biān chī yī biān liáo， Dù guò le yí gè yú kuài de yè wǎn。 Péng yǒu men lí kāi de shí hòu， Dōu shuō jīn tiān wán dé hěn gāo xìng。 Zhè shì wǒ zuì nán wàng de shēng rì！",
+          "translation": "Hôm qua là sinh nhật của tôi, tôi mời một số bạn tốt đến nhà tổ chức tiệc sinh nhật. Chiều 3 giờ, các bạn lần lượt đến. Họ đều mang quà đến, có sách, có socola, còn có một khung ảnh đẹp. Tôi rất cảm động, cảm ơn mọi người. Chúng tôi trước tiên trò chuyện ở phòng khách. Mọi người trò chuyện rất vui, nói nhiều chuyện thú vị. Sau đó chúng tôi cùng chơi game, hát, nhảy. Phòng tràn ngập tiếng cười. Đến 6 giờ tối, mẹ mang ra một cái bánh lớn. Trên bánh cắm 19 cây nến, vì năm nay tôi 19 tuổi. Bạn bè vây quanh tôi, cùng hát bài chúc mừng sinh nhật. Tôi nhắm mắt, ước một điều ước, sau đó thổi tắt nến. Mọi người cùng vỗ tay. Chúng tôi cắt bánh, mỗi người đều nhận được một miếng. Bánh rất ngọt, rất ngon. Giờ ăn tối, mẹ chuẩn bị rất nhiều món ngon. Chúng tôi vừa ăn vừa trò chuyện, trải qua một buổi tối vui vẻ. Khi bạn bè rời đi, đều nói hôm nay chơi rất vui. Đây là sinh nhật khó quên nhất của tôi!"
+        }
+      ]
+    },
+    {
+      "topic": "运动会",
+      "description": "Hội thao",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "上个月，我们学校举办了一年一度的运动会。全校的学生都参加了。运动会有很多项目：跑步、跳远、跳高、接力赛等等。我报名参加了一百米跑步和接力赛。比赛前几天，我每天都去操场练习跑步。老师说要想跑得快，需要多练习。运动会那天，天气很好。操场上人山人海，非常热闹。我先参加了一百米跑步。站在起跑线上，我的心跳得很快。裁判员吹响口哨，我就像箭一样冲了出去。虽然我很努力，但是只得了第三名。下午是接力赛。我和三个同学一组。我们互相鼓励，一定要加油！比赛开始了，我们跑得很快，最后得了第一名！大家都很高兴，拥抱在一起。这次运动会让我明白了团队合作的重要性。虽然很累，但是我觉得很值得！",
+          "pinyin": "Shàng gè yuè， Wǒ men xué xiào jǔ bàn le yī nián yī dù de yùn dòng huì。 Quán xiào de xué shēng dōu cān jiā le。 Yùn dòng huì yǒu hěn duō xiàng mù： Pǎo bù 、 tiào yuǎn 、 tiào gāo 、 jiē lì sài děng děng。 Wǒ bào míng cān jiā le yì bǎi mǐ pǎo bù hé jiē lì sài。 Bǐ sài qián jǐ tiān， Wǒ měi tiān dōu qù cāo chǎng liàn xí pǎo bù。 Lǎo shī shuō yào xiǎng pǎo dé kuài， Xū yào duō liàn xí。 Yùn dòng huì nà tiān， Tiān qì hěn hǎo。 Cāo chǎng shàng rén shān rén hǎi， Fēi cháng rè nào。 Wǒ xiān cān jiā le yì bǎi mǐ pǎo bù。 Zhàn zài qǐ pǎo xiàn shàng， Wǒ de xīn tiào dé hěn kuài。 Cái pàn yuán chuī xiǎng kǒu shào， Wǒ jiù xiàng jiàn yī yàng chōng le chū qù。 Suī rán wǒ hěn nǔ lì， Dàn shì zhǐ dé le dì sān míng。 Xià wǔ shì jiē lì sài。 Wǒ hé sān gè tóng xué yī zǔ。 Wǒ men hù xiāng gǔ lì， Yí dìng yào jiā yóu！ Bǐ sài kāi shǐ le， Wǒ men pǎo dé hěn kuài， Zuì hòu dé le dì yì míng！ Dà jiā dōu hěn gāo xìng， Yōng bào zài yì qǐ。 Zhè cì yùn dòng huì ràng wǒ míng bái le tuán duì hé zuò de zhòng yào xìng。 Suī rán hěn lèi， Dàn shì wǒ jué de hěn zhí de！",
+          "translation": "Tháng trước, trường chúng tôi tổ chức hội thao hàng năm. Toàn bộ học sinh trường đều tham gia. Hội thao có nhiều môn: chạy, nhảy xa, nhảy cao, chạy tiếp sức v.v. Tôi đăng ký tham gia chạy 100 mét và chạy tiếp sức. Trước ngày thi đấu vài ngày, tôi mỗi ngày đều đến sân tập chạy. Thầy nói muốn chạy nhanh, cần luyện tập nhiều. Ngày hội thao, thời tiết rất tốt. Sân vận động người núi người biển, rất náo nhiệt. Tôi trước tiên tham gia chạy 100 mét. Đứng ở vạch xuất phát, tim tôi đập rất nhanh. Trọng tài thổi còi, tôi như mũi tên lao ra. Mặc dù tôi rất cố gắng, nhưng chỉ được giải ba. Chiều là chạy tiếp sức. Tôi và ba bạn học một nhóm. Chúng tôi động viên lẫn nhau, nhất định phải cố lên! Cuộc thi bắt đầu, chúng tôi chạy rất nhanh, cuối cùng được giải nhất! Mọi người đều rất vui, ôm nhau. Hội thao lần này khiến tôi hiểu được tầm quan trọng của hợp tác đội nhóm. Mặc dù rất mệt, nhưng tôi thấy rất đáng!"
+        }
+      ]
+    },
+    {
+      "topic": "第一次打工",
+      "description": "Lần đầu làm thêm",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "暑假的时候，我找了一份兼职工作。这是我第一次打工，所以很兴奋也有点儿紧张。我在一家咖啡店工作。每天早上九点上班，下午五点下班。第一天上班，店长给我介绍了工作内容。我需要学习怎么做咖啡、怎么接待客人、怎么收钱等等。开始的时候，我觉得很难。做咖啡的步骤很多，我总是记不住。有时候客人很多，我会手忙脚乱。但是店长和同事们都很好，他们耐心地教我。慢慢地，我越来越熟练了。我学会了做各种咖啡，也学会了怎么跟客人交流。有些老客人还记得我，会跟我聊天。工作虽然辛苦，但是我学到了很多东西。我明白了赚钱不容易，也更加理解父母了。暑假结束的时候，我拿到了第一份工资。我用这些钱给爸爸妈妈买了礼物。他们很高兴，说我长大了。",
+          "pinyin": "Shǔ jià de shí hòu， Wǒ zhǎo le yī fèn jiān zhí gōng zuò。 Zhè shì wǒ dì yī cì dǎ gōng， Suǒ yǐ hěn xīng fèn yě yǒu diǎn ér jǐn zhāng。 Wǒ zài yī jiā kā fēi diàn gōng zuò。 Měi tiān zǎo shàng jiǔ diǎn shàng bān， Xià wǔ wǔ diǎn xià bān。 Dì yī tiān shàng bān， Diàn zhǎng gěi wǒ jiè shào le gōng zuò nèi róng。 Wǒ xū yào xué xí zěn me zuò kā fēi 、 zěn me jiē dài kè rén 、 zěn me shōu qián děng děng。 Kāi shǐ de shí hòu， Wǒ jué de hěn nán。 Zuò kā fēi de bù zhòu hěn duō， Wǒ zǒng shì jì bú zhù。 Yǒu shí hòu kè rén hěn duō， Wǒ huì shǒu máng jiǎo luàn。 Dàn shì diàn zhǎng hé tóng shì men dōu hěn hǎo， Tā men nài xīn dì jiào wǒ。 Màn màn dì， Wǒ yuè lái yuè shú liàn le。 Wǒ xué huì le zuò gè zhǒng kā fēi， Yě xué huì le zěn me gēn kè rén jiāo liú。 Yǒu xiē lǎo kè rén hái jì de wǒ， Huì gēn wǒ liáo tiān。 Gōng zuò suī rán xīn kǔ， Dàn shì wǒ xué dào le hěn duō dōng xī。 Wǒ míng bái le zhuàn qián bù róng yì， Yě gèng jiā lǐ jiě fù mǔ le。 Shǔ jià jié shù de shí hòu， Wǒ ná dào le dì yī fèn gōng zī。 Wǒ yòng zhè xiē qián gěi bà bà mā mā mǎi le lǐ wù。 Tā men hěn gāo xìng， Shuō wǒ zhǎng dà le。",
+          "translation": "Mùa hè, tôi tìm được một công việc bán thời gian. Đây là lần đầu tiên tôi làm thêm, nên rất phấn khích cũng hơi lo. Tôi làm việc ở một quán cà phê. Mỗi ngày 9 giờ sáng đi làm, 5 giờ chiều tan làm. Ngày đầu đi làm, quản lý giới thiệu cho tôi nội dung công việc. Tôi cần học cách pha cà phê, cách tiếp khách, cách thu tiền v.v. Ban đầu, tôi thấy rất khó. Các bước pha cà phê rất nhiều, tôi luôn nhớ không được. Có lúc khách rất đông, tôi sẽ tay chân lúng túng. Nhưng quản lý và đồng nghiệp đều rất tốt, họ kiên nhẫn dạy tôi. Dần dần, tôi càng ngày càng thành thạo. Tôi học được cách pha nhiều loại cà phê, cũng học được cách giao tiếp với khách. Một số khách quen còn nhớ tôi, sẽ trò chuyện với tôi. Công việc tuy vất vả, nhưng tôi học được nhiều thứ. Tôi hiểu kiếm tiền không dễ, cũng hiểu bố mẹ hơn. Kết thúc mùa hè, tôi nhận được tiền lương đầu tiên. Tôi dùng số tiền này mua quà cho bố mẹ. Họ rất vui, nói tôi đã lớn."
+        }
+      ]
+    },
+    {
+      "topic": "搬家",
+      "description": "Chuyển nhà",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "上个月，我们家搬家了。以前的房子比较旧，而且离爸爸的公司太远。新家在市中心，交通很方便。搬家前一个星期，我们就开始收拾东西。妈妈把所有的衣服、书、碗筷等都装进箱子里。我帮忙整理自己房间的东西。我发现了很多以前的照片和玩具，看着它们，想起了很多美好的回忆。搬家那天，搬家公司来了。工人们很专业，小心地把家具搬上车。我们坐车跟在后面。到了新家，我很兴奋。新房子比旧房子大多了，而且很明亮。我有了自己独立的房间！墙是我最喜欢的绿色。我开始布置房间，把书放在书架上，把海报贴在墙上。妈妈在厨房忙着整理锅碗瓢盆。虽然累，但是大家都很开心。邻居们也很友好，来帮我们搬东西。新环境让我很期待，我想我会喜欢这里的！",
+          "pinyin": "Shàng gè yuè， Wǒ men jiā bān jiā le。 Yǐ qián de fáng zi bǐ jiào jiù， Ér qiě lí bà bà de gōng sī tài yuǎn。 Xīn jiā zài shì zhōng xīn， Jiāo tōng hěn fāng biàn。 Bān jiā qián yí gè xīng qī， Wǒ men jiù kāi shǐ shōu shí dōng xī。 Mā mā bǎ suǒ yǒu de yī fú 、 shū 、 wǎn kuài děng dōu zhuāng jìn xiāng zi lǐ。 Wǒ bāng máng zhěng lǐ zì jǐ fáng jiān de dōng xī。 Wǒ fā xiàn le hěn duō yǐ qián de zhào piān hé wán jù， Kàn zhe tā men， Xiǎng qǐ le hěn duō měi hǎo de huí yì。 Bān jiā nà tiān， Bān jiā gōng sī lái le。 Gōng rén men hěn zhuān yè， Xiǎo xīn dì bǎ jiā jù bān shàng chē。 Wǒ men zuò chē gēn zài hòu miàn。 Dào le xīn jiā， Wǒ hěn xīng fèn。 Xīn fáng zi bǐ jiù fáng zi dà duō le， Ér qiě hěn míng liàng。 Wǒ yǒu le zì jǐ dú lì de fáng jiān！ Qiáng shì wǒ zuì xǐ huān de lǜ sè。 Wǒ kāi shǐ bù zhì fáng jiān， Bǎ shū fàng zài shū jià shàng， Bǎ hǎi bào tiē zài qiáng shàng。 Mā mā zài chú fáng máng zhe zhěng lǐ guō wǎn piáo pén。 Suī rán lèi， Dàn shì dà jiā dōu hěn kāi xīn。 Lín jū men yě hěn yǒu hǎo， Lái bāng wǒ men bān dōng xī。 Xīn huán jìng ràng wǒ hěn qī dài， Wǒ xiǎng wǒ huì xǐ huān zhè lǐ de！",
+          "translation": "Tháng trước, gia đình chúng tôi chuyển nhà. Nhà trước khá cũ, và cách công ty của bố quá xa. Nhà mới ở trung tâm thành phố, giao thông rất tiện. Trước khi chuyển nhà một tuần, chúng tôi đã bắt đầu thu dọn đồ. Mẹ bỏ tất cả quần áo, sách, bát đũa v.v. vào hộp. Tôi giúp thu dọn đồ trong phòng mình. Tôi phát hiện nhiều ảnh và đồ chơi trước đây, nhìn chúng, nhớ lại nhiều kỷ niệm đẹp. Ngày chuyển nhà, công ty chuyển nhà đến. Công nhân rất chuyên nghiệp, cẩn thận chuyển đồ nội thất lên xe. Chúng tôi đi xe theo phía sau. Đến nhà mới, tôi rất phấn khích. Nhà mới lớn hơn nhà cũ nhiều, và rất sáng sủa. Tôi có phòng riêng độc lập! Tường là màu xanh lá tôi thích nhất. Tôi bắt đầu bố trí phòng, đặt sách lên giá, dán poster lên tường. Mẹ ở nhà bếp bận thu xếp nồi chảo bát đĩa. Mặc dù mệt, nhưng mọi người đều rất vui. Hàng xóm cũng rất thân thiện, đến giúp chúng tôi chuyển đồ. Môi trường mới khiến tôi rất mong đợi, tôi nghĩ tôi sẽ thích nơi đây!"
+        }
+      ]
+    },
+    {
+      "topic": "学骑自行车",
+      "description": "Học đi xe đạp",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "小时候，我一直想学骑自行车，但是害怕摔倒。去年暑假，爸爸鼓励我，说一定要学会。他给我买了一辆漂亮的自行车。第一天练习，我很紧张。爸爸在旁边扶着车，我骑得摇摇晃晃的。刚开始的时候，我根本控制不了方向，总是往左右倾斜。爸爸告诉我要保持平衡，眼睛看前方，不要看脚下。我按照他说的做，慢慢地感觉好一点了。但是当爸爸松手的时候，我就摔倒了。膝盖擦破了，很疼。我想放弃，但是爸爸说：失败是成功之母，要坚持！我又爬起来继续练习。经过一个星期的努力，我终于学会了！我可以自己骑着自行车在小区里转来转去。现在我每天都骑自行车上学，既锻炼身体，又环保。学骑自行车让我明白：只要不怕困难，坚持不懈，就一定能成功！",
+          "pinyin": "Xiǎo shí hòu， Wǒ yì zhí xiǎng xué qí zì xíng chē， Dàn shì hài pà shuāi dǎo。 Qù nián shǔ jià， Bà bà gǔ lì wǒ， Shuō yí dìng yào xué huì。 Tā gěi wǒ mǎi le yī liàng piào liàng de zì xíng chē。 Dì yī tiān liàn xí， Wǒ hěn jǐn zhāng。 Bà bà zài páng biān fú zhe chē， Wǒ qí dé yáo yáo huàng huǎng de。 Gāng kāi shǐ de shí hòu， Wǒ gēn běn kòng zhì bù liǎo fāng xiàng， Zǒng shì wǎng zuǒ yòu qīng xié。 Bà bà gào sù wǒ yào bǎo chí píng héng， Yǎn jīng kàn qián fāng， Bú yào kàn jiǎo xià。 Wǒ àn zhào tā shuō de zuò， Màn màn dì gǎn jué hǎo yì diǎn le。 Dàn shì dāng bà bà sōng shǒu de shí hòu， Wǒ jiù shuāi dǎo le。 Xī gài cā pò le， Hěn téng。 Wǒ xiǎng fàng qì， Dàn shì bà bà shuō： Shī bài shì chéng gōng zhī mǔ， Yào jiān chí！ Wǒ yòu pá qǐ lái jì xù liàn xí。 Jīng guò yí gè xīng qī de nǔ lì， Wǒ zhōng yú xué huì le！ Wǒ kě yǐ zì jǐ qí zhe zì xíng chē zài xiǎo qū lǐ zhuàn lái zhuàn qù。 Xiàn zài wǒ měi tiān dōu qí zì xíng chē shàng xué， Jì duàn liàn shēn tǐ， Yòu huán bǎo。 Xué qí zì xíng chē ràng wǒ míng bái： Zhǐ yào bù pà kùn nán， Jiān chí bù xiè， Jiù yí dìng néng chéng gōng！",
+          "translation": "Hồi nhỏ, tôi luôn muốn học đi xe đạp, nhưng sợ ngã. Mùa hè năm ngoái, bố động viên tôi, nói nhất định phải học được. Bố mua cho tôi một chiếc xe đạp đẹp. Ngày đầu luyện tập, tôi rất lo. Bố ở bên cạnh nâng xe, tôi đạp lảo đảo. Lúc mới bắt đầu, tôi hoàn toàn không kiểm soát được hướng, luôn nghiêng trái phải. Bố nói với tôi phải giữ thăng bằng, mắt nhìn phía trước, không nhìn chân. Tôi làm theo như bố nói, dần dần cảm thấy tốt hơn một chút. Nhưng khi bố buông tay, tôi liền ngã. Đầu gối trầy, rất đau. Tôi muốn bỏ cuộc, nhưng bố nói: thất bại là mẹ thành công, phải kiên trì! Tôi lại đứng dậy tiếp tục luyện tập. Sau một tuần cố gắng, cuối cùng tôi học được! Tôi có thể tự mình đạp xe đạp đi lại trong khu. Bây giờ tôi mỗi ngày đều đạp xe đạp đi học, vừa rèn luyện thân thể, lại thân thiện môi trường. Học đi xe đạp khiến tôi hiểu: chỉ cần không sợ khó khăn, kiên trì không ngừng, nhất định sẽ thành công!"
+        }
+      ]
+    },
+    {
+      "topic": "家庭介绍",
+      "description": "Giới thiệu gia đình",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "大家好！我姓李，叫李明。今天我给大家介绍一下我的家庭。我家有六口人。我的爷爷奶奶都已经退休了。我爸爸是医生，我妈妈是老师。我还有一个哥哥和一个弟弟。哥哥今年二十五岁，已经结婚了。他的妻子很漂亮，也很善良。弟弟今年十五岁，还在上中学。我们家还有一个姐姐，她嫁给了一个很好的丈夫。他们有两个可爱的孩子，一个男孩和一个女孩。男人和女人在我们家都很平等，大家互相尊重。每个周末，我们全家人都会聚在一起吃饭。奶奶会做很多好吃的菜，有羊肉、牛肉，还有各种蔬菜。我特别喜欢喝牛奶。吃完饭，我们一起聊天，非常开心。这就是我温暖的大家庭！",
+          "pinyin": "Dà jiā hǎo！ Wǒ xìng lǐ， Jiào lǐ míng。 Jīn tiān wǒ gěi dà jiā jiè shào yī xià wǒ de jiā tíng。 Wǒ jiā yǒu liù kǒu rén。 Wǒ de yé yé nǎi nǎi dōu yǐ jīng tuì xiū le。 Wǒ bà bà shì yī shēng， Wǒ mā mā shì lǎo shī。 Wǒ hái yǒu yí gè gē gē hé yí gè dì di。 Gē gē jīn nián èr shí wǔ suì， Yǐ jīng jié hūn le。 Tā de qī zǐ hěn piào liàng， Yě hěn shàn liáng。 Dì di jīn nián shí wǔ suì， Hái zài shàng zhōng xué。 Wǒ men jiā hái yǒu yí gè jiě jiě， Tā jià gěi le yí gè hěn hǎo de zhàng fū。 Tā men yǒu liǎng gè kě ài de hái zi， Yí gè nán hái hé yí gè nǚ hái。 Nán rén hé nǚ rén zài wǒ men jiā dōu hěn píng děng， Dà jiā hù xiāng zūn zhòng。 Měi gè zhōu mò， Wǒ men quán jiā rén dū huì jù zài yì qǐ chī fàn。 Nǎi nǎi huì zuò hěn duō hǎo chī de cài， Yǒu yáng ròu 、 niú ròu， Hái yǒu gè zhǒng shū cài。 Wǒ tè bié xǐ huān hē niú nǎi。 Chī wán fàn， Wǒ men yì qǐ liáo tiān， Fēi cháng kāi xīn。 Zhè jiù shì wǒ wēn nuǎn de dà jiā tíng！",
+          "translation": "Xin chào mọi người! Tôi họ Lý, tên là Lý Minh. Hôm nay tôi giới thiệu với mọi người về gia đình của tôi. Nhà tôi có sáu người. Ông bà của tôi đều đã nghỉ hưu. Bố tôi là bác sĩ, mẹ tôi là giáo viên. Tôi còn có một anh trai và một em trai. Anh trai năm nay 25 tuổi, đã kết hôn. Vợ của anh ấy rất đẹp, cũng rất hiền lành. Em trai năm nay 15 tuổi, vẫn đang học trung học. Nhà chúng tôi còn có một chị gái, chị ấy lấy một người chồng rất tốt. Họ có hai đứa con đáng yêu, một bé trai và một bé gái. Nam giới và nữ giới trong gia đình chúng tôi đều rất bình đẳng, mọi người tôn trọng lẫn nhau. Mỗi cuối tuần, cả gia đình chúng tôi đều tụ họp lại cùng ăn cơm. Bà sẽ làm nhiều món ngon, có thịt cừu, thịt bò, còn có đủ loại rau. Tôi đặc biệt thích uống sữa. Ăn xong cơm, chúng tôi cùng trò chuyện, rất vui. Đây là đại gia đình ấm áp của tôi!"
+        }
+      ]
+    },
+    {
+      "topic": "在菜市场",
+      "description": "Ở chợ",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "今天早上我陪妈妈去菜市场买菜。菜市场离家不远，从我家走过去只要五分钟。市场里有很多摊位，卖各种各样的东西。我们先去水果摊。老板很热情，欢迎我们来看看。妈妈问：西瓜多少钱一公斤？老板说：三元一公斤，很甜的。妈妈又问：能不能便宜一点儿？老板笑着说：好吧，给您便宜五毛钱。我们买了一个大西瓜。然后我们去买肉。妈妈买了一些羊肉和牛肉。她说今天要做羊肉汤和牛肉面。我们还买了一些蔬菜和牛奶。付钱的时候，老板娘问：一共多少元？妈妈数了数，说：一共八十五元。您贵姓？老板娘说：我姓王。以后常来啊！妈妈说谢谢，然后我们就回家了。路上妈妈告诉我，买东西要货比三家，这样才能买到又好又便宜的东西。",
+          "pinyin": "Jīn tiān zǎo shàng wǒ péi mā mā qù cài shì chǎng mǎi cài。 Cài shì chǎng lí jiā bù yuǎn， Cóng wǒ jiā zǒu guò qù zhǐ yào wǔ fēn zhōng。 Shì chǎng lǐ yǒu hěn duō tān wèi， Mài gè zhǒng gè yàng de dōng xī。 Wǒ men xiān qù shuǐ guǒ tān。 Lǎo bǎn hěn rè qíng， Huān yíng wǒ men lái kàn kàn。 Mā mā wèn： Xī guā duō shǎo qián yī gōng jīn？ Lǎo bǎn shuō： Sān yuán yī gōng jīn， Hěn tián de。 Mā mā yòu wèn： Néng bù néng pián yi yì diǎn ér？ Lǎo bǎn xiào zhe shuō： Hǎo ba， Gěi nín pián yi wǔ máo qián。 Wǒ men mǎi le yí gè dà xī guā。 Rán hòu wǒ men qù mǎi ròu。 Mā mā mǎi le yī xiē yáng ròu hé niú ròu。 Tā shuō jīn tiān yào zuò yáng ròu tāng hé niú ròu miàn。 Wǒ men hái mǎi le yī xiē shū cài hé niú nǎi。 Fù qián de shí hòu， Lǎo bǎn niáng wèn： Yī gòng duō shǎo yuán？ Mā mā shù le shù， Shuō： Yī gòng bā shí wǔ yuán。 Nín guì xìng？ Lǎo bǎn niáng shuō： Wǒ xìng wáng。 Yǐ hòu cháng lái a！ Mā mā shuō xiè xiè， Rán hòu wǒ men jiù huí jiā le。 Lù shàng mā mā gào sù wǒ， Mǎi dōng xī yào huò bǐ sān jiā， Zhè yàng cái néng mǎi dào yòu hǎo yòu pián yi de dōng xī。",
+          "translation": "Sáng nay tôi đi cùng mẹ đến chợ mua rau. Chợ cách nhà không xa, từ nhà tôi đi qua chỉ mất 5 phút. Trong chợ có nhiều quầy hàng, bán đủ loại thứ. Chúng tôi trước tiên đến quầy trái cây. Chủ rất nhiệt tình, chào đón chúng tôi đến xem. Mẹ hỏi: dưa hấu bao nhiêu tiền một kg? Chủ nói: 3 tệ một kg, rất ngọt. Mẹ lại hỏi: có thể rẻ hơn một chút không? Chủ cười nói: được thôi, giảm cho chị 5 mao. Chúng tôi mua một quả dưa hấu lớn. Sau đó chúng tôi đi mua thịt. Mẹ mua một ít thịt cừu và thịt bò. Mẹ nói hôm nay sẽ nấu canh thịt cừu và mì thịt bò. Chúng tôi còn mua một ít rau và sữa. Khi trả tiền, bà chủ hỏi: tổng cộng bao nhiêu tệ? Mẹ đếm, nói: tổng cộng 85 tệ. Chị quý họ gì? Bà chủ nói: tôi họ Vương. Sau này thường đến nhé! Mẹ nói cảm ơn, sau đó chúng tôi về nhà. Trên đường mẹ nói với tôi, mua đồ phải so sánh nhiều chỗ, như vậy mới mua được đồ vừa tốt vừa rẻ."
+        }
+      ]
+    },
+    {
+      "topic": "问路",
+      "description": "Hỏi đường",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "昨天我要去机场接朋友，但是我不知道怎么走。我看见一位先生，就走过去问他。我说：您好，请问机场怎么走？他很友好地回答：从这里往右边走，然后坐地铁二号线就可以到。我问：大概要多长时间？他说：可能要四十分钟左右吧。您是第一次去机场吗？我说是的。他说：那我送您去地铁站吧，正在顺路。我说太感谢了！路上我们聊了很多。我问他为什么对这里这么熟悉。他说他在附近工作已经十年了。我们还聊到了天气。他说：今天是晴天，但是明天可能会下雨或者下雪，天气预报说会变阴天。到了地铁站，他告诉我在哪里买票，然后说：希望您的朋友旅途愉快！我说谢谢，再见！真是一位热心的好人！",
+          "pinyin": "Zuó tiān wǒ yào qù jī chǎng jiē péng yǒu， Dàn shì wǒ bù zhī dào zěn me zǒu。 Wǒ kàn jiàn yī wèi xiān shēng， Jiù zǒu guò qù wèn tā。 Wǒ shuō： Nín hǎo， Qǐng wèn jī chǎng zěn me zǒu？ Tā hěn yǒu hǎo dì huí dá： Cóng zhè lǐ wǎng yòu biān zǒu， Rán hòu zuò dì tiě èr hào xiàn jiù kě yǐ dào。 Wǒ wèn： Dà gài yào duō zhǎng shí jiān？ Tā shuō： Kě néng yào sì shí fēn zhōng zuǒ yòu ba。 Nín shì dì yī cì qù jī chǎng ma？ Wǒ shuō shì de。 Tā shuō： Nà wǒ sòng nín qù dì tiě zhàn ba， Zhèng zài shùn lù。 Wǒ shuō tài gǎn xiè le！ Lù shàng wǒ men liáo le hěn duō。 Wǒ wèn tā wèi shén me duì zhè lǐ zhè me shú xī。 Tā shuō tā zài fù jìn gōng zuò yǐ jīng shí nián le。 Wǒ men hái liáo dào le tiān qì。 Tā shuō： Jīn tiān shì qíng tiān， Dàn shì míng tiān kě néng huì xià yǔ huò zhě xià xuě， Tiān qì yù bào shuō huì biàn yīn tiān。 Dào le dì tiě zhàn， Tā gào sù wǒ zài nǎ lǐ mǎi piào， Rán hòu shuō： Xī wàng nín de péng yǒu lǚ tú yú kuài！ Wǒ shuō xiè xiè， Zài jiàn！ Zhēn shì yī wèi rè xīn de hǎo rén！",
+          "translation": "Hôm qua tôi phải đi sân bay đón bạn, nhưng tôi không biết đi thế nào. Tôi thấy một ông, liền đi qua hỏi ông ấy. Tôi nói: Xin chào, cho hỏi đi sân bay thế nào? Ông ấy rất thân thiện trả lời: Từ đây đi bên phải, sau đó đi tàu điện ngầm tuyến 2 là có thể đến. Tôi hỏi: khoảng mất bao lâu? Ông ấy nói: có thể khoảng 40 phút. Đây là lần đầu anh đi sân bay à? Tôi nói đúng vậy. Ông ấy nói: vậy tôi đưa anh đến ga tàu điện ngầm, đang đúng đường. Tôi nói cảm ơn quá! Trên đường chúng tôi nói chuyện nhiều. Tôi hỏi ông tại sao lại quen đây thế. Ông nói ông làm việc gần đây đã mười năm rồi. Chúng tôi còn nói về thời tiết. Ông nói: hôm nay trời nắng, nhưng ngày mai có thể sẽ mưa hoặc tuyết, dự báo thời tiết nói sẽ chuyển âm u. Đến ga tàu điện ngầm, ông ấy nói cho tôi mua vé ở đâu, sau đó nói: hi vọng bạn của anh có chuyến đi vui vẻ! Tôi nói cảm ơn, tạm biệt! Thật là một người tốt bụng nhiệt tình!"
+        }
+      ]
+    },
+    {
+      "topic": "买礼物",
+      "description": "Mua quà",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "下个星期三是我妈妈的生日，我想给她买一份礼物。我不知道买什么好，就打电话问姐姐。姐姐说妈妈最近总是说她的手表坏了，不如买一块新手表吧。我觉得这是个好主意。周末我去了商场。我看了很多手表，有各种颜色的。有红色的、蓝色的、黑色的、白色的。我想妈妈可能喜欢白色或者粉红色的。售货员问我：您要买什么样的手表？我说：我想买一块白色的，价格不要太贵。她给我推荐了几款。我选了一块很漂亮的，价格是八百元。虽然有点儿贵，但是质量很好。我希望妈妈会喜欢。生日那天，我把礼物送给妈妈。妈妈很高兴，说：谢谢你，孩子！这正是我想要的。为什么你这么了解妈妈呢？我笑着说：因为我爱您啊！看到妈妈开心的样子，我也很开心。",
+          "pinyin": "Xià gè xīng qī sān shì wǒ mā mā de shēng rì， Wǒ xiǎng gěi tā mǎi yī fèn lǐ wù。 Wǒ bù zhī dào mǎi shén me hǎo， Jiù dǎ diàn huà wèn jiě jiě。 Jiě jiě shuō mā mā zuì jìn zǒng shì shuō tā de shǒu biǎo huài le， Bù rú mǎi yī kuài xīn shǒu biǎo ba。 Wǒ jué de zhè shì gè hǎo zhǔ yì。 Zhōu mò wǒ qù le shāng chǎng。 Wǒ kàn le hěn duō shǒu biǎo， Yǒu gè zhǒng yán sè de。 Yǒu hóng sè de 、 lán sè de 、 hēi sè de 、 bái sè de。 Wǒ xiǎng mā mā kě néng xǐ huān bái sè huò zhě fěn hóng sè de。 Shòu huò yuán wèn wǒ： Nín yào mǎi shén me yàng de shǒu biǎo？ Wǒ shuō： Wǒ xiǎng mǎi yī kuài bái sè de， Jià gé bú yào tài guì。 Tā gěi wǒ tuī jiàn le jǐ kuǎn。 Wǒ xuǎn le yī kuài hěn piào liàng de， Jià gé shì bā bǎi yuán。 Suī rán yǒu diǎn ér guì， Dàn shì zhì liàng hěn hǎo。 Wǒ xī wàng mā mā huì xǐ huān。 Shēng rì nà tiān， Wǒ bǎ lǐ wù sòng gěi mā mā。 Mā mā hěn gāo xìng， Shuō： Xiè xiè nǐ， Hái zi！ Zhè zhèng shì wǒ xiǎng yào de。 Wèi shén me nǐ zhè me liǎo jiě mā mā ne？ Wǒ xiào zhe shuō： Yīn wèi wǒ ài nín a！ Kàn dào mā mā kāi xīn de yàng zi， Wǒ yě hěn kāi xīn。",
+          "translation": "Tuần sau thứ Tư là sinh nhật mẹ tôi, tôi muốn mua một món quà cho mẹ. Tôi không biết mua gì, liền gọi điện hỏi chị gái. Chị nói mẹ gần đây luôn nói đồng hồ của mẹ hỏng rồi, không bằng mua một chiếc đồng hồ mới. Tôi thấy đây là ý kiến hay. Cuối tuần tôi đi trung tâm thương mại. Tôi xem nhiều đồng hồ, có nhiều màu sắc. Có đỏ, xanh dương, đen, trắng. Tôi nghĩ mẹ có thể thích trắng hoặc hồng. Nhân viên bán hàng hỏi tôi: Anh muốn mua đồng hồ như thế nào? Tôi nói: Tôi muốn mua chiếc màu trắng, giá không quá đắt. Cô ấy giới thiệu cho tôi vài mẫu. Tôi chọn một chiếc rất đẹp, giá 800 tệ. Mặc dù hơi đắt, nhưng chất lượng rất tốt. Tôi hi vọng mẹ sẽ thích. Ngày sinh nhật, tôi tặng quà cho mẹ. Mẹ rất vui, nói: Cảm ơn con! Đây chính là điều mẹ muốn. Tại sao con hiểu mẹ thế? Tôi cười nói: Vì con yêu mẹ! Nhìn mẹ vui, tôi cũng rất vui."
+        }
+      ]
+    },
+    {
+      "topic": "周末活动",
+      "description": "Hoạt động cuối tuần",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "这个周末的天气真好，是晴天。我和朋友们决定去公园玩。我们早上八点在公园门口集合。大家都很准时，一个都没有迟到。进了公园，我们先去划船。湖面上已经有很多船了。我们租了一条船，在湖上划了一个小时。从船上可以看到很美的风景。中午我们在公园的草地上野餐。大家都带了食物。我带了三明治和水果，还有几瓶牛奶。朋友小张带了西瓜，又大又甜。我们一边吃一边聊天，非常开心。下午我们去游泳池游泳。虽然水有点儿凉，但是游泳很舒服。我们在水里玩了很久。游完泳，我们都累了。我们坐在树荫下休息。这时候天气开始变阴了，可能要下雨了。我们赶紧收拾东西准备回家。虽然有点儿累，但是今天玩得真开心！我们约好下次还要一起出来玩。",
+          "pinyin": "Zhè ge zhōu mò de tiān qì zhēn hǎo， Shì qíng tiān。 Wǒ hé péng yǒu men jué dìng qù gōng yuán wán。 Wǒ men zǎo shàng bā diǎn zài gōng yuán mén kǒu jí hé。 Dà jiā dōu hěn zhǔn shí， Yí gè dōu méi yǒu chí dào。 Jìn le gōng yuán， Wǒ men xiān qù huá chuán。 Hú miàn shàng yǐ jīng yǒu hěn duō chuán le。 Wǒ men zū le yī tiáo chuán， Zài hú shàng huà le yí gè xiǎo shí。 Cóng chuán shàng kě yǐ kàn dào hěn měi de fēng jǐng。 Zhōng wǔ wǒ men zài gōng yuán de cǎo dì shàng yě cān。 Dà jiā dōu dài le shí wù。 Wǒ dài le sān míng zhì hé shuǐ guǒ， Hái yǒu jǐ píng niú nǎi。 Péng yǒu xiǎo zhāng dài le xī guā， Yòu dà yòu tián。 Wǒ men yī biān chī yī biān liáo tiān， Fēi cháng kāi xīn。 Xià wǔ wǒ men qù yóu yǒng chí yóu yǒng。 Suī rán shuǐ yǒu diǎn ér liáng， Dàn shì yóu yǒng hěn shū fú。 Wǒ men zài shuǐ lǐ wán le hěn jiǔ。 Yóu wán yǒng， Wǒ men dōu lèi le。 Wǒ men zuò zài shù yīn xià xiū xī。 Zhè shí hòu tiān qì kāi shǐ biàn yīn le， Kě néng yào xià yǔ le。 Wǒ men gǎn jǐn shōu shí dōng xī zhǔn bèi huí jiā。 Suī rán yǒu diǎn ér lèi， Dàn shì jīn tiān wán dé zhēn kāi xīn！ Wǒ men yuē hǎo xià cì hái yào yì qǐ chū lái wán。",
+          "translation": "Cuối tuần này thời tiết thật tốt, trời nắng. Tôi và bạn bè quyết định đi công viên chơi. Chúng tôi 8 giờ sáng tập trung ở cổng công viên. Mọi người đều rất đúng giờ, không ai muộn. Vào công viên, chúng tôi trước tiên đi chèo thuyền. Trên mặt hồ đã có nhiều thuyền. Chúng tôi thuê một chiếc thuyền, chèo trên hồ một tiếng. Từ thuyền có thể nhìn thấy phong cảnh rất đẹp. Trưa chúng tôi dã ngoại trên bãi cỏ công viên. Mọi người đều mang đồ ăn. Tôi mang sandwich và trái cây, còn có vài chai sữa. Bạn Tiểu Trương mang dưa hấu, to và ngọt. Chúng tôi vừa ăn vừa trò chuyện, rất vui. Chiều chúng tôi đi hồ bơi bơi lội. Mặc dù nước hơi lạnh, nhưng bơi rất thoải mái. Chúng tôi chơi trong nước rất lâu. Bơi xong, chúng tôi đều mệt. Chúng tôi ngồi dưới bóng cây nghỉ. Lúc này thời tiết bắt đầu chuyển âm, có thể sắp mưa. Chúng tôi vội thu dọn đồ chuẩn bị về nhà. Mặc dù hơi mệt, nhưng hôm nay chơi thật vui! Chúng tôi hẹn lần sau còn cùng ra ngoài chơi."
+        }
+      ]
+    },
+    {
+      "topic": "假期旅游",
+      "description": "Du lịch kỳ nghỉ",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "去年夏天，我和家人去云南旅游。这是我第一次去那么远的地方旅游。我们坐飞机去的，飞机票很贵，一个人要两千多元。虽然贵，但是很值得。云南的风景真美啊！我们去了很多地方：大理、丽江、香格里拉。每个地方都有不同的特色。在大理，我们看到了洱海，湖水很清澈。在丽江，我们参观了古城，那里的建筑很有特色。但是在旅游的第三天，我弟弟突然生病了。他发烧，而且肚子也疼。我们很担心，赶紧带他去医院。医生检查以后说，可能是吃坏了东西，需要休息几天。我们只好在酒店休息了两天。好在弟弟很快就好了，我们又可以继续旅游了。虽然中间出了点儿小问题，但是这次旅游还是很愉快的。我拍了上千张照片，记录了这次美好的旅行。回家以后，我常常看这些照片，回忆那段快乐的时光。",
+          "pinyin": "Qù nián xià tiān， Wǒ hé jiā rén qù yún nán lǚ yóu。 Zhè shì wǒ dì yī cì qù nà me yuǎn de dì fāng lǚ yóu。 Wǒ men zuò fēi jī qù de， Fēi jī piào hěn guì， Yí gè rén yào liǎng qiān duō yuán。 Suī rán guì， Dàn shì hěn zhí de。 Yún nán de fēng jǐng zhēn měi a！ Wǒ men qù le hěn duō dì fāng： Dà lǐ 、 lì jiāng 、 xiāng gé lǐ lā。 Měi gè dì fāng dōu yǒu bù tóng de tè sè。 Zài dà lǐ， Wǒ men kàn dào le ěr hǎi， Hú shuǐ hěn qīng chè。 Zài lì jiāng， Wǒ men cān guān le gǔ chéng， Nà lǐ de jiàn zhù hěn yǒu tè sè。 Dàn shì zài lǚ yóu de dì sān tiān， Wǒ dì di tū rán shēng bìng le。 Tā fā shāo， Ér qiě dǔ zi yě téng。 Wǒ men hěn dān xīn， Gǎn jǐn dài tā qù yī yuàn。 Yī shēng jiǎn chá yǐ hòu shuō， Kě néng shì chī huài le dōng xī， Xū yào xiū xī jǐ tiān。 Wǒ men zhǐ hǎo zài jiǔ diàn xiū xī le liǎng tiān。 Hǎo zài dì di hěn kuài jiù hǎo le， Wǒ men yòu kě yǐ jì xù lǚ yóu le。 Suī rán zhōng jiān chū le diǎn ér xiǎo wèn tí， Dàn shì zhè cì lǚ yóu hái shì hěn yú kuài de。 Wǒ pāi le shàng qiān zhāng zhào piān， Jì lù le zhè cì měi hǎo de lǚ xíng。 Huí jiā yǐ hòu， Wǒ cháng cháng kàn zhè xiē zhào piān， Huí yì nà duàn kuài lè de shí guāng。",
+          "translation": "Mùa hè năm ngoái, tôi và gia đình đi du lịch Vân Nam. Đây là lần đầu tiên tôi đi du lịch nơi xa như vậy. Chúng tôi đi máy bay, vé máy bay rất đắt, một người hơn 2000 tệ. Mặc dù đắt, nhưng rất đáng. Phong cảnh Vân Nam thật đẹp! Chúng tôi đi nhiều nơi: Đại Lý, Lệ Giang, Shangri-La. Mỗi nơi đều có đặc sắc khác nhau. Ở Đại Lý, chúng tôi thấy hồ Nhĩ Hải, nước hồ rất trong. Ở Lệ Giang, chúng tôi tham quan cổ trấn, kiến trúc ở đó rất có đặc sắc. Nhưng ngày thứ ba du lịch, em trai tôi đột nhiên bị ốm. Em ấy sốt, và bụng cũng đau. Chúng tôi rất lo, vội đưa em ấy đi bệnh viện. Bác sĩ khám xong nói, có thể ăn hỏng bụng, cần nghỉ mấy ngày. Chúng tôi chỉ còn cách nghỉ ở khách sạn hai ngày. May mà em trai nhanh chóng khỏe lại, chúng tôi lại có thể tiếp tục du lịch. Mặc dù giữa chừng có chút vấn đề nhỏ, nhưng chuyến du lịch này vẫn rất vui vẻ. Tôi chụp trên nghìn tấm ảnh, ghi lại chuyến du lịch đẹp này. Về nhà sau, tôi thường xem những tấm ảnh này, nhớ lại khoảng thời gian vui vẻ đó."
+        }
+      ]
+    }
+  ]
+}
