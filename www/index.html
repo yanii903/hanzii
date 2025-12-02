@@ -614,9 +614,14 @@
           <h5>
             <i class="fas fa-language"></i> Dịch nhanh
           </h5>
-          <button class="translator-close" onclick="closeTranslator()">
-            <i class="fas fa-times"></i>
-          </button>
+          <div class="header-actions">
+            <span id="translatorStatus" class="status-icon online" title="Trực tuyến">
+              <i class="fas fa-wifi"></i>
+            </span>
+            <button class="translator-close" onclick="closeTranslator()">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
         </div>
         <div class="translator-body">
           <div class="translator-direction">
@@ -666,10 +671,8 @@
               <i class="fas fa-times"></i>
             </button>
           </div>
-          <div class="translator-status">
-            <span id="translatorStatus" class="status-indicator">
-              <i class="fas fa-wifi"></i> Sẵn sàng
-            </span>
+          <div class="translation-indicator">
+            <i class="fas fa-exchange-alt"></i>
           </div>
           <div class="translator-output-wrapper">
             <div id="translatorOutput" class="translator-output empty"></div>
