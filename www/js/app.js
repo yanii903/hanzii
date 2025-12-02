@@ -1158,6 +1158,903 @@ document.getElementById('applyReadingSettings')?.addEventListener('click', funct
 });
 
 // ===================================
+// TRANSLATOR POPUP
+// ===================================
+
+let translatorDirection = 'zh-vi'; // 'zh-vi' or 'vi-zh'
+let translatorCache = {};
+let translationTimeout;
+let isOnline = navigator.onLine;
+let dictionaryDataLoaded = false;
+let translatorChineseType = 'simplified'; // 'simplified' or 'traditional'
+let translatorDictionaryData = []; // Separate dictionary for translator
+
+// Common Traditional Chinese characters (not in Simplified)
+const traditionalChars = '繁體臺灣無還會對戰請問讓說與與聽講開關還對給給點還總與與與給與與與與與與';
+// Common Simplified Chinese characters (not in Traditional)
+const simplifiedChars = '简体台湾无还会对战请问让说与与听讲开关还对给给点还总与与与给与与与与与与';
+
+// Detect if text contains Traditional or Simplified Chinese
+function detectChineseType(text) {
+    let traditionalCount = 0;
+    let simplifiedCount = 0;
+    
+    for (const char of text) {
+        if (traditionalChars.includes(char)) traditionalCount++;
+        if (simplifiedChars.includes(char)) simplifiedCount++;
+    }
+    
+    if (traditionalCount > simplifiedCount && traditionalCount > 0) {
+        return 'traditional';
+    } else if (simplifiedCount > traditionalCount && simplifiedCount > 0) {
+        return 'simplified';
+    }
+    return null; // Cannot determine
+}
+
+// Initialize translator on page load
+function initTranslator() {
+    const toggleBtn = document.getElementById('translatorToggle');
+    const translatorInput = document.getElementById('translatorInput');
+    
+    // Toggle popup
+    toggleBtn?.addEventListener('click', function() {
+        const popup = document.getElementById('translatorPopup');
+        popup.classList.remove('collapsed');
+        translatorInput?.focus();
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.lang-selector')) {
+            closeAllDropdowns();
+        }
+    });
+    
+    // Initialize UI to match default state
+    updateLanguageIndicators();
+    updateDropdownCheckmarks();
+    
+    // Monitor online/offline status
+    window.addEventListener('online', () => {
+        isOnline = true;
+        updateTranslatorStatus('online');
+        console.log('Network status: ONLINE');
+    });
+    
+    window.addEventListener('offline', () => {
+        isOnline = false;
+        updateTranslatorStatus('offline');
+        console.log('Network status: OFFLINE');
+    });
+    
+    // Check initial online status
+    isOnline = navigator.onLine;
+    updateTranslatorStatus(isOnline ? 'online' : 'offline');
+    console.log('Initial network status:', isOnline ? 'ONLINE' : 'OFFLINE');
+    
+    // Auto-translate on input with debounce
+    translatorInput?.addEventListener('input', function() {
+        const value = this.value.trim();
+        
+        // Show/hide clear button
+        const clearBtn = document.querySelector('.clear-input-btn');
+        if (clearBtn) {
+            clearBtn.style.display = value ? 'flex' : 'none';
+        }
+        
+        // Clear previous timeout
+        clearTimeout(translationTimeout);
+        
+        if (!value) {
+            resetTranslatorOutput();
+            return;
+        }
+        
+        // Auto-detect and translate with 500ms debounce
+        translationTimeout = setTimeout(() => {
+            autoTranslate(value);
+        }, 500);
+    });
+    
+    // Preload dictionary data for offline use
+    preloadDictionaryData();
+    loadTranslatorDictionary();
+}
+
+function updateTranslatorStatus(status) {
+    const statusEl = document.getElementById('translatorStatus');
+    if (!statusEl) return;
+    
+    if (status === 'online') {
+        statusEl.className = 'status-indicator';
+        statusEl.innerHTML = '<i class="fas fa-wifi"></i> Sẵn sàng';
+    } else if (status === 'offline') {
+        statusEl.className = 'status-indicator offline';
+        statusEl.innerHTML = '<i class="fas fa-wifi-slash"></i> Offline - Dùng từ điển';
+    } else if (status === 'translating') {
+        statusEl.className = 'status-indicator translating';
+        statusEl.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang dịch...';
+    }
+}
+
+async function autoTranslate(text) {
+    if (!text || !text.trim()) {
+        resetTranslatorOutput();
+        return;
+    }
+    
+    // Auto-detect language
+    const isChinese = /[\u4e00-\u9fff]/.test(text);
+    
+    // Update direction if needed
+    if (isChinese && translatorDirection === 'vi-zh') {
+        translatorDirection = 'zh-vi';
+        updateLanguageIndicators();
+    } else if (!isChinese && translatorDirection === 'zh-vi') {
+        translatorDirection = 'vi-zh';
+        updateLanguageIndicators();
+    }
+    
+    // Check cache first
+    const cacheKey = `${translatorDirection}:${translatorChineseType}:${text}`;
+    if (translatorCache[cacheKey]) {
+        displayTranslation(translatorCache[cacheKey]);
+        // Update status based on current network
+        updateTranslatorStatus(isOnline ? 'online' : 'offline');
+        return;
+    }
+    
+    // Show translating status
+    updateTranslatorStatus('translating');
+    const outputEl = document.getElementById('translatorOutput');
+    outputEl.className = 'translator-output translating';
+    outputEl.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang dịch...';
+    
+    let translation = null;
+    let usedOnline = false;
+    
+    console.log('Starting translation. Online status:', isOnline);
+    console.log('Direction:', translatorDirection, 'Type:', translatorChineseType);
+    console.log('Input text:', text);
+    
+    // For Vietnamese to Chinese, ALWAYS try online first (offline won't work well)
+    if (translatorDirection === 'vi-zh') {
+        if (isOnline) {
+            console.log('Attempting online translation for Vietnamese→Chinese...');
+            translation = await translateOnline(text, translatorDirection);
+            
+            if (translation && translation.trim() && !/[\uFFFD]/.test(translation)) {
+                console.log('Online translation successful:', translation);
+                usedOnline = true;
+            } else {
+                console.log('Online translation failed for Vietnamese→Chinese');
+                translation = 'Cần kết nối internet để dịch Việt→Trung chính xác. Từ điển offline không hỗ trợ tốt.';
+                usedOnline = false;
+            }
+        } else {
+            console.log('Device is offline, Vietnamese→Chinese will be very limited');
+            translation = 'Cần kết nối internet để dịch Việt→Trung. Vui lòng kiểm tra kết nối.';
+            usedOnline = false;
+        }
+    } else {
+        // For Chinese to Vietnamese, try online first, fallback to offline
+        if (isOnline) {
+            console.log('Attempting online translation for Chinese→Vietnamese...');
+            translation = await translateOnline(text, translatorDirection);
+            
+            if (translation && translation.trim() && !/[\uFFFD]/.test(translation)) {
+                console.log('Online translation successful:', translation);
+                usedOnline = true;
+            } else {
+                console.log('Online translation failed, trying offline...');
+                translation = null;
+            }
+        } else {
+            console.log('Device is offline, using dictionary for Chinese→Vietnamese...');
+        }
+        
+        // Fallback to offline for Chinese→Vietnamese only
+        if (!translation || !usedOnline) {
+            console.log('Using offline translation...');
+            const offlineTranslation = await translateOffline(text, translatorDirection);
+            if (offlineTranslation && offlineTranslation.trim()) {
+                translation = offlineTranslation;
+                usedOnline = false;
+            }
+        }
+    }
+    
+    // Display result
+    if (translation && translation.trim()) {
+        translatorCache[cacheKey] = translation;
+        displayTranslation(translation);
+        console.log('Translation complete. Used:', usedOnline ? 'ONLINE' : 'OFFLINE');
+    } else {
+        displayTranslation('Không thể dịch văn bản này.');
+        console.log('Translation failed completely');
+    }
+    
+    // Update status to reflect actual network state
+    updateTranslatorStatus(usedOnline ? 'online' : 'offline');
+}
+
+async function translateOnline(text, direction) {
+    try {
+        // Simple translation using Google Translate (unofficial free method)
+        let sourceLang, targetLang;
+        if (direction === 'zh-vi') {
+            sourceLang = translatorChineseType === 'simplified' ? 'zh-CN' : 'zh-TW';
+            targetLang = 'vi';
+        } else {
+            sourceLang = 'vi';
+            targetLang = translatorChineseType === 'simplified' ? 'zh-CN' : 'zh-TW';
+        }
+        
+        // Use Google Translate unofficial API via translate.googleapis.com
+        // This endpoint doesn't require API key and works from browser
+        const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLang}&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`;
+        
+        console.log('Google Translate URL:', url);
+        
+        const response = await fetch(url);
+        
+        console.log('API Response status:', response.status);
+        
+        if (!response.ok) throw new Error('Translation API failed');
+        
+        const data = await response.json();
+        console.log('Google Translate Response:', data);
+        
+        // Parse Google Translate response format
+        // Response format: [[[translated_text, original_text, ...]]]
+        if (data && data[0] && Array.isArray(data[0])) {
+            let translation = '';
+            for (const segment of data[0]) {
+                if (segment && segment[0]) {
+                    translation += segment[0];
+                }
+            }
+            
+            if (translation.trim()) {
+                console.log('Translation successful:', translation);
+                return translation.trim();
+            }
+        }
+        
+        console.log('No valid translation in response');
+        return null;
+    } catch (error) {
+        console.error('Online translation error:', error);
+        return null;
+    }
+}
+
+async function translateOffline(text, direction) {
+    // Ensure translator dictionary data is loaded
+    if (translatorDictionaryData.length === 0) {
+        await loadTranslatorDictionary();
+    }
+    
+    if (!translatorDictionaryData || translatorDictionaryData.length === 0) {
+        return null;
+    }
+    
+    // For Chinese to Vietnamese
+    if (direction === 'zh-vi') {
+        return translateChineseToVietnamese(text);
+    } else {
+        // For Vietnamese to Chinese
+        return translateVietnameseToChinese(text);
+    }
+}
+
+function translateChineseToVietnamese(text) {
+    if (!translatorDictionaryData || translatorDictionaryData.length === 0) {
+        return 'Chưa tải dữ liệu từ điển';
+    }
+    
+    // Detect and warn if wrong Chinese type
+    const detectedType = detectChineseType(text);
+    let warning = '';
+    if (detectedType && detectedType !== translatorChineseType) {
+        const current = translatorChineseType === 'simplified' ? 'Giản thể' : 'Phồn thể';
+        const detected = detectedType === 'simplified' ? 'Giản thể' : 'Phồn thể';
+        warning = `\n\n⚠️ Lưu ý: Bạn đang dịch ${current} nhưng văn bản có vẻ là ${detected}`;
+    }
+    
+    // Strategy 1: Try to match sentence patterns and common structures
+    const patterns = [
+        // Subject + Verb + Object patterns
+        { regex: /我(.{1,3})了/, priority: 3 },  // Tôi ... rồi
+        { regex: /你(.{1,3})吗/, priority: 3 },  // Bạn ... không?
+        { regex: /(.{1,2})不(.{1,2})/, priority: 2 },  // ... không ...
+    ];
+    
+    // Process character by character with context awareness
+    const characters = text.split('');
+    const words = [];
+    let i = 0;
+    
+    while (i < characters.length) {
+        const char = characters[i];
+        
+        // Keep punctuation separately
+        if (/[,.!?。，！？、；：“”‘’《》〈〉「」『』]/.test(char)) {
+            words.push({ type: 'punct', value: char });
+            i++;
+            continue;
+        }
+        
+        // Skip whitespace
+        if (/\s/.test(char)) {
+            i++;
+            continue;
+        }
+        
+        // Skip non-Chinese characters
+        if (!/[\u4e00-\u9fff]/.test(char)) {
+            i++;
+            continue;
+        }
+        
+        let matched = false;
+        let bestMatch = null;
+        let bestLen = 0;
+        
+        // Strategy 2: Try to match longest phrase first (up to 6 characters)
+        for (let len = Math.min(6, characters.length - i); len > 0; len--) {
+            const phrase = characters.slice(i, i + len).join('');
+            if (/[\u4e00-\u9fff]/.test(phrase)) {
+                const entry = findInDictionary(phrase);
+                
+                if (entry) {
+                    // Prefer longer matches for better context
+                    if (len > bestLen) {
+                        bestMatch = entry;
+                        bestLen = len;
+                    }
+                }
+            }
+        }
+        
+        if (bestMatch) {
+            // Clean the meaning
+            let meaning = bestMatch.meaning_vi;
+            meaning = cleanMeaning(meaning);
+            
+            words.push({ type: 'word', value: meaning, length: bestLen });
+            i += bestLen;
+            matched = true;
+        }
+        
+        // If no match found, skip this character
+        if (!matched) {
+            i++;
+        }
+    }
+    
+    // Strategy 3: Build result with intelligent spacing
+    const result = buildNaturalSentence(words);
+    
+    return result + warning;
+}
+
+// Helper function to clean meaning
+function cleanMeaning(meaning) {
+    if (!meaning) return '';
+    
+    // Remove content in parentheses and brackets
+    let cleaned = meaning.replace(/\s*\([^)]+\)/g, '');
+    cleaned = cleaned.replace(/\s*\[[^\]]+\]/g, '');
+    
+    // Take first meaning if multiple
+    if (cleaned.includes(',')) {
+        cleaned = cleaned.split(',')[0].trim();
+    }
+    if (cleaned.includes(';')) {
+        cleaned = cleaned.split(';')[0].trim();
+    }
+    
+    return cleaned.trim();
+}
+
+// Helper function to build natural sentence
+function buildNaturalSentence(words) {
+    if (words.length === 0) return 'Đang dùng từ điển offline';
+    
+    const result = [];
+    
+    for (let j = 0; j < words.length; j++) {
+        const word = words[j];
+        const nextWord = words[j + 1];
+        const prevWord = words[j - 1];
+        
+        if (word.type === 'punct') {
+            result.push(word.value);
+        } else if (word.value) {
+            // Add space before word if needed
+            if (result.length > 0) {
+                const last = result[result.length - 1];
+                // Don't add space after punctuation
+                if (!/[,.!?。，！？、；：]$/.test(last)) {
+                    // Smart spacing: check if words should be connected
+                    const shouldConnect = shouldConnectWords(prevWord, word, nextWord);
+                    if (!shouldConnect) {
+                        result.push(' ');
+                    }
+                }
+            }
+            result.push(word.value);
+        }
+    }
+    
+    // Final cleanup with advanced rules
+    let final = result.join('')
+        .replace(/\s+/g, ' ')  // Multiple spaces to single
+        .replace(/\s+([,.!?。，！？、；：])/g, '$1')  // Remove space before punctuation
+        .replace(/([,.!?。，！？、；：])(?!\s|$)/g, '$1 ')  // Single space after punctuation
+        .trim();
+    
+    // Post-processing: fix common Vietnamese grammar issues
+    final = improveVietnameseGrammar(final);
+    
+    return final;
+}
+
+// Improve Vietnamese grammar and naturalness
+function improveVietnameseGrammar(text) {
+    if (!text) return text;
+    
+    // Fix common word order issues
+    let improved = text;
+    
+    // Fix "rồi đã" -> "đã ... rồi"
+    improved = improved.replace(/(rồi)\s+(đã)\s+([^\s]+)/gi, '$2 $3 $1');
+    
+    // Fix double negatives
+    improved = improved.replace(/không\s+không/gi, 'không');
+    
+    // Fix "có thể" placement
+    improved = improved.replace(/thể\s+có/gi, 'có thể');
+    
+    // Remove redundant words at start
+    improved = improved.replace(/^(là|có|và)\s+(là|có|và)\s+/gi, '$1 ');
+    
+    // Capitalize first letter
+    if (improved.length > 0) {
+        improved = improved.charAt(0).toUpperCase() + improved.slice(1);
+    }
+    
+    return improved;
+}
+
+// Determine if two words should be connected without space
+function shouldConnectWords(prev, current, next) {
+    if (!prev || !current || !prev.value || !current.value) return false;
+    
+    const prevVal = prev.value.toLowerCase().trim();
+    const currVal = current.value.toLowerCase().trim();
+    const nextVal = next?.value?.toLowerCase().trim() || '';
+    
+    // Connect common Vietnamese word pairs and phrases
+    const connectedPairs = [
+        // Negatives and modals
+        ['không', 'thể'], ['không', 'biết'], ['không', 'có'],
+        ['có', 'thể'], ['có', 'thể'], ['có', 'nên'],
+        // Quantity and degree
+        ['rất', 'nhiều'], ['rất', 'là'], ['quá', 'nhiều'],
+        ['một', 'ít'], ['một', 'số'],
+        // Tense and aspect markers
+        ['đang', 'dùng'], ['đang', 'làm'], ['đang', 'học'],
+        ['sẽ', 'là'], ['sẽ', 'có'], ['sẽ', 'đi'],
+        ['đã', 'có'], ['đã', 'làm'], ['đã', 'được'],
+        // Common verb phrases
+        ['cần', 'phải'], ['cần', 'có'], ['muốn', 'làm'],
+        ['biết', 'làm'], ['biết', 'nói'],
+        // Prepositions
+        ['ở', 'trong'], ['ở', 'trên'], ['tại', 'đây'],
+        ['của', 'tôi'], ['của', 'bạn'],
+    ];
+    
+    // Check direct pairs
+    for (const [first, second] of connectedPairs) {
+        if (prevVal === first && currVal === second) {
+            return false; // Add space
+        }
+    }
+    
+    // Don't connect if both are single characters (likely separate words)
+    if (prevVal.length === 1 && currVal.length === 1) {
+        return false;
+    }
+    
+    // Don't connect if current is a common standalone word
+    const standaloneWords = ['và', 'hoặc', 'nhưng', 'mà', 'nên', 'thì', 'nếu'];
+    if (standaloneWords.includes(currVal)) {
+        return false;
+    }
+    
+    return false; // Default: add space
+}
+
+function translateVietnameseToChinese(text) {
+    if (!translatorDictionaryData || translatorDictionaryData.length === 0) {
+        return 'Chưa tải dữ liệu từ điển';
+    }
+    
+    // NOTE: Offline Vietnamese → Chinese dictionary is very limited
+    // Most Vietnamese words don't have direct Chinese equivalents in HSK/TOCFL data
+    // This function is mainly for reverse lookup of known Chinese words
+    
+    // Normalize Vietnamese text
+    const normalizedText = text.toLowerCase().trim();
+    
+    // Try to match the whole sentence first
+    const exactMatch = findInDictionaryByMeaning(normalizedText);
+    if (exactMatch) {
+        return exactMatch.hanzi;
+    }
+    
+    // Try to find longest phrases first
+    const words = normalizedText.split(/\s+/);
+    const translations = [];
+    let i = 0;
+    
+    while (i < words.length) {
+        let found = false;
+        
+        // Try matching 4, 3, 2, then 1 word phrases
+        for (let len = Math.min(4, words.length - i); len >= 1; len--) {
+            const phrase = words.slice(i, i + len).join(' ');
+            
+            // Skip if only punctuation
+            if (/^[,.!?。，！？\s]+$/.test(phrase)) {
+                i++;
+                found = true;
+                break;
+            }
+            
+            const entry = findInDictionaryByMeaning(phrase);
+            if (entry) {
+                translations.push(entry.hanzi);
+                i += len;
+                found = true;
+                break;
+            }
+        }
+        
+        // If no match found for this word, skip it
+        if (!found) {
+            i++;
+        }
+    }
+    
+    const result = translations.join('');
+    
+    // If result is too short compared to input, likely not enough dictionary coverage
+    if (result.length === 0) {
+        return 'Dịch Việt→Trung offline chưa hỗ trợ tốt. Vui lòng dùng kết nối internet.';
+    }
+    
+    return result;
+}
+
+function findInDictionary(hanzi) {
+    // Search in translator's dictionary data
+    if (!translatorDictionaryData || translatorDictionaryData.length === 0) return null;
+    
+    return translatorDictionaryData.find(entry => entry.hanzi === hanzi);
+}
+
+function findInDictionaryByMeaning(meaning) {
+    if (!translatorDictionaryData || translatorDictionaryData.length === 0) return null;
+    
+    const normalized = normalizeText(meaning);
+    
+    // Try exact match first
+    let entry = translatorDictionaryData.find(e => {
+        const entryMeaning = normalizeText(e.meaning_vi);
+        return entryMeaning === normalized;
+    });
+    
+    if (entry) return entry;
+    
+    // Try partial match - the meaning contains the search term
+    entry = translatorDictionaryData.find(e => {
+        const entryMeaning = normalizeText(e.meaning_vi);
+        // Split by common separators and check each meaning
+        const meanings = entryMeaning.split(/[,;/]/).map(m => m.trim());
+        return meanings.some(m => m === normalized || m.startsWith(normalized + ' '));
+    });
+    
+    return entry;
+}
+
+async function preloadDictionaryData() {
+    if (dictionaryDataLoaded && allScriptData.length > 0) return;
+    
+    try {
+        // Load both simplified and traditional data
+        const simplifiedPaths = Object.values(dataPaths.simplified);
+        const traditionalPaths = Object.values(dataPaths.traditional);
+        const allPaths = [...simplifiedPaths, ...traditionalPaths];
+        
+        const promises = allPaths.map(path => 
+            fetch(path).then(res => res.json()).catch(() => ({ entries: [] }))
+        );
+        
+        const results = await Promise.all(promises);
+        const combinedData = results.flatMap(data => data.entries || []);
+        
+        // Update global dictionary if empty
+        if (allScriptData.length === 0) {
+            allScriptData = combinedData;
+        }
+        
+        dictionaryDataLoaded = true;
+        console.log('Dictionary data preloaded:', combinedData.length, 'entries');
+    } catch (error) {
+        console.error('Error preloading dictionary:', error);
+    }
+}
+
+async function loadTranslatorDictionary() {
+    try {
+        // Load dictionary based on selected Chinese type
+        const paths = translatorChineseType === 'simplified' 
+            ? Object.values(dataPaths.simplified)
+            : Object.values(dataPaths.traditional);
+        
+        const promises = paths.map(path => 
+            fetch(path).then(res => res.json()).catch(() => ({ entries: [] }))
+        );
+        
+        const results = await Promise.all(promises);
+        translatorDictionaryData = results.flatMap(data => data.entries || []);
+        
+        console.log(`Translator dictionary loaded (${translatorChineseType}):`, translatorDictionaryData.length, 'entries');
+    } catch (error) {
+        console.error('Error loading translator dictionary:', error);
+        translatorDictionaryData = [];
+    }
+}
+
+function displayTranslation(text) {
+    const outputEl = document.getElementById('translatorOutput');
+    const copyBtn = document.getElementById('copyBtn');
+    
+    outputEl.className = 'translator-output';
+    outputEl.textContent = text;
+    
+    // Enable copy button if translation is valid
+    if (copyBtn) {
+        if (text && text.trim() && !text.includes('Không thể dịch') && !text.includes('Cần kết nối')) {
+            copyBtn.disabled = false;
+        } else {
+            copyBtn.disabled = true;
+        }
+    }
+}
+
+function resetTranslatorOutput() {
+    const outputEl = document.getElementById('translatorOutput');
+    const copyBtn = document.getElementById('copyBtn');
+    
+    outputEl.className = 'translator-output empty';
+    outputEl.textContent = '';
+    
+    if (copyBtn) {
+        copyBtn.disabled = true;
+    }
+}
+
+function swapLanguages() {
+    // Close dropdowns immediately
+    closeAllDropdowns();
+    
+    // Swap direction
+    translatorDirection = translatorDirection === 'zh-vi' ? 'vi-zh' : 'zh-vi';
+    
+    // Update UI immediately
+    updateLanguageIndicators();
+    
+    // Clear cache for new direction
+    translatorCache = {};
+    
+    // Swap input and output only if both have real content
+    const input = document.getElementById('translatorInput');
+    const output = document.getElementById('translatorOutput');
+    
+    const outputText = output.textContent.trim();
+    const inputText = input.value.trim();
+    
+    // Only swap if output has real translation (not placeholder text)
+    if (outputText && outputText !== 'Bản dịch...' && 
+        !outputText.includes('Không thể dịch') && 
+        !outputText.includes('Cần kết nối')) {
+        
+        // Swap the texts
+        input.value = outputText;
+        
+        // Translate the new input immediately
+        clearTimeout(translationTimeout);
+        translationTimeout = setTimeout(() => autoTranslate(outputText), 100);
+    } else {
+        // Just re-translate current input with new direction
+        if (inputText) {
+            clearTimeout(translationTimeout);
+            translationTimeout = setTimeout(() => autoTranslate(inputText), 100);
+        } else {
+            resetTranslatorOutput();
+        }
+    }
+}
+
+function updateLanguageIndicators() {
+    const sourceLangText = document.getElementById('sourceLangText');
+    const targetLangText = document.getElementById('targetLangText');
+    const sourceIcon = document.getElementById('sourceDropdownIcon');
+    const targetIcon = document.getElementById('targetDropdownIcon');
+    const sourceLang = document.getElementById('sourceLang');
+    const targetLang = document.getElementById('targetLang');
+    
+    const chineseText = translatorChineseType === 'simplified' ? '简体中文' : '繁體中文';
+    const vietnameseText = 'Tiếng Việt';
+    
+    if (translatorDirection === 'zh-vi') {
+        sourceLangText.textContent = chineseText;
+        targetLangText.textContent = vietnameseText;
+        sourceIcon.style.display = 'inline-block';
+        targetIcon.style.display = 'none';
+        sourceLang.classList.add('active');
+        targetLang.classList.remove('active');
+    } else {
+        sourceLangText.textContent = vietnameseText;
+        targetLangText.textContent = chineseText;
+        sourceIcon.style.display = 'none';
+        targetIcon.style.display = 'inline-block';
+        sourceLang.classList.remove('active');
+        targetLang.classList.add('active');
+    }
+}
+
+function updateDropdownCheckmarks() {
+    // Update both dropdowns
+    ['sourceTypeDropdown', 'targetTypeDropdown'].forEach(dropdownId => {
+        const items = document.querySelectorAll(`#${dropdownId} .dropdown-item`);
+        items.forEach((item, index) => {
+            const icon = item.querySelector('i');
+            // index 0 = simplified, index 1 = traditional
+            if ((translatorChineseType === 'simplified' && index === 0) || 
+                (translatorChineseType === 'traditional' && index === 1)) {
+                icon.style.visibility = 'visible';
+            } else {
+                icon.style.visibility = 'hidden';
+            }
+        });
+    });
+}
+
+function toggleChineseTypeDropdown(side) {
+    event?.stopPropagation(); // Prevent event bubbling
+    
+    const sourceDropdown = document.getElementById('sourceTypeDropdown');
+    const targetDropdown = document.getElementById('targetTypeDropdown');
+    
+    if (side === 'source') {
+        // Only show if source is Chinese
+        if (translatorDirection === 'zh-vi') {
+            // Ensure left alignment for source
+            sourceDropdown.classList.remove('align-right');
+            const isOpen = sourceDropdown.style.display === 'block';
+            sourceDropdown.style.display = isOpen ? 'none' : 'block';
+            // Hide the other dropdown
+            targetDropdown.style.display = 'none';
+        }
+    } else if (side === 'target') {
+        // Only show if target is Chinese
+        if (translatorDirection === 'vi-zh') {
+            // Ensure right alignment for target
+            targetDropdown.classList.add('align-right');
+            const isOpen = targetDropdown.style.display === 'block';
+            targetDropdown.style.display = isOpen ? 'none' : 'block';
+            // Hide the other dropdown
+            sourceDropdown.style.display = 'none';
+        }
+    }
+}
+
+function closeAllDropdowns() {
+    const sourceDropdown = document.getElementById('sourceTypeDropdown');
+    const targetDropdown = document.getElementById('targetTypeDropdown');
+    if (sourceDropdown) sourceDropdown.style.display = 'none';
+    if (targetDropdown) targetDropdown.style.display = 'none';
+}
+
+function selectChineseType(type, side) {
+    event?.stopPropagation(); // Prevent event bubbling
+    
+    translatorChineseType = type;
+    
+    // Update checkmarks in all dropdowns
+    updateDropdownCheckmarks();
+    
+    // Update language text
+    updateLanguageIndicators();
+    
+    // Close dropdown
+    closeAllDropdowns();
+    
+    // Clear translator cache and reload dictionary
+    translatorCache = {};
+    translatorDictionaryData = [];
+    loadTranslatorDictionary();
+    
+    // Re-translate if there's input
+    const input = document.getElementById('translatorInput');
+    if (input && input.value.trim()) {
+        clearTimeout(translationTimeout);
+        translationTimeout = setTimeout(() => autoTranslate(input.value.trim()), 100);
+    }
+}
+
+function clearTranslatorInput() {
+    const input = document.getElementById('translatorInput');
+    input.value = '';
+    input.focus();
+    
+    const clearBtn = document.querySelector('.clear-input-btn');
+    if (clearBtn) {
+        clearBtn.style.display = 'none';
+    }
+    
+    resetTranslatorOutput();
+}
+
+function copyTranslation() {
+    const copyBtn = document.getElementById('copyBtn');
+    const output = document.getElementById('translatorOutput');
+    const text = output.textContent;
+    
+    // Don't copy if button is disabled
+    if (copyBtn.disabled) return;
+    
+    if (!text || text === 'Bản dịch...') return;
+    
+    navigator.clipboard.writeText(text).then(() => {
+        if (copyBtn) {
+            const originalHTML = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<i class="fas fa-check"></i> Đã sao chép!';
+            copyBtn.classList.add('copied');
+            
+            setTimeout(() => {
+                copyBtn.innerHTML = originalHTML;
+                copyBtn.classList.remove('copied');
+            }, 2000);
+        }
+    }).catch(err => {
+        console.error('Failed to copy:', err);
+        alert('Không thể sao chép văn bản');
+    });
+}
+
+function closeTranslator() {
+    const popup = document.getElementById('translatorPopup');
+    popup.classList.add('collapsed');
+    
+    // Clear input and output
+    clearTranslatorInput();
+}
+
+// Initialize translator when app loads
+const originalInitializeApp = initializeApp;
+initializeApp = function() {
+    originalInitializeApp();
+    initTranslator();
+};
+
+// ===================================
 // EXPORT FUNCTIONS (for HTML onclick)
 // ===================================
 
@@ -1177,3 +2074,9 @@ window.showDialog = showDialog;
 window.toggleSupport = toggleSupport;
 window.backToTopics = backToTopics;
 window.changeReadingPage = changeReadingPage;
+window.swapLanguages = swapLanguages;
+window.clearTranslatorInput = clearTranslatorInput;
+window.copyTranslation = copyTranslation;
+window.closeTranslator = closeTranslator;
+window.selectChineseType = selectChineseType;
+window.toggleChineseTypeDropdown = toggleChineseTypeDropdown;
