@@ -27,6 +27,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
     
+    <!-- Google Translate API (unofficial free library) -->
+    <script src="https://cdn.jsdelivr.net/npm/@vitalets/google-translate-api@9.2.0/dist/index.min.js"></script>
+    
     <!-- Cordova Script (Required for VoltBuilder) -->
     <script src="cordova.js"></script>
   </head>
@@ -596,6 +599,83 @@
           <div id="modalExamples" class="word-modal-section" style="display: none;">
             <h4><i class="fas fa-list"></i> Ví dụ</h4>
             <div id="modalExamplesList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Translation Popup -->
+    <div id="translatorPopup" class="translator-popup collapsed">
+      <button class="translator-toggle" id="translatorToggle">
+        <i class="fas fa-language"></i>
+      </button>
+      <div class="translator-content">
+        <div class="translator-header">
+          <h5>
+            <i class="fas fa-language"></i> Dịch nhanh
+          </h5>
+          <button class="translator-close" onclick="closeTranslator()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="translator-body">
+          <div class="translator-direction">
+            <div class="lang-selector">
+              <span id="sourceLang" class="lang-indicator active" onclick="toggleChineseTypeDropdown('source')">
+                <span id="sourceLangText">简体中文</span>
+                <i class="fas fa-chevron-down" id="sourceDropdownIcon"></i>
+              </span>
+              <div id="sourceTypeDropdown" class="chinese-type-dropdown" style="display: none;">
+                <div class="dropdown-item" onclick="selectChineseType('simplified', 'source')">
+                  <i class="fas fa-check"></i>
+                  <span>简体中文 (Giản thể)</span>
+                </div>
+                <div class="dropdown-item" onclick="selectChineseType('traditional', 'source')">
+                  <i class="fas fa-check" style="visibility: hidden;"></i>
+                  <span>繁體中文 (Phồn thể)</span>
+                </div>
+              </div>
+            </div>
+            <button class="swap-btn" onclick="swapLanguages()">
+              <i class="fas fa-exchange-alt"></i>
+            </button>
+            <div class="lang-selector">
+              <span id="targetLang" class="lang-indicator" onclick="toggleChineseTypeDropdown('target')">
+                <span id="targetLangText">Tiếng Việt</span>
+                <i class="fas fa-chevron-down" id="targetDropdownIcon" style="display: none;"></i>
+              </span>
+              <div id="targetTypeDropdown" class="chinese-type-dropdown" style="display: none;">
+                <div class="dropdown-item" onclick="selectChineseType('simplified', 'target')">
+                  <i class="fas fa-check"></i>
+                  <span>简体中文 (Giản thể)</span>
+                </div>
+                <div class="dropdown-item" onclick="selectChineseType('traditional', 'target')">
+                  <i class="fas fa-check" style="visibility: hidden;"></i>
+                  <span>繁體中文 (Phồn thể)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="translator-input-wrapper">
+            <textarea
+              id="translatorInput"
+              class="translator-input"
+              placeholder="Nhập văn bản cần dịch..."
+            ></textarea>
+            <button class="clear-input-btn" onclick="clearTranslatorInput()" style="display: none;">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="translator-status">
+            <span id="translatorStatus" class="status-indicator">
+              <i class="fas fa-wifi"></i> Sẵn sàng
+            </span>
+          </div>
+          <div class="translator-output-wrapper">
+            <div id="translatorOutput" class="translator-output empty"></div>
+            <button class="copy-btn" id="copyBtn" onclick="copyTranslation()" disabled>
+              <i class="fas fa-copy"></i> Sao chép
+            </button>
           </div>
         </div>
       </div>
