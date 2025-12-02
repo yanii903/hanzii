@@ -1101,8 +1101,10 @@ function showDialog(index) {
         </div>
     `).join('');
     
-    // Hide support panel initially
-    document.getElementById('supportPanel').style.display = 'none';
+    // Hide support panel initially with clean state
+    const supportPanel = document.getElementById('supportPanel');
+    supportPanel.classList.remove('show');
+    supportPanel.style.display = 'none';
     document.getElementById('supportBtn').innerHTML = '<i class="fas fa-question-circle"></i> Hỗ trợ';
     
     // Show dialog, hide topics
@@ -1126,12 +1128,26 @@ function toggleSupport() {
             </div>
         `).join('');
         
+        // First set display block, then trigger animation in next frame
         supportPanel.style.display = 'block';
+        // Force reflow to ensure display change is applied
+        supportPanel.offsetHeight;
+        // Now add class to trigger animation
+        requestAnimationFrame(() => {
+            supportPanel.classList.add('show');
+        });
         supportBtn.innerHTML = '<i class="fas fa-eye-slash"></i> Ẩn hỗ trợ';
     } else {
-        // Hide support
-        supportPanel.style.display = 'none';
+        // Hide support with animation
+        supportPanel.classList.remove('show');
         supportBtn.innerHTML = '<i class="fas fa-question-circle"></i> Hỗ trợ';
+        
+        // Wait for animation to complete before hiding
+        setTimeout(() => {
+            if (!supportVisible) {
+                supportPanel.style.display = 'none';
+            }
+        }, 400); // Match the CSS transition duration
     }
 }
 
