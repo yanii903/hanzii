@@ -1287,7 +1287,7 @@ function updateTranslatorStatus(status) {
         statusEl.innerHTML = '<i class="fas fa-wifi"></i> Sẵn sàng';
     } else if (status === 'offline') {
         statusEl.className = 'status-indicator offline';
-        statusEl.innerHTML = '<i class="fas fa-wifi-slash"></i> Offline - Dùng từ điển';
+        statusEl.innerHTML = '<i class="fas fa-wifi-slash"></i> Offline - Không thể dịch';
     } else if (status === 'translating') {
         statusEl.className = 'status-indicator translating';
         statusEl.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang dịch...';
@@ -1345,12 +1345,12 @@ async function autoTranslate(text) {
                 usedOnline = true;
             } else {
                 console.log('Online translation failed for Vietnamese→Chinese');
-                translation = 'Cần kết nối internet để dịch Việt→Trung chính xác. Từ điển offline không hỗ trợ tốt.';
+                translation = 'Cần kết nối internet.';
                 usedOnline = false;
             }
         } else {
             console.log('Device is offline, Vietnamese→Chinese will be very limited');
-            translation = 'Cần kết nối internet để dịch Việt→Trung. Vui lòng kiểm tra kết nối.';
+            translation = 'Cần kết nối internet.';
             usedOnline = false;
         }
     } else {
