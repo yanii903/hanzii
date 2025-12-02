@@ -2063,9 +2063,9 @@ mark.search-highlight {
 
 .translator-input {
     width: 100%;
-    min-height: 80px;
-    max-height: 140px;
-    height: 80px;
+    min-height: 120px;
+    max-height: 180px;
+    height: auto;
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid var(--glass-border);
     border-radius: var(--radius-sm);
@@ -2075,6 +2075,30 @@ mark.search-highlight {
     resize: vertical;
     font-family: 'Noto Sans SC', 'Noto Sans TC', 'Inter', sans-serif;
     transition: all var(--transition-fast);
+    line-height: 1.6;
+    
+    /* Custom scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(138, 180, 248, 0.5) transparent;
+}
+
+.translator-input::-webkit-scrollbar {
+    width: 8px;
+}
+
+.translator-input::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+}
+
+.translator-input::-webkit-scrollbar-thumb {
+    background: rgba(138, 180, 248, 0.5);
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+}
+
+.translator-input::-webkit-scrollbar-thumb:hover {
+    background: rgba(138, 180, 248, 0.8);
 }
 
 .translator-input:focus {
@@ -2155,9 +2179,9 @@ mark.search-highlight {
 }
 
 .translator-output {
-    min-height: 80px;
-    max-height: 160px;
-    height: 80px;
+    min-height: 120px;
+    max-height: 180px;
+    height: auto;
     background: rgba(255, 255, 255, 0.03);
     border: 2px solid var(--glass-border);
     border-radius: var(--radius-sm);
@@ -2165,30 +2189,35 @@ mark.search-highlight {
     color: var(--text-primary);
     font-size: 1rem;
     overflow-y: auto;
-    line-height: 1.8;
+    line-height: 1.6;
     font-family: 'Noto Sans SC', 'Noto Sans TC', 'Inter', sans-serif;
     white-space: pre-wrap;
     word-wrap: break-word;
-    resize: none;
-    /* Reserve space on the scrollbar side only to avoid shifting text */
-    scrollbar-gutter: stable;
+    display: flex;
+    align-items: flex-start;
     
-    /* Hide scrollbar but keep functionality */
+    /* Custom scrollbar */
     scrollbar-width: thin;
-    scrollbar-color: var(--primary-color) transparent;
+    scrollbar-color: rgba(138, 180, 248, 0.5) transparent;
 }
 
 .translator-output::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
 }
 
 .translator-output::-webkit-scrollbar-track {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
 }
 
 .translator-output::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 3px;
+    background: rgba(138, 180, 248, 0.5);
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+}
+
+.translator-output::-webkit-scrollbar-thumb:hover {
+    background: rgba(138, 180, 248, 0.8);
 }
 
 .translator-output.empty {
@@ -2219,6 +2248,32 @@ mark.search-highlight {
     align-items: center;
     justify-content: center;
     color: var(--info-color);
+}
+
+/* Translation with Pinyin Display */
+.translation-with-pinyin {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+}
+
+.translation-hanzi {
+    font-family: 'Noto Sans SC', 'Noto Sans TC', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+}
+
+.translation-pinyin {
+    font-size: 0.875rem;
+    color: #8ab4f8;
+    font-style: normal;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.01em;
 }
 
 .copy-btn {

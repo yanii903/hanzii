@@ -1340,7 +1340,11 @@ async function autoTranslate(text) {
             console.log('Attempting online translation for Vietnamese→Chinese...');
             translation = await translateOnline(text, translatorDirection);
             
-            if (translation && translation.trim() && !/[\uFFFD]/.test(translation)) {
+            // Check if translation is valid (object with text or non-empty string)
+            const isValid = (typeof translation === 'object' && translation?.text) || 
+                           (typeof translation === 'string' && translation.trim() && !/[\uFFFD]/.test(translation));
+            
+            if (isValid) {
                 console.log('Online translation successful:', translation);
                 usedOnline = true;
             } else {
@@ -1359,7 +1363,11 @@ async function autoTranslate(text) {
             console.log('Attempting online translation for Chinese→Vietnamese...');
             translation = await translateOnline(text, translatorDirection);
             
-            if (translation && translation.trim() && !/[\uFFFD]/.test(translation)) {
+            // Check if translation is valid (object with text or non-empty string)
+            const isValid = (typeof translation === 'object' && translation?.text) || 
+                           (typeof translation === 'string' && translation.trim() && !/[\uFFFD]/.test(translation));
+            
+            if (isValid) {
                 console.log('Online translation successful:', translation);
                 usedOnline = true;
             } else {
@@ -1382,10 +1390,22 @@ async function autoTranslate(text) {
     }
     
     // Display result
-    if (translation && translation.trim()) {
-        translatorCache[cacheKey] = translation;
-        displayTranslation(translation);
-        console.log('Translation complete. Used:', usedOnline ? 'ONLINE' : 'OFFLINE');
+    if (translation) {
+        // Handle both string and object responses
+        const isValidTranslation = typeof translation === 'object' 
+            ? (translation.text && translation.text.trim())
+            : (typeof translation === 'string' && translation.trim() && 
+               !translation.includes('Không thể dịch') && 
+               !translation.includes('Cần kết nối'));
+        
+        if (isValidTranslation) {
+            translatorCache[cacheKey] = translation;
+            displayTranslation(translation);
+            console.log('Translation complete. Used:', usedOnline ? 'ONLINE' : 'OFFLINE');
+        } else {
+            displayTranslation('Không thể dịch văn bản này.');
+            console.log('Translation failed completely');
+        }
     } else {
         displayTranslation('Không thể dịch văn bản này.');
         console.log('Translation failed completely');
@@ -1409,7 +1429,8 @@ async function translateOnline(text, direction) {
         
         // Use Google Translate unofficial API via translate.googleapis.com
         // This endpoint doesn't require API key and works from browser
-        const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLang}&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`;
+        // Add dt=rm for romanization (pinyin)
+        const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLang}&tl=${targetLang}&dt=t&dt=rm&q=${encodeURIComponent(text)}`;
         
         console.log('Google Translate URL:', url);
         
@@ -1421,9 +1442,10 @@ async function translateOnline(text, direction) {
         
         const data = await response.json();
         console.log('Google Translate Response:', data);
+        console.log('Full response structure:', JSON.stringify(data, null, 2));
         
         // Parse Google Translate response format
-        // Response format: [[[translated_text, original_text, ...]]]
+        // Response format: [[[translated_text, original_text, ...]], ..., romanization_array]
         if (data && data[0] && Array.isArray(data[0])) {
             let translation = '';
             for (const segment of data[0]) {
@@ -1434,6 +1456,38 @@ async function translateOnline(text, direction) {
             
             if (translation.trim()) {
                 console.log('Translation successful:', translation);
+                
+                // Check if result contains Chinese characters and get pinyin
+                if (/[\u4e00-\u9fff]/.test(translation)) {
+                    // Try to get pinyin from romanization data
+                    let pinyin = '';
+                    
+                    // Google Translate response format:
+                    // data[0] = [["translation", "original", null, null, ...], [null, null, "Pinyin"], ...]
+                    // Pinyin is in data[0][i][2] where i > 0
+                    console.log('Checking for pinyin in data[0]:', data[0]);
+                    
+                    if (data[0] && Array.isArray(data[0])) {
+                        for (let i = 1; i < data[0].length; i++) {
+                            const segment = data[0][i];
+                            if (segment && segment[2]) {
+                                pinyin += segment[2] + ' ';
+                            }
+                        }
+                    }
+                    
+                    pinyin = pinyin.trim();
+                    console.log('Pinyin extracted:', pinyin);
+                    
+                    // Return object with both translation and pinyin
+                    if (pinyin) {
+                        return {
+                            text: translation.trim(),
+                            pinyin: pinyin
+                        };
+                    }
+                }
+                
                 return translation.trim();
             }
         }
@@ -1841,14 +1895,36 @@ function displayTranslation(text) {
     const copyBtn = document.getElementById('copyBtn');
     
     outputEl.className = 'translator-output';
-    outputEl.textContent = text;
     
-    // Enable copy button if translation is valid
-    if (copyBtn) {
-        if (text && text.trim() && !text.includes('Không thể dịch') && !text.includes('Cần kết nối')) {
-            copyBtn.disabled = false;
+    // Check if text is an object with pinyin
+    if (typeof text === 'object' && text.text) {
+        // Display Chinese with pinyin below
+        if (text.pinyin) {
+            outputEl.innerHTML = `
+                <div class="translation-with-pinyin">
+                    <div class="translation-hanzi">${text.text}</div>
+                    <div class="translation-pinyin">${text.pinyin}</div>
+                </div>
+            `;
         } else {
-            copyBtn.disabled = true;
+            outputEl.textContent = text.text;
+        }
+        
+        // Enable copy button
+        if (copyBtn) {
+            copyBtn.disabled = false;
+        }
+    } else if (typeof text === 'string') {
+        // Normal string display
+        outputEl.textContent = text;
+        
+        // Enable copy button if translation is valid
+        if (copyBtn) {
+            if (text && text.trim() && !text.includes('Không thể dịch') && !text.includes('Cần kết nối')) {
+                copyBtn.disabled = false;
+            } else {
+                copyBtn.disabled = true;
+            }
         }
     }
 }
@@ -1882,7 +1958,9 @@ function swapLanguages() {
     const input = document.getElementById('translatorInput');
     const output = document.getElementById('translatorOutput');
     
-    const outputText = output.textContent.trim();
+    // Get only the Chinese text (hanzi), not pinyin
+    const hanziEl = output.querySelector('.translation-hanzi');
+    const outputText = hanziEl ? hanziEl.textContent.trim() : output.textContent.trim();
     const inputText = input.value.trim();
     
     // Only swap if output has real translation (not placeholder text)
@@ -1890,7 +1968,7 @@ function swapLanguages() {
         !outputText.includes('Không thể dịch') && 
         !outputText.includes('Cần kết nối')) {
         
-        // Swap the texts
+        // Swap the texts (only hanzi, not pinyin)
         input.value = outputText;
         
         // Translate the new input immediately
@@ -2031,10 +2109,22 @@ function clearTranslatorInput() {
 function copyTranslation() {
     const copyBtn = document.getElementById('copyBtn');
     const output = document.getElementById('translatorOutput');
-    const text = output.textContent;
     
     // Don't copy if button is disabled
     if (copyBtn.disabled) return;
+    
+    // Get text from output element
+    let text;
+    const hanziEl = output.querySelector('.translation-hanzi');
+    const pinyinEl = output.querySelector('.translation-pinyin');
+    
+    if (hanziEl && pinyinEl) {
+        // If has pinyin, copy both
+        text = `${hanziEl.textContent}\n${pinyinEl.textContent}`;
+    } else {
+        // Otherwise copy normal text
+        text = output.textContent;
+    }
     
     if (!text || text === 'Bản dịch...') return;
     
