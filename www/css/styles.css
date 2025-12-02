@@ -1143,18 +1143,34 @@ mark.search-highlight {
     background: rgba(255, 255, 255, 0.03);
     border: 2px solid var(--info-color);
     border-radius: var(--radius-lg);
+    padding: 0 2rem;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+    transition: max-height 0.5s ease-in-out,
+                opacity 0.3s ease,
+                padding 0.5s ease,
+                margin-top 0.5s ease;
+}
+
+.support-panel.show {
+    max-height: 1000px;
+    opacity: 1;
     padding: 2rem;
-    animation: slideDown 0.3s ease;
+    margin-top: 2rem;
 }
 
 @keyframes slideDown {
     from {
         opacity: 0;
         transform: translateY(-20px);
+        max-height: 0;
     }
     to {
         opacity: 1;
         transform: translateY(0);
+        max-height: 600px;
     }
 }
 
