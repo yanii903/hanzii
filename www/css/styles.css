@@ -696,7 +696,12 @@ mark.search-highlight {
     color: var(--text-secondary);
     font-size: 1rem;
     margin-bottom: 0.75rem;
-    font-style: italic;
+    font-style: normal;
+    line-height: 1.8;
+    vertical-align: baseline;
+    display: block;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    text-align: left;
 }
 
 .word-meaning {
@@ -839,7 +844,12 @@ mark.search-highlight {
 .word-modal-pinyin {
     font-size: 1.5rem;
     color: var(--text-secondary);
-    font-style: italic;
+    font-style: normal;
+    line-height: 2;
+    vertical-align: baseline;
+    display: block;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    text-align: center;
 }
 
 .word-modal-body {
@@ -914,8 +924,13 @@ mark.search-highlight {
 .modal-example-pinyin {
     font-size: 1rem;
     color: var(--text-secondary);
-    font-style: italic;
+    font-style: normal;
     margin-bottom: 0.5rem;
+    line-height: 1.8;
+    vertical-align: baseline;
+    display: block;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    text-align: left;
 }
 
 .modal-example-meaning {
@@ -1221,8 +1236,13 @@ mark.search-highlight {
 .support-pinyin {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    font-style: italic;
+    font-style: normal;
     margin-bottom: 0.5rem;
+    line-height: 1.8;
+    vertical-align: baseline;
+    display: block;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    text-align: left;
 }
 
 .support-translation {
@@ -1288,7 +1308,12 @@ mark.search-highlight {
 .pinyin-hint {
     color: var(--text-secondary);
     font-size: 1.5rem;
-    font-style: italic;
+    font-style: normal;
+    line-height: 2;
+    vertical-align: baseline;
+    display: block;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    text-align: center;
 }
 
 .answer-input-wrapper {
@@ -1827,6 +1852,56 @@ mark.search-highlight {
     background-clip: text;
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.status-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--success-color);
+    border-radius: 50%;
+    color: var(--success-color);
+    font-size: 0.9rem;
+    cursor: help;
+    transition: all var(--transition-fast);
+    position: relative;
+    line-height: 0;
+}
+
+.status-icon i {
+    font-size: 1.05rem;
+}
+
+.status-icon.online {
+    border-color: var(--success-color);
+    color: var(--success-color);
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.status-icon.offline {
+    border-color: var(--danger-color);
+    color: #ffffff; /* make symbol clear on dark bg */
+    background: rgba(239, 68, 68, 0.18);
+}
+
+
+.status-icon.translating {
+    border-color: var(--warning-color);
+    color: var(--warning-color);
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.status-icon:hover {
+    transform: scale(1.1);
+}
+
 .translator-close {
     width: 32px;
     height: 32px;
@@ -2058,14 +2133,14 @@ mark.search-highlight {
 
 .translator-input-wrapper {
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
 }
 
 .translator-input {
     width: 100%;
-    min-height: 80px;
-    max-height: 140px;
-    height: 80px;
+    min-height: 120px;
+    max-height: 180px;
+    height: auto;
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid var(--glass-border);
     border-radius: var(--radius-sm);
@@ -2075,6 +2150,30 @@ mark.search-highlight {
     resize: vertical;
     font-family: 'Noto Sans SC', 'Noto Sans TC', 'Inter', sans-serif;
     transition: all var(--transition-fast);
+    line-height: 1.6;
+    
+    /* Custom scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(138, 180, 248, 0.5) transparent;
+}
+
+.translator-input::-webkit-scrollbar {
+    width: 8px;
+}
+
+.translator-input::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+}
+
+.translator-input::-webkit-scrollbar-thumb {
+    background: rgba(138, 180, 248, 0.5);
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+}
+
+.translator-input::-webkit-scrollbar-thumb:hover {
+    background: rgba(138, 180, 248, 0.8);
 }
 
 .translator-input:focus {
@@ -2112,34 +2211,19 @@ mark.search-highlight {
     transform: scale(1.1);
 }
 
-.translator-status {
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.status-indicator {
-    display: inline-flex;
+.translation-indicator {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: rgba(16, 185, 129, 0.1);
-    border: 1px solid var(--success-color);
-    border-radius: var(--radius-sm);
-    color: var(--success-color);
-    font-size: 0.9rem;
-    font-weight: 500;
+    margin-bottom: 10px;
+    min-height: 24px;
 }
 
-.status-indicator.offline {
-    background: rgba(239, 68, 68, 0.1);
-    border-color: var(--danger-color);
-    color: var(--danger-color);
-}
-
-.status-indicator.translating {
-    background: rgba(59, 130, 246, 0.1);
-    border-color: var(--info-color);
-    color: var(--info-color);
+.translation-indicator i {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    opacity: 0.5;
+    transform: rotate(90deg);
 }
 
 .status-indicator i {
@@ -2155,9 +2239,9 @@ mark.search-highlight {
 }
 
 .translator-output {
-    min-height: 80px;
-    max-height: 160px;
-    height: 80px;
+    min-height: 120px;
+    max-height: 180px;
+    height: auto;
     background: rgba(255, 255, 255, 0.03);
     border: 2px solid var(--glass-border);
     border-radius: var(--radius-sm);
@@ -2165,30 +2249,35 @@ mark.search-highlight {
     color: var(--text-primary);
     font-size: 1rem;
     overflow-y: auto;
-    line-height: 1.8;
+    line-height: 1.6;
     font-family: 'Noto Sans SC', 'Noto Sans TC', 'Inter', sans-serif;
     white-space: pre-wrap;
     word-wrap: break-word;
-    resize: none;
-    /* Reserve space on the scrollbar side only to avoid shifting text */
-    scrollbar-gutter: stable;
+    display: flex;
+    align-items: flex-start;
     
-    /* Hide scrollbar but keep functionality */
+    /* Custom scrollbar */
     scrollbar-width: thin;
-    scrollbar-color: var(--primary-color) transparent;
+    scrollbar-color: rgba(138, 180, 248, 0.5) transparent;
 }
 
 .translator-output::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
 }
 
 .translator-output::-webkit-scrollbar-track {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
 }
 
 .translator-output::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 3px;
+    background: rgba(138, 180, 248, 0.5);
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+}
+
+.translator-output::-webkit-scrollbar-thumb:hover {
+    background: rgba(138, 180, 248, 0.8);
 }
 
 .translator-output.empty {
@@ -2219,6 +2308,36 @@ mark.search-highlight {
     align-items: center;
     justify-content: center;
     color: var(--info-color);
+}
+
+/* Translation with Pinyin Display */
+.translation-with-pinyin {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+}
+
+.translation-hanzi {
+    font-family: 'Noto Sans SC', 'Noto Sans TC', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+}
+
+.translation-pinyin {
+    font-size: 0.875rem;
+    color: #8ab4f8;
+    font-style: normal;
+    line-height: 1.8;
+    font-weight: 400;
+    vertical-align: baseline;
+    display: block;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    text-align: left;
+    letter-spacing: 0;
 }
 
 .copy-btn {

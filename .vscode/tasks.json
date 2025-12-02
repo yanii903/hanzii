@@ -1,0 +1,10 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "apply-offline-icon-fix",
+			"type": "shell",
+			"command": "echo Applying offline icon CSS/JS changes"
+		}
+	]
+}
