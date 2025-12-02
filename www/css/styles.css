@@ -233,6 +233,76 @@ html {
     font-size: 1rem;
 }
 
+/* Offcanvas (mobile/tablet navbar) */
+.offcanvas {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-left: 1px solid var(--glass-border);
+    /* Narrower, comfortable width */
+    --bs-offcanvas-width: 250px;
+    /* Smooth slide only (same as close) */
+    transition: transform 0.3s ease-in-out;
+    will-change: transform, opacity;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.offcanvas.show { }
+
+.offcanvas .offcanvas-header {
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.offcanvas .nav-link {
+    color: var(--text-primary) !important;
+    border-radius: var(--radius-sm);
+    /* Add vertical breathing room so hover pills don't stick */
+    margin: 0.10rem 0 !important;
+    /* Larger touch targets for mobile/tablet */
+    font-size: 1.1rem;
+    padding: 0.75rem 1.25rem !important;
+}
+
+.offcanvas .nav-link i {
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+}
+
+.offcanvas .nav-link:hover,
+.offcanvas .nav-link.active {
+    background: var(--glass-bg);
+}
+
+/* Extra spacing fallback for older browsers (no flex gap support) */
+.offcanvas .nav-item + .nav-item {
+    margin-top: 0.10rem;
+}
+
+/* Very small screens: keep some breathing room */
+@media (max-width: 360px) {
+    .offcanvas {
+        --bs-offcanvas-width: calc(100vw - 56px);
+    }
+}
+
+/* Smooth dim/blur animation targets */
+.glass-nav,
+.main-content,
+.glass-footer,
+#scrollToTop,
+.translator-popup {
+    transition: filter 0.35s ease, opacity 0.35s ease;
+}
+
+/* Blur + fade outside nav when offcanvas is open */
+body.nav-open .glass-nav,
+body.nav-open .main-content,
+body.nav-open .glass-footer,
+body.nav-open #scrollToTop,
+body.nav-open .translator-popup {
+    filter: blur(6px);
+    opacity: 0.35;
+}
+
 /* ===================================
    MAIN CONTENT
    =================================== */

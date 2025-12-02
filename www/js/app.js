@@ -76,6 +76,7 @@ function initializeApp() {
 
     // Setup navigation
     setupNavigation();
+    setupOffcanvasNavEffects();
     
     // Setup scroll to top button
     setupScrollToTop();
@@ -117,6 +118,33 @@ function setupNavigation() {
             // Get section to show
             const sectionId = this.getAttribute('data-section');
             navigateToSection(sectionId);
+        });
+    });
+}
+
+// Setup blur and behavior for offcanvas navbar (mobile/tablet)
+function setupOffcanvasNavEffects() {
+    const offcanvasEl = document.getElementById('mobileNav');
+    if (!offcanvasEl) return;
+
+    // Toggle body class for blur when offcanvas open/close
+    offcanvasEl.addEventListener('shown.bs.offcanvas', function () {
+        document.body.classList.add('nav-open');
+    });
+    offcanvasEl.addEventListener('hidden.bs.offcanvas', function () {
+        document.body.classList.remove('nav-open');
+    });
+
+    // Close offcanvas when clicking a nav link inside it
+    const offcanvasLinks = offcanvasEl.querySelectorAll('.nav-link');
+    offcanvasLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            try {
+                const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl);
+                offcanvas.hide();
+            } catch (e) {
+                // Bootstrap might not be available; fail silently
+            }
         });
     });
 }
