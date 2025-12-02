@@ -97,6 +97,18 @@ html {
     visibility: hidden;
 }
 
+/* Hide all UI while preloading; show after preload completes */
+body.preloading .glass-nav,
+body.preloading .main-content,
+body.preloading .glass-footer,
+body.preloading #mobileNav,
+body.preloading .translator-popup,
+body.preloading #scrollToTop {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
 .preloader-content {
     text-align: center;
 }
@@ -1559,8 +1571,32 @@ mark.search-highlight {
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
     border-top: 1px solid var(--glass-border);
-    padding: 2rem 0;
-    margin-top: 0.5rem;
+        padding: 2rem 0;
+        margin-top: 0.5rem;
+}
+
+/* Tighter footer spacing on tablet */
+@media (max-width: 992px) {
+    .glass-footer {
+        padding: 1.5rem 0; /* giảm nhẹ */
+        margin-top: 0.25rem;
+    }
+}
+
+/* Tighter footer spacing on mobile */
+@media (max-width: 768px) {
+    .glass-footer {
+        padding: 1.25rem 0;
+        margin-top: 0.2rem;
+    }
+}
+
+/* Very small devices: minimal vertical space */
+@media (max-width: 576px) {
+    .glass-footer {
+        padding: 0.9rem 0;
+        margin-top: 0.15rem;
+    }
 }
 
 .social-links {
@@ -1607,8 +1643,32 @@ mark.search-highlight {
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    transition: all var(--transition-normal);
-    z-index: 1000;
+    /* Smoother dedicated transitions */
+    transition: transform 0.4s cubic-bezier(.19,1,.22,1),
+                box-shadow 0.4s ease,
+                filter 0.4s ease,
+                background-position 0.6s ease;
+    background-size: 180% 180%;
+    background-position: 50% 50%;
+     z-index: 99999;
+    will-change: transform, box-shadow, filter;
+    position: fixed;
+}
+
+/* Subtle pulsing glow layer */
+.scroll-to-top::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(99,102,241,0.45);
+    animation: scrollPulse 2.8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes scrollPulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(99,102,241,0.45); }
+  50% { box-shadow: 0 0 0 14px rgba(99,102,241,0); }
 }
 
 .scroll-to-top.visible {
@@ -1617,8 +1677,32 @@ mark.search-highlight {
 }
 
 .scroll-to-top:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 10px 28px -4px rgba(99,102,241,0.55), 0 0 0 4px rgba(255,255,255,0.08);
+    filter: brightness(1.12) saturate(1.2);
+    background-position: 60% 40%;
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+     bottom: 1.5rem;
+     right: 1.5rem;
+     width: 44px;
+     height: 44px;
+     font-size: 1.1rem;
+     z-index: 99999;
+  }
+}
+
+/* Focus & active states for accessibility */
+.scroll-to-top:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(255,255,255,0.25), 0 8px 24px rgba(99,102,241,0.6);
+}
+
+.scroll-to-top:active {
+        transform: translateY(-2px) scale(0.96);
+        box-shadow: 0 4px 14px rgba(99,102,241,0.45);
+        filter: brightness(1.05);
 }
 
 /* ===================================

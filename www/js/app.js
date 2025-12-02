@@ -68,10 +68,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initializeApp() {
-    // Hide preloader after content is loaded
+    // Hide preloader after content is loaded and show UI
     setTimeout(() => {
         const preloader = document.getElementById('preloader');
-        preloader.classList.add('hidden');
+        if (preloader) preloader.classList.add('hidden');
+        // Remove global preloading state so UI appears
+        document.body.classList.remove('preloading');
     }, 1500);
 
     // Setup navigation
