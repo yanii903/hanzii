@@ -1464,6 +1464,28 @@ mark.search-highlight {
     text-align: center;
     margin-bottom: 1.5rem;
 }
+/* Question transition animations */
+.question-card {
+    position: relative;
+}
+
+@keyframes question-slide-out {
+    0% { opacity: 1; transform: translateX(0); }
+    100% { opacity: 0; transform: translateX(-30px); }
+}
+
+@keyframes question-slide-in {
+    0% { opacity: 0; transform: translateX(30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.question-transition-out {
+    animation: question-slide-out 250ms ease forwards;
+}
+
+.question-transition-in {
+    animation: question-slide-in 250ms ease forwards;
+}
 
 .question-number {
     color: var(--text-secondary);
