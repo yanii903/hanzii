@@ -87,6 +87,7 @@ class LRUCache {
 
 let translatorCache = new LRUCache(MAX_CACHE_SIZE);
 let eventCleanupHandlers = []; // Track event listeners for cleanup
+let translatorInitialized = false; // Flag to prevent duplicate initialization
 
 // Data paths
 const dataPaths = {
@@ -167,6 +168,9 @@ function initializeApp() {
     
     // Initialize reading game level options
     updateReadingLevelOptions();
+    
+    // Initialize translator
+    initTranslator();
     
     // Don't load dictionary data immediately - lazy load when user opens Dictionary tab
 }
@@ -458,6 +462,9 @@ async function loadDictionaryData() {
     // Show skeleton loading
     showSkeletonLoading('dictionaryResults', 'cards');
     
+    // Bắt đầu đếm thời gian loading
+    const loadStartTime = Date.now();
+    
     try {
         // Only load current level initially (performance optimization)
         const levelKey = `${scriptType}_${level}`;
@@ -477,9 +484,27 @@ async function loadDictionaryData() {
         allScriptData = currentData;
         
         currentPage = 1;
+        
+        // Đảm bảo skeleton loading hiển thị ít nhất 1 giây để tránh giật
+        const loadTime = Date.now() - loadStartTime;
+        const minLoadTime = 1000; // 1 giây
+        
+        if (loadTime < minLoadTime) {
+            await new Promise(resolve => setTimeout(resolve, minLoadTime - loadTime));
+        }
+        
         displayDictionary();
     } catch (error) {
         console.error('Error loading dictionary data:', error);
+        
+        // Đảm bảo hiển thị lỗi sau 1 giây
+        const loadTime = Date.now() - loadStartTime;
+        const minLoadTime = 1000;
+        
+        if (loadTime < minLoadTime) {
+            await new Promise(resolve => setTimeout(resolve, minLoadTime - loadTime));
+        }
+        
         document.getElementById('dictionaryResults').innerHTML = `
             <div class="col-12">
                 <div class="glass-card p-4 text-center">
@@ -579,7 +604,7 @@ async function displayDictionary() {
     // Only render 24 items per page instead of all results for better performance
     resultsContainer.innerHTML = paginatedData.map((entry, index) => `
         <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="word-card" onclick='showWordDetail(${JSON.stringify(entry).replace(/'/g, "&apos;")})'>
+            <div class="word-card animate-word-card" style="animation-delay: ${index * 0.05}s" onclick='showWordDetail(${JSON.stringify(entry).replace(/'/g, "&apos;")})'>
                 <div class="word-hanzi">${highlightText(entry.hanzi, searchTerm)}</div>
                 <div class="word-pinyin">${highlightText(entry.pinyin, searchTerm)}</div>
                 <div class="word-meaning">${highlightText(entry.meaning_vi, searchTerm)}</div>
@@ -1494,6 +1519,10 @@ function detectChineseType(text) {
 
 // Initialize translator on page load
 function initTranslator() {
+    // Prevent duplicate initialization
+    if (translatorInitialized) return;
+    translatorInitialized = true;
+    
     const toggleBtn = document.getElementById('translatorToggle');
     const translatorInput = document.getElementById('translatorInput');
     
@@ -2240,7 +2269,7 @@ function swapLanguages() {
     updateLanguageIndicators();
     
     // Clear cache for new direction
-    translatorCache = {};
+    translatorCache.clear();
     
     // Swap input and output only if both have real content
     const input = document.getElementById('translatorInput');
@@ -2369,7 +2398,7 @@ function selectChineseType(type, side) {
     closeAllDropdowns();
     
     // Clear translator cache and reload dictionary
-    translatorCache = {};
+    translatorCache.clear();
     translatorDictionaryData = [];
     loadTranslatorDictionary();
     
@@ -2440,13 +2469,6 @@ function closeTranslator() {
     // Clear input and output
     clearTranslatorInput();
 }
-
-// Initialize translator when app loads
-const originalInitializeApp = initializeApp;
-initializeApp = function() {
-    originalInitializeApp();
-    initTranslator();
-};
 
 // ===================================
 // EXPORT FUNCTIONS (for HTML onclick)
