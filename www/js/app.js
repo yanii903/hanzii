@@ -1153,8 +1153,31 @@ function showNextButton() {
 
 // Move to next question
 function nextQuestion() {
-    currentQuestion++;
-    showQuestion();
+    const card = document.querySelector('.question-card');
+    if (!card) {
+        currentQuestion++;
+        showQuestion();
+        return;
+    }
+    // Animate out, then advance, then animate in
+    card.classList.remove('question-transition-in');
+    card.classList.add('question-transition-out');
+    const handleOutEnd = () => {
+        card.removeEventListener('animationend', handleOutEnd);
+        currentQuestion++;
+        showQuestion();
+        // Animate in
+        // Force reflow to restart animation
+        void card.offsetWidth;
+        card.classList.remove('question-transition-out');
+        card.classList.add('question-transition-in');
+        const handleInEnd = () => {
+            card.removeEventListener('animationend', handleInEnd);
+            card.classList.remove('question-transition-in');
+        };
+        card.addEventListener('animationend', handleInEnd);
+    };
+    card.addEventListener('animationend', handleOutEnd);
 }
 
 // ===================================
