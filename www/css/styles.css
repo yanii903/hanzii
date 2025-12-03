@@ -1463,6 +1463,36 @@ mark.search-highlight {
     padding: 2rem 1.5rem;
     text-align: center;
     margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.question-preload-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(
+            90deg,
+            rgba(255,255,255,0.06) 25%,
+            rgba(255,255,255,0.12) 50%,
+            rgba(255,255,255,0.06) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1000ms ease-in-out infinite;
+    display: none;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.question-content-fade {
+    opacity: 0;
+}
+.question-content-visible {
+    opacity: 1;
+    transition: opacity 400ms ease;
 }
 /* Question transition animations */
 .question-card {
