@@ -231,6 +231,27 @@ function navigateToSection(sectionId) {
     const sections = document.querySelectorAll('.section-container');
     sections.forEach(section => section.classList.remove('active'));
     
+    // Close game areas when navigating away from games section
+    if (sectionId !== 'games') {
+        const gameArea = document.getElementById('gameArea');
+        const readingGameArea = document.getElementById('readingGameArea');
+        
+        if (gameArea && gameArea.style.display === 'block') {
+            gameArea.style.display = 'none';
+            gameMode = null;
+        }
+        
+        if (readingGameArea && readingGameArea.style.display === 'block') {
+            readingGameArea.style.display = 'none';
+            // Reset display and page
+            currentReadingPage = 1;
+            const topicsList = document.getElementById('topicsList');
+            const dialogDisplay = document.getElementById('dialogDisplay');
+            if (topicsList) topicsList.style.display = 'grid';
+            if (dialogDisplay) dialogDisplay.style.display = 'none';
+        }
+    }
+    
     // Show target section
     const targetSection = document.getElementById(sectionId);
     if (targetSection) {
