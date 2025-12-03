@@ -1458,6 +1458,13 @@ function showDialog(index) {
     // Show dialog, hide topics
     document.getElementById('topicsList').style.display = 'none';
     document.getElementById('dialogDisplay').style.display = 'block';
+    
+    // Hide pagination when showing dialog
+    const readingGameArea = document.getElementById('readingGameArea');
+    const paginationContainer = readingGameArea?.querySelector('.reading-pagination');
+    if (paginationContainer) {
+        paginationContainer.style.display = 'none';
+    }
 }
 
 function toggleSupport() {
@@ -1502,6 +1509,13 @@ function toggleSupport() {
 function backToTopics() {
     currentReadingPage = 1; // Reset to first page when going back
     displayTopics();
+    
+    // Show pagination again when back to topics
+    const readingGameArea = document.getElementById('readingGameArea');
+    const paginationContainer = readingGameArea?.querySelector('.reading-pagination');
+    if (paginationContainer) {
+        paginationContainer.style.display = 'block';
+    }
 }
 function exitReadingGame() {
     document.getElementById('readingGameArea').style.display = 'none';
