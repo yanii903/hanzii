@@ -96,8 +96,7 @@ function initializeApp() {
     // Initialize reading game level options
     updateReadingLevelOptions();
     
-    // Load initial data
-    loadDictionaryData();
+    // Don't load dictionary data immediately - lazy load when user opens Dictionary tab
 }
 
 // ===================================
@@ -160,6 +159,11 @@ function navigateToSection(sectionId) {
     const targetSection = document.getElementById(sectionId);
     if (targetSection) {
         targetSection.classList.add('active');
+        
+        // Lazy load dictionary data when user opens Dictionary section
+        if (sectionId === 'dictionary' && currentData.length === 0) {
+            loadDictionaryData();
+        }
         
         // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -331,7 +335,8 @@ function displayDictionary() {
         return;
     }
     
-    // Display with highlighting
+    // Display with highlighting (pagination = lightweight virtual scrolling)
+    // Only render 24 items per page instead of all results for better performance
     resultsContainer.innerHTML = paginatedData.map((entry, index) => `
         <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="word-card" onclick='showWordDetail(${JSON.stringify(entry).replace(/'/g, "&apos;")})'>

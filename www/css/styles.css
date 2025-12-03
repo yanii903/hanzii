@@ -373,6 +373,7 @@ body.nav-open .translator-popup {
     filter: blur(80px);
     opacity: 0.3;
     animation: float 6s ease-in-out infinite;
+    will-change: transform;
 }
 
 .orb-1 {
@@ -475,6 +476,7 @@ body.nav-open .translator-popup {
     flex-direction: column;
     gap: 0.5rem;
     animation: floatCard 4s ease-in-out infinite;
+    will-change: transform;
 }
 
 .floating-card .hanzi {
@@ -557,6 +559,7 @@ body.nav-open .translator-popup {
     padding: 2rem;
     transition: all var(--transition-normal);
     height: 100%;
+    will-change: transform;
 }
 
 .feature-card:hover {
@@ -751,6 +754,7 @@ mark.search-highlight {
     transition: all var(--transition-normal);
     height: 100%;
     cursor: pointer;
+    will-change: transform, border-color, box-shadow;
 }
 
 .word-card:hover {
@@ -1806,6 +1810,15 @@ mark.search-highlight {
     
     .social-links {
         justify-content: center;
+    }
+    
+    /* Reduce blur on mobile for better performance */
+    .word-card,
+    .glass-card,
+    .glass-nav,
+    .glass-footer {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 }
 
