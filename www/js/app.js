@@ -1188,6 +1188,7 @@ let currentDialog = null;
 let supportVisible = false;
 let currentReadingPage = 1;
 const topicsPerPage = 8;
+let loadedReadingLevels = {}; // Cache for loaded reading levels {scriptType_level: data}
 
 function startReadingGame() {
     // Hide vocabulary game area
@@ -1239,16 +1240,54 @@ async function loadReadingData() {
     const scriptType = document.getElementById('readingScriptType').value;
     const level = document.getElementById('readingLevelSelect').value;
     
+    // Show skeleton loading
+    const topicsList = document.getElementById('topicsList');
+    topicsList.innerHTML = `
+        ${Array(8).fill(0).map(() => `
+            <div class="skeleton-card">
+                <div class="skeleton skeleton-avatar"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text short"></div>
+            </div>
+        `).join('')}
+    `;
+    
+    // Bắt đầu đếm thời gian loading
+    const loadStartTime = Date.now();
+    
     const dataPath = readingDataPaths[scriptType][level];
     
     try {
-        const response = await fetch(dataPath);
-        const data = await response.json();
-        readingData = data.dialogs || [];
+        // Check cache first
+        const levelKey = `${scriptType}_${level}`;
+        if (!loadedReadingLevels[levelKey]) {
+            const response = await fetch(dataPath);
+            const data = await response.json();
+            loadedReadingLevels[levelKey] = data.dialogs || [];
+        }
+        
+        readingData = loadedReadingLevels[levelKey];
+        
+        // Đảm bảo loading hiển thị ít nhất 1 giây để tránh giật
+        const loadTime = Date.now() - loadStartTime;
+        const minLoadTime = 1000; // 1 giây
+        
+        if (loadTime < minLoadTime) {
+            await new Promise(resolve => setTimeout(resolve, minLoadTime - loadTime));
+        }
         
         displayTopics();
     } catch (error) {
         console.error('Error loading reading data:', error);
+        
+        // Đảm bảo hiển thị lỗi sau 1 giây
+        const loadTime = Date.now() - loadStartTime;
+        const minLoadTime = 1000;
+        
+        if (loadTime < minLoadTime) {
+            await new Promise(resolve => setTimeout(resolve, minLoadTime - loadTime));
+        }
+        
         document.getElementById('topicsList').innerHTML = `
             <div class="glass-card p-4 text-center">
                 <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: var(--warning-color);"></i>
@@ -1283,7 +1322,7 @@ function displayTopics() {
     topicsList.innerHTML = currentPageTopics.map((dialog, index) => {
         const actualIndex = startIndex + index;
         return `
-            <div class="topic-card glass-card" onclick="showDialog(${actualIndex})">
+            <div class="topic-card glass-card animate-topic-card" style="animation-delay: ${index * 0.05}s" onclick="showDialog(${actualIndex})">
                 <div class="topic-icon">
                     <i class="fas ${getTopicIcon(dialog.topic)}"></i>
                 </div>
@@ -1478,8 +1517,31 @@ document.getElementById('readingScriptType')?.addEventListener('change', functio
     updateReadingLevelOptions();
 });
 
-document.getElementById('applyReadingSettings')?.addEventListener('click', function() {
-    loadReadingData();
+document.getElementById('applyReadingSettings')?.addEventListener('click', async function() {
+    const btn = this;
+    const originalHTML = btn.innerHTML;
+    
+    // Disable button và hiển thị loading state ngay lập tức
+    btn.disabled = true;
+    btn.style.transition = 'all 0.3s ease';
+    btn.classList.remove('btn-warning');
+    btn.classList.add('btn-primary');
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang cập nhật...';
+    
+    // Đảm bảo hiệu ứng được render trước khi load data
+    await new Promise(resolve => setTimeout(resolve, 100));
+    
+    // Load data
+    await loadReadingData();
+    
+    // Restore button state mượt mà
+    btn.classList.remove('btn-primary');
+    btn.classList.add('btn-warning');
+    btn.innerHTML = originalHTML;
+    
+    // Chờ animation hoàn tất rồi mới enable lại
+    await new Promise(resolve => setTimeout(resolve, 300));
+    btn.disabled = false;
 });
 
 // ===================================
