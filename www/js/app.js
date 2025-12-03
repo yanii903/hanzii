@@ -877,6 +877,29 @@ async function initializeGame() {
     const dataPath = dataPaths[scriptType][level];
     
     try {
+        // Button preload UX
+        const applyBtn = document.getElementById('applyGameSettings');
+        const card = document.querySelector('.question-card');
+        const answerInputEl = document.getElementById('answerInput');
+        const submitBtnEl = document.getElementById('submitBtn');
+        const giveUpBtnEl = document.getElementById('giveUpBtn');
+        const nextBtnEl = document.getElementById('nextBtn');
+
+        if (applyBtn) {
+            applyBtn.disabled = true;
+            if (!applyBtn.dataset.originalText) {
+                applyBtn.dataset.originalText = applyBtn.innerHTML;
+            }
+            applyBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang cập nhật';
+        }
+
+        // Start preload overlay (do NOT hide content)
+        const preloadStart = performance.now();
+        if (card) {
+            ensureQuestionPreloadOverlay(card);
+            setQuestionPreloadVisible(card, true);
+            // keep inputs enabled so user sees content with wave effect
+        }
         const response = await fetch(dataPath);
         const data = await response.json();
         const availableEntries = data.entries || [];
@@ -898,10 +921,31 @@ async function initializeGame() {
         
         // Update UI
         updateGameUI();
+
+        // Ensure at least 1s preload
+        const elapsed = performance.now() - preloadStart;
+        const waitMs = Math.max(0, 1000 - elapsed);
+        await new Promise(res => setTimeout(res, waitMs));
+
         showQuestion();
+
+        // Remove overlay; keep content visible throughout
+        if (card) {
+            setQuestionPreloadVisible(card, false);
+        }
+
+        if (applyBtn) {
+            applyBtn.disabled = false;
+            applyBtn.innerHTML = applyBtn.dataset.originalText || '<i class="fas fa-sync"></i> Cập nhật';
+        }
     } catch (error) {
         console.error('Error loading game data:', error);
         alert('Không thể tải dữ liệu game. Vui lòng thử lại.');
+        const applyBtn = document.getElementById('applyGameSettings');
+        if (applyBtn) {
+            applyBtn.disabled = false;
+            applyBtn.innerHTML = applyBtn.dataset.originalText || '<i class="fas fa-sync"></i> Cập nhật';
+        }
     }
 }
 
@@ -941,6 +985,23 @@ function showQuestion() {
     document.getElementById('giveUpBtn').style.display = 'inline-block';
     document.getElementById('nextBtn').style.display = 'none';
     document.getElementById('answerInput').disabled = false;
+}
+
+// Helpers for question preload overlay
+function ensureQuestionPreloadOverlay(card) {
+    let overlay = card.querySelector('.question-preload-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'question-preload-overlay';
+        card.appendChild(overlay);
+    }
+}
+
+function setQuestionPreloadVisible(card, visible) {
+    const overlay = card.querySelector('.question-preload-overlay');
+    if (overlay) {
+        overlay.style.display = visible ? 'block' : 'none';
+    }
 }
 
 function submitAnswer() {
@@ -1745,29 +1806,19 @@ document.getElementById('readingScriptType')?.addEventListener('change', functio
 
 document.getElementById('applyReadingSettings')?.addEventListener('click', async function() {
     const btn = this;
-    const originalHTML = btn.innerHTML;
-    
-    // Disable button và hiển thị loading state ngay lập tức
+    if (!btn.dataset.originalText) {
+        btn.dataset.originalText = btn.innerHTML;
+    }
+    // Disable and show spinner (match vocab game UX)
     btn.disabled = true;
-    btn.style.transition = 'all 0.3s ease';
-    btn.classList.remove('btn-warning');
-    btn.classList.add('btn-primary');
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang cập nhật...';
-    
-    // Đảm bảo hiệu ứng được render trước khi load data
-    await new Promise(resolve => setTimeout(resolve, 100));
-    
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang cập nhật';
+
     // Load data
     await loadReadingData();
-    
-    // Restore button state mượt mà
-    btn.classList.remove('btn-primary');
-    btn.classList.add('btn-warning');
-    btn.innerHTML = originalHTML;
-    
-    // Chờ animation hoàn tất rồi mới enable lại
-    await new Promise(resolve => setTimeout(resolve, 300));
+
+    // Restore
     btn.disabled = false;
+    btn.innerHTML = btn.dataset.originalText;
 });
 
 // ===================================
