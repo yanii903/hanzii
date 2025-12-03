@@ -3,9 +3,43 @@
 // Main JavaScript File
 // ===================================
 
+// ===================================
+// UTILITY FUNCTIONS
+// ===================================
+
+// Debounce function to limit execution rate
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Throttle function for high-frequency events
+function throttle(func, limit) {
+    let inThrottle;
+    return function(...args) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
+
+// ===================================
+// GLOBAL VARIABLES
+// ===================================
+
 // Global Variables
 let currentData = [];
 let allScriptData = []; // All data for current script type (all levels combined)
+let loadedLevels = {}; // Cache for loaded levels {scriptType_level: data}
 let currentPage = 1;
 let itemsPerPage = 12;
 let gameMode = null;
@@ -18,6 +52,41 @@ let currentAnswer = null;
 let wrongAttempts = 0;
 let searchCache = {};
 let lastSearchTerm = '';
+let lastFocusedElement = null; // For focus restoration
+
+// LRU Cache for translations with max size
+const MAX_CACHE_SIZE = 100;
+class LRUCache {
+    constructor(maxSize) {
+        this.maxSize = maxSize;
+        this.cache = new Map();
+    }
+    
+    get(key) {
+        if (!this.cache.has(key)) return undefined;
+        const value = this.cache.get(key);
+        this.cache.delete(key);
+        this.cache.set(key, value);
+        return value;
+    }
+    
+    set(key, value) {
+        if (this.cache.has(key)) {
+            this.cache.delete(key);
+        } else if (this.cache.size >= this.maxSize) {
+            const firstKey = this.cache.keys().next().value;
+            this.cache.delete(firstKey);
+        }
+        this.cache.set(key, value);
+    }
+    
+    clear() {
+        this.cache.clear();
+    }
+}
+
+let translatorCache = new LRUCache(MAX_CACHE_SIZE);
+let eventCleanupHandlers = []; // Track event listeners for cleanup
 
 // Data paths
 const dataPaths = {
@@ -93,6 +162,9 @@ function initializeApp() {
     // Setup event listeners
     setupEventListeners();
     
+    // Setup keyboard shortcuts
+    setupKeyboardShortcuts();
+    
     // Initialize reading game level options
     updateReadingLevelOptions();
     
@@ -165,6 +237,14 @@ function navigateToSection(sectionId) {
             loadDictionaryData();
         }
         
+        // Focus management for better UX
+        setTimeout(() => {
+            if (sectionId === 'dictionary') {
+                const searchInput = document.getElementById('searchInput');
+                if (searchInput) searchInput.focus();
+            }
+        }, 100);
+        
         // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -181,19 +261,114 @@ function navigateToSection(sectionId) {
 }
 
 // ===================================
+// KEYBOARD SHORTCUTS
+// ===================================
+
+function setupKeyboardShortcuts() {
+    document.addEventListener('keydown', function(e) {
+        // ESC - Close modals and popups
+        if (e.key === 'Escape') {
+            // Close word modal
+            const wordModal = document.getElementById('wordModal');
+            if (wordModal && wordModal.style.display === 'flex') {
+                closeWordModal();
+                return;
+            }
+            
+            // Close translator if open
+            const translatorPopup = document.getElementById('translatorPopup');
+            if (translatorPopup && !translatorPopup.classList.contains('collapsed')) {
+                toggleTranslator();
+                return;
+            }
+        }
+        
+        // / (slash) - Focus search (like GitHub)
+        if (e.key === '/' && !isInputFocused()) {
+            e.preventDefault();
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                navigateToSection('dictionary');
+                setTimeout(() => searchInput.focus(), 150);
+            }
+            return;
+        }
+        
+        // Ctrl/Cmd + K - Focus search
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                navigateToSection('dictionary');
+                setTimeout(() => searchInput.focus(), 150);
+            }
+            return;
+        }
+        
+        // Ctrl/Cmd + 1,2,3,4 - Navigate tabs
+        if ((e.ctrlKey || e.metaKey) && ['1','2','3','4'].includes(e.key)) {
+            e.preventDefault();
+            const sections = ['home', 'dictionary', 'games', 'about'];
+            const index = parseInt(e.key) - 1;
+            if (sections[index]) {
+                navigateToSection(sections[index]);
+            }
+            return;
+        }
+        
+        // Arrow keys for pagination (when not in input)
+        if (!isInputFocused()) {
+            if (e.key === 'ArrowLeft') {
+                const prevBtn = document.querySelector('.page-btn[onclick*="currentPage--"]');
+                if (prevBtn && !prevBtn.disabled) {
+                    prevBtn.click();
+                }
+            } else if (e.key === 'ArrowRight') {
+                const nextBtn = document.querySelector('.page-btn[onclick*="currentPage++"]');
+                if (nextBtn && !nextBtn.disabled) {
+                    nextBtn.click();
+                }
+            }
+        }
+    });
+}
+
+function isInputFocused() {
+    const activeElement = document.activeElement;
+    return activeElement && (
+        activeElement.tagName === 'INPUT' ||
+        activeElement.tagName === 'TEXTAREA' ||
+        activeElement.isContentEditable
+    );
+}
+
+// Cleanup function to prevent memory leaks
+function cleanupEventListeners() {
+    eventCleanupHandlers.forEach(cleanup => {
+        if (typeof cleanup === 'function') {
+            cleanup();
+        }
+    });
+    eventCleanupHandlers = [];
+}
+
+// ===================================
 // SCROLL TO TOP
 // ===================================
 
 function setupScrollToTop() {
     const scrollBtn = document.getElementById('scrollToTop');
     
-    window.addEventListener('scroll', function() {
+    // Debounced scroll handler for better performance
+    const handleScroll = debounce(function() {
         if (window.pageYOffset > 300) {
             scrollBtn.classList.add('visible');
         } else {
             scrollBtn.classList.remove('visible');
         }
-    });
+    }, 100);
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
     
     scrollBtn.addEventListener('click', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -203,6 +378,33 @@ function setupScrollToTop() {
 // ===================================
 // DICTIONARY
 // ===================================
+
+function showSkeletonLoading(container, type = 'cards') {
+    const resultsContainer = document.getElementById(container);
+    
+    if (type === 'cards') {
+        resultsContainer.innerHTML = `
+            <div class="skeleton-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; width: 100%;">
+                ${Array(12).fill(0).map(() => `
+                    <div class="skeleton-card">
+                        <div class="skeleton skeleton-header"></div>
+                        <div class="skeleton skeleton-text short"></div>
+                        <div class="skeleton skeleton-text shorter"></div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    } else if (type === 'list') {
+        resultsContainer.innerHTML = `
+            ${Array(6).fill(0).map(() => `
+                <div class="skeleton-card">
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text short"></div>
+                </div>
+            `).join('')}
+        `;
+    }
+}
 
 function setupDictionary() {
     const scriptType = document.getElementById('scriptType');
@@ -253,23 +455,26 @@ async function loadDictionaryData() {
     const scriptType = document.getElementById('scriptType').value;
     const level = document.getElementById('levelSelect').value;
     
+    // Show skeleton loading
+    showSkeletonLoading('dictionaryResults', 'cards');
+    
     try {
-        // Load all levels for current script type
+        // Only load current level initially (performance optimization)
+        const levelKey = `${scriptType}_${level}`;
         const levelPaths = dataPaths[scriptType];
-        const allPromises = Object.values(levelPaths).map(path => 
-            fetch(path).then(res => res.json())
-        );
-        
-        const allData = await Promise.all(allPromises);
-        
-        // Combine all entries from all levels
-        allScriptData = allData.flatMap(data => data.entries || []);
-        
-        // Current level data for display when no search
         const currentLevelPath = levelPaths[level];
-        const currentLevelResponse = await fetch(currentLevelPath);
-        const currentLevelData = await currentLevelResponse.json();
-        currentData = currentLevelData.entries || [];
+        
+        // Check cache first
+        if (!loadedLevels[levelKey]) {
+            const response = await fetch(currentLevelPath);
+            const data = await response.json();
+            loadedLevels[levelKey] = data.entries || [];
+        }
+        
+        currentData = loadedLevels[levelKey];
+        
+        // For search across all levels, we'll load on-demand
+        allScriptData = currentData;
         
         currentPage = 1;
         displayDictionary();
@@ -287,7 +492,35 @@ async function loadDictionaryData() {
     }
 }
 
-function displayDictionary() {
+// Load all levels for search (on-demand)
+async function loadAllLevelsForSearch(scriptType) {
+    const levelPaths = dataPaths[scriptType];
+    const promises = [];
+    
+    for (const [level, path] of Object.entries(levelPaths)) {
+        const levelKey = `${scriptType}_${level}`;
+        if (!loadedLevels[levelKey]) {
+            promises.push(
+                fetch(path)
+                    .then(res => res.json())
+                    .then(data => {
+                        loadedLevels[levelKey] = data.entries || [];
+                    })
+            );
+        }
+    }
+    
+    if (promises.length > 0) {
+        await Promise.all(promises);
+    }
+    
+    // Combine all loaded levels
+    allScriptData = Object.keys(loadedLevels)
+        .filter(key => key.startsWith(scriptType))
+        .flatMap(key => loadedLevels[key]);
+}
+
+async function displayDictionary() {
     const searchTerm = document.getElementById('searchInput').value.trim();
     const normalizedSearch = normalizeText(searchTerm);
     
@@ -295,6 +528,13 @@ function displayDictionary() {
     // If searching, search ALL levels; otherwise show current level only
     let filteredData;
     if (searchTerm) {
+        // Load all levels on first search (lazy load optimization)
+        const scriptType = document.getElementById('scriptType').value;
+        if (allScriptData.length === currentData.length) {
+            showSkeletonLoading('dictionaryResults', 'cards');
+            await loadAllLevelsForSearch(scriptType);
+        }
+        
         // Search across ALL levels of current script type
         filteredData = allScriptData.filter(entry => {
             const normalizedHanzi = normalizeText(entry.hanzi);
@@ -440,9 +680,9 @@ function setupEventListeners() {
         }
         
         clearTimeout(searchTimeout);
-        searchTimeout = setTimeout(() => {
+        searchTimeout = setTimeout(async () => {
             currentPage = 1;
-            displayDictionary();
+            await displayDictionary();
             
             // Hide loading
             if (searchLoading) {
@@ -452,11 +692,11 @@ function setupEventListeners() {
     });
     
     // Enter key support
-    searchInput.addEventListener('keypress', function(e) {
+    searchInput.addEventListener('keypress', async function(e) {
         if (e.key === 'Enter') {
             clearTimeout(searchTimeout);
             currentPage = 1;
-            displayDictionary();
+            await displayDictionary();
             if (searchLoading) {
                 searchLoading.style.display = 'none';
             }
@@ -864,6 +1104,9 @@ function showWordDetail(entry) {
     // Show modal
     modal.style.display = 'flex';
     
+    // Save focus for restoration
+    lastFocusedElement = document.activeElement;
+    
     // Hide scrollbar only on mobile devices (width < 768px)
     if (window.innerWidth < 768) {
         document.body.style.overflow = 'hidden';
@@ -886,6 +1129,12 @@ function closeWordModal() {
         // Restore scrollbar (only needed if it was hidden on mobile)
         if (window.innerWidth < 768) {
             document.body.style.overflow = 'auto';
+        }
+        
+        // Restore focus to previous element
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+            lastFocusedElement = null;
         }
     }, 300);
 }
@@ -1213,7 +1462,6 @@ document.getElementById('applyReadingSettings')?.addEventListener('click', funct
 // ===================================
 
 let translatorDirection = 'zh-vi'; // 'zh-vi' or 'vi-zh'
-let translatorCache = {};
 let translationTimeout;
 let isOnline = navigator.onLine;
 let dictionaryDataLoaded = false;
@@ -1382,10 +1630,11 @@ async function autoTranslate(text) {
         updateLanguageIndicators();
     }
     
-    // Check cache first
+    // Check LRU cache first
     const cacheKey = `${translatorDirection}:${translatorChineseType}:${text}`;
-    if (translatorCache[cacheKey]) {
-        displayTranslation(translatorCache[cacheKey]);
+    const cachedTranslation = translatorCache.get(cacheKey);
+    if (cachedTranslation) {
+        displayTranslation(cachedTranslation);
         // Update status based on current network
         updateTranslatorStatus(isOnline ? 'online' : 'offline');
         return;
@@ -1455,7 +1704,7 @@ async function autoTranslate(text) {
                !translation.includes('Cần kết nối'));
         
         if (isValidTranslation) {
-            translatorCache[cacheKey] = translation;
+            translatorCache.set(cacheKey, translation);
             displayTranslation(translation);
         } else {
             displayTranslation('Không thể dịch văn bản này.');
