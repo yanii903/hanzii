@@ -188,6 +188,69 @@ body.preloading #scrollToTop {
 }
 
 /* ===================================
+   SKELETON LOADING
+   =================================== */
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.05) 100%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+    border-radius: var(--radius-sm);
+}
+
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.skeleton-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.skeleton-header {
+    height: 24px;
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+.skeleton-text {
+    height: 16px;
+    width: 100%;
+    margin-bottom: 0.75rem;
+}
+
+.skeleton-text.short {
+    width: 80%;
+}
+
+.skeleton-text.shorter {
+    width: 60%;
+}
+
+.skeleton-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.skeleton-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* ===================================
    NAVIGATION
    =================================== */
 
@@ -257,8 +320,6 @@ body.preloading #scrollToTop {
     will-change: transform, opacity;
     box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 20px 60px rgba(0,0,0,0.5);
 }
-
-.offcanvas.show { }
 
 .offcanvas .offcanvas-header {
     border-bottom: 1px solid var(--glass-border);
@@ -784,7 +845,6 @@ mark.search-highlight {
     margin-bottom: 0.75rem;
     font-style: normal;
     line-height: 1.8;
-    vertical-align: baseline;
     display: block;
     font-family: 'Arial', 'Helvetica', sans-serif;
     text-align: left;
@@ -932,7 +992,6 @@ mark.search-highlight {
     color: var(--text-secondary);
     font-style: normal;
     line-height: 2;
-    vertical-align: baseline;
     display: block;
     font-family: 'Arial', 'Helvetica', sans-serif;
     text-align: center;
@@ -1013,7 +1072,6 @@ mark.search-highlight {
     font-style: normal;
     margin-bottom: 0.5rem;
     line-height: 1.8;
-    vertical-align: baseline;
     display: block;
     font-family: 'Arial', 'Helvetica', sans-serif;
     text-align: left;
@@ -1325,7 +1383,6 @@ mark.search-highlight {
     font-style: normal;
     margin-bottom: 0.5rem;
     line-height: 1.8;
-    vertical-align: baseline;
     display: block;
     font-family: 'Arial', 'Helvetica', sans-serif;
     text-align: left;
@@ -1396,7 +1453,6 @@ mark.search-highlight {
     font-size: 1.5rem;
     font-style: normal;
     line-height: 2;
-    vertical-align: baseline;
     display: block;
     font-family: 'Arial', 'Helvetica', sans-serif;
     text-align: center;
@@ -2500,7 +2556,6 @@ mark.search-highlight {
     font-style: normal;
     line-height: 1.8;
     font-weight: 400;
-    vertical-align: baseline;
     display: block;
     font-family: 'Arial', 'Helvetica', sans-serif;
     text-align: left;
