@@ -250,6 +250,40 @@ function navigateToSection(sectionId) {
             if (topicsList) topicsList.style.display = 'grid';
             if (dialogDisplay) dialogDisplay.style.display = 'none';
         }
+    } else {
+        // When navigating TO games section, ensure title and game modes are visible
+        const gameTitle = document.querySelector('#games .section-header');
+        const gameModes = document.querySelector('#games .row.g-4.mb-5');
+        const gameArea = document.getElementById('gameArea');
+        const readingGameArea = document.getElementById('readingGameArea');
+        
+        // Hide game areas if they're open
+        if (gameArea && gameArea.style.display === 'block') {
+            gameArea.style.display = 'none';
+            gameMode = null;
+        }
+        
+        if (readingGameArea && readingGameArea.style.display === 'block') {
+            readingGameArea.style.display = 'none';
+            currentReadingPage = 1;
+            const topicsList = document.getElementById('topicsList');
+            const dialogDisplay = document.getElementById('dialogDisplay');
+            if (topicsList) topicsList.style.display = 'grid';
+            if (dialogDisplay) dialogDisplay.style.display = 'none';
+        }
+        
+        // Reset and show title and game modes with proper styles
+        if (gameTitle) {
+            gameTitle.style.display = 'block';
+            gameTitle.style.opacity = '1';
+            gameTitle.style.transform = 'translateY(0)';
+        }
+        
+        if (gameModes) {
+            gameModes.style.display = 'flex';
+            gameModes.style.opacity = '1';
+            gameModes.style.transform = 'translateY(0)';
+        }
     }
     
     // Show target section
