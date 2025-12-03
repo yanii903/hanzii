@@ -1269,20 +1269,17 @@ function initTranslator() {
         isOnline = true;
         // Flash checking for 2s then show result
         scheduleNetworkCheck(2000);
-        console.log('Network status: ONLINE');
     });
     
     window.addEventListener('offline', () => {
         isOnline = false;
         // Flash checking for 2s then show exclamation
         scheduleNetworkCheck(2000);
-        console.log('Network status: OFFLINE');
     });
     
     // Initial: show checking for 2s, then reflect actual status
     isOnline = navigator.onLine;
     scheduleNetworkCheck(2000);
-    console.log('Initial network status:', isOnline ? 'ONLINE' : 'OFFLINE');
     
     // Auto-translate on input with debounce
     translatorInput?.addEventListener('input', function() {
@@ -1398,14 +1395,9 @@ async function autoTranslate(text) {
     let translation = null;
     let usedOnline = false;
     
-    console.log('Starting translation. Online status:', isOnline);
-    console.log('Direction:', translatorDirection, 'Type:', translatorChineseType);
-    console.log('Input text:', text);
-    
     // For Vietnamese to Chinese, ALWAYS try online first (offline won't work well)
     if (translatorDirection === 'vi-zh') {
         if (isOnline) {
-            console.log('Attempting online translation for Vietnamese→Chinese...');
             translation = await translateOnline(text, translatorDirection);
             
             // Check if translation is valid (object with text or non-empty string)
@@ -1413,22 +1405,18 @@ async function autoTranslate(text) {
                            (typeof translation === 'string' && translation.trim() && !/[\uFFFD]/.test(translation));
             
             if (isValid) {
-                console.log('Online translation successful:', translation);
                 usedOnline = true;
             } else {
-                console.log('Online translation failed for Vietnamese→Chinese');
                 translation = 'Cần kết nối internet.';
                 usedOnline = false;
             }
         } else {
-            console.log('Device is offline, Vietnamese→Chinese will be very limited');
             translation = 'Cần kết nối internet.';
             usedOnline = false;
         }
     } else {
         // For Chinese to Vietnamese, try online first, fallback to offline
         if (isOnline) {
-            console.log('Attempting online translation for Chinese→Vietnamese...');
             translation = await translateOnline(text, translatorDirection);
             
             // Check if translation is valid (object with text or non-empty string)
@@ -1436,19 +1424,14 @@ async function autoTranslate(text) {
                            (typeof translation === 'string' && translation.trim() && !/[\uFFFD]/.test(translation));
             
             if (isValid) {
-                console.log('Online translation successful:', translation);
                 usedOnline = true;
             } else {
-                console.log('Online translation failed, trying offline...');
                 translation = null;
             }
-        } else {
-            console.log('Device is offline, using dictionary for Chinese→Vietnamese...');
         }
         
         // Fallback to offline for Chinese→Vietnamese only
         if (!translation || !usedOnline) {
-            console.log('Using offline translation...');
             const offlineTranslation = await translateOffline(text, translatorDirection);
             if (offlineTranslation && offlineTranslation.trim()) {
                 translation = offlineTranslation;
@@ -1469,14 +1452,11 @@ async function autoTranslate(text) {
         if (isValidTranslation) {
             translatorCache[cacheKey] = translation;
             displayTranslation(translation);
-            console.log('Translation complete. Used:', usedOnline ? 'ONLINE' : 'OFFLINE');
         } else {
             displayTranslation('Không thể dịch văn bản này.');
-            console.log('Translation failed completely');
         }
     } else {
         displayTranslation('Không thể dịch văn bản này.');
-        console.log('Translation failed completely');
     }
     
     // Update status to reflect actual network state
@@ -1500,17 +1480,11 @@ async function translateOnline(text, direction) {
         // Add dt=rm for romanization (pinyin)
         const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLang}&tl=${targetLang}&dt=t&dt=rm&q=${encodeURIComponent(text)}`;
         
-        console.log('Google Translate URL:', url);
-        
         const response = await fetch(url);
-        
-        console.log('API Response status:', response.status);
         
         if (!response.ok) throw new Error('Translation API failed');
         
         const data = await response.json();
-        console.log('Google Translate Response:', data);
-        console.log('Full response structure:', JSON.stringify(data, null, 2));
         
         // Parse Google Translate response format
         // Response format: [[[translated_text, original_text, ...]], ..., romanization_array]
@@ -1523,8 +1497,6 @@ async function translateOnline(text, direction) {
             }
             
             if (translation.trim()) {
-                console.log('Translation successful:', translation);
-                
                 // Check if result contains Chinese characters and get pinyin
                 if (/[\u4e00-\u9fff]/.test(translation)) {
                     // Try to get pinyin from romanization data
@@ -1533,7 +1505,6 @@ async function translateOnline(text, direction) {
                     // Google Translate response format:
                     // data[0] = [["translation", "original", null, null, ...], [null, null, "Pinyin"], ...]
                     // Pinyin is in data[0][i][2] where i > 0
-                    console.log('Checking for pinyin in data[0]:', data[0]);
                     
                     if (data[0] && Array.isArray(data[0])) {
                         for (let i = 1; i < data[0].length; i++) {
@@ -1545,7 +1516,6 @@ async function translateOnline(text, direction) {
                     }
                     
                     pinyin = pinyin.trim();
-                    console.log('Pinyin extracted:', pinyin);
                     
                     // Return object with both translation and pinyin
                     if (pinyin) {
@@ -1560,7 +1530,6 @@ async function translateOnline(text, direction) {
             }
         }
         
-        console.log('No valid translation in response');
         return null;
     } catch (error) {
         console.error('Online translation error:', error);
@@ -1931,7 +1900,6 @@ async function preloadDictionaryData() {
         }
         
         dictionaryDataLoaded = true;
-        console.log('Dictionary data preloaded:', combinedData.length, 'entries');
     } catch (error) {
         console.error('Error preloading dictionary:', error);
     }
@@ -1950,8 +1918,6 @@ async function loadTranslatorDictionary() {
         
         const results = await Promise.all(promises);
         translatorDictionaryData = results.flatMap(data => data.entries || []);
-        
-        console.log(`Translator dictionary loaded (${translatorChineseType}):`, translatorDictionaryData.length, 'entries');
     } catch (error) {
         console.error('Error loading translator dictionary:', error);
         translatorDictionaryData = [];
