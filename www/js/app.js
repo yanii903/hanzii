@@ -791,16 +791,50 @@ function startGame(mode) {
         readingGameArea.style.display = 'none';
     }
     
-    // Show game area
-    document.getElementById('gameArea').style.display = 'block';
-    document.getElementById('gameResults').style.display = 'none';
+    // Get elements
+    const gameTitle = document.querySelector('#games .section-header');
+    const gameModes = document.querySelector('#games .row.g-4.mb-5');
+    const gameArea = document.getElementById('gameArea');
     
-    // Scroll to game area
+    // Add fade out animation to title and game modes
+    if (gameTitle) {
+        gameTitle.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        gameTitle.style.opacity = '0';
+        gameTitle.style.transform = 'translateY(-20px)';
+    }
+    
+    if (gameModes) {
+        gameModes.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        gameModes.style.opacity = '0';
+        gameModes.style.transform = 'translateY(-20px)';
+    }
+    
+    // After fade out completes, hide them and show game area
     setTimeout(() => {
-        document.getElementById('gameArea').scrollIntoView({ behavior: 'smooth' });
-        // Initialize game after scrolling
-        initializeGame();
-    }, 100);
+        if (gameTitle) gameTitle.style.display = 'none';
+        if (gameModes) gameModes.style.display = 'none';
+        
+        // Show game area with fade in animation
+        gameArea.style.display = 'block';
+        gameArea.style.opacity = '0';
+        gameArea.style.transform = 'translateY(20px)';
+        gameArea.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        
+        document.getElementById('gameResults').style.display = 'none';
+        
+        // Trigger fade in
+        setTimeout(() => {
+            gameArea.style.opacity = '1';
+            gameArea.style.transform = 'translateY(0)';
+            
+            // Scroll to game area
+            setTimeout(() => {
+                gameArea.scrollIntoView({ behavior: 'smooth' });
+                // Initialize game after scrolling
+                initializeGame();
+            }, 100);
+        }, 50);
+    }, 400);
 }
 
 async function initializeGame() {
@@ -968,9 +1002,44 @@ function restartGame() {
 }
 
 function exitGame() {
-    document.getElementById('gameArea').style.display = 'none';
-    gameMode = null;
-    navigateToSection('games');
+    const gameArea = document.getElementById('gameArea');
+    const gameTitle = document.querySelector('#games .section-header');
+    const gameModes = document.querySelector('#games .row.g-4.mb-5');
+    
+    // Fade out game area
+    gameArea.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    gameArea.style.opacity = '0';
+    gameArea.style.transform = 'translateY(20px)';
+    
+    setTimeout(() => {
+        gameArea.style.display = 'none';
+        gameMode = null;
+        
+        // Show and fade in title and game modes
+        if (gameTitle) {
+            gameTitle.style.display = 'block';
+            gameTitle.style.opacity = '0';
+            gameTitle.style.transform = 'translateY(-20px)';
+            gameTitle.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            
+            setTimeout(() => {
+                gameTitle.style.opacity = '1';
+                gameTitle.style.transform = 'translateY(0)';
+            }, 50);
+        }
+        
+        if (gameModes) {
+            gameModes.style.display = 'flex';
+            gameModes.style.opacity = '0';
+            gameModes.style.transform = 'translateY(-20px)';
+            gameModes.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            
+            setTimeout(() => {
+                gameModes.style.opacity = '1';
+                gameModes.style.transform = 'translateY(0)';
+            }, 50);
+        }
+    }, 400);
 }
 
 // Add Enter key support for answer submission
@@ -1218,14 +1287,48 @@ function startReadingGame() {
         gameArea.style.display = 'none';
     }
     
-    document.getElementById('readingGameArea').style.display = 'block';
+    // Get elements
+    const gameTitle = document.querySelector('#games .section-header');
+    const gameModes = document.querySelector('#games .row.g-4.mb-5');
+    const readingGameArea = document.getElementById('readingGameArea');
     
-    // Scroll to reading game area
+    // Add fade out animation to title and game modes
+    if (gameTitle) {
+        gameTitle.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        gameTitle.style.opacity = '0';
+        gameTitle.style.transform = 'translateY(-20px)';
+    }
+    
+    if (gameModes) {
+        gameModes.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        gameModes.style.opacity = '0';
+        gameModes.style.transform = 'translateY(-20px)';
+    }
+    
+    // After fade out completes, hide them and show reading game area
     setTimeout(() => {
-        document.getElementById('readingGameArea').scrollIntoView({ behavior: 'smooth' });
-        // Load initial reading data
-        loadReadingData();
-    }, 100);
+        if (gameTitle) gameTitle.style.display = 'none';
+        if (gameModes) gameModes.style.display = 'none';
+        
+        // Show reading game area with fade in animation
+        readingGameArea.style.display = 'block';
+        readingGameArea.style.opacity = '0';
+        readingGameArea.style.transform = 'translateY(20px)';
+        readingGameArea.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        
+        // Trigger fade in
+        setTimeout(() => {
+            readingGameArea.style.opacity = '1';
+            readingGameArea.style.transform = 'translateY(0)';
+            
+            // Scroll to reading game area
+            setTimeout(() => {
+                readingGameArea.scrollIntoView({ behavior: 'smooth' });
+                // Load initial reading data
+                loadReadingData();
+            }, 100);
+        }, 50);
+    }, 400);
 }
 
 function updateReadingLevelOptions() {
@@ -1539,13 +1642,48 @@ function backToTopics() {
     }
 }
 function exitReadingGame() {
-    document.getElementById('readingGameArea').style.display = 'none';
-    // Reset display and page
-    currentReadingPage = 1;
-    document.getElementById('topicsList').style.display = 'grid';
-    document.getElementById('dialogDisplay').style.display = 'none';
-    navigateToSection('games');
-}   navigateToSection('games');
+    const readingGameArea = document.getElementById('readingGameArea');
+    const gameTitle = document.querySelector('#games .section-header');
+    const gameModes = document.querySelector('#games .row.g-4.mb-5');
+    
+    // Fade out reading game area
+    readingGameArea.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    readingGameArea.style.opacity = '0';
+    readingGameArea.style.transform = 'translateY(20px)';
+    
+    setTimeout(() => {
+        readingGameArea.style.display = 'none';
+        // Reset display and page
+        currentReadingPage = 1;
+        document.getElementById('topicsList').style.display = 'grid';
+        document.getElementById('dialogDisplay').style.display = 'none';
+        
+        // Show and fade in title and game modes
+        if (gameTitle) {
+            gameTitle.style.display = 'block';
+            gameTitle.style.opacity = '0';
+            gameTitle.style.transform = 'translateY(-20px)';
+            gameTitle.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            
+            setTimeout(() => {
+                gameTitle.style.opacity = '1';
+                gameTitle.style.transform = 'translateY(0)';
+            }, 50);
+        }
+        
+        if (gameModes) {
+            gameModes.style.display = 'flex';
+            gameModes.style.opacity = '0';
+            gameModes.style.transform = 'translateY(-20px)';
+            gameModes.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            
+            setTimeout(() => {
+                gameModes.style.opacity = '1';
+                gameModes.style.transform = 'translateY(0)';
+            }, 50);
+        }
+    }, 400);
+}
 
 // Event listeners for reading game
 document.getElementById('readingScriptType')?.addEventListener('change', function() {
