@@ -861,10 +861,8 @@ function startGame(mode) {
             gameArea.style.opacity = '1';
             gameArea.style.transform = 'translateY(0)';
             
-            // Scroll to game area
+            // Initialize game without scrolling
             setTimeout(() => {
-                gameArea.scrollIntoView({ behavior: 'smooth' });
-                // Initialize game after scrolling
                 initializeGame();
             }, 100);
         }, 50);
@@ -1355,10 +1353,8 @@ function startReadingGame() {
             readingGameArea.style.opacity = '1';
             readingGameArea.style.transform = 'translateY(0)';
             
-            // Scroll to reading game area
+            // Load initial reading data without scrolling
             setTimeout(() => {
-                readingGameArea.scrollIntoView({ behavior: 'smooth' });
-                // Load initial reading data
                 loadReadingData();
             }, 100);
         }, 50);
