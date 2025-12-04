@@ -2809,6 +2809,65 @@ function closeTranslator() {
     clearTranslatorInput();
 }
 
+// Hiển thị pinyin cho input dịch nhanh
+function showPinyinForTranslatorInput() {
+    const hanziInput = document.getElementById('translatorInput');
+    const pinyinOutput = document.getElementById('translatorPinyinOutput');
+    if (hanziInput && pinyinOutput) {
+        const value = hanziInput.value.trim();
+        if (/^[\u4e00-\u9fff]+$/.test(value)) {
+            const pinyin = getPinyinForHanzi(value);
+            pinyinOutput.textContent = pinyin;
+        } else {
+            pinyinOutput.textContent = '';
+        }
+    }
+}
+
+// Gắn sự kiện input cho translatorInput
+window.addEventListener('DOMContentLoaded', function() {
+    const hanziInput = document.getElementById('translatorInput');
+    if (hanziInput) {
+        hanziInput.addEventListener('input', showPinyinForTranslatorInput);
+    }
+});
+
+// Hàm chuyển chữ Hán sang pinyin (ưu tiên cụm từ, sau đó từng ký tự)
+function getPinyinForHanzi(hanzi) {
+    let dict = translatorDictionaryData && translatorDictionaryData.length ? translatorDictionaryData : [];
+    if (!dict.length) {
+        Object.values(loadedLevels).forEach(arr => {
+            dict = dict.concat(arr);
+        });
+    }
+    if (!dict.length) return '';
+    let pinyinArr = [];
+    let i = 0;
+    while (i < hanzi.length) {
+        let found = false;
+        for (let len = Math.min(6, hanzi.length - i); len > 0; len--) {
+            let phrase = hanzi.substr(i, len);
+            let entry = dict.find(e => e.hanzi === phrase);
+            if (entry) {
+                pinyinArr.push(entry.pinyin);
+                i += len;
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            let entry = dict.find(e => e.hanzi === hanzi[i]);
+            if (entry) {
+                pinyinArr.push(entry.pinyin);
+            } else {
+                pinyinArr.push(hanzi[i]);
+            }
+            i++;
+        }
+    }
+    return pinyinArr.join(' ');
+}
+
 // ===================================
 // EXPORT FUNCTIONS (for HTML onclick)
 // ===================================
