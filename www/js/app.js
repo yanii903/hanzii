@@ -1,5 +1,5 @@
 // ===================================
-// HANZII - Chinese Learning App
+// Yanii - Chinese Learning App
 // Main JavaScript File
 // ===================================
 
@@ -2811,10 +2811,10 @@ function closeTranslator() {
 
 // Hiển thị pinyin cho input dịch nhanh
 function showPinyinForTranslatorInput() {
-    const hanziInput = document.getElementById('translatorInput');
+    const Yaniinput = document.getElementById('translatorInput');
     const pinyinOutput = document.getElementById('translatorPinyinOutput');
-    if (hanziInput && pinyinOutput) {
-        const value = hanziInput.value.trim();
+    if (Yaniinput && pinyinOutput) {
+        const value = Yaniinput.value.trim();
         if (/^[\u4e00-\u9fff]+$/.test(value)) {
             const pinyin = getPinyinForHanzi(value);
             pinyinOutput.textContent = pinyin;
@@ -2826,9 +2826,9 @@ function showPinyinForTranslatorInput() {
 
 // Gắn sự kiện input cho translatorInput
 window.addEventListener('DOMContentLoaded', function() {
-    const hanziInput = document.getElementById('translatorInput');
-    if (hanziInput) {
-        hanziInput.addEventListener('input', showPinyinForTranslatorInput);
+    const Yaniinput = document.getElementById('translatorInput');
+    if (Yaniinput) {
+        Yaniinput.addEventListener('input', showPinyinForTranslatorInput);
     }
 });
 

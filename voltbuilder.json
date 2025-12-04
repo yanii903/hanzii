@@ -1,6 +1,6 @@
 {
-  "title": "Hanzii",
-  "id": "com.example.hanzii",
+  "title": "Yanii",
+  "id": "com.example.Yanii",
   "version": "1.0.0",
   "description": "A Chinese language learning application",
   "platforms": [
@@ -9,7 +9,7 @@
   ],
   "androidKeystore": "certificates/android.keystore",
   "androidKeystorePassword": "",
-  "androidAlias": "hanzii",
+  "androidAlias": "Yanii",
   "androidAliasPassword": "",
   "androidPackageType": "apk",
   "iosDevP12": "certificates/ios_development.p12",

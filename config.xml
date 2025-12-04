@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.example.hanzii" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Hanzii</name>
+<widget id="com.example.Yanii" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Yanii</name>
     <description>
         A Chinese language learning application
     </description>
-    <author email="dev@example.com" href="https://example.com">
+    <author email="phamdat7905@gmail.com" href="https://example.com">
         Yanii Team
     </author>
     <content src="index.html" />
