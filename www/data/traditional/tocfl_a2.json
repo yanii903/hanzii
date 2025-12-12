@@ -1,0 +1,2660 @@
+{
+  "level": "TOCFL_A2",
+  "entries": [
+    {
+      "hanzi": "阿姨",
+      "pinyin": "āyí",
+      "meaning_vi": "dì, cô",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "啊",
+      "pinyin": "a",
+      "meaning_vi": "a, à, ơ (trợ từ ngữ khí)",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "矮",
+      "pinyin": "ǎi",
+      "meaning_vi": "thấp, lùn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "愛好",
+      "pinyin": "àihào",
+      "meaning_vi": "sở thích",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "安靜",
+      "pinyin": "ānjìng",
+      "meaning_vi": "yên tĩnh",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "把",
+      "pinyin": "bǎ",
+      "meaning_vi": "đem, lấy (giới từ)",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "班",
+      "pinyin": "bān",
+      "meaning_vi": "lớp, ca (làm việc)",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "搬",
+      "pinyin": "bān",
+      "meaning_vi": "chuyển, dời",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "半",
+      "pinyin": "bàn",
+      "meaning_vi": "một nửa",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "辦法",
+      "pinyin": "bànfǎ",
+      "meaning_vi": "biện pháp",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "辦公室",
+      "pinyin": "bàngōngshì",
+      "meaning_vi": "văn phòng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "幫忙",
+      "pinyin": "bāngmáng",
+      "meaning_vi": "giúp đỡ (động từ li hợp)",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "包",
+      "pinyin": "bāo",
+      "meaning_vi": "túi, bao",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "飽",
+      "pinyin": "bǎo",
+      "meaning_vi": "no",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "北方",
+      "pinyin": "běifāng",
+      "meaning_vi": "miền Bắc",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "被",
+      "pinyin": "bèi",
+      "meaning_vi": "bị, được (giới từ bị động)",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "比較",
+      "pinyin": "bǐjiào",
+      "meaning_vi": "khá, tương đối",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "比賽",
+      "pinyin": "bǐsài",
+      "meaning_vi": "cuộc thi, thi đấu",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "必須",
+      "pinyin": "bìxū",
+      "meaning_vi": "phải, cần phải",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "變化",
+      "pinyin": "biànhuà",
+      "meaning_vi": "thay đổi",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "表示",
+      "pinyin": "biǎoshì",
+      "meaning_vi": "biểu thị, thể hiện",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "表演",
+      "pinyin": "biǎoyǎn",
+      "meaning_vi": "biểu diễn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "別人",
+      "pinyin": "biérén",
+      "meaning_vi": "người khác",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "賓館",
+      "pinyin": "bīnguǎn",
+      "meaning_vi": "khách sạn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "冰箱",
+      "pinyin": "bīngxiāng",
+      "meaning_vi": "tủ lạnh",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "才",
+      "pinyin": "cái",
+      "meaning_vi": "mới (nhấn mạnh thời gian muộn, trễ)",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "菜單",
+      "pinyin": "càidān",
+      "meaning_vi": "thực đơn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "參加",
+      "pinyin": "cānjiā",
+      "meaning_vi": "tham gia",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "草",
+      "pinyin": "cǎo",
+      "meaning_vi": "cỏ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "層",
+      "pinyin": "céng",
+      "meaning_vi": "tầng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "差",
+      "pinyin": "chà",
+      "meaning_vi": "kém, thiếu, tệ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "超市",
+      "pinyin": "chāoshì",
+      "meaning_vi": "siêu thị",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "襯衫",
+      "pinyin": "chènshān",
+      "meaning_vi": "áo sơ mi",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "成績",
+      "pinyin": "chéngjì",
+      "meaning_vi": "thành tích",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "城市",
+      "pinyin": "chéngshì",
+      "meaning_vi": "thành phố",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "遲到",
+      "pinyin": "chídào",
+      "meaning_vi": "đến trễ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "出現",
+      "pinyin": "chūxiàn",
+      "meaning_vi": "xuất hiện",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "廚房",
+      "pinyin": "chúfáng",
+      "meaning_vi": "nhà bếp",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "除了",
+      "pinyin": "chúle",
+      "meaning_vi": "ngoài ra, trừ ra",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "春",
+      "pinyin": "chūn",
+      "meaning_vi": "mùa xuân",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "詞語",
+      "pinyin": "cíyǔ",
+      "meaning_vi": "từ ngữ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "聰明",
+      "pinyin": "cōngmíng",
+      "meaning_vi": "thông minh",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "打掃",
+      "pinyin": "dǎsǎo",
+      "meaning_vi": "quét dọn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "打算",
+      "pinyin": "dǎsuàn",
+      "meaning_vi": "dự định",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "帶",
+      "pinyin": "dài",
+      "meaning_vi": "mang theo, dẫn theo",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "擔心",
+      "pinyin": "dānxīn",
+      "meaning_vi": "lo lắng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "蛋糕",
+      "pinyin": "dàngāo",
+      "meaning_vi": "bánh ngọt",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "當然",
+      "pinyin": "dāngrán",
+      "meaning_vi": "đương nhiên",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "地",
+      "pinyin": "de",
+      "meaning_vi": "trợ từ của động từ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "燈",
+      "pinyin": "dēng",
+      "meaning_vi": "đèn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "低",
+      "pinyin": "dī",
+      "meaning_vi": "thấp",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "地方",
+      "pinyin": "dìfāng",
+      "meaning_vi": "nơi, chỗ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "地鐵",
+      "pinyin": "dìtiě",
+      "meaning_vi": "tàu điện ngầm",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "地圖",
+      "pinyin": "dìtú",
+      "meaning_vi": "bản đồ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "電梯",
+      "pinyin": "diàntī",
+      "meaning_vi": "thang máy",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "電子郵箱",
+      "pinyin": "diànzǐ yóuxiāng",
+      "meaning_vi": "hộp thư điện tử (email)",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "東",
+      "pinyin": "dōng",
+      "meaning_vi": "đông (hướng đông)",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "冬",
+      "pinyin": "dōng",
+      "meaning_vi": "mùa đông",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "動物",
+      "pinyin": "dòngwù",
+      "meaning_vi": "động vật",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "短",
+      "pinyin": "duǎn",
+      "meaning_vi": "ngắn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "段",
+      "pinyin": "duàn",
+      "meaning_vi": "đoạn, quãng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "鍛鍊",
+      "pinyin": "duànliàn",
+      "meaning_vi": "luyện tập, rèn luyện",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "多麼",
+      "pinyin": "duōme",
+      "meaning_vi": "bao nhiêu, biết bao",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "餓",
+      "pinyin": "è",
+      "meaning_vi": "đói",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "而且",
+      "pinyin": "érqiě",
+      "meaning_vi": "mà còn, hơn nữa",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "耳朵",
+      "pinyin": "ěrduo",
+      "meaning_vi": "tai",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "發燒",
+      "pinyin": "fāshāo",
+      "meaning_vi": "sốt",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "發現",
+      "pinyin": "fāxiàn",
+      "meaning_vi": "phát hiện",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "方便",
+      "pinyin": "fāngbiàn",
+      "meaning_vi": "thuận tiện",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "放",
+      "pinyin": "fàng",
+      "meaning_vi": "đặt, để",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "放心",
+      "pinyin": "fàngxīn",
+      "meaning_vi": "yên tâm",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "分",
+      "pinyin": "fēn",
+      "meaning_vi": "phút, phân",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "附近",
+      "pinyin": "fùjìn",
+      "meaning_vi": "gần đây, vùng lân cận",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "複習",
+      "pinyin": "fùxí",
+      "meaning_vi": "ôn tập",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "乾淨",
+      "pinyin": "gānjìng",
+      "meaning_vi": "sạch sẽ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "敢",
+      "pinyin": "gǎn",
+      "meaning_vi": "dám",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "感冒",
+      "pinyin": "gǎnmào",
+      "meaning_vi": "cảm mạo, cảm lạnh",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "剛纔",
+      "pinyin": "gāngcái",
+      "meaning_vi": "vừa mới",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "跟",
+      "pinyin": "gēn",
+      "meaning_vi": "cùng với",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "根據",
+      "pinyin": "gēnjù",
+      "meaning_vi": "căn cứ vào",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "更",
+      "pinyin": "gèng",
+      "meaning_vi": "hơn, càng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "公園",
+      "pinyin": "gōngyuán",
+      "meaning_vi": "công viên",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "故事",
+      "pinyin": "gùshì",
+      "meaning_vi": "câu chuyện",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "颳風",
+      "pinyin": "guā fēng",
+      "meaning_vi": "gió thổi",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "關",
+      "pinyin": "guān",
+      "meaning_vi": "đóng, tắt",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "關係",
+      "pinyin": "guānxì",
+      "meaning_vi": "quan hệ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "關心",
+      "pinyin": "guānxīn",
+      "meaning_vi": "quan tâm",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "關於",
+      "pinyin": "guānyú",
+      "meaning_vi": "về (liên quan đến)",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "國家",
+      "pinyin": "guójiā",
+      "meaning_vi": "quốc gia",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "果汁",
+      "pinyin": "guǒzhī",
+      "meaning_vi": "nước ép trái cây",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "過去",
+      "pinyin": "guòqù",
+      "meaning_vi": "quá khứ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "還是",
+      "pinyin": "háishì",
+      "meaning_vi": "vẫn còn, hay là",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "害怕",
+      "pinyin": "hàipà",
+      "meaning_vi": "sợ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "河",
+      "pinyin": "hé",
+      "meaning_vi": "sông",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "黑板",
+      "pinyin": "hēibǎn",
+      "meaning_vi": "bảng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "護照",
+      "pinyin": "hùzhào",
+      "meaning_vi": "hộ chiếu",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "花",
+      "pinyin": "huā",
+      "meaning_vi": "hoa, tiêu (tiền, thời gian)",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "花園",
+      "pinyin": "huāyuán",
+      "meaning_vi": "vườn hoa",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "畫",
+      "pinyin": "huà",
+      "meaning_vi": "vẽ, tranh",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "壞",
+      "pinyin": "huài",
+      "meaning_vi": "hỏng, xấu",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "還",
+      "pinyin": "huán",
+      "meaning_vi": "trả lại, hoàn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "環境",
+      "pinyin": "huánjìng",
+      "meaning_vi": "môi trường",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "換",
+      "pinyin": "huàn",
+      "meaning_vi": "đổi",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "黃",
+      "pinyin": "huáng",
+      "meaning_vi": "màu vàng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "會議",
+      "pinyin": "huìyì",
+      "meaning_vi": "hội nghị, cuộc họp",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "或者",
+      "pinyin": "huòzhě",
+      "meaning_vi": "hoặc là",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "機會",
+      "pinyin": "jīhuì",
+      "meaning_vi": "cơ hội",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "幾乎",
+      "pinyin": "jīhū",
+      "meaning_vi": "hầu như, gần như",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "極",
+      "pinyin": "jí",
+      "meaning_vi": "cực kỳ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "記得",
+      "pinyin": "jìdé",
+      "meaning_vi": "nhớ, nhớ đến",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "季節",
+      "pinyin": "jìjié",
+      "meaning_vi": "mùa",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "檢查",
+      "pinyin": "jiǎnchá",
+      "meaning_vi": "kiểm tra",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "簡單",
+      "pinyin": "jiǎndān",
+      "meaning_vi": "đơn giản",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "健康",
+      "pinyin": "jiànkāng",
+      "meaning_vi": "khỏe mạnh",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "見面",
+      "pinyin": "jiànmiàn",
+      "meaning_vi": "gặp mặt",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "講",
+      "pinyin": "jiǎng",
+      "meaning_vi": "nói, giảng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "教",
+      "pinyin": "jiāo",
+      "meaning_vi": "dạy",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "角",
+      "pinyin": "jiǎo",
+      "meaning_vi": "góc",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "腳",
+      "pinyin": "jiǎo",
+      "meaning_vi": "chân",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "接",
+      "pinyin": "jiē",
+      "meaning_vi": "nhận, tiếp",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "街道",
+      "pinyin": "jiēdào",
+      "meaning_vi": "đường phố",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "結婚",
+      "pinyin": "jiéhūn",
+      "meaning_vi": "kết hôn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "結束",
+      "pinyin": "jiéshù",
+      "meaning_vi": "kết thúc",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "節目",
+      "pinyin": "jiémù",
+      "meaning_vi": "chương trình",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "節日",
+      "pinyin": "jiérì",
+      "meaning_vi": "ngày lễ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "解決",
+      "pinyin": "jiějué",
+      "meaning_vi": "giải quyết",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "借",
+      "pinyin": "jiè",
+      "meaning_vi": "mượn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "經常",
+      "pinyin": "jīngcháng",
+      "meaning_vi": "thường xuyên",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "經過",
+      "pinyin": "jīngguò",
+      "meaning_vi": "trải qua",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "經歷",
+      "pinyin": "jīnglì",
+      "meaning_vi": "kinh nghiệm",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "久",
+      "pinyin": "jiǔ",
+      "meaning_vi": "lâu",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "舊",
+      "pinyin": "jiù",
+      "meaning_vi": "cũ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "舉行",
+      "pinyin": "jǔxíng",
+      "meaning_vi": "tổ chức",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "句子",
+      "pinyin": "jùzi",
+      "meaning_vi": "câu",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "決定",
+      "pinyin": "juédìng",
+      "meaning_vi": "quyết định",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "可愛",
+      "pinyin": "kě'ài",
+      "meaning_vi": "đáng yêu",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "刻",
+      "pinyin": "kè",
+      "meaning_vi": "khắc (15 phút)",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "客人",
+      "pinyin": "kèrén",
+      "meaning_vi": "khách",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "空調",
+      "pinyin": "kòngtiáo",
+      "meaning_vi": "máy điều hòa",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "口",
+      "pinyin": "kǒu",
+      "meaning_vi": "miệng, khẩu",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "哭",
+      "pinyin": "kū",
+      "meaning_vi": "khóc",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "褲子",
+      "pinyin": "kùzi",
+      "meaning_vi": "quần",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "筷子",
+      "pinyin": "kuàizi",
+      "meaning_vi": "đũa",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "藍",
+      "pinyin": "lán",
+      "meaning_vi": "màu xanh",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "老",
+      "pinyin": "lǎo",
+      "meaning_vi": "già, cũ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "離開",
+      "pinyin": "líkāi",
+      "meaning_vi": "rời khỏi",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "禮物",
+      "pinyin": "lǐwù",
+      "meaning_vi": "quà",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "歷史",
+      "pinyin": "lìshǐ",
+      "meaning_vi": "lịch sử",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "臉",
+      "pinyin": "liǎn",
+      "meaning_vi": "mặt",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "練習",
+      "pinyin": "liànxí",
+      "meaning_vi": "luyện tập",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "輛",
+      "pinyin": "liàng",
+      "meaning_vi": "chiếc (xe)",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "瞭解",
+      "pinyin": "liǎojiě",
+      "meaning_vi": "hiểu rõ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "鄰居",
+      "pinyin": "línjū",
+      "meaning_vi": "hàng xóm",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "樓",
+      "pinyin": "lóu",
+      "meaning_vi": "tòa nhà",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "馬",
+      "pinyin": "mǎ",
+      "meaning_vi": "con ngựa",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "馬上",
+      "pinyin": "mǎshàng",
+      "meaning_vi": "ngay lập tức",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "滿意",
+      "pinyin": "mǎnyì",
+      "meaning_vi": "hài lòng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "帽子",
+      "pinyin": "màozi",
+      "meaning_vi": "mũ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "米",
+      "pinyin": "mǐ",
+      "meaning_vi": "gạo, mét",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "麪包",
+      "pinyin": "miànbāo",
+      "meaning_vi": "bánh mì",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "麪條",
+      "pinyin": "miàntiáo",
+      "meaning_vi": "mì sợi",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "明白",
+      "pinyin": "míngbái",
+      "meaning_vi": "hiểu rõ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "拿",
+      "pinyin": "ná",
+      "meaning_vi": "cầm, lấy",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "奶奶",
+      "pinyin": "nǎinai",
+      "meaning_vi": "bà nội",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "南",
+      "pinyin": "nán",
+      "meaning_vi": "phía nam",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "難",
+      "pinyin": "nán",
+      "meaning_vi": "khó",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "難過",
+      "pinyin": "nánguò",
+      "meaning_vi": "buồn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "年級",
+      "pinyin": "niánjí",
+      "meaning_vi": "lớp, năm học",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "年輕",
+      "pinyin": "niánqīng",
+      "meaning_vi": "trẻ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "鳥",
+      "pinyin": "niǎo",
+      "meaning_vi": "chim",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "努力",
+      "pinyin": "nǔlì",
+      "meaning_vi": "nỗ lực, chăm chỉ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "爬山",
+      "pinyin": "páshān",
+      "meaning_vi": "leo núi",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "盤子",
+      "pinyin": "pánzi",
+      "meaning_vi": "đĩa",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "胖",
+      "pinyin": "pàng",
+      "meaning_vi": "béo",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "啤酒",
+      "pinyin": "píjiǔ",
+      "meaning_vi": "bia",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "葡萄",
+      "pinyin": "pútao",
+      "meaning_vi": "nho",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "普通話",
+      "pinyin": "pǔtōnghuà",
+      "meaning_vi": "tiếng Phổ thông (tiếng Trung chuẩn)",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "騎",
+      "pinyin": "qí",
+      "meaning_vi": "cưỡi, đi (xe đạp, xe máy)",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "其實",
+      "pinyin": "qíshí",
+      "meaning_vi": "thực ra",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "其他",
+      "pinyin": "qítā",
+      "meaning_vi": "khác",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "奇怪",
+      "pinyin": "qíguài",
+      "meaning_vi": "kỳ lạ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "鉛筆",
+      "pinyin": "qiānbǐ",
+      "meaning_vi": "bút chì",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "清楚",
+      "pinyin": "qīngchǔ",
+      "meaning_vi": "rõ ràng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "秋",
+      "pinyin": "qiū",
+      "meaning_vi": "mùa thu",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "裙子",
+      "pinyin": "qúnzi",
+      "meaning_vi": "váy",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "然後",
+      "pinyin": "ránhòu",
+      "meaning_vi": "sau đó",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "熱情",
+      "pinyin": "rèqíng",
+      "meaning_vi": "nhiệt tình",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "認爲",
+      "pinyin": "rènwéi",
+      "meaning_vi": "cho rằng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "認真",
+      "pinyin": "rènzhēn",
+      "meaning_vi": "nghiêm túc",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "容易",
+      "pinyin": "róngyì",
+      "meaning_vi": "dễ dàng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "如果",
+      "pinyin": "rúguǒ",
+      "meaning_vi": "nếu như",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "傘",
+      "pinyin": "sǎn",
+      "meaning_vi": "ô, dù",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "上網",
+      "pinyin": "shàngwǎng",
+      "meaning_vi": "lên mạng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "生氣",
+      "pinyin": "shēngqì",
+      "meaning_vi": "giận dữ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "聲音",
+      "pinyin": "shēngyīn",
+      "meaning_vi": "âm thanh",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "使",
+      "pinyin": "shǐ",
+      "meaning_vi": "khiến, làm cho",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "世界",
+      "pinyin": "shìjiè",
+      "meaning_vi": "thế giới",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "瘦",
+      "pinyin": "shòu",
+      "meaning_vi": "gầy",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "舒服",
+      "pinyin": "shūfu",
+      "meaning_vi": "thoải mái",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "叔叔",
+      "pinyin": "shūshu",
+      "meaning_vi": "chú",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "樹",
+      "pinyin": "shù",
+      "meaning_vi": "cây",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "數學",
+      "pinyin": "shùxué",
+      "meaning_vi": "toán học",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "刷牙",
+      "pinyin": "shuāyá",
+      "meaning_vi": "đánh răng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "雙",
+      "pinyin": "shuāng",
+      "meaning_vi": "đôi",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "水平",
+      "pinyin": "shuǐpíng",
+      "meaning_vi": "trình độ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "司機",
+      "pinyin": "sījī",
+      "meaning_vi": "lái xe, tài xế",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "雖然",
+      "pinyin": "suīrán",
+      "meaning_vi": "tuy rằng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "太陽",
+      "pinyin": "tàiyáng",
+      "meaning_vi": "mặt trời",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "糖",
+      "pinyin": "táng",
+      "meaning_vi": "kẹo, đường",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "特別",
+      "pinyin": "tèbié",
+      "meaning_vi": "đặc biệt",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "疼",
+      "pinyin": "téng",
+      "meaning_vi": "đau",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "提高",
+      "pinyin": "tígāo",
+      "meaning_vi": "nâng cao",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "體育",
+      "pinyin": "tǐyù",
+      "meaning_vi": "thể dục, thể thao",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "甜",
+      "pinyin": "tián",
+      "meaning_vi": "ngọt",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "條",
+      "pinyin": "tiáo",
+      "meaning_vi": "sợi, cái",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "同事",
+      "pinyin": "tóngshì",
+      "meaning_vi": "đồng nghiệp",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "同意",
+      "pinyin": "tóngyì",
+      "meaning_vi": "đồng ý",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "頭髮",
+      "pinyin": "tóufa",
+      "meaning_vi": "tóc",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "突然",
+      "pinyin": "tūrán",
+      "meaning_vi": "đột nhiên",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "圖書館",
+      "pinyin": "túshūguǎn",
+      "meaning_vi": "thư viện",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "腿",
+      "pinyin": "tuǐ",
+      "meaning_vi": "chân",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "完成",
+      "pinyin": "wánchéng",
+      "meaning_vi": "hoàn thành",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "碗",
+      "pinyin": "wǎn",
+      "meaning_vi": "bát",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "萬",
+      "pinyin": "wàn",
+      "meaning_vi": "vạn, mười nghìn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "忘記",
+      "pinyin": "wàngjì",
+      "meaning_vi": "quên",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "位",
+      "pinyin": "wèi",
+      "meaning_vi": "vị, ngài",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "爲",
+      "pinyin": "wèi",
+      "meaning_vi": "vì",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "爲了",
+      "pinyin": "wèile",
+      "meaning_vi": "để, vì",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "文化",
+      "pinyin": "wénhuà",
+      "meaning_vi": "văn hóa",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "西",
+      "pinyin": "xī",
+      "meaning_vi": "phía tây",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "習慣",
+      "pinyin": "xíguàn",
+      "meaning_vi": "thói quen",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "洗手間",
+      "pinyin": "xǐshǒujiān",
+      "meaning_vi": "nhà vệ sinh",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "洗澡",
+      "pinyin": "xǐzǎo",
+      "meaning_vi": "tắm",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "喜歡",
+      "pinyin": "xǐhuān",
+      "meaning_vi": "thích",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "現在",
+      "pinyin": "xiànzài",
+      "meaning_vi": "hiện",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "香蕉",
+      "pinyin": "xiāngjiāo",
+      "meaning_vi": "chuối",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "相同",
+      "pinyin": "xiāngtóng",
+      "meaning_vi": "giống nhau",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "相信",
+      "pinyin": "xiāngxìn",
+      "meaning_vi": "tin tưởng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "像",
+      "pinyin": "xiàng",
+      "meaning_vi": "giống",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "小心",
+      "pinyin": "xiǎoxīn",
+      "meaning_vi": "cẩn thận",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "校長",
+      "pinyin": "xiàozhǎng",
+      "meaning_vi": "hiệu trưởng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "鞋",
+      "pinyin": "xié",
+      "meaning_vi": "giày",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "新聞",
+      "pinyin": "xīnwén",
+      "meaning_vi": "tin tức",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "新鮮",
+      "pinyin": "xīnxiān",
+      "meaning_vi": "tươi mới",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "信",
+      "pinyin": "xìn",
+      "meaning_vi": "thư, tin tưởng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "行李箱",
+      "pinyin": "xínglǐxiāng",
+      "meaning_vi": "vali",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "興趣",
+      "pinyin": "xìngqù",
+      "meaning_vi": "hứng thú",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "熊貓",
+      "pinyin": "xióngmāo",
+      "meaning_vi": "gấu trúc",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "需要",
+      "pinyin": "xūyào",
+      "meaning_vi": "cần",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "選擇",
+      "pinyin": "xuǎnzé",
+      "meaning_vi": "lựa chọn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "眼鏡",
+      "pinyin": "yǎnjìng",
+      "meaning_vi": "kính",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "要求",
+      "pinyin": "yāoqiú",
+      "meaning_vi": "yêu cầu",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "爺爺",
+      "pinyin": "yéye",
+      "meaning_vi": "ông nội",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "一定",
+      "pinyin": "yīdìng",
+      "meaning_vi": "nhất định",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "一共",
+      "pinyin": "yīgòng",
+      "meaning_vi": "tổng cộng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "一會兒",
+      "pinyin": "yīhuìr",
+      "meaning_vi": "một lát",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "一樣",
+      "pinyin": "yīyàng",
+      "meaning_vi": "giống nhau",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "以後",
+      "pinyin": "yǐhòu",
+      "meaning_vi": "sau này",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "以前",
+      "pinyin": "yǐqián",
+      "meaning_vi": "trước đây",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "以爲",
+      "pinyin": "yǐwéi",
+      "meaning_vi": "cho rằng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "一般",
+      "pinyin": "yībān",
+      "meaning_vi": "thông thường",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "一邊",
+      "pinyin": "yībiān",
+      "meaning_vi": "vừa ... vừa ...",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "一直",
+      "pinyin": "yīzhí",
+      "meaning_vi": "luôn luôn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "音樂",
+      "pinyin": "yīnyuè",
+      "meaning_vi": "âm nhạc",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "銀行",
+      "pinyin": "yínháng",
+      "meaning_vi": "ngân hàng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "應該",
+      "pinyin": "yīnggāi",
+      "meaning_vi": "nên",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "影響",
+      "pinyin": "yǐngxiǎng",
+      "meaning_vi": "ảnh hưởng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "用",
+      "pinyin": "yòng",
+      "meaning_vi": "dùng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "遊戲",
+      "pinyin": "yóuxì",
+      "meaning_vi": "trò chơi",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "又",
+      "pinyin": "yòu",
+      "meaning_vi": "lại, vừa",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "有名",
+      "pinyin": "yǒumíng",
+      "meaning_vi": "nổi tiếng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "遇到",
+      "pinyin": "yùdào",
+      "meaning_vi": "gặp phải",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "月亮",
+      "pinyin": "yuèliàng",
+      "meaning_vi": "mặt trăng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "雲",
+      "pinyin": "yún",
+      "meaning_vi": "mây",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "站",
+      "pinyin": "zhàn",
+      "meaning_vi": "đứng, trạm",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "長",
+      "pinyin": "zhǎng",
+      "meaning_vi": "dài",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "着急",
+      "pinyin": "zhāojí",
+      "meaning_vi": "lo lắng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "照顧",
+      "pinyin": "zhàogu",
+      "meaning_vi": "chăm sóc",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "照片",
+      "pinyin": "zhàopiàn",
+      "meaning_vi": "bức ảnh",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "照相機",
+      "pinyin": "zhàoxiàngjī",
+      "meaning_vi": "máy ảnh",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "只",
+      "pinyin": "zhǐ",
+      "meaning_vi": "chỉ",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "中間",
+      "pinyin": "zhōngjiān",
+      "meaning_vi": "ở giữa",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "終於",
+      "pinyin": "zhōngyú",
+      "meaning_vi": "cuối cùng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "種",
+      "pinyin": "zhǒng",
+      "meaning_vi": "loại, hạt giống",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "重要",
+      "pinyin": "zhòngyào",
+      "meaning_vi": "quan trọng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "主要",
+      "pinyin": "zhǔyào",
+      "meaning_vi": "chủ yếu",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "週末",
+      "pinyin": "zhōumò",
+      "meaning_vi": "cuối tuần",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "祝",
+      "pinyin": "zhù",
+      "meaning_vi": "chúc",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "注意",
+      "pinyin": "zhùyì",
+      "meaning_vi": "chú ý",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "字典",
+      "pinyin": "zìdiǎn",
+      "meaning_vi": "từ điển",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "自己",
+      "pinyin": "zìjǐ",
+      "meaning_vi": "bản thân",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "總是",
+      "pinyin": "zǒngshì",
+      "meaning_vi": "luôn luôn",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "最近",
+      "pinyin": "zuìjìn",
+      "meaning_vi": "gần đây",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "作業",
+      "pinyin": "zuòyè",
+      "meaning_vi": "bài tập về nhà",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "作用",
+      "pinyin": "zuòyòng",
+      "meaning_vi": "tác dụng",
+      "level": "TOCFL A2",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    }
+  ]
+}

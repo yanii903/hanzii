@@ -1,0 +1,1105 @@
+    <!-- Modal xem PDF -->
+    <div class="modal fade" id="pdfViewerModal" tabindex="-1" aria-labelledby="pdfViewerModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="pdfViewerModalLabel">Xem sách PDF</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex justify-content-center align-items-center mb-3 gap-2">
+              <button class="btn btn-outline-secondary" id="zoomOutBtn"><i class="fas fa-search-minus"></i></button>
+              <button class="btn btn-outline-secondary" id="zoomInBtn"><i class="fas fa-search-plus"></i></button>
+              <button class="btn btn-outline-secondary me-2" id="prevPageBtn"><i class="fas fa-chevron-left"></i></button>
+              <span>Trang </span>
+              <input type="number" id="pageNumberInput" min="1" value="1" style="width: 60px; margin: 0 8px;">
+              <span id="totalPages">/ 1</span>
+              <button class="btn btn-outline-secondary ms-2" id="nextPageBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div id="pdfViewerContainer" class="d-flex justify-content-center" style="overflow-x:auto;">
+              <canvas id="pdfCanvas" style="max-width:100%;border:1px solid #eee;"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- pdf.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"></script>
+    <script>
+      // PDF Viewer logic
+      let pdfDoc = null, pageNum = 1, totalPageCount = 1, pdfFilePath = '', rendering = false;
+      let pdfZoom = 1.3; // zoom mặc định lớn hơn
+      let dragStart = null, dragOffset = {x:0, y:0};
+      const pdfCanvas = document.getElementById('pdfCanvas');
+      const ctx = pdfCanvas ? pdfCanvas.getContext('2d') : null;
+      function renderPage(num) {
+        rendering = true;
+        pdfDoc.getPage(num).then(function(page) {
+          // Tính toán scale: scale = pdfZoom * auto-fit
+          const container = document.getElementById('pdfViewerContainer');
+          let containerWidth = container ? container.offsetWidth : window.innerWidth * 0.98;
+          // Trừ padding/modal border nếu cần
+          containerWidth = containerWidth - 32;
+          const viewport = page.getViewport({ scale: 1 });
+          let fitScale = containerWidth / viewport.width;
+          let scale = fitScale * pdfZoom;
+          if (scale < 0.5) scale = 0.5;
+          if (scale > 5) scale = 5;
+          const scaledViewport = page.getViewport({ scale });
+          pdfCanvas.height = scaledViewport.height;
+          pdfCanvas.width = scaledViewport.width;
+          pdfCanvas.style.transform = `translate(${dragOffset.x}px,${dragOffset.y}px)`;
+          const renderContext = {
+            canvasContext: ctx,
+            viewport: scaledViewport
+          };
+          page.render(renderContext).promise.then(function() {
+            rendering = false;
+            document.getElementById('pageNumberInput').value = num;
+            document.getElementById('totalPages').textContent = '/ ' + pdfDoc.numPages;
+          });
+        });
+      }
+      function queueRenderPage(num) {
+        if (rendering) {
+          setTimeout(() => queueRenderPage(num), 100);
+        } else {
+          renderPage(num);
+        }
+      }
+      function loadPdf(filePath) {
+        pdfjsLib.getDocument(filePath).promise.then(function(pdfDoc_) {
+          pdfDoc = pdfDoc_;
+          totalPageCount = pdfDoc.numPages;
+          pageNum = 1;
+          renderPage(pageNum);
+        }).catch(function(error) {
+          // Hiển thị thông báo lỗi lên modal
+          const ctx = pdfCanvas.getContext('2d');
+          ctx.clearRect(0, 0, pdfCanvas.width, pdfCanvas.height);
+          pdfCanvas.width = 600;
+          pdfCanvas.height = 120;
+          ctx.fillStyle = '#ef4444';
+          ctx.font = 'bold 20px Inter, Arial, sans-serif';
+          ctx.textAlign = 'center';
+          ctx.fillText('Không thể mở file PDF!', 300, 60);
+          ctx.font = '16px Inter, Arial, sans-serif';
+          ctx.fillStyle = '#fff';
+          ctx.fillText('Vui lòng kiểm tra lại đường dẫn hoặc file.', 300, 90);
+        });
+      }
+      document.getElementById('prevPageBtn').addEventListener('click', function() {
+        if (pageNum <= 1) return;
+        pageNum--;
+        queueRenderPage(pageNum);
+      });
+      document.getElementById('nextPageBtn').addEventListener('click', function() {
+        if (pageNum >= totalPageCount) return;
+        pageNum++;
+        queueRenderPage(pageNum);
+      });
+      document.getElementById('pageNumberInput').addEventListener('change', function(e) {
+        let val = parseInt(e.target.value);
+        if (val >= 1 && val <= totalPageCount) {
+          pageNum = val;
+          queueRenderPage(pageNum);
+        }
+      });
+      // Zoom in/out
+      document.getElementById('zoomInBtn').addEventListener('click', function() {
+        pdfZoom += 0.1;
+        if (pdfZoom > 3) pdfZoom = 3;
+        queueRenderPage(pageNum);
+      });
+      document.getElementById('zoomOutBtn').addEventListener('click', function() {
+        pdfZoom -= 0.1;
+        if (pdfZoom < 0.5) pdfZoom = 0.5;
+        queueRenderPage(pageNum);
+      });
+      // Drag canvas
+      pdfCanvas.addEventListener('mousedown', function(e) {
+        dragStart = {x: e.clientX, y: e.clientY};
+        pdfCanvas.style.cursor = 'grabbing';
+      });
+      window.addEventListener('mousemove', function(e) {
+        if (dragStart) {
+          dragOffset.x += e.clientX - dragStart.x;
+          dragOffset.y += e.clientY - dragStart.y;
+          dragStart = {x: e.clientX, y: e.clientY};
+          pdfCanvas.style.transform = `translate(${dragOffset.x}px,${dragOffset.y}px)`;
+        }
+      });
+      window.addEventListener('mouseup', function(e) {
+        if (dragStart) {
+          dragStart = null;
+          pdfCanvas.style.cursor = 'grab';
+        }
+      });
+      // Reset drag khi đổi trang hoặc zoom
+      function resetDrag() {
+        dragOffset = {x:0, y:0};
+        pdfCanvas.style.transform = 'translate(0,0)';
+      }
+      // Gọi resetDrag khi đổi trang hoặc zoom
+      const oldQueueRenderPage = queueRenderPage;
+      queueRenderPage = function(num) {
+        resetDrag();
+        oldQueueRenderPage(num);
+      }
+      // Hàm mở modal PDF, truyền vào đường dẫn file
+      function openPdfModal(filePath) {
+        pdfFilePath = filePath;
+        const pdfModalEl = document.getElementById('pdfViewerModal');
+        const pdfModal = new bootstrap.Modal(pdfModalEl);
+        pdfModal.show();
+        // Đợi modal show xong mới load PDF để lấy đúng kích thước container
+        setTimeout(() => {
+          loadPdf(filePath);
+        }, 300);
+      }
+    </script>
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Học tiếng Trung Giản thể và Phồn thể - HSK & TOCFL"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../resources/android/splash/yanii.png" />
+    <title>Yanii - Học Tiếng Trung Hiện Đại</title>
+
+    <!-- Resource Hints for Performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.gstatic.com">
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    
+    <!-- Google Translate API (unofficial free library) -->
+    <script src="https://cdn.jsdelivr.net/npm/@vitalets/google-translate-api@9.2.0/dist/index.min.js"></script>
+    
+    <!-- Cordova Script (Required for VoltBuilder) -->
+    <script src="cordova.js"></script>
+  </head>
+  <body class="preloading">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="preloader-content">
+        <div class="spinner-wrapper">
+          <div class="spinner"></div>
+          <div class="spinner-glow"></div>
+        </div>
+        <h2 class="preloader-text">Yanii</h2>
+        <p class="preloader-subtext">学习中文 · Học Tiếng Trung</p>
+        <div class="loading-bar">
+          <div class="loading-progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand brand-logo" href="#">
+          <i class="fas fa-language brand-icon"></i>
+          <span class="brand-text">Yanii</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileNav"
+          aria-controls="mobileNav"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home" data-section="home">
+                <i class="fas fa-home"></i> Trang chủ
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dictionary" data-section="dictionary">
+                <i class="fas fa-book"></i> Từ điển
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#games" data-section="games">
+                <i class="fas fa-gamepad"></i> Luyện tập
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#courses" data-section="courses">
+                <i class="fas fa-graduation-cap"></i> Khóa học
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about" data-section="about">
+                <i class="fas fa-info-circle"></i> Giới thiệu
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Offcanvas Nav (Mobile/Tablet) -->
+    <div class="offcanvas offcanvas-end text-bg-dark d-lg-none" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel" data-bs-scroll="false" data-bs-backdrop="true">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileNavLabel">
+          <i class="fas fa-language"></i> Yanii
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home" data-section="home">
+              <i class="fas fa-home"></i> Trang chủ
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#dictionary" data-section="dictionary">
+              <i class="fas fa-book"></i> Từ điển
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#games" data-section="games">
+              <i class="fas fa-gamepad"></i> Luyện tập
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#courses" data-section="courses">
+              <i class="fas fa-graduation-cap"></i> Khóa học
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" data-section="about">
+              <i class="fas fa-info-circle"></i> Giới thiệu
+            </a>
+          </li>
+        </ul>
+        <div class="mt-auto pt-3 text-center small text-secondary w-100">
+          &copy; 2025 Yanii
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Home Section -->
+      <section id="home" class="section-container active">
+        <div class="hero-section">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6 hero-text">
+                <h1 class="hero-title animate-fade-in">
+                  Học Tiếng Trung
+                  <span class="gradient-text">Hiện Đại</span>
+                </h1>
+                <p class="hero-subtitle animate-fade-in delay-1">
+                  Khám phá thế giới chữ Hán với Giản thể (简体) và Phồn thể
+                  (繁體)
+                </p>
+                <div class="hero-buttons animate-fade-in delay-2">
+                  <button
+                    class="btn btn-primary btn-lg btn-glow"
+                    onclick="navigateToSection('dictionary')"
+                  >
+                    <i class="fas fa-book-open"></i> Bắt đầu học
+                  </button>
+                  <button
+                    class="btn btn-outline-light btn-lg"
+                    onclick="navigateToSection('games')"
+                  >
+                    <i class="fas fa-play"></i> Tham gia
+                  </button>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="hero-image animate-fade-in delay-3">
+                  <div class="floating-card card-1">
+                    <span class="hanzi">你好</span>
+                    <span class="meaning">Xin chào</span>
+                  </div>
+                  <div class="floating-card card-2">
+                    <span class="hanzi">学习</span>
+                    <span class="meaning">Học tập</span>
+                  </div>
+                  <div class="floating-card card-3">
+                    <span class="hanzi">中文</span>
+                    <span class="meaning">Tiếng Trung</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+          </div>
+        </div>
+
+        <!-- Features -->
+        <div class="container py-5">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="feature-card glass-card">
+                <div class="feature-icon">
+                  <i class="fas fa-book-reader"></i>
+                </div>
+                <h3>Từ điển đa cấp độ</h3>
+                <p>HSK 1-6 (Giản thể) và TOCFL A1-C2 (Phồn thể)</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-card glass-card">
+                <div class="feature-icon">
+                  <i class="fas fa-gamepad"></i>
+                </div>
+                <h3>Luyện tập tương tác</h3>
+                <p>Luyện tập, nhận diện chữ và nghĩa</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-card glass-card">
+                <div class="feature-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Responsive Design</h3>
+                <p>Hoạt động mượt mà trên mọi thiết bị</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Courses Section -->
+      <section id="courses" class="section-container">
+        <div class="container py-5">
+          <div class="section-header text-center mb-5">
+            <h2 class="section-title">
+              <i class="fas fa-graduation-cap"></i> Khóa học
+            </h2>
+            <p class="section-subtitle">
+              Giáo trình tiếng Trung Đương Đại (1-5)
+            </p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="course-card glass-card h-100 text-center p-4">
+                <img src="images/bia1.png" alt="Giáo trình 1" class="img-fluid mb-3 course-cover" style="max-height:260px;width:auto;object-fit:contain;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+                <h4 class="mb-2">Giáo trình 1</h4>
+                <p>Nội dung cơ bản, làm quen phát âm, từ vựng và mẫu câu giao tiếp hàng ngày.</p>
+                <button class="btn btn-primary mt-2 course-btn" data-course="當代中文課程1">Xem chi tiết</button>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="course-card glass-card h-100 text-center p-4">
+                <img src="images/bia2.png" alt="Giáo trình 2" class="img-fluid mb-3 course-cover" style="max-height:260px;width:auto;object-fit:contain;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+                <h4 class="mb-2">Giáo trình 2</h4>
+                <p>Mở rộng chủ đề, tăng cường kỹ năng nghe nói, luyện tập hội thoại thực tế.</p>
+                <button class="btn btn-primary mt-2 course-btn" data-course="當代中文課程2">Xem chi tiết</button>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="course-card glass-card h-100 text-center p-4">
+                <img src="images/bia3.png" alt="Giáo trình 3" class="img-fluid mb-3 course-cover" style="max-height:260px;width:auto;object-fit:contain;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+                <h4 class="mb-2">Giáo trình 3</h4>
+                <p>Nâng cao ngữ pháp, đọc hiểu, viết đoạn văn và giao tiếp nâng cao.</p>
+                <button class="btn btn-primary mt-2 course-btn" data-course="當代中文課程3">Xem chi tiết</button>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="course-card glass-card h-100 text-center p-4">
+                <img src="images/bia4.png" alt="Giáo trình 4" class="img-fluid mb-3 course-cover" style="max-height:260px;width:auto;object-fit:contain;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+                <h4 class="mb-2">Giáo trình 4</h4>
+                <p>Phát triển kỹ năng đọc, viết, thảo luận các chủ đề xã hội, học thuật.</p>
+                <button class="btn btn-primary mt-2 course-btn" data-course="當代中文課程4">Xem chi tiết</button>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="course-card glass-card h-100 text-center p-4">
+                <img src="images/bia5.png" alt="Giáo trình 5" class="img-fluid mb-3 course-cover" style="max-height:260px;width:auto;object-fit:contain;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+                <h4 class="mb-2">Giáo trình 5</h4>
+                <p>Luyện tập nâng cao, giao tiếp chuyên sâu, chuẩn bị cho các kỳ thi lớn.</p>
+                <button class="btn btn-primary mt-2 course-btn" data-course="當代中文課程5">Xem chi tiết</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dictionary Section -->
+      <section id="dictionary" class="section-container">
+        <div class="container py-5">
+          <div class="section-header text-center mb-5">
+            <h2 class="section-title">
+              <i class="fas fa-book"></i> Từ điển chữ Hán
+            </h2>
+            <p class="section-subtitle">
+              Tra cứu từ vựng theo cấp độ HSK và TOCFL
+            </p>
+          </div>
+
+          <!-- Dictionary Controls -->
+          <div class="glass-card p-4 mb-4">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label">Loại chữ</label>
+                <select id="scriptType" class="form-select custom-select">
+                  <option value="simplified">Giản thể (简体)</option>
+                  <option value="traditional">Phồn thể (繁體)</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Cấp độ</label>
+                <select id="levelSelect" class="form-select custom-select">
+                  <!-- Options will be populated by JavaScript -->
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Tìm kiếm</label>
+                <div class="search-wrapper">
+                  <i class="fas fa-search search-icon"></i>
+                  <input
+                    type="text"
+                    id="searchInput"
+                    class="form-control custom-input search-input"
+                    placeholder="Nhập chữ Hán hoặc nghĩa..."
+                  />
+                  <button id="clearSearch" class="clear-search" style="display: none;">
+                    <i class="fas fa-times"></i>
+                  </button>
+                  <span class="search-loading" style="display: none;">
+                    <i class="fas fa-spinner fa-spin"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dictionary Results -->
+          <div id="dictionaryResults" class="row g-3">
+            <!-- Results will be loaded here -->
+          </div>
+
+          <!-- Pagination -->
+          <div id="pagination" class="pagination-container mt-4">
+            <!-- Pagination will be loaded here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Games Section -->
+      <section id="games" class="section-container">
+        <div class="container py-5">
+          <div class="section-header text-center mb-5">
+            <h2 class="section-title">
+              <i class="fas fa-gamepad"></i> Luyện tập học tập
+            </h2>
+            <p class="section-subtitle">
+              Học tiếng Trung qua bài tập vui nhộn
+            </p>
+          </div>
+
+          <!-- Game Mode Selection -->
+          <div class="row g-4 mb-5">
+            <div class="col-md-4">
+              <div
+                class="game-mode-card glass-card"
+                onclick="startGame('hanzi-to-meaning')"
+              >
+                <div class="game-icon">
+                  <i class="fas fa-spell-check"></i>
+                </div>
+                <h3>Chữ Hán → Nghĩa</h3>
+                <p>Nhìn chữ Hán và nhập nghĩa tiếng Việt</p>
+                <button class="btn btn-primary btn-game">
+                  <i class="fas fa-play"></i> Tham gia
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div
+                class="game-mode-card glass-card"
+                onclick="startGame('meaning-to-hanzi')"
+              >
+                <div class="game-icon">
+                  <i class="fas fa-language"></i>
+                </div>
+                <h3>Nghĩa → Chữ Hán</h3>
+                <p>Nhìn nghĩa tiếng Việt và nhập chữ Hán</p>
+                <button class="btn btn-primary btn-game">
+                  <i class="fas fa-play"></i> Tham gia
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div
+                class="game-mode-card glass-card"
+                onclick="startReadingGame()"
+              >
+                <div class="game-icon reading-icon">
+                  <i class="fas fa-book-reader"></i>
+                </div>
+                <h3>Đọc đoạn văn</h3>
+                <p>Đọc hội thoại tiếng Trung theo chủ đề</p>
+                <button class="btn btn-primary btn-game">
+                  <i class="fas fa-play"></i> Tham gia
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game Area -->
+          <div id="gameArea" class="game-area glass-card" style="display: none">
+            <div class="game-header">
+              <div class="game-info">
+                <span class="badge bg-primary">
+                  <i class="fas fa-star"></i> Điểm:
+                  <span id="gameScore">0</span>
+                </span>
+                <span class="badge bg-success">
+                  <i class="fas fa-check"></i> Đúng:
+                  <span id="correctCount">0</span>
+                </span>
+                <span class="badge bg-danger">
+                  <i class="fas fa-times"></i> Sai:
+                  <span id="wrongCount">0</span>
+                </span>
+              </div>
+              <button class="btn btn-sm btn-outline-light" onclick="exitGame()">
+                <i class="fas fa-times"></i> Thoát
+              </button>
+            </div>
+
+            <div class="game-content">
+              <div class="game-settings mb-4">
+                <div class="row g-3 align-items-end">
+                  <div class="col-md-4">
+                    <select
+                      id="gameScriptType"
+                      class="form-select custom-select"
+                    >
+                      <option value="simplified">Giản thể (简体)</option>
+                      <option value="traditional">Phồn thể (繁體)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <select
+                      id="gameLevelSelect"
+                      class="form-select custom-select"
+                    >
+                      <!-- Options will be populated by JavaScript -->
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <select
+                      id="questionCount"
+                      class="form-select custom-select"
+                    >
+                      <option value="5">5 câu hỏi</option>
+                      <option value="10" selected>10 câu hỏi</option>
+                      <option value="15">15 câu hỏi</option>
+                      <option value="20">20 câu hỏi</option>
+                      <option value="30">30 câu hỏi</option>
+                      <option value="50">50 câu hỏi</option>
+                    </select>
+                  </div>
+                  <div
+                    class="col-md-auto d-flex align-items-stretch justify-content-end w-100"
+                  >
+                    <button
+                      id="applyGameSettings"
+                      class="btn btn-warning w-100"
+                    >
+                      <i class="fas fa-sync"></i> Cập nhật
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="question-card">
+                <div class="question-number">
+                  Câu <span id="questionNumber">1</span>/<span
+                    id="totalQuestions"
+                    >10</span
+                  >
+                </div>
+                <div class="question-text" id="questionText">...</div>
+                <div class="pinyin-hint" id="pinyinHint"></div>
+              </div>
+
+              <div class="answer-input-wrapper">
+                <input
+                  type="text"
+                  id="answerInput"
+                  class="form-control answer-input"
+                  placeholder="Nhập câu trả lời..."
+                />
+                <button
+                  class="btn btn-primary btn-submit"
+                  onclick="submitAnswer()"
+                  id="submitBtn"
+                >
+                  <i class="fas fa-paper-plane"></i> Trả lời
+                </button>
+                <button class="btn btn-danger btn-submit" onclick="giveUp()" id="giveUpBtn">
+                  <i class="fas fa-flag"></i> Từ bỏ
+                </button>
+                <button class="btn btn-success btn-submit" onclick="nextQuestion()" id="nextBtn" style="display: none;">
+                  <i class="fas fa-arrow-right"></i> Tiếp theo
+                </button>
+              </div>
+
+              <div id="feedbackMessage" class="feedback-message"></div>
+            </div>
+
+            <!-- Game Results -->
+            <div id="gameResults" class="game-results" style="display: none">
+              <div class="results-content">
+                <div class="results-icon">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <h2>Hoàn thành!</h2>
+                <div class="results-stats">
+                  <div class="stat-item">
+                    <div class="stat-number" id="finalScore">0</div>
+                    <div class="stat-label">Điểm số</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number" id="finalCorrect">0</div>
+                    <div class="stat-label">Câu đúng</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number" id="finalWrong">0</div>
+                    <div class="stat-label">Câu sai</div>
+                  </div>
+                </div>
+                <div class="results-actions">
+                  <button
+                    class="btn btn-primary btn-lg"
+                    onclick="restartGame()"
+                  >
+                    <i class="fas fa-redo"></i> Làm lại
+                  </button>
+                  <button
+                    class="btn btn-outline-light btn-lg"
+                    onclick="exitGame()"
+                  >
+                    <i class="fas fa-home"></i> Về trang chủ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reading Game Area -->
+          <div id="readingGameArea" class="game-area glass-card" style="display: none">
+            <div class="game-header">
+              <h3><i class="fas fa-book-reader"></i> Đọc đoạn văn</h3>
+              <button class="btn btn-sm btn-outline-light" onclick="exitReadingGame()">
+                <i class="fas fa-times"></i> Thoát
+              </button>
+            </div>
+
+            <div class="game-content">
+              <div class="game-settings mb-4">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Loại chữ</label>
+                    <select id="readingScriptType" class="form-select custom-select">
+                      <option value="simplified">Giản thể (简体)</option>
+                      <option value="traditional">Phồn thể (繁體)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Cấp độ</label>
+                    <select id="readingLevelSelect" class="form-select custom-select">
+                      <!-- Options will be populated by JavaScript -->
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <button id="applyReadingSettings" class="btn btn-warning w-100">
+                      <i class="fas fa-sync"></i> Cập nhật
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Topics List -->
+              <div id="topicsList" class="topics-list">
+                <!-- Topics will be loaded here -->
+              </div>
+
+              <!-- Dialog Display -->
+              <div id="dialogDisplay" class="dialog-display" style="display: none">
+                <div class="dialog-header">
+                  <h4 id="dialogTitle"></h4>
+                  <button class="btn btn-sm btn-outline-light" onclick="backToTopics()">
+                    <i class="fas fa-arrow-left"></i> Quay lại
+                  </button>
+                </div>
+                <div id="dialogContent" class="dialog-content">
+                  <!-- Dialog will be displayed here -->
+                </div>
+                <div class="dialog-actions">
+                  <button id="supportBtn" class="btn btn-info" onclick="toggleSupport()">
+                    <i class="fas fa-question-circle"></i> Hỗ trợ
+                  </button>
+                </div>
+                <div id="supportPanel" class="support-panel" style="display: none">
+                  <div class="support-header">
+                    <h5><i class="fas fa-lightbulb"></i> Hỗ trợ đọc hiểu</h5>
+                  </div>
+                  <div id="supportContent" class="support-content">
+                    <!-- Support content will be displayed here -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section-container">
+        <div class="container py-5">
+          <div class="section-header text-center mb-5">
+            <h2 class="section-title">
+              <i class="fas fa-info-circle"></i> Giới thiệu
+            </h2>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="glass-card p-5 text-center">
+                <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                  <img src="../resources/android/splash/yanii.png" alt="Yanii App Logo" style="width:128px;height:128px;border-radius:32px;margin-bottom:18px;box-shadow:0 8px 32px rgba(0,0,0,0.18),0 1.5px 0 #fff; border:4px solid #6c63ff; background:#fff;" />
+                </div>
+                <h3 class="mb-3" style="font-weight:800;letter-spacing:1px;color:#6c63ff;">Về Yanii</h3>
+                <p class="lead mb-3" style="font-size:1.25rem;">
+                  <span style="font-weight:700;color:#6c63ff;">Yanii</span> là nền tảng học tiếng Trung hiện đại, hỗ trợ cả chữ <span style="color:#00c9a7;font-weight:600;">Giản thể</span> và <span style="color:#ffc107;font-weight:600;">Phồn thể</span>.<br>
+                  Ứng dụng sở hữu giao diện thân thiện, logo mascot đặc trưng giúp bạn nhận diện dễ dàng và tạo cảm hứng học tập.
+                </p>
+                <p style="font-size:1.08rem;">
+                  Từ điển đa cấp độ <b style="color:#007bff">HSK 1-6</b> (Giản thể) và <b style="color:#28a745">TOCFL A1-C2</b> (Phồn thể), kết hợp các bài tập tương tác, đọc hiểu, luyện tập nhận diện chữ và nghĩa.<br>
+                  <span style="color:#6c757d;font-size:0.98rem;">Học tiếng Trung thú vị, hiệu quả, phù hợp mọi trình độ.</span>
+                </p>
+                <div class="mt-4 d-flex flex-wrap justify-content-center gap-2">
+                  <span class="badge" style="background:linear-gradient(90deg,#007bff,#00c9a7);color:#fff;font-weight:600;font-size:1rem;padding:0.7em 1.2em;border-radius:1.5em;box-shadow:0 2px 8px rgba(0,0,0,0.08);">HSK 1-6</span>
+                  <span class="badge" style="background:linear-gradient(90deg,#28a745,#00c9a7);color:#fff;font-weight:600;font-size:1rem;padding:0.7em 1.2em;border-radius:1.5em;box-shadow:0 2px 8px rgba(0,0,0,0.08);">TOCFL A1-C2</span>
+                  <span class="badge" style="background:linear-gradient(90deg,#00c9a7,#6c63ff);color:#fff;font-weight:600;font-size:1rem;padding:0.7em 1.2em;border-radius:1.5em;box-shadow:0 2px 8px rgba(0,0,0,0.08);">Giản thể</span>
+                  <span class="badge" style="background:linear-gradient(90deg,#ffc107,#ff6f61);color:#fff;font-weight:600;font-size:1rem;padding:0.7em 1.2em;border-radius:1.5em;box-shadow:0 2px 8px rgba(0,0,0,0.08);">Phồn thể</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer glass-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Yanii</h5>
+            <p>Học tiếng Trung hiện đại và hiệu quả</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p>&copy; 2025 Yanii. All rights reserved.</p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/lil.sheep.795" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="https://github.com/yanii903" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.instagram.com/lil.sheep.795" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Word Detail Modal -->
+    <div id="wordModal" class="word-modal">
+      <div class="word-modal-content">
+        <button class="word-modal-close" onclick="closeWordModal()">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="word-modal-header">
+          <div class="word-modal-hanzi" id="modalHanzi"></div>
+          <div class="word-modal-pinyin" id="modalPinyin"></div>
+        </div>
+        <div class="word-modal-body">
+          <div class="word-modal-meaning" id="modalMeaning"></div>
+          <div class="word-modal-level" id="modalLevel"></div>
+          
+          <div id="modalGrammar" class="word-modal-section" style="display: none;">
+            <h4><i class="fas fa-book"></i> Ngữ pháp</h4>
+            <p id="modalGrammarText"></p>
+          </div>
+          
+          <div id="modalUsage" class="word-modal-section" style="display: none;">
+            <h4><i class="fas fa-lightbulb"></i> Cách dùng</h4>
+            <p id="modalUsageText"></p>
+          </div>
+          
+          <div id="modalExamples" class="word-modal-section" style="display: none;">
+            <h4><i class="fas fa-list"></i> Ví dụ</h4>
+            <div id="modalExamplesList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Translation Popup -->
+    <div id="translatorPopup" class="translator-popup collapsed">
+      <button class="translator-toggle" id="translatorToggle">
+        <i class="fas fa-language"></i>
+      </button>
+      <div class="translator-content">
+        <div class="translator-header">
+          <h5>
+            <i class="fas fa-language"></i> Dịch nhanh
+          </h5>
+          <div class="header-actions">
+            <span id="translatorStatus" class="status-icon online" title="Trực tuyến">
+              <i class="fas fa-wifi"></i>
+            </span>
+            <button class="translator-close" onclick="closeTranslator()">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+        <div class="translator-body">
+          <div class="translator-direction">
+            <div class="lang-selector">
+              <span id="sourceLang" class="lang-indicator active" onclick="toggleChineseTypeDropdown('source')">
+                <span id="sourceLangText">简体中文</span>
+                <i class="fas fa-chevron-down" id="sourceDropdownIcon"></i>
+              </span>
+              <div id="sourceTypeDropdown" class="chinese-type-dropdown" style="display: none;">
+                <div class="dropdown-item" onclick="selectChineseType('simplified', 'source')">
+                  <i class="fas fa-check"></i>
+                  <span>简体中文 (Giản thể)</span>
+                </div>
+                <div class="dropdown-item" onclick="selectChineseType('traditional', 'source')">
+                  <i class="fas fa-check" style="visibility: hidden;"></i>
+                  <span>繁體中文 (Phồn thể)</span>
+                </div>
+              </div>
+            </div>
+            <button class="swap-btn" onclick="swapLanguages()">
+              <i class="fas fa-exchange-alt"></i>
+            </button>
+            <div class="lang-selector">
+              <span id="targetLang" class="lang-indicator" onclick="toggleChineseTypeDropdown('target')">
+                <span id="targetLangText">Tiếng Việt</span>
+                <i class="fas fa-chevron-down" id="targetDropdownIcon" style="display: none;"></i>
+              </span>
+              <div id="targetTypeDropdown" class="chinese-type-dropdown" style="display: none;">
+                <div class="dropdown-item" onclick="selectChineseType('simplified', 'target')">
+                  <i class="fas fa-check"></i>
+                  <span>简体中文 (Giản thể)</span>
+                </div>
+                <div class="dropdown-item" onclick="selectChineseType('traditional', 'target')">
+                  <i class="fas fa-check" style="visibility: hidden;"></i>
+                  <span>繁體中文 (Phồn thể)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="translator-input-wrapper">
+            <textarea
+              id="translatorInput"
+              class="translator-input"
+              placeholder="Nhập văn bản cần dịch..."
+            ></textarea>
+            <button class="clear-input-btn" onclick="clearTranslatorInput()" style="display: none;">
+              <i class="fas fa-times"></i>
+            </button>
+            <div id="translatorPinyinOutput" class="pinyin-output" style="margin-top:8px;color:#6c757d;font-size:1rem;"></div>
+          </div>
+          <div class="translation-indicator">
+            <i class="fas fa-exchange-alt"></i>
+          </div>
+          <div class="translator-output-wrapper">
+            <div id="translatorOutput" class="translator-output empty"></div>
+            <button class="copy-btn" id="copyBtn" onclick="copyTranslation()" disabled>
+              <i class="fas fa-copy"></i> Sao chép
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+    <script>
+      // Luôn cuộn về đầu trang khi load hoặc refresh
+      window.addEventListener('beforeunload', function () {
+        window.scrollTo(0, 0);
+      });
+      window.addEventListener('load', function () {
+        setTimeout(function() { window.scrollTo(0, 0); }, 10);
+      });
+      </script>
+    <style>
+      #bookTypeModal .modal-content.booktype-modal-content {
+        background: var(--bg-secondary);
+        color: var(--text-primary);
+        border-radius: 18px;
+        border: 1.5px solid var(--glass-border);
+        box-shadow: var(--glass-shadow);
+      }
+      #bookTypeModal .modal-header {
+        background: var(--bg-primary);
+        border-bottom: 1px solid var(--glass-border);
+      }
+      #bookTypeModal .modal-title {
+        color: var(--primary-color);
+        font-weight: 700;
+      }
+      .book-type-btn {
+        min-width: 160px;
+        font-weight: 600;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 0.9rem 1.7rem;
+        font-size: 1.15rem;
+        transition: background 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px 0 rgba(99,102,241,0.08);
+      }
+      .book-type-giaokhoa {
+        background: linear-gradient(90deg, #6366f1 0%, #764ba2 100%);
+      }
+      .book-type-giaokhoa:hover {
+        background: linear-gradient(90deg, #4f46e5 0%, #6366f1 100%);
+      }
+      .book-type-baitap {
+        background: #444a5a;
+      }
+      .book-type-baitap:hover {
+        background: #6366f1;
+        color: #fff;
+      }
+      .booktype-cover-main {
+        max-width: 200px;
+        max-height: 280px;
+        border-radius: 14px;
+        box-shadow: 0 6px 32px 0 rgba(0,0,0,0.18);
+        margin-bottom: 8px;
+        background: #fff;
+        object-fit: contain;
+      }
+    </style>
+    <script>
+      // Hiển thị ảnh bìa cho cả hai loại sách khi mở modal chọn loại sách
+      const courseCoverMap = {
+        '當代中文課程1': 'images/bia1.png',
+        '當代中文課程2': 'images/bia2.png',
+        '當代中文課程3': 'images/bia3.png',
+        '當代中文課程4': 'images/bia4.png',
+        '當代中文課程5': 'images/bia5.png'
+      };
+      let lastSelectedCourse = null;
+      document.querySelectorAll('.course-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          lastSelectedCourse = btn.getAttribute('data-course');
+          const imgMain = document.getElementById('bookTypeCoverMain');
+          if (imgMain && courseCoverMap[lastSelectedCourse]) {
+            imgMain.src = courseCoverMap[lastSelectedCourse];
+            imgMain.style.display = '';
+          } else if (imgMain) {
+            imgMain.style.display = 'none';
+          }
+        });
+      });
+    </script>
+
+      <script>
+        // Khi bấm vào khóa học
+        document.addEventListener('DOMContentLoaded', function() {
+          const courseBtns = document.querySelectorAll('.course-btn');
+          const courseListSection = document.getElementById('course-list-section');
+          let selectedCourse = null;
+          courseBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+              selectedCourse = btn.getAttribute('data-course');
+              courseListSection.style.display = 'none';
+              const bookTypeModal = new bootstrap.Modal(document.getElementById('bookTypeModal'));
+              bookTypeModal.show();
+            });
+          });
+          // Khi chọn loại sách
+          document.querySelectorAll('.book-type-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+              const type = btn.getAttribute('data-type');
+              // Ẩn modal chọn loại sách
+              const bookTypeModalEl = document.getElementById('bookTypeModal');
+              const modal = bootstrap.Modal.getInstance(bookTypeModalEl);
+              modal.hide();
+              // Chuẩn hóa mapping tên khóa học sang thư mục
+              let courseMap = {
+                '當代中文課程1': 'td1',
+                '當代中文課程2': 'td2',
+                '當代中文課程3': 'td3',
+                '當代中文課程4': 'td4',
+                '當代中文課程5': 'td5'
+              };
+              let pdfFile = '';
+              if (selectedCourse && type && courseMap[selectedCourse]) {
+                let folder = courseMap[selectedCourse];
+                let num = folder.replace('td','');
+                // Chỉ xử lý traditional, nếu sau này có modern thì mở rộng tiếp
+                if (type === 'giaokhoa') {
+                  pdfFile = `data/traditional/${folder}/sgk${num}.pdf`;
+                } else if (type === 'baitap') {
+                  pdfFile = `data/traditional/${folder}/sbt${num}.pdf`;
+                }
+                if (typeof openPdfModal === 'function') {
+                  openPdfModal(pdfFile);
+                } else {
+                  alert('Không tìm thấy hàm mở PDF!');
+                }
+              } else {
+                alert('Không tìm thấy thư mục khóa học hoặc loại sách!');
+              }
+            });
+          });
+        });
+      </script>
+    </script>
+  </body>
+</html>

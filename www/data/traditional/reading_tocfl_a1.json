@@ -1,0 +1,280 @@
+{
+  "dialogs": [
+    {
+      "topic": "我的一天",
+      "description": "Một ngày của tôi",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "我叫小明，我是學生。我家有四個人，爸爸、媽媽、我和我的女兒。我很愛我的家。今天是星期一，我七點起牀。我的媽媽做早飯，我喫米飯和蘋果。我喝茶，不喝咖啡。八點我去學校。我的學校很大，也很漂亮。我在學校學習中文。我的老師是中國人，她很好。她叫李老師。十二點我和同學在學校喫飯。我們喫米飯和菜。下午我看書，也寫漢字。我有很多中文書。四點下課。五點我回家。回家以後，我先做作業，然後喫晚飯。晚上我和爸爸媽媽一起看電視。我們看中國電影。十點我睡覺。我很高興。我喜歡我的學校，也喜歡我的家。",
+          "pinyin": "Wǒ jiào xiǎo míng， Wǒ shì xué shēng。 Wǒ jiā yǒu sì gè rén， Bà bà 、 mā mā 、 wǒ hé wǒ de nǚ ér。 Wǒ hěn ài wǒ de jiā。 Jīn tiān shì xīng qī yī， Wǒ qī diǎn qǐ chuáng。 Wǒ de mā mā zuò zǎo fàn， Wǒ chī mǐ fàn hé píng guǒ。 Wǒ hē chá， Bù hē kā fēi。 Bā diǎn wǒ qù xué xiào。 Wǒ de xué xiào hěn dà， Yě hěn piào liàng。 Wǒ zài xué xiào xué xí zhōng wén。 Wǒ de lǎo shī shì zhōng guó rén， Tā hěn hǎo。 Tā jiào lǐ lǎo shī。 Shí èr diǎn wǒ hé tóng xué zài xué xiào chī fàn。 Wǒ men chī mǐ fàn hé cài。 Xià wǔ wǒ kàn shū， Yě xiě hàn zì。 Wǒ yǒu hěn duō zhōng wén shū。 Sì diǎn xià kè。 Wǔ diǎn wǒ huí jiā。 Huí jiā yǐ hòu， Wǒ xiān zuò zuò yè， Rán hòu chī wǎn fàn。 Wǎn shàng wǒ hé bà bà mā mā yì qǐ kàn diàn shì。 Wǒ men kàn zhòng guó diàn yǐng。 Shí diǎn wǒ shuì jué。 Wǒ hěn gāo xìng。 Wǒ xǐ huān wǒ de xué xiào， Yě xǐ huān wǒ de jiā。",
+          "translation": "Tôi tên là Tiểu Minh, tôi là học sinh. Nhà tôi có bốn người, bố, mẹ, tôi và con gái tôi. Tôi rất yêu gia đình của mình. Hôm nay là thứ Hai, tôi dậy lúc 7 giờ. Mẹ tôi nấu bữa sáng, tôi ăn cơm và táo. Tôi uống trà, không uống cà phê. 8 giờ tôi đi học. Trường của tôi rất lớn, cũng rất đẹp. Tôi học tiếng Trung ở trường. Giáo viên của tôi là người Trung Quốc, cô ấy rất tốt. Cô ấy tên là cô Lý. 12 giờ tôi và bạn học ăn cơm ở trường. Chúng tôi ăn cơm và rau. Buổi chiều tôi đọc sách, cũng viết chữ Hán. Tôi có rất nhiều sách tiếng Trung. 4 giờ tan học. 5 giờ tôi về nhà. Về nhà sau, tôi làm bài tập trước, sau đó ăn tối. Buổi tối tôi cùng bố mẹ xem tivi. Chúng tôi xem phim Trung Quốc. 10 giờ tôi đi ngủ. Tôi rất vui. Tôi thích trường của mình, cũng thích gia đình của mình."
+        }
+      ]
+    },
+    {
+      "topic": "去商店買東西",
+      "description": "Đi cửa hàng mua đồ",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "今天是星期六，我不去學校。上午九點，我和媽媽一起去商店買東西。商店很大，裏面有很多東西。我看見水、茶、米飯、蘋果、杯子、椅子、桌子，還有很多書。商店裏的人也很多。水五塊錢一瓶，茶六塊錢，米飯八塊錢。我很喜歡蘋果，我問老闆：這個蘋果多少錢？老闆說：三塊錢一個，很好喫。我買了六個蘋果。我還買了兩杯茶和一個漂亮的杯子。媽媽買了米、菜和水果。老闆說：一共二十五塊錢。我給老闆錢，我說謝謝。老闆也說謝謝，再見。我們很高興。下午我在家喫蘋果，喝茶，看書。我喜歡星期六。",
+          "pinyin": "Jīn tiān shì xīng qī liù， Wǒ bù qù xué xiào。 Shàng wǔ jiǔ diǎn， Wǒ hé mā mā yì qǐ qù shāng diàn mǎi dōng xī。 Shāng diàn hěn dà， Lǐ miàn yǒu hěn duō dōng xī。 Wǒ kàn jiàn shuǐ 、 chá 、 mǐ fàn 、 píng guǒ 、 bēi zi 、 yǐ zi 、 zhuō zi， Hái yǒu hěn duō shū。 Shāng diàn lǐ de rén yě hěn duō。 Shuǐ wǔ kuài qián yī píng， Chá liù kuài qián， Mǐ fàn bā kuài qián。 Wǒ hěn xǐ huān píng guǒ， Wǒ wèn lǎo bǎn： Zhè gè píng guǒ duō shǎo qián？ Lǎo bǎn shuō： Sān kuài qián yī gè， Hěn hǎo chī。 Wǒ mǎi le liù gè píng guǒ。 Wǒ hái mǎi le liǎng bēi chá hé yī gè piào liàng de bēi zi。 Mā mā mǎi le mǐ 、 cài hé shuǐ guǒ。 Lǎo bǎn shuō： Yī gòng èr shí wǔ kuài qián。 Wǒ gěi lǎo bǎn qián， Wǒ shuō xiè xiè。 Lǎo bǎn yě shuō xiè xiè， Zài jiàn。 Wǒ men hěn gāo xìng。 Xià wǔ wǒ zài jiā chī píng guǒ， Hē chá， Kàn shū。 Wǒ xǐ huān xīng qī liù。",
+          "translation": "Hôm nay là thứ Bảy, tôi không đi học. Buổi sáng 9 giờ, tôi cùng mẹ đi cửa hàng mua đồ. Cửa hàng rất lớn, bên trong có rất nhiều thứ. Tôi thấy nước, trà, cơm, táo, cốc, ghế, bàn, còn có rất nhiều sách. Người trong cửa hàng cũng rất đông. Nước 5 tệ một chai, trà 6 tệ, cơm 8 tệ. Tôi rất thích táo, tôi hỏi chủ: quả táo này bao nhiêu tiền? Chủ nói: 3 tệ một quả, rất ngon. Tôi đã mua 6 quả táo. Tôi còn mua 2 cốc trà và một cái cốc đẹp. Mẹ mua gạo, rau và trái cây. Chủ nói: tổng cộng 25 tệ. Tôi đưa tiền cho chủ, tôi nói cảm ơn. Chủ cũng nói cảm ơn, tạm biệt. Chúng tôi rất vui. Buổi chiều tôi ở nhà ăn táo, uống trà, đọc sách. Tôi thích thứ Bảy."
+        }
+      ]
+    },
+    {
+      "topic": "我的朋友",
+      "description": "Bạn của tôi",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "我有一個好朋友，他叫王明。他是中國人，是北京人。他今年二十歲。他也是學生，在我的學校學習。他很愛學習。他學習中文和英文，也學習數學。他的中文老師和英文老師都說他很好。我們常常在學校一起看書，一起寫漢字。他有很多中文書，也有很多英文書。他很喜歡看書。星期六和星期天，我們不去學校。我們去看電影，也去商店買書。他很喜歡看中國電影。他也喜歡喫中國菜，喝中國茶。他說中國菜很好喫。他的家也在北京，他家有五個人：爸爸、媽媽、哥哥、他和他的女兒。他很愛他的家。我很喜歡我的朋友，他也很喜歡我。我們是好朋友。",
+          "pinyin": "Wǒ yǒu yī gè hǎo péng yǒu， Tā jiào wáng míng。 Tā shì zhōng guó rén， Shì běi jīng rén。 Tā jīn nián èr shí suì。 Tā yě shì xué shēng， Zài wǒ de xué xiào xué xí。 Tā hěn ài xué xí。 Tā xué xí zhōng wén hé yīng wén， Yě xué xí shù xué。 Tā de zhōng wén lǎo shī hé yīng wén lǎo shī dōu shuō tā hěn hǎo。 Wǒ men cháng cháng zài xué xiào yì qǐ kàn shū， Yì qǐ xiě hàn zì。 Tā yǒu hěn duō zhōng wén shū， Yě yǒu hěn duō yīng wén shū。 Tā hěn xǐ huān kàn shū。 Xīng qī liù hé xīng qī tiān， Wǒ men bù qù xué xiào。 Wǒ men qù kàn diàn yǐng， Yě qù shāng diàn mǎi shū。 Tā hěn xǐ huān kàn zhòng guó diàn yǐng。 Tā yě xǐ huān chī zhōng guó cài， Hē zhōng guó chá。 Tā shuō zhōng guó cài hěn hǎo chī。 Tā de jiā yě zài běi jīng， Tā jiā yǒu wǔ gè rén： Bà bà 、 mā mā 、 gē gē 、 tā hé tā de nǚ ér。 Tā hěn ài tā de jiā。 Wǒ hěn xǐ huān wǒ de péng yǒu， Tā yě hěn xǐ huān wǒ。 Wǒ men shì hǎo péng yǒu。",
+          "translation": "Tôi có một người bạn tốt, anh ấy tên là Vương Minh. Anh ấy là người Trung Quốc, là người Bắc Kinh. Năm nay anh ấy 20 tuổi. Anh ấy cũng là học sinh, học ở trường của tôi. Anh ấy rất yêu học tập. Anh ấy học tiếng Trung và tiếng Anh, cũng học toán. Giáo viên tiếng Trung và giáo viên tiếng Anh của anh ấy đều nói anh ấy rất tốt. Chúng tôi thường cùng đọc sách ở trường, cùng viết chữ Hán. Anh ấy có rất nhiều sách tiếng Trung, cũng có nhiều sách tiếng Anh. Anh ấy rất thích đọc sách. Thứ Bảy và Chủ Nhật, chúng tôi không đi học. Chúng tôi đi xem phim, cũng đi cửa hàng mua sách. Anh ấy rất thích xem phim Trung Quốc. Anh ấy cũng thích ăn món Trung Quốc, uống trà Trung Quốc. Anh ấy nói món Trung Quốc rất ngon. Gia đình anh ấy cũng ở Bắc Kinh, nhà anh ấy có năm người: bố, mẹ, anh trai, anh ấy và con gái của anh ấy. Anh ấy rất yêu gia đình mình. Tôi rất thích bạn của mình, anh ấy cũng rất thích tôi. Chúng tôi là bạn tốt."
+        }
+      ]
+    },
+    {
+      "topic": "在飯店喫飯",
+      "description": "Ăn cơm ở nhà hàng",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "今天中午，我和我的朋友王明一起去飯店喫飯。飯店很大，很漂亮，人也很多。我們坐下。一個服務員來了，她很漂亮，也很好。她問我們：你們喫什麼？我說：我想喫米飯和菜。王明說：我喫麪條。服務員又問：你們喝什麼？我說：我喝茶，我很喜歡喝茶。王明說：我喝水，我不喝茶。服務員說：好的，請等一下。我和王明在飯店看書。我們等了十分鐘。服務員來了，她說：你們的飯來了。我們開始喫飯。飯很好喫，菜也很好喫。我們喫得很高興。喫完飯，我們給服務員錢。我們說謝謝服務員。服務員也說謝謝，再見。我們很高興。",
+          "pinyin": "Jīn tiān zhōng wǔ， Wǒ hé wǒ de péng yǒu wáng míng yì qǐ qù fàn diàn chī fàn。 Fàn diàn hěn dà， Hěn piào liàng， Rén yě hěn duō。 Wǒ men zuò xià。 Yī gè fú wù yuán lái le， Tā hěn piào liàng， Yě hěn hǎo。 Tā wèn wǒ men： Nǐ men chī shén me？ Wǒ shuō： Wǒ xiǎng chī mǐ fàn hé cài。 Wáng míng shuō： Wǒ chī miàn tiáo。 Fú wù yuán yòu wèn： Nǐ men hē shén me？ Wǒ shuō： Wǒ hē chá， Wǒ hěn xǐ huān hē chá。 Wáng míng shuō： Wǒ hē shuǐ， Wǒ bù hē chá。 Fú wù yuán shuō： Hǎo de， Qǐng děng yí xià。 Wǒ hé wáng míng zài fàn diàn kàn shū。 Wǒ men děng le shí fēn zhōng。 Fú wù yuán lái le， Tā shuō： Nǐ men de fàn lái le。 Wǒ men kāi shǐ chī fàn。 Fàn hěn hǎo chī， Cài yě hěn hǎo chī。 Wǒ men chī dé hěn gāo xìng。 Chī wán fàn， Wǒ men gěi fú wù yuán qián。 Wǒ men shuō xiè xiè fú wù yuán。 Fú wù yuán yě shuō xiè xiè， Zài jiàn。 Wǒ men hěn gāo xìng。",
+          "translation": "Hôm nay trưa, tôi và bạn tôi Vương Minh cùng đi nhà hàng ăn cơm. Nhà hàng rất lớn, rất đẹp, người cũng rất đông. Chúng tôi ngồi xuống. Một phục vụ đến, cô ấy rất đẹp, cũng rất tốt. Cô ấy hỏi chúng tôi: các anh ăn gì? Tôi nói: tôi muốn ăn cơm và rau. Vương Minh nói: tôi ăn mì. Phục vụ lại hỏi: các anh uống gì? Tôi nói: tôi uống trà, tôi rất thích uống trà. Vương Minh nói: tôi uống nước, tôi không uống trà. Phục vụ nói: được, xin vui lòng đợi một chút. Tôi và Vương Minh đọc sách trong nhà hàng. Chúng tôi đợi 10 phút. Phục vụ đến, cô ấy nói: cơm của các anh đến rồi. Chúng tôi bắt đầu ăn cơm. Cơm rất ngon, rau cũng rất ngon. Chúng tôi ăn rất vui. Ăn xong cơm, chúng tôi đưa tiền cho phục vụ. Chúng tôi nói cảm ơn phục vụ. Phục vụ cũng nói cảm ơn, tạm biệt. Chúng tôi rất vui."
+        }
+      ]
+    },
+    {
+      "topic": "我的家",
+      "description": "Gia đình tôi",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "我家有五個人：爸爸、媽媽、哥哥、我和我的女兒。我們都很愛我們的家。我爸爸是醫生，他在醫院工作。他每天都很忙，但是他很愛他的工作。他說他喜歡做醫生。我媽媽是老師，她在學校工作。她教中文。她的學生都很喜歡她。她說她很喜歡當老師。我哥哥是學生，他在北京的大學學習。他學習英文，也學習數學。他很愛學習，他的老師說他學得很好。我也是學生，我學習中文。我的女兒很小，她三歲。她很可愛，我們都很愛她。星期天，我們都在家。我們一起喫飯，一起看電視，一起看電影。我們很高興。我很愛我的家。",
+          "pinyin": "Wǒ jiā yǒu wǔ gè rén： Bà bà 、 mā mā 、 gē gē 、 wǒ hé wǒ de nǚ ér。 Wǒ men dōu hěn ài wǒ men de jiā。 Wǒ bà bà shì yī shēng， Tā zài yī yuàn gōng zuò。 Tā měi tiān dōu hěn máng， Dàn shì tā hěn ài tā de gōng zuò。 Tā shuō tā xǐ huān zuò yī shēng。 Wǒ mā mā shì lǎo shī， Tā zài xué xiào gōng zuò。 Tā jiāo zhōng wén。 Tā de xué shēng dōu hěn xǐ huān tā。 Tā shuō tā hěn xǐ huān dāng lǎo shī。 Wǒ gē gē shì xué shēng， Tā zài běi jīng de dà xué xué xí。 Tā xué xí yīng wén， Yě xué xí shù xué。 Tā hěn ài xué xí， Tā de lǎo shī shuō tā xué dé hěn hǎo。 Wǒ yě shì xué shēng， Wǒ xué xí zhōng wén。 Wǒ de nǚ ér hěn xiǎo， Tā sān suì。 Tā hěn kě ài， Wǒ men dōu hěn ài tā。 Xīng qī tiān， Wǒ men dōu zài jiā。 Wǒ men yì qǐ chī fàn， Yì qǐ kàn diàn shì， Yì qǐ kàn diàn yǐng。 Wǒ men hěn gāo xìng。 Wǒ hěn ài wǒ de jiā。",
+          "translation": "Nhà tôi có năm người: bố, mẹ, anh trai, tôi và con gái tôi. Chúng tôi đều rất yêu gia đình của mình. Bố tôi là bác sĩ, ông làm việc ở bệnh viện. Ông mỗi ngày đều rất bận, nhưng ông rất yêu công việc của mình. Ông nói ông thích làm bác sĩ. Mẹ tôi là giáo viên, bà làm việc ở trường. Bà dạy tiếng Trung. Học sinh của bà đều rất thích bà. Bà nói bà rất thích làm giáo viên. Anh trai tôi là học sinh, anh ấy học ở đại học Bắc Kinh. Anh ấy học tiếng Anh, cũng học toán. Anh ấy rất yêu học tập, giáo viên của anh ấy nói anh ấy học rất tốt. Tôi cũng là học sinh, tôi học tiếng Trung. Con gái tôi còn nhỏ, nó 3 tuổi. Nó rất đáng yêu, chúng tôi đều rất yêu nó. Chủ Nhật, chúng tôi đều ở nhà. Chúng tôi cùng ăn cơm, cùng xem tivi, cùng xem phim. Chúng tôi rất vui. Tôi rất yêu gia đình của mình."
+        }
+      ]
+    },
+    {
+      "topic": "天氣和日期",
+      "description": "Thời tiết và ngày tháng",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "今天是五月十日，星期二。今天的天氣很好，不冷也不熱，很舒服。昨天下雨了，很冷。明天天氣怎麼樣？我不知道。我每天早上都看天氣預報。今年的天氣很奇怪。有時候很熱，有時候很冷。我不喜歡冷天氣，我喜欠暖和的天氣。我問我的朋友：你喜歡什麼天氣？他說：我喜歡下雨的天氣。下雨的時候，我在家看書，喝茶，很舒服。我說：下雨天我不能出去，我不喜歡。他笑了。我們都有不同的喜好。今天不下雨，我很高興。我要出去買東西，去看朋友，去飯館喫飯。天氣好的時候，做什麼都很開心。",
+          "pinyin": "Jīn tiān shì wǔ yuè shí rì， Xīng qī èr。 Jīn tiān de tiān qì hěn hǎo， Bù lěng yě bù rè， Hěn shū fú。 Zuó tiān xià yǔ le， Hěn lěng。 Míng tiān tiān qì zěn me yàng？ Wǒ bù zhī dào。 Wǒ měi tiān zǎo shàng dōu kàn tiān qì yù bào。 Jīn nián de tiān qì hěn qí guài。 Yǒu shí hòu hěn rè， Yǒu shí hòu hěn lěng。 Wǒ bù xǐ huān lěng tiān qì， Wǒ xǐ qiàn nuǎn huo de tiān qì。 Wǒ wèn wǒ de péng yǒu： Nǐ xǐ huān shén me tiān qì？ Tā shuō： Wǒ xǐ huān xià yǔ de tiān qì。 Xià yǔ de shí hòu， Wǒ zài jiā kàn shū， Hē chá， Hěn shū fú。 Wǒ shuō： Xià yǔ tiān wǒ bù néng chū qù， Wǒ bù xǐ huān。 Tā xiào le。 Wǒ men dōu yǒu bù tóng de xǐ hào。 Jīn tiān bù xià yǔ， Wǒ hěn gāo xìng。 Wǒ yào chū qù mǎi dōng xī， Qù kàn péng yǒu， Qù fàn guǎn chī fàn。 Tiān qì hǎo de shí hòu， Zuò shén me dōu hěn kāi xīn。",
+          "translation": "Hôm nay là ngày 10 tháng 5, thứ Ba. Thời tiết hôm nay rất tốt, không lạnh cũng không nóng, rất thoải mái. Hôm qua trời mưa, rất lạnh. Ngày mai thời tiết thế nào? Tôi không biết. Tôi mỗi sáng đều xem dự báo thời tiết. Thời tiết năm nay rất kỳ lạ. Có lúc rất nóng, có lúc rất lạnh. Tôi không thích thời tiết lạnh, tôi thích thời tiết ấm áp. Tôi hỏi bạn tôi: bạn thích thời tiết gì? Anh ấy nói: tôi thích thời tiết mưa. Khi trời mưa, tôi ở nhà đọc sách, uống trà, rất thoải mái. Tôi nói: ngày mưa tôi không thể ra ngoài, tôi không thích. Anh ấy cười. Chúng tôi đều có sở thích khác nhau. Hôm nay không mưa, tôi rất vui. Tôi muốn ra ngoài mua đồ, gặp bạn, đi nhà hàng ăn cơm. Khi thời tiết tốt, làm gì cũng vui."
+        }
+      ]
+    },
+    {
+      "topic": "打電話",
+      "description": "Gọi điện thoại",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "喂，你好！我是小明。你是誰？你是王明嗎？對，我是王明。你好，小明！你現在在哪裏？我現在在家。你呢？我在學校。今天星期幾？今天星期五。明天是星期六，你明天有時間嗎？有時間，怎麼了？明天我想去看電影，你能來嗎？我能來。幾點？下午兩點，在電影院門口，好嗎？好的，沒問題。我們看完電影去飯館喫飯，怎麼樣？好啊，我也想喫中國菜。那我們明天見。好，明天見。再見！再見！打完電話，我很高興。我很喜歡和朋友一起看電影，一起喫飯。明天一定很有意思。",
+          "pinyin": "Wèi， Nǐ hǎo！ Wǒ shì xiǎo míng。 Nǐ shì shuí？ Nǐ shì wáng míng ma？ Duì， Wǒ shì wáng míng。 Nǐ hǎo， Xiǎo míng！ Nǐ xiàn zài zài nǎ lǐ？ Wǒ xiàn zài zài jiā。 Nǐ ne？ Wǒ zài xué xiào。 Jīn tiān xīng qī jǐ？ Jīn tiān xīng qī wǔ。 Míng tiān shì xīng qī liù， Nǐ míng tiān yǒu shí jiān ma？ Yǒu shí jiān， Zěn me le？ Míng tiān wǒ xiǎng qù kàn diàn yǐng， Nǐ néng lái ma？ Wǒ néng lái。 Jǐ diǎn？ Xià wǔ liǎng diǎn， Zài diàn yǐng yuàn mén kǒu， Hǎo ma？ Hǎo de， Méi wèn tí。 Wǒ men kàn wán diàn yǐng qù fàn guǎn chī fàn， Zěn me yàng？ Hǎo a， Wǒ yě xiǎng chī zhōng guó cài。 Nà wǒ men míng tiān jiàn。 Hǎo， Míng tiān jiàn。 Zài jiàn！ Zài jiàn！ Dǎ wán diàn huà， Wǒ hěn gāo xìng。 Wǒ hěn xǐ huān hé péng yǒu yì qǐ kàn diàn yǐng， Yì qǐ chī fàn。 Míng tiān yí dìng hěn yǒu yì si。",
+          "translation": "Alo, xin chào! Tôi là Tiểu Minh. Bạn là ai? Bạn có phải Vương Minh không? Đúng, tôi là Vương Minh. Chào bạn, Tiểu Minh! Bây giờ bạn ở đâu? Bây giờ tôi ở nhà. Còn bạn? Tôi ở trường. Hôm nay thứ mấy? Hôm nay thứ Sáu. Ngày mai là thứ Bảy, ngày mai bạn có thời gian không? Có thời gian, sao vậy? Ngày mai tôi muốn đi xem phim, bạn có thể đến không? Tôi có thể đến. Mấy giờ? Chiều 2 giờ, ở cửa rạp chiếu phim, được không? Được, không vấn đề gì. Chúng ta xem xong phim đi nhà hàng ăn cơm, thế nào? Được, tôi cũng muốn ăn món Trung Quốc. Vậy chúng ta gặp nhau ngày mai. Được, gặp nhau ngày mai. Tạm biệt! Tạm biệt! Gọi xong điện thoại, tôi rất vui. Tôi rất thích cùng bạn bè xem phim, cùng ăn cơm. Ngày mai chắc chắn rất thú vị."
+        }
+      ]
+    },
+    {
+      "topic": "我的寵物",
+      "description": "Thú cưng của tôi",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "我家有兩隻寵物，一隻狗和一隻貓。我的狗叫大黃，我的貓叫小白。大黃很大，小白很小。它們都很可愛。大黃今年三歲，小白今年一歲。我很愛它們。每天早上，大黃會叫我起牀。我起牀以後，給它們喫早飯。大黃喫狗糧，小白喫貓糧。喫完早飯，大黃和小白在家玩。它們是好朋友。下午我從學校回家，它們在門口等我。我很高興看到它們。晚上我做作業的時候，大黃在我的桌子下面睡覺，小白在我的椅子上睡覺。我寫字，它們睡覺。我很喜歡這樣。我的朋友來我家，都很喜歡大黃和小白。它們讓我的生活很有意思。",
+          "pinyin": "Wǒ jiā yǒu liǎng zhī chǒng wù， Yī zhī gǒu hé yī zhī māo。 Wǒ de gǒu jiào dà huáng， Wǒ de māo jiào xiǎo bái。 Dà huáng hěn dà， Xiǎo bái hěn xiǎo。 Tā men dōu hěn kě ài。 Dà huáng jīn nián sān suì， Xiǎo bái jīn nián yī suì。 Wǒ hěn ài tā men。 Měi tiān zǎo shàng， Dà huáng huì jiào wǒ qǐ chuáng。 Wǒ qǐ chuáng yǐ hòu， Gěi tā men chī zǎo fàn。 Dà huáng chī gǒu liáng， Xiǎo bái chī māo liáng。 Chī wán zǎo fàn， Dà huáng hé xiǎo bái zài jiā wán。 Tā men shì hǎo péng yǒu。 Xià wǔ wǒ cóng xué xiào huí jiā， Tā men zài mén kǒu děng wǒ。 Wǒ hěn gāo xìng kàn dào tā men。 Wǎn shàng wǒ zuò zuò yè de shí hòu， Dà huáng zài wǒ de zhuō zi xià miàn shuì jué， Xiǎo bái zài wǒ de yǐ zi shàng shuì jué。 Wǒ xiě zì， Tā men shuì jué。 Wǒ hěn xǐ huān zhè yàng。 Wǒ de péng yǒu lái wǒ jiā， Dōu hěn xǐ huān dà huáng hé xiǎo bái。 Tā men ràng wǒ de shēng huó hěn yǒu yì si。",
+          "translation": "Nhà tôi có hai con thú cưng, một con chó và một con mèo. Con chó của tôi tên là Đại Hoàng, con mèo của tôi tên là Tiểu Bạch. Đại Hoàng rất to, Tiểu Bạch rất nhỏ. Chúng đều rất đáng yêu. Năm nay Đại Hoàng 3 tuổi, Tiểu Bạch 1 tuổi. Tôi rất yêu chúng. Mỗi sáng, Đại Hoàng sẽ gọi tôi dậy. Sau khi tôi dậy, cho chúng ăn sáng. Đại Hoàng ăn thức ăn cho chó, Tiểu Bạch ăn thức ăn cho mèo. Ăn xong sáng, Đại Hoàng và Tiểu Bạch chơi ở nhà. Chúng là bạn tốt. Chiều tôi từ trường về nhà, chúng đợi tôi ở cửa. Tôi rất vui khi nhìn thấy chúng. Tối khi tôi làm bài tập, Đại Hoàng ngủ dưới bàn của tôi, Tiểu Bạch ngủ trên ghế của tôi. Tôi viết chữ, chúng ngủ. Tôi rất thích như vậy. Bạn tôi đến nhà tôi, đều rất thích Đại Hoàng và Tiểu Bạch. Chúng làm cuộc sống của tôi rất thú vị."
+        }
+      ]
+    },
+    {
+      "topic": "去旅行",
+      "description": "Đi du lịch",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "下個月我想去中國旅行。我想坐飛機去北京。飛機很快，我很喜歡坐飛機。我也可以坐火車，但是火車很慢。我不喜歡坐出租車，太貴了。我想住在北京的飯店。飯店前面有很多商店，後面有公園。那個飯店很大，很漂亮。我在北京想喫很多中國菜，喝很多中國茶。我想去看長城，去看故宮。我的朋友說：北京很漂亮，你一定會喜歡。我問他：北京的天氣怎麼樣？他說：現在不冷不熱，很舒服。我很高興。我現在每天學漢語，我想說話說得很好。我會買很多中國書和衣服帶回家。我太想去中國了！",
+          "pinyin": "Xià gè yuè wǒ xiǎng qù zhōng guó lǚ xíng。 Wǒ xiǎng zuò fēi jī qù běi jīng。 Fēi jī hěn kuài， Wǒ hěn xǐ huān zuò fēi jī。 Wǒ yě kě yǐ zuò huǒ chē， Dàn shì huǒ chē hěn màn。 Wǒ bù xǐ huān zuò chū zū chē， Tài guì le。 Wǒ xiǎng zhù zài běi jīng de fàn diàn。 Fàn diàn qián miàn yǒu hěn duō shāng diàn， Hòu miàn yǒu gōng yuán。 Nà gè fàn diàn hěn dà， Hěn piào liàng。 Wǒ zài běi jīng xiǎng chī hěn duō zhōng guó cài， Hē hěn duō zhōng guó chá。 Wǒ xiǎng qù kàn zhǎng chéng， Qù kàn gù gōng。 Wǒ de péng yǒu shuō： Běi jīng hěn piào liàng， Nǐ yí dìng huì xǐ huān。 Wǒ wèn tā： Běi jīng de tiān qì zěn me yàng？ Tā shuō： Xiàn zài bù lěng bù rè， Hěn shū fú。 Wǒ hěn gāo xìng。 Wǒ xiàn zài měi tiān xué hàn yǔ， Wǒ xiǎng shuō huà shuō dé hěn hǎo。 Wǒ huì mǎi hěn duō zhōng guó shū hé yī fú dài huí jiā。 Wǒ tài xiǎng qù zhōng guó le！",
+          "translation": "Tháng sau tôi muốn đi du lịch Trung Quốc. Tôi muốn đi máy bay đến Bắc Kinh. Máy bay rất nhanh, tôi rất thích đi máy bay. Tôi cũng có thể đi tàu hỏa, nhưng tàu hỏa rất chậm. Tôi không thích đi taxi, quá đắt. Tôi muốn ở khách sạn ở Bắc Kinh. Phía trước khách sạn có nhiều cửa hàng, phía sau có công viên. Khách sạn đó rất lớn, rất đẹp. Tôi ở Bắc Kinh muốn ăn nhiều món Trung Quốc, uống nhiều trà Trung Quốc. Tôi muốn đi xem Vạn Lý Trường Thành, đi xem Cố Cung. Bạn tôi nói: Bắc Kinh rất đẹp, bạn chắc chắn sẽ thích. Tôi hỏi anh ấy: thời tiết Bắc Kinh thế nào? Anh ấy nói: bây giờ không lạnh không nóng, rất thoải mái. Tôi rất vui. Bây giờ tôi mỗi ngày học tiếng Hán, tôi muốn nói chuyện nói rất tốt. Tôi sẽ mua nhiều sách Trung Quốc và quần áo mang về nhà. Tôi quá muốn đi Trung Quốc!"
+        }
+      ]
+    },
+    {
+      "topic": "學習和工作",
+      "description": "Học tập và làm việc",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "我是學生，我哥哥工作了。我每天去學校學習，哥哥每天去公司工作。我學漢語、英語和數學。我的漢語老師姓李，她是中國人。李老師很好，我們都很喜歡她。她會說漢語和英語。她常常問我們：你們會說漢語嗎？你們會寫漢字嗎？我說：我會說一些漢語，但是說得不太好。我會寫一些漢字，但是寫得也不太好。李老師說：沒關係，你學得很認真，以後一定會說得很好。我很高興。我哥哥的工作很忙。他每天早上七點半去公司，晚上六點半回家。他說：我很喜歡我的工作。雖然很忙，但是很有意思。我問他：你累不累？他說：有時候累，但是我很快樂。對不起，我要去工作了，我們晚上再說話。好的，再見！",
+          "pinyin": "Wǒ shì xué shēng， Wǒ gē gē gōng zuò le。 Wǒ měi tiān qù xué xiào xué xí， Gē gē měi tiān qù gōng sī gōng zuò。 Wǒ xué hàn yǔ 、 yīng yǔ hé shù xué。 Wǒ de hàn yǔ lǎo shī xìng lǐ， Tā shì zhōng guó rén。 Lǐ lǎo shī hěn hǎo， Wǒ men dōu hěn xǐ huān tā。 Tā huì shuō hàn yǔ hé yīng yǔ。 Tā cháng cháng wèn wǒ men： Nǐ men huì shuō hàn yǔ ma？ Nǐ men huì xiě hàn zì ma？ Wǒ shuō： Wǒ huì shuō yī xiē hàn yǔ， Dàn shì shuō dé bù tài hǎo。 Wǒ huì xiě yī xiē hàn zì， Dàn shì xiě dé yě bù tài hǎo。 Lǐ lǎo shī shuō： Méi guān xì， Nǐ xué dé hěn rèn zhēn， Yǐ hòu yí dìng huì shuō dé hěn hǎo。 Wǒ hěn gāo xìng。 Wǒ gē gē de gōng zuò hěn máng。 Tā měi tiān zǎo shàng qī diǎn bàn qù gōng sī， Wǎn shàng liù diǎn bàn huí jiā。 Tā shuō： Wǒ hěn xǐ huān wǒ de gōng zuò。 Suī rán hěn máng， Dàn shì hěn yǒu yì si。 Wǒ wèn tā： Nǐ lèi bù lèi？ Tā shuō： Yǒu shí hòu lèi， Dàn shì wǒ hěn kuài lè。 Duì bù qǐ， Wǒ yào qù gōng zuò le， Wǒ men wǎn shàng zài shuō huà。 Hǎo de， Zài jiàn！",
+          "translation": "Tôi là học sinh, anh trai tôi đã đi làm. Tôi mỗi ngày đi học, anh trai mỗi ngày đi công ty làm việc. Tôi học tiếng Hán, tiếng Anh và toán. Giáo viên tiếng Hán của tôi họ Lý, cô ấy là người Trung Quốc. Cô Lý rất tốt, chúng tôi đều rất thích cô ấy. Cô ấy biết nói tiếng Hán và tiếng Anh. Cô ấy thường hỏi chúng tôi: các em biết nói tiếng Hán không? Các em biết viết chữ Hán không? Tôi nói: tôi biết nói một ít tiếng Hán, nhưng nói không tốt lắm. Tôi biết viết một ít chữ Hán, nhưng viết cũng không tốt lắm. Cô Lý nói: không sao, em học rất chăm chỉ, sau này chắc chắn sẽ nói rất tốt. Tôi rất vui. Công việc của anh trai tôi rất bận. Anh ấy mỗi sáng 7 giờ rưỡi đi công ty, tối 6 giờ rưỡi về nhà. Anh ấy nói: anh rất thích công việc của mình. Tuy rất bận, nhưng rất thú vị. Tôi hỏi anh ấy: anh có mệt không? Anh ấy nói: có lúc mệt, nhưng anh rất vui. Xin lỗi, anh phải đi làm, chúng ta tối nói chuyện tiếp. Được, tạm biệt!"
+        }
+      ]
+    },
+    {
+      "topic": "問路和地點",
+      "description": "Hỏi đường và địa điểm",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "對不起，請問火車站在哪裏？火車站離這裏不太遠。你看，你從這裏往前走，前面有一個大商店。商店的前面是銀行，後面是飯館。你看見那個飯館了嗎？看見了，然後呢？你往左走，走十分鐘就到了。火車站很大，很好找。謝謝你！不客氣。你是哪裏人？你的漢語說得很好。謝謝！我是學生，我在這裏學漢語。我的老師是中國人，她教得很好。你叫什麼名字？我叫小明。你呢？你叫什麼？我姓王，叫王明。你也是學生嗎？對，我也是學生。我在北京學英語。那我們是同學了。對，我們是同學。很高興認識你！我也很高興認識你！你現在去哪裏？我去火車站接我的朋友。好，那你去吧。再見！再見！",
+          "pinyin": "Duì bù qǐ， Qǐng wèn huǒ chē zhàn zài nǎ lǐ？ Huǒ chē zhàn lí zhè lǐ bù tài yuǎn。 Nǐ kàn， Nǐ cóng zhè lǐ wǎng qián zǒu， Qián miàn yǒu yī gè dà shāng diàn。 Shāng diàn de qián miàn shì yín xíng， Hòu miàn shì fàn guǎn。 Nǐ kàn jiàn nà gè fàn guǎn le ma？ Kàn jiàn le， Rán hòu ne？ Nǐ wǎng zuǒ zǒu， Zǒu shí fēn zhōng jiù dào le。 Huǒ chē zhàn hěn dà， Hěn hǎo zhǎo。 Xiè xiè nǐ！ Bù kè qì。 Nǐ shì nǎ lǐ rén？ Nǐ de hàn yǔ shuō dé hěn hǎo。 Xiè xiè！ Wǒ shì xué shēng， Wǒ zài zhè lǐ xué hàn yǔ。 Wǒ de lǎo shī shì zhōng guó rén， Tā jiào dé hěn hǎo。 Nǐ jiào shén me míng zì？ Wǒ jiào xiǎo míng。 Nǐ ne？ Nǐ jiào shén me？ Wǒ xìng wáng， Jiào wáng míng。 Nǐ yě shì xué shēng ma？ Duì， Wǒ yě shì xué shēng。 Wǒ zài běi jīng xué yīng yǔ。 Nà wǒ men shì tóng xué le。 Duì， Wǒ men shì tóng xué。 Hěn gāo xìng rèn shí nǐ！ Wǒ yě hěn gāo xìng rèn shí nǐ！ Nǐ xiàn zài qù nǎ lǐ？ Wǒ qù huǒ chē zhàn jiē wǒ de péng yǒu。 Hǎo， Nà nǐ qù ba。 Zài jiàn！ Zài jiàn！",
+          "translation": "Xin lỗi, cho hỏi ga tàu ở đâu? Ga tàu cách đây không xa lắm. Bạn xem, từ đây đi thẳng, phía trước có một cửa hàng lớn. Phía trước cửa hàng là ngân hàng, phía sau là nhà hàng. Bạn thấy nhà hàng đó chưa? Thấy rồi, sau đó thế nào? Bạn đi sang trái, đi 10 phút là đến. Ga tàu rất lớn, rất dễ tìm. Cảm ơn bạn! Không có gì. Bạn là người đâu? Tiếng Hán của bạn nói rất tốt. Cảm ơn! Tôi là học sinh, tôi học tiếng Hán ở đây. Giáo viên của tôi là người Trung Quốc, cô ấy dạy rất tốt. Bạn tên là gì? Tôi tên là Tiểu Minh. Còn bạn? Bạn tên là gì? Tôi họ Vương, tên là Vương Minh. Bạn cũng là học sinh à? Đúng, tôi cũng là học sinh. Tôi học tiếng Anh ở Bắc Kinh. Vậy chúng ta là bạn học rồi. Đúng, chúng ta là bạn học. Rất vui được gặp bạn! Tôi cũng rất vui được gặp bạn! Bây giờ bạn đi đâu? Tôi đi ga tàu đón bạn tôi. Được, vậy bạn đi nhé. Tạm biệt! Tạm biệt!"
+        }
+      ]
+    },
+    {
+      "topic": "在家裏",
+      "description": "Ở nhà",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "今天星期日，我不去學校，我在家裏。我的家不太大，但是很溫暖。我的房間裏有一張牀，一張桌子，兩把椅子，還有一個大書櫃。書櫃裏有很多書，有中文書，有英文書。我的電腦在桌子上。我每天用電腦學習，看電影，聽音樂。我的衣服在哪裏？哦，在椅子上。我的貓在牀上睡覺，我的狗在門口。今天零下五度，外面很冷。我不想出去，我想在家裏看書，看電視。中午我媽媽做飯，我們一起喫飯。媽媽做的菜很好喫。喫完飯，我給我的朋友打電話。我問他：你在哪兒？他說：我在飯館喫飯。我說：喫完飯來我家吧，我們一起看電影。他說：好的，一會兒見。我很高興。",
+          "pinyin": "Jīn tiān xīng qī rì， Wǒ bù qù xué xiào， Wǒ zài jiā lǐ。 Wǒ de jiā bù tài dà， Dàn shì hěn wēn nuǎn。 Wǒ de fáng jiān lǐ yǒu yī zhāng chuáng， Yī zhāng zhuō zi， Liǎng bǎ yǐ zi， Hái yǒu yī gè dà shū guì。 Shū guì lǐ yǒu hěn duō shū， Yǒu zhōng wén shū， Yǒu yīng wén shū。 Wǒ de diàn nǎo zài zhuō zi shàng。 Wǒ měi tiān yòng diàn nǎo xué xí， Kàn diàn yǐng， Tīng yīn lè。 Wǒ de yī fú zài nǎ lǐ？ Ó， Zài yǐ zi shàng。 Wǒ de māo zài chuáng shàng shuì jué， Wǒ de gǒu zài mén kǒu。 Jīn tiān líng xià wǔ dù， Wài miàn hěn lěng。 Wǒ bù xiǎng chū qù， Wǒ xiǎng zài jiā lǐ kàn shū， Kàn diàn shì。 Zhōng wǔ wǒ mā mā zuò fàn， Wǒ men yì qǐ chī fàn。 Mā mā zuò de cài hěn hǎo chī。 Chī wán fàn， Wǒ gěi wǒ de péng yǒu dǎ diàn huà。 Wǒ wèn tā： Nǐ zài nǎ ér？ Tā shuō： Wǒ zài fàn guǎn chī fàn。 Wǒ shuō： Chī wán fàn lái wǒ jiā ba， Wǒ men yì qǐ kàn diàn yǐng。 Tā shuō： Hǎo de， Yī huì ér jiàn。 Wǒ hěn gāo xìng。",
+          "translation": "Hôm nay Chủ Nhật, tôi không đi học, tôi ở nhà. Nhà của tôi không quá lớn, nhưng rất ấm áp. Trong phòng của tôi có một cái giường, một cái bàn, hai cái ghế, còn có một tủ sách lớn. Trong tủ sách có nhiều sách, có sách tiếng Trung, có sách tiếng Anh. Máy tính của tôi ở trên bàn. Tôi mỗi ngày dùng máy tính học tập, xem phim, nghe nhạc. Quần áo của tôi ở đâu? Ồ, ở trên ghế. Con mèo của tôi ngủ trên giường, con chó của tôi ở cửa. Hôm nay âm 5 độ, bên ngoài rất lạnh. Tôi không muốn ra ngoài, tôi muốn ở nhà đọc sách, xem tivi. Trưa mẹ tôi nấu cơm, chúng tôi cùng ăn cơm. Món mẹ nấu rất ngon. Ăn xong cơm, tôi gọi điện cho bạn tôi. Tôi hỏi anh ấy: bạn ở đâu? Anh ấy nói: tôi đang ăn cơm ở nhà hàng. Tôi nói: ăn xong cơm đến nhà tôi nhé, chúng ta cùng xem phim. Anh ấy nói: được, một lát gặp nhau. Tôi rất vui."
+        }
+      ]
+    },
+    {
+      "topic": "在圖書館",
+      "description": "Ở thư viện",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "今天下午，我去圖書館。圖書館在哪兒？就在學校後面。我進去以後，看見一位小姐在前臺工作。我問她：小姐，請問中文書在哪裏？她很好，她說：中文書在二樓，你上去就看見了。我說謝謝。我上樓，看到很多書。我想買三本書，一本漢語書，一本英語書，還有一本數學書。我很喜歡讀書。我在圖書館坐下，開始讀書。這時候，我看見我的老師王先生也在這裏。王先生是我的漢語老師。他有一個兒子，他的兒子也在這個學校學習。王先生看見我，他說：小明，你也在這裏讀書嗎？我說：是的，王先生，我很喜歡來圖書館讀書。王先生說：很好，多讀書對你有好處。我們一起看書。圖書館很安靜，很適合學習。我很喜歡圖書館。",
+          "pinyin": "Jīn tiān xià wǔ， Wǒ qù tú shū guǎn。 Tú shū guǎn zài nǎ ér？ Jiù zài xué xiào hòu miàn。 Wǒ jìn qù yǐ hòu， Kàn jiàn yī wèi xiǎo jiě zài qián tái gōng zuò。 Wǒ wèn tā： Xiǎo jiě， Qǐng wèn zhōng wén shū zài nǎ lǐ？ Tā hěn hǎo， Tā shuō： Zhōng wén shū zài èr lóu， Nǐ shàng qù jiù kàn jiàn le。 Wǒ shuō xiè xiè。 Wǒ shàng lóu， Kàn dào hěn duō shū。 Wǒ xiǎng mǎi sān běn shū， Yī běn hàn yǔ shū， Yī běn yīng yǔ shū， Hái yǒu yī běn shù xué shū。 Wǒ hěn xǐ huān dú shū。 Wǒ zài tú shū guǎn zuò xià， Kāi shǐ dú shū。 Zhè shí hòu， Wǒ kàn jiàn wǒ de lǎo shī wáng xiān shēng yě zài zhè lǐ。 Wáng xiān shēng shì wǒ de hàn yǔ lǎo shī。 Tā yǒu yī gè ér zi， Tā de ér zi yě zài zhè gè xué xiào xué xí。 Wáng xiān shēng kàn jiàn wǒ， Tā shuō： Xiǎo míng， Nǐ yě zài zhè lǐ dú shū ma？ Wǒ shuō： Shì de， Wáng xiān shēng， Wǒ hěn xǐ huān lái tú shū guǎn dú shū。 Wáng xiān shēng shuō： Hěn hǎo， Duō dú shū duì nǐ yǒu hǎo chù。 Wǒ men yì qǐ kàn shū。 Tú shū guǎn hěn ān jìng， Hěn shì hé xué xí。 Wǒ hěn xǐ huān tú shū guǎn。",
+          "translation": "Chiều nay, tôi đi thư viện. Thư viện ở đâu? Ngay phía sau trường. Sau khi tôi vào, thấy một cô ở quầy làm việc. Tôi hỏi cô ấy: Cô ơi, cho hỏi sách tiếng Trung ở đâu? Cô ấy rất tốt, cô ấy nói: Sách tiếng Trung ở tầng 2, bạn lên là thấy. Tôi nói cảm ơn. Tôi lên lầu, thấy rất nhiều sách. Tôi muốn mua ba quyển sách, một quyển sách tiếng Hán, một quyển sách tiếng Anh, còn có một quyển sách toán. Tôi rất thích đọc sách. Tôi ngồi xuống ở thư viện, bắt đầu đọc sách. Lúc này, tôi thấy giáo viên của tôi ông Vương cũng ở đây. Ông Vương là giáo viên tiếng Hán của tôi. Ông có một con trai, con trai của ông cũng học ở trường này. Ông Vương thấy tôi, ông nói: Tiểu Minh, em cũng đọc sách ở đây à? Tôi nói: Vâng, thầy Vương, em rất thích đến thư viện đọc sách. Ông Vương nói: Rất tốt, đọc nhiều sách có lợi cho em. Chúng tôi cùng xem sách. Thư viện rất yên tĩnh, rất thích hợp để học. Tôi rất thích thư viện."
+        }
+      ]
+    },
+    {
+      "topic": "我的家人",
+      "description": "Gia đình tôi",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "大家好！我來介紹一下我的家人。我家有七口人：爺爺、奶奶、爸爸、媽媽、哥哥、妹妹和我。我爸爸的妻子是我媽媽，她是一位老師。我媽媽的丈夫是我爸爸，他是醫生。我還有一個姐姐，她已經結婚了，她的丈夫很好。我的弟弟今年十歲，他喜歡踢足球和打籃球，非常喜歡運動。妹妹很可愛，她喜歡唱歌和跳舞。週末的時候，我們一家人會一起準備晚飯。爸爸做魚，媽媽炒菜，我幫助他們洗菜。我們做了很多菜：紅色的西紅柿炒雞蛋、黑色的木耳、還有羊肉。大家都覺得非常好喫。喫完飯，我們一起看電視，聊聊最近的事情。這就是我的家人，我很愛他們！",
+          "pinyin": "Dà jiā hǎo！ Wǒ lái jiè shào yī xià wǒ de jiā rén。 Wǒ jiā yǒu qī kǒu rén： Yé yé 、 nǎi nǎi 、 bà bà 、 mā mā 、 gē gē 、 mèi mèi hé wǒ。 Wǒ bà bà de qī zǐ shì wǒ mā mā， Tā shì yī wèi lǎo shī。 Wǒ mā mā de zhàng fū shì wǒ bà bà， Tā shì yī shēng。 Wǒ hái yǒu yī gè jiě jiě， Tā yǐ jīng jié hūn le， Tā de zhàng fū hěn hǎo。 Wǒ de dì di jīn nián shí suì， Tā xǐ huān tī zú qiú hé dǎ lán qiú， Fēi cháng xǐ huān yùn dòng。 Mèi mèi hěn kě ài， Tā xǐ huān chàng gē hé tiào wǔ。 Zhōu mò de shí hòu， Wǒ men yī jiā rén huì yì qǐ zhǔn bèi wǎn fàn。 Bà bà zuò yú， Mā mā chǎo cài， Wǒ bāng zhù tā men xǐ cài。 Wǒ men zuò le hěn duō cài： Hóng sè de xī hóng shì chǎo jī dàn 、 hēi sè de mù ěr 、 hái yǒu yáng ròu。 Dà jiā dōu jué dé fēi cháng hǎo chī。 Chī wán fàn， Wǒ men yì qǐ kàn diàn shì， Liáo liáo zuì jìn de shì qíng。 Zhè jiù shì wǒ de jiā rén， Wǒ hěn ài tā men！",
+          "translation": "Xin chào mọi người! Tôi giới thiệu về gia đình tôi. Nhà tôi có bảy người: ông, bà, bố, mẹ, anh trai, em gái và tôi. Vợ của bố tôi là mẹ tôi, mẹ là giáo viên. Chồng của mẹ tôi là bố tôi, ông là bác sĩ. Tôi còn có một chị gái, chị đã kết hôn, chồng của chị rất tốt. Em trai tôi năm nay mười tuổi, em thích đá bóng và chơi bóng rổ, rất thích thể thao. Em gái rất đáng yêu, em thích hát và nhảy. Cuối tuần, cả nhà chúng tôi sẽ cùng chuẩn bị bữa tối. Bố nấu cá, mẹ xào rau, tôi giúp họ rửa rau. Chúng tôi làm nhiều món: cà chua đỏ xào trứng, mộc nhĩ đen, còn có thịt cừu. Mọi người đều thấy rất ngon. Ăn xong cơm, chúng tôi cùng xem tivi, nói chuyện về những chuyện gần đây. Đây là gia đình tôi, tôi rất yêu họ!"
+        }
+      ]
+    },
+    {
+      "topic": "上學的一天",
+      "description": "Một ngày đi học",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "今天早上我六點起牀，穿上新衣服去上學。我坐公共汽車去學校，路上用了半個小時。到了學校，我先去教室。第一節課是中文課，老師教我們寫漢字。老師問我們懂不懂，我們都說懂了。第二節課是數學課，老師告訴我們怎麼做題。我覺得數學有點兒難，但是很有意思。下課以後，我和同學一起打籃球。我們在操場上跑步，玩得很開心。中午我在學校喫午飯，喫了魚、雞蛋和蔬菜。下午有兩節課，一節是英語課，一節是音樂課。音樂課上我們唱歌，老師說我唱得很好。放學以後，我坐公共汽車回家。回到家，我先洗手，然後做作業。晚上我和家人一起喫晚飯，然後準備明天的考試。",
+          "pinyin": "Jīn tiān zǎo shàng wǒ liù diǎn qǐ chuáng， Chuān shàng xīn yī fú qù shàng xué。 Wǒ zuò gōng gòng qì chē qù xué xiào， Lù shàng yòng le bàn gè xiǎo shí。 Dào le xué xiào， Wǒ xiān qù jiào shì。 Dì yī jié kè shì zhōng wén kè， Lǎo shī jiào wǒ men xiě hàn zì。 Lǎo shī wèn wǒ men dǒng bù dǒng， Wǒ men dōu shuō dǒng le。 Dì èr jié kè shì shù xué kè， Lǎo shī gào sù wǒ men zěn me zuò tí。 Wǒ jué dé shù xué yǒu diǎn ér nán， Dàn shì hěn yǒu yì si。 Xià kè yǐ hòu， Wǒ hé tóng xué yì qǐ dǎ lán qiú。 Wǒ men zài cāo chǎng shàng pǎo bù， Wán dé hěn kāi xīn。 Zhōng wǔ wǒ zài xué xiào chī wǔ fàn， Chī le yú 、 jī dàn hé shū cài。 Xià wǔ yǒu liǎng jié kè， Yī jié shì yīng yǔ kè， Yī jié shì yīn lè kè。 Yīn lè kè shàng wǒ men chàng gē， Lǎo shī shuō wǒ chàng dé hěn hǎo。 Fàng xué yǐ hòu， Wǒ zuò gōng gòng qì chē huí jiā。 Huí dào jiā， Wǒ xiān xǐ shǒu， Rán hòu zuò zuò yè。 Wǎn shàng wǒ hé jiā rén yì qǐ chī wǎn fàn， Rán hòu zhǔn bèi míng tiān de kǎo shì。",
+          "translation": "Sáng nay tôi dậy lúc 6 giờ, mặc quần áo mới đi học. Tôi đi xe buýt đến trường, trên đường mất nửa tiếng. Đến trường, tôi trước tiên đến lớp học. Tiết đầu tiên là tiết tiếng Trung, thầy dạy chúng tôi viết chữ Hán. Thầy hỏi chúng tôi có hiểu không, chúng tôi đều nói hiểu rồi. Tiết thứ hai là tiết toán, thầy nói cho chúng tôi cách làm bài. Tôi thấy toán hơi khó, nhưng rất thú vị. Sau khi tan học, tôi và bạn học cùng chơi bóng rổ. Chúng tôi chạy bộ ở sân trường, chơi rất vui. Trưa tôi ăn trưa ở trường, ăn cá, trứng và rau. Chiều có hai tiết, một tiết tiếng Anh, một tiết âm nhạc. Tiết âm nhạc chúng tôi hát, thầy nói tôi hát rất hay. Sau khi tan học, tôi đi xe buýt về nhà. Về đến nhà, tôi trước tiên rửa tay, sau đó làm bài tập. Tối tôi cùng gia đình ăn tối, sau đó chuẩn bị cho kỳ thi ngày mai."
+        }
+      ]
+    },
+    {
+      "topic": "去超市買東西",
+      "description": "Đi siêu thị mua đồ",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "昨天下午，我和媽媽去超市買東西。超市離我家很近，從家裏走過去只要十分鐘。進去以後，我們先去蔬菜區。那裏賣很多新鮮的蔬菜。媽媽買了一些西瓜、雞蛋、牛奶和羊肉。西瓜三元一公斤，很便宜。我問媽媽爲什麼要買這麼多，媽媽回答說因爲明天是我的生日，要準備生日晚會。我們還買了魚，媽媽說魚對身體很好。在水果區，我看見紅色的蘋果，黑色的葡萄，還有很多顏色的水果。我選了我最喜歡的香蕉。付錢的時候，一共花了一百二十元。服務員問我們需不需要袋子，媽媽說不用，我們自己帶了。走出超市，我幫助媽媽提東西。路上我們看見賣西瓜的人，他正在大聲喊：新鮮西瓜，又甜又便宜！",
+          "pinyin": "Zuó tiān xià wǔ， Wǒ hé mā mā qù chāo shì mǎi dōng xī。 Chāo shì lí wǒ jiā hěn jìn， Cóng jiā lǐ zǒu guò qù zhǐ yào shí fēn zhōng。 Jìn qù yǐ hòu， Wǒ men xiān qù shū cài qū。 Nà lǐ mài hěn duō xīn xiān de shū cài。 Mā mā mǎi le yī xiē xī guā 、 jī dàn 、 niú nǎi hé yáng ròu。 Xī guā sān yuán yī gōng jīn， Hěn pián yi。 Wǒ wèn mā mā wèi shén me yào mǎi zhè me duō， Mā mā huí dá shuō yīn wèi míng tiān shì wǒ de shēng rì， Yào zhǔn bèi shēng rì wǎn huì。 Wǒ men hái mǎi le yú， Mā mā shuō yú duì shēn tǐ hěn hǎo。 Zài shuǐ guǒ qū， Wǒ kàn jiàn hóng sè de píng guǒ， Hēi sè de pú táo， Hái yǒu hěn duō yán sè de shuǐ guǒ。 Wǒ xuǎn le wǒ zuì xǐ huān de xiāng jiāo。 Fù qián de shí hòu， Yī gòng huā le yì bǎi èr shí yuán。 Fú wù yuán wèn wǒ men xū bù xū yào dài zi， Mā mā shuō bù yòng， Wǒ men zì jǐ dài le。 Zǒu chū chāo shì， Wǒ bāng zhù mā mā tí dōng xī。 Lù shàng wǒ men kàn jiàn mài xī guā de rén， Tā zhèng zài dà shēng hǎn： Xīn xiān xī guā， Yòu tián yòu pián yi！",
+          "translation": "Chiều hôm qua, tôi và mẹ đi siêu thị mua đồ. Siêu thị cách nhà tôi rất gần, từ nhà đi qua chỉ mất mười phút. Vào bên trong, chúng tôi trước tiên đi khu rau. Ở đó bán rất nhiều rau tươi. Mẹ mua một ít dưa hấu, trứng, sữa và thịt cừu. Dưa hấu ba tệ một kg, rất rẻ. Tôi hỏi mẹ tại sao mua nhiều thế, mẹ trả lời vì ngày mai là sinh nhật của tôi, phải chuẩn bị tiệc sinh nhật. Chúng tôi còn mua cá, mẹ nói cá tốt cho cơ thể. Ở khu trái cây, tôi thấy táo đỏ, nho đen, còn có nhiều màu sắc trái cây. Tôi chọn chuối tôi thích nhất. Khi trả tiền, tổng cộng tốn một trăm hai mươi tệ. Nhân viên hỏi chúng tôi có cần túi không, mẹ nói không cần, chúng tôi tự mang. Đi ra khỏi siêu thị, tôi giúp mẹ xách đồ. Trên đường chúng tôi thấy người bán dưa hấu, anh ta đang hét to: dưa hấu tươi, vừa ngọt vừa rẻ!"
+        }
+      ]
+    },
+    {
+      "topic": "問路",
+      "description": "Hỏi đường",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "上個星期，我要去機場接朋友，但是不知道怎麼走。我看見一位先生，就過去問他。我說：您好，請問機場怎麼走？他很友好地告訴我：你從這裏往右邊走，然後在第一個路口向左轉，走大約一百米就能看見公共汽車站。坐五號線公共汽車就可以到機場。我問：大概要多長時間？他說：可能要一個小時左右吧。你也可以坐地鐵，比公共汽車快。我說太感謝您了！他笑著說：別客氣，希望你能順利接到朋友。我問他：機場旁邊有沒有商店？他說有，機場左邊有很多商店，賣各種東西，也有餐廳。我又問：買機票在哪裏？他說：在機場裏面，你一進去就能看見售票處。我們聊了一會兒，他還告訴我今天天氣很好，是晴天，但是明天可能會下雪，天氣會變陰。",
+          "pinyin": "Shàng gè xīng qī， Wǒ yào qù jī chǎng jiē péng yǒu， Dàn shì bù zhī dào zěn me zǒu。 Wǒ kàn jiàn yī wèi xiān shēng， Jiù guò qù wèn tā。 Wǒ shuō： Nín hǎo， Qǐng wèn jī chǎng zěn me zǒu？ Tā hěn yǒu hǎo dì gào sù wǒ： Nǐ cóng zhè lǐ wǎng yòu biān zǒu， Rán hòu zài dì yī gè lù kǒu xiàng zuǒ zhuǎn， Zǒu dà yuē yì bǎi mǐ jiù néng kàn jiàn gōng gòng qì chē zhàn。 Zuò wǔ hào xiàn gōng gòng qì chē jiù kě yǐ dào jī chǎng。 Wǒ wèn： Dà gài yào duō zhǎng shí jiān？ Tā shuō： Kě néng yào yī gè xiǎo shí zuǒ yòu ba。 Nǐ yě kě yǐ zuò dì tiě， Bǐ gōng gòng qì chē kuài。 Wǒ shuō tài gǎn xiè nín le！ Tā xiào zhù shuō： Bié kè qì， Xī wàng nǐ néng shùn lì jiē dào péng yǒu。 Wǒ wèn tā： Jī chǎng páng biān yǒu méi yǒu shāng diàn？ Tā shuō yǒu， Jī chǎng zuǒ biān yǒu hěn duō shāng diàn， Mài gè zhǒng dōng xī， Yě yǒu cān tīng。 Wǒ yòu wèn： Mǎi jī piào zài nǎ lǐ？ Tā shuō： Zài jī chǎng lǐ miàn， Nǐ yī jìn qù jiù néng kàn jiàn shòu piào chù。 Wǒ men liáo le yī huì ér， Tā hái gào sù wǒ jīn tiān tiān qì hěn hǎo， Shì qíng tiān， Dàn shì míng tiān kě néng huì xià xuě， Tiān qì huì biàn yīn。",
+          "translation": "Tuần trước, tôi phải đi sân bay đón bạn, nhưng không biết đi thế nào. Tôi thấy một ông, liền đi qua hỏi ông. Tôi nói: Xin chào, cho hỏi đi sân bay thế nào? Ông rất thân thiện nói cho tôi: bạn từ đây đi bên phải, sau đó ở ngã tư đầu tiên rẽ trái, đi khoảng một trăm mét là thấy trạm xe buýt. Đi xe buýt tuyến 5 là có thể đến sân bay. Tôi hỏi: khoảng mất bao lâu? Ông nói: có thể khoảng một tiếng. Bạn cũng có thể đi tàu điện ngầm, nhanh hơn xe buýt. Tôi nói cảm ơn ông quá! Ông cười nói: đừng khách khí, hi vọng bạn có thể đón bạn thuận lợi. Tôi hỏi ông: bên cạnh sân bay có cửa hàng không? Ông nói có, bên trái sân bay có nhiều cửa hàng, bán đủ thứ, cũng có nhà hàng. Tôi lại hỏi: mua vé máy bay ở đâu? Ông nói: trong sân bay, bạn vừa vào là thấy quầy bán vé. Chúng tôi nói chuyện một lúc, ông còn nói cho tôi hôm nay thời tiết rất tốt, trời nắng, nhưng ngày mai có thể tuyết rơi, thời tiết sẽ chuyển âm."
+        }
+      ]
+    },
+    {
+      "topic": "週末活動",
+      "description": "Hoạt động cuối tuần",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "這個週末，我和朋友們一起去公園玩。我們早上八點在公園門口休息區集合。我騎自行車去的，朋友小李坐公共汽車來的。公園裏人非常多，大家都在運動。有人在跑步，有人在打籃球，還有人在踢足球。我們先去游泳池游泳。水有點兒涼，但是游泳很舒服，對身體很好。遊了一個小時以後，我們去旁邊的餐廳喫午飯。我點了魚和雞蛋，朋友們點了牛奶、羊肉和西瓜。飯菜的顏色很好看，紅色的西紅柿，黑色的木耳。下午我們去坐船。船票十元一次，不太貴。我們在湖上划船，看風景。湖邊有很多人在拍照，他們穿着各種顏色的新衣服。晚上我們一起去看電影。電影很有意思，我們都覺得很好看。看完電影已經很晚了，我們就各自回家了。",
+          "pinyin": "Zhè gè zhōu mò， Wǒ hé péng yǒu men yì qǐ qù gōng yuán wán。 Wǒ men zǎo shàng bā diǎn zài gōng yuán mén kǒu xiū xī qū jí hé。 Wǒ qí zì xíng chē qù de， Péng yǒu xiǎo lǐ zuò gōng gòng qì chē lái de。 Gōng yuán lǐ rén fēi cháng duō， Dà jiā dōu zài yùn dòng。 Yǒu rén zài pǎo bù， Yǒu rén zài dǎ lán qiú， Hái yǒu rén zài tī zú qiú。 Wǒ men xiān qù yóu yǒng chí yóu yǒng。 Shuǐ yǒu diǎn ér liáng， Dàn shì yóu yǒng hěn shū fú， Duì shēn tǐ hěn hǎo。 Yóu le yī gè xiǎo shí yǐ hòu， Wǒ men qù páng biān de cān tīng chī wǔ fàn。 Wǒ diǎn le yú hé jī dàn， Péng yǒu men diǎn le niú nǎi 、 yáng ròu hé xī guā。 Fàn cài de yán sè hěn hǎo kàn， Hóng sè de xī hóng shì， Hēi sè de mù ěr。 Xià wǔ wǒ men qù zuò chuán。 Chuán piào shí yuán yī cì， Bù tài guì。 Wǒ men zài hú shàng huá chuán， Kàn fēng jǐng。 Hú biān yǒu hěn duō rén zài pāi zhào， Tā men chuān zhe gè zhǒng yán sè de xīn yī fú。 Wǎn shàng wǒ men yì qǐ qù kàn diàn yǐng。 Diàn yǐng hěn yǒu yì si， Wǒ men dōu jué dé hěn hǎo kàn。 Kàn wán diàn yǐng yǐ jīng hěn wǎn le， Wǒ men jiù gè zì huí jiā le。",
+          "translation": "Cuối tuần này, tôi và bạn bè cùng đi công viên chơi. Chúng tôi 8 giờ sáng tập trung ở khu nghỉ cổng công viên. Tôi đi xe đạp, bạn Tiểu Lý đi xe buýt đến. Trong công viên người rất đông, mọi người đều đang thể dục. Có người chạy bộ, có người chơi bóng rổ, còn có người đá bóng. Chúng tôi trước tiên đi hồ bơi bơi lội. Nước hơi lạnh, nhưng bơi rất thoải mái, tốt cho cơ thể. Bơi một tiếng sau, chúng tôi đi nhà hàng bên cạnh ăn trưa. Tôi gọi cá và trứng, bạn bè gọi sữa, thịt cừu và dưa hấu. Màu sắc món ăn rất đẹp, cà chua đỏ, mộc nhĩ đen. Chiều chúng tôi đi chèo thuyền. Vé thuyền mười tệ một lần, không đắt lắm. Chúng tôi chèo thuyền trên hồ, xem phong cảnh. Bên hồ có nhiều người đang chụp ảnh, họ mặc đủ loại quần áo màu sắc mới. Tối chúng tôi cùng đi xem phim. Phim rất thú vị, chúng tôi đều thấy rất hay. Xem xong phim đã rất muộn, chúng tôi mỗi người về nhà."
+        }
+      ]
+    },
+    {
+      "topic": "去醫院",
+      "description": "Đi bệnh viện",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "去年冬天，我生病了。開始的時候我以爲只是有點兒不舒服，所以沒有去醫院。但是過了兩天，我的眼睛很疼，身體也越來越不舒服。媽媽說我應該去看醫生。第二天早上，媽媽帶我去醫院。醫院離我家不遠，從家裏走路去只要十五分鐘，也可以騎自行車去。到了醫院，護士先問我哪裏不舒服，然後幫助我掛號。我們在休息室等了一個小時才輪到我。醫生很好，他告訴我不要緊張。他檢查了我的眼睛和身體，說我是因爲太累了。他給我開了一些藥，讓我好好休息。他還說：這個藥一天喫三次，飯後喫。如果三天以後還不好，要再來醫院。媽媽問醫生：他需要住院嗎？醫生說不用，在家休息就可以了。我們付了錢，拿了藥就回家了。",
+          "pinyin": "Qù nián dōng tiān， Wǒ shēng bìng le。 Kāi shǐ de shí hòu wǒ yǐ wèi zhǐ shì yǒu diǎn ér bù shū fú， Suǒ yǐ méi yǒu qù yī yuàn。 Dàn shì guò le liǎng tiān， Wǒ de yǎn jīng hěn téng， Shēn tǐ yě yuè lái yuè bù shū fú。 Mā mā shuō wǒ yīng gāi qù kàn yī shēng。 Dì èr tiān zǎo shàng， Mā mā dài wǒ qù yī yuàn。 Yī yuàn lí wǒ jiā bù yuǎn， Cóng jiā lǐ zǒu lù qù zhǐ yào shí wǔ fēn zhōng， Yě kě yǐ qí zì xíng chē qù。 Dào le yī yuàn， Hù shì xiān wèn wǒ nǎ lǐ bù shū fú， Rán hòu bāng zhù wǒ guà hào。 Wǒ men zài xiū xī shì děng le yī gè xiǎo shí cái lún dào wǒ。 Yī shēng hěn hǎo， Tā gào sù wǒ bú yào jǐn zhāng。 Tā jiǎn chá le wǒ de yǎn jīng hé shēn tǐ， Shuō wǒ shì yīn wèi tài lèi le。 Tā gěi wǒ kāi le yī xiē yào， Ràng wǒ hǎo hǎo xiū xī。 Tā hái shuō： Zhè gè yào yī tiān chī sān cì， Fàn hòu chī。 Rú guǒ sān tiān yǐ hòu hái bù hǎo， Yào zài lái yī yuàn。 Mā mā wèn yī shēng： Tā xū yào zhù yuàn ma？ Yī shēng shuō bù yòng， Zài jiā xiū xī jiù kě yǐ le。 Wǒ men fù le qián， Ná le yào jiù huí jiā le。",
+          "translation": "Mùa đông năm ngoái, tôi bị ốm. Ban đầu tôi tưởng chỉ hơi khó chịu, nên không đi bệnh viện. Nhưng qua hai ngày, mắt tôi rất đau, cơ thể cũng càng ngày càng khó chịu. Mẹ nói tôi nên đi khám bác sĩ. Sáng hôm sau, mẹ đưa tôi đi bệnh viện. Bệnh viện cách nhà tôi không xa, từ nhà đi bộ chỉ mất mười lăm phút, cũng có thể đi xe đạp. Đến bệnh viện, y tá trước tiên hỏi tôi đâu khó chịu, sau đó giúp tôi đăng ký. Chúng tôi đợi ở phòng nghỉ một tiếng mới đến lượt tôi. Bác sĩ rất tốt, ông nói cho tôi đừng lo lắng. Ông kiểm tra mắt và cơ thể của tôi, nói tôi là do quá mệt. Ông kê cho tôi một ít thuốc, bảo tôi nghỉ ngơi tốt. Ông còn nói: thuốc này một ngày uống ba lần, sau bữa ăn uống. Nếu ba ngày sau vẫn không khỏi, phải đến bệnh viện lại. Mẹ hỏi bác sĩ: con cần nằm viện không? Bác sĩ nói không cần, nghỉ ở nhà là được. Chúng tôi trả tiền, lấy thuốc rồi về nhà."
+        }
+      ]
+    },
+    {
+      "topic": "旅遊計劃",
+      "description": "Kế hoạch du lịch",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "下個月是暑假，我和家人準備去旅遊。這是我們第一次一起旅遊，所以大家都很興奮。爸爸告訴我們，他已經買好了火車票和飛機票。我們要先坐火車去機場，然後坐飛機去目的地。媽媽問爸爸：飛機票多少錢一張？爸爸回答說：一千元左右，比較貴，但是很快。我們要去的地方很遠，坐飛機只要兩個小時，如果坐船要好幾天。媽媽正在準備行李，她買了新的衣服、帽子和手錶。弟弟問媽媽：我們什麼時候出發？媽媽說：下個月五號，你要準備好你的東西。我覺得這次旅遊一定會很有意思。我希望能看到很多新的地方，認識新的朋友。我也想買一些禮物送給我的朋友們。雖然要花不少錢，但是我們都覺得非常值得。旅遊可以讓我們休息，也可以學到很多新的事情。",
+          "pinyin": "Xià gè yuè shì shǔ jià， Wǒ hé jiā rén zhǔn bèi qù lǚ yóu。 Zhè shì wǒ men dì yī cì yì qǐ lǚ yóu， Suǒ yǐ dà jiā dōu hěn xìng fèn。 Bà bà gào sù wǒ men， Tā yǐ jīng mǎi hǎo le huǒ chē piào hé fēi jī piào。 Wǒ men yào xiān zuò huǒ chē qù jī chǎng， Rán hòu zuò fēi jī qù mù dì dì。 Mā mā wèn bà bà： Fēi jī piào duō shǎo qián yī zhāng？ Bà bà huí dá shuō： Yī qiān yuán zuǒ yòu， Bǐ jiào guì， Dàn shì hěn kuài。 Wǒ men yào qù de dì fāng hěn yuǎn， Zuò fēi jī zhǐ yào liǎng gè xiǎo shí， Rú guǒ zuò chuán yào hǎo jǐ tiān。 Mā mā zhèng zài zhǔn bèi xíng lǐ， Tā mǎi le xīn de yī fú 、 mào zi hé shǒu biǎo。 Dì di wèn mā mā： Wǒ men shén me shí hòu chū fā？ Mā mā shuō： Xià gè yuè wǔ hào， Nǐ yào zhǔn bèi hǎo nǐ de dōng xī。 Wǒ jué dé zhè cì lǚ yóu yí dìng huì hěn yǒu yì si。 Wǒ xī wàng néng kàn dào hěn duō xīn de dì fāng， Rèn shí xīn de péng yǒu。 Wǒ yě xiǎng mǎi yī xiē lǐ wù sòng gěi wǒ de péng yǒu men。 Suī rán yào huā bù shǎo qián， Dàn shì wǒ men dōu jué dé fēi cháng zhí de。 Lǚ yóu kě yǐ ràng wǒ men xiū xī， Yě kě yǐ xué dào hěn duō xīn de shì qíng。",
+          "translation": "Tháng sau là kỳ nghỉ hè, tôi và gia đình chuẩn bị đi du lịch. Đây là lần đầu tiên chúng tôi cùng đi du lịch, nên mọi người đều rất phấn khích. Bố nói cho chúng tôi, ông đã mua vé tàu và vé máy bay. Chúng tôi trước tiên đi tàu hỏa đến sân bay, sau đó đi máy bay đến điểm đến. Mẹ hỏi bố: vé máy bay bao nhiêu tiền một vé? Bố trả lời: khoảng một nghìn tệ, khá đắt, nhưng rất nhanh. Nơi chúng tôi đi rất xa, đi máy bay chỉ mất hai tiếng, nếu đi thuyền phải mấy ngày. Mẹ đang chuẩn bị hành lý, mẹ mua quần áo mới, mũ và đồng hồ. Em trai hỏi mẹ: chúng ta khi nào khởi hành? Mẹ nói: tháng sau ngày 5, con phải chuẩn bị đồ của con. Tôi thấy chuyến du lịch này chắc chắn sẽ rất thú vị. Tôi hi vọng có thể xem nhiều nơi mới, quen bạn mới. Tôi cũng muốn mua một ít quà tặng cho bạn bè của tôi. Mặc dù phải tốn không ít tiền, nhưng chúng tôi đều thấy rất đáng. Du lịch có thể cho chúng tôi nghỉ ngơi, cũng có thể học được nhiều chuyện mới."
+        }
+      ]
+    },
+    {
+      "topic": "在餐廳",
+      "description": "Ở nhà hàng",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "昨天晚上，我和朋友們去餐廳喫飯。這家餐廳很有名，賣各種各樣的菜。我們六點到的，餐廳已經有很多人了。服務員歡迎我們，讓我們坐在靠窗戶的位置。我覺得這個位置很好，因爲可以看到外面的風景。服務員給我們菜單，問我們想喝什麼。我點了牛奶，朋友們點了果汁和茶。我們看菜單，上面有魚、雞蛋、羊肉、蔬菜等等。每個菜旁邊都寫着價錢，有的貴，有的便宜。服務員告訴我們，今天的特別菜是紅燒魚，非常好喫。我們決定點這個。我還點了西紅柿炒雞蛋，朋友點了羊肉。等菜的時候，我們聊天，談論最近的事情。服務員送來了菜，菜的顏色很漂亮，紅色、黑色、綠色都有。我們開始喫飯，大家都說菜很好喫。喫完飯，服務員問我們需不需要打包。我們說不用了，然後付了錢。",
+          "pinyin": "Zuó tiān wǎn shàng， Wǒ hé péng yǒu men qù cān tīng chī fàn。 Zhè jiā cān tīng hěn yǒu míng， Mài gè zhǒng gè yàng de cài。 Wǒ men liù diǎn dào de， Cān tīng yǐ jīng yǒu hěn duō rén le。 Fú wù yuán huān yíng wǒ men， Ràng wǒ men zuò zài kào chuāng hù de wèi zhì。 Wǒ jué dé zhè gè wèi zhì hěn hǎo， Yīn wèi kě yǐ kàn dào wài miàn de fēng jǐng。 Fú wù yuán gěi wǒ men cài dān， Wèn wǒ men xiǎng hē shén me。 Wǒ diǎn le niú nǎi， Péng yǒu men diǎn le guǒ zhī hé chá。 Wǒ men kàn cài dān， Shàng miàn yǒu yú 、 jī dàn 、 yáng ròu 、 shū cài děng děng。 Měi gè cài páng biān dōu xiě zhe jià qián， Yǒu de guì， Yǒu de pián yi。 Fú wù yuán gào sù wǒ men， Jīn tiān de tè bié cài shì hóng shāo yú， Fēi cháng hǎo chī。 Wǒ men jué dìng diǎn zhè gè。 Wǒ hái diǎn le xī hóng shì chǎo jī dàn， Péng yǒu diǎn le yáng ròu。 Děng cài de shí hòu， Wǒ men liáo tiān， Tán lùn zuì jìn de shì qíng。 Fú wù yuán sòng lái le cài， Cài de yán sè hěn piào liàng， Hóng sè 、 hēi sè 、 lǜ sè dōu yǒu。 Wǒ men kāi shǐ chī fàn， Dà jiā dōu shuō cài hěn hǎo chī。 Chī wán fàn， Fú wù yuán wèn wǒ men xū bù xū yào dǎ bāo。 Wǒ men shuō bù yòng le， Rán hòu fù le qián。",
+          "translation": "Tối hôm qua, tôi và bạn bè đi nhà hàng ăn cơm. Nhà hàng này rất nổi tiếng, bán đủ loại món. Chúng tôi đến lúc 6 giờ, nhà hàng đã có rất nhiều người. Nhân viên chào đón chúng tôi, để chúng tôi ngồi ở vị trí gần cửa sổ. Tôi thấy vị trí này rất tốt, vì có thể nhìn phong cảnh bên ngoài. Nhân viên đưa thực đơn cho chúng tôi, hỏi chúng tôi muốn uống gì. Tôi gọi sữa, bạn bè gọi nước trái cây và trà. Chúng tôi xem thực đơn, trên đó có cá, trứng, thịt cừu, rau v.v. Bên cạnh mỗi món đều viết giá, có món đắt, có món rẻ. Nhân viên nói cho chúng tôi, món đặc biệt hôm nay là cá kho đỏ, rất ngon. Chúng tôi quyết định gọi món này. Tôi còn gọi cà chua xào trứng, bạn gọi thịt cừu. Khi đợi món, chúng tôi trò chuyện, bàn luận chuyện gần đây. Nhân viên mang món đến, màu sắc món ăn rất đẹp, đỏ, đen, xanh đều có. Chúng tôi bắt đầu ăn cơm, mọi người đều nói món rất ngon. Ăn xong cơm, nhân viên hỏi chúng tôi có cần đóng gói không. Chúng tôi nói không cần, sau đó trả tiền."
+        }
+      ]
+    },
+    {
+      "topic": "現代生活",
+      "description": "Cuộc sống hiện đại",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "現在的生活和以前很不一樣了。每天早上，男人和女人都要去上班。有的人開車去，有的人坐公共汽車。很多人都有手機，在路上可以用手機看報紙、聽音樂或者和朋友聊天。我認識一位女人，她每天要去很遠的地方上班。她告訴我，雖然很累，但是她很喜歡她的工作。還有一位男人，他在家工作，不用去辦公室。他說這樣可以有更多時間陪孩子。現在的孩子們也很忙，他們要上學、做作業、參加各種活動。週末的時候，一家人會一起去公園或者商場。有時候我在想，爲什麼現代人這麼忙呢？是因爲生活節奏快，還是因爲我們想要得到更多？這個問題很難回答。但是不管怎樣，我們都應該好好享受生活，多陪陪家人和朋友。",
+          "pinyin": "Xiàn zài de shēng huó hé yǐ qián hěn bù yī yàng le。 Měi tiān zǎo shàng， Nán rén hé nǚ rén dōu yào qù shàng bān。 Yǒu de rén kāi chē qù， Yǒu de rén zuò gōng gòng qì chē。 Hěn duō rén dōu yǒu shǒu jī， Zài lù shàng kě yǐ yòng shǒu jī kàn bào zhǐ 、 tīng yīn lè huò zhě hé péng yǒu liáo tiān。 Wǒ rèn shí yī wèi nǚ rén， Tā měi tiān yào qù hěn yuǎn de dì fāng shàng bān。 Tā gào sù wǒ， Suī rán hěn lèi， Dàn shì tā hěn xǐ huān tā de gōng zuò。 Hái yǒu yī wèi nán rén， Tā zài jiā gōng zuò， Bù yòng qù bàn gōng shì。 Tā shuō zhè yàng kě yǐ yǒu gèng duō shí jiān péi hái zi。 Xiàn zài de hái zi men yě hěn máng， Tā men yào shàng xué 、 zuò zuò yè 、 cān jiā gè zhǒng huó dòng。 Zhōu mò de shí hòu， Yī jiā rén huì yì qǐ qù gōng yuán huò zhě shāng chǎng。 Yǒu shí hòu wǒ zài xiǎng， Wèi shén me xiàn dài rén zhè me máng ne？ Shì yīn wèi shēng huó jié zòu kuài， Hái shì yīn wèi wǒ men xiǎng yào dé dào gèng duō？ Zhè gè wèn tí hěn nán huí dá。 Dàn shì bù guǎn zěn yàng， Wǒ men dōu yīng gāi hǎo hǎo xiǎng shòu shēng huó， Duō péi péi jiā rén hé péng yǒu。",
+          "translation": "Cuộc sống bây giờ rất khác so với trước. Mỗi sáng, đàn ông và phụ nữ đều phải đi làm. Có người lái xe đi, có người đi xe buýt. Rất nhiều người có điện thoại, trên đường có thể dùng điện thoại xem báo, nghe nhạc hoặc nói chuyện với bạn bè. Tôi quen một phụ nữ, cô mỗi ngày phải đi nơi rất xa đi làm. Cô nói cho tôi, mặc dù rất mệt, nhưng cô rất thích công việc của cô. Còn có một đàn ông, anh làm việc ở nhà, không cần đi văn phòng. Anh nói như vậy có thể có nhiều thời gian hơn ở cùng con cái. Trẻ em bây giờ cũng rất bận, chúng phải đi học, làm bài tập, tham gia các hoạt động. Cuối tuần, cả nhà sẽ cùng đi công viên hoặc trung tâm mua sắm. Đôi khi tôi nghĩ, tại sao người hiện đại bận thế? Là vì nhịp sống nhanh, hay vì chúng ta muốn có được nhiều hơn? Câu hỏi này rất khó trả lời. Nhưng dù sao, chúng ta đều nên tận hưởng cuộc sống, ở cùng gia đình và bạn bè nhiều hơn."
+        }
+      ]
+    },
+    {
+      "topic": "買衣服",
+      "description": "Mua quần áo",
+      "lines": [
+        {
+          "speaker": "",
+          "text": "星期六，我和媽媽去商場買衣服。商場裏有很多店，賣各種衣服、鞋子、手錶等等。我們先去看衣服。售貨員問我們要買什麼，我說想買幾件新衣服。售貨員很熱情，她給我們介紹了很多好看的衣服。有紅色的、黑色的、白色的，各種顏色都有。我試了好幾件，但是都不太合適。有的太大，有的太小。媽媽問我：你喜歡哪一件？我說我最喜歡那件藍色的。售貨員說：這件衣服很受歡迎，很多人都買。但是對不起，你要的號碼賣完了。我覺得有點兒失望。媽媽說：沒關係，我們再去別的店看看。我們又去了幾家店，最後找到了合適的衣服。這件衣服不貴也不便宜，價格剛剛好。我很高興，覺得沒有選錯。買完衣服，我們去喫午飯，然後就回家了。",
+          "pinyin": "Xīng qī liù， Wǒ hé mā mā qù shāng chǎng mǎi yī fú。 Shāng chǎng lǐ yǒu hěn duō diàn， Mài gè zhǒng yī fú 、 xié zi 、 shǒu biǎo děng děng。 Wǒ men xiān qù kàn yī fú。 Shòu huò yuán wèn wǒ men yào mǎi shén me， Wǒ shuō xiǎng mǎi jǐ jiàn xīn yī fú。 Shòu huò yuán hěn rè qíng， Tā gěi wǒ men jiè shào le hěn duō hǎo kàn de yī fú。 Yǒu hóng sè de 、 hēi sè de 、 bái sè de， Gè zhǒng yán sè dōu yǒu。 Wǒ shì le hǎo jǐ jiàn， Dàn shì dōu bù tài hé shì。 Yǒu de tài dà， Yǒu de tài xiǎo。 Mā mā wèn wǒ： Nǐ xǐ huān nǎ yī jiàn？ Wǒ shuō wǒ zuì xǐ huān nà jiàn lán sè de。 Shòu huò yuán shuō： Zhè jiàn yī fú hěn shòu huān yíng， Hěn duō rén dōu mǎi。 Dàn shì duì bù qǐ， Nǐ yào de hào mǎ mài wán le。 Wǒ jué dé yǒu diǎn ér shī wàng。 Mā mā shuō： Méi guān xì， Wǒ men zài qù bié de diàn kàn kàn。 Wǒ men yòu qù le jǐ jiā diàn， Zuì hòu zhǎo dào le hé shì de yī fú。 Zhè jiàn yī fú bù guì yě bù biàn yí， Jià gé gāng gāng hǎo。 Wǒ hěn gāo xìng， Jué dé méi yǒu xuǎn cuò。 Mǎi wán yī fú， Wǒ men qù chī wǔ fàn， Rán hòu jiù huí jiā le。",
+          "translation": "Thứ bảy, tôi và mẹ đi trung tâm mua sắm mua quần áo. Trong trung tâm có nhiều cửa hàng, bán đủ loại quần áo, giày, đồng hồ v.v. Chúng tôi trước tiên đi xem quần áo. Nhân viên bán hàng hỏi chúng tôi muốn mua gì, tôi nói muốn mua mấy bộ quần áo mới. Nhân viên rất nhiệt tình, cô giới thiệu cho chúng tôi nhiều quần áo đẹp. Có màu đỏ, đen, trắng, đủ màu sắc đều có. Tôi thử mấy bộ, nhưng đều không vừa lắm. Có cái quá to, có cái quá nhỏ. Mẹ hỏi tôi: con thích cái nào? Tôi nói tôi thích nhất cái màu xanh đó. Nhân viên nói: bộ quần áo này rất được ưa chuộng, nhiều người đều mua. Nhưng xin lỗi, số con muốn đã bán hết. Tôi thấy hơi thất vọng. Mẹ nói: không sao, chúng ta đi cửa hàng khác xem. Chúng tôi lại đi mấy cửa hàng, cuối cùng tìm thấy quần áo vừa. Bộ quần áo này không đắt cũng không rẻ, giá vừa phải. Tôi rất vui, thấy không chọn sai. Mua xong quần áo, chúng tôi đi ăn trưa, sau đó về nhà."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1618 @@
+{
+  "level": "HSK_1",
+  "entries": [
+    {
+      "hanzi": "爱",
+      "pinyin": "ài",
+      "meaning_vi": "yêu",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我爱你。",
+          "pinyin": "Wǒ ài nǐ.",
+          "meaning_vi": "Tôi yêu bạn."
+        },
+        {
+          "hanzi": "我爱中国。",
+          "pinyin": "Wǒ ài Zhōngguó.",
+          "meaning_vi": "Tôi yêu Trung Quốc."
+        },
+        {
+          "hanzi": "他爱学习。",
+          "pinyin": "Tā ài xuéxí.",
+          "meaning_vi": "Anh ấy thích học tập."
+        }
+      ],
+      "grammar": "动词 (Động từ) - Biểu thị tình cảm yêu thích",
+      "usage": "爱 + 名词/动词"
+    },
+    {
+      "hanzi": "八",
+      "pinyin": "bā",
+      "meaning_vi": "tám",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "爸爸",
+      "pinyin": "bàba",
+      "meaning_vi": "bố",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "杯子",
+      "pinyin": "bēizi",
+      "meaning_vi": "cốc",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "北京",
+      "pinyin": "Běijīng",
+      "meaning_vi": "Bắc Kinh",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "本",
+      "pinyin": "běn",
+      "meaning_vi": "cuốn (dùng cho sách)",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "不客气",
+      "pinyin": "bú kèqì",
+      "meaning_vi": "không có gì (đáp lại lời cảm ơn)",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "不",
+      "pinyin": "bù",
+      "meaning_vi": "không",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "菜",
+      "pinyin": "cài",
+      "meaning_vi": "món ăn, rau củ",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "茶",
+      "pinyin": "chá",
+      "meaning_vi": "trà",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "吃",
+      "pinyin": "chī",
+      "meaning_vi": "ăn",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我吃饭。",
+          "pinyin": "Wǒ chī fàn.",
+          "meaning_vi": "Tôi ăn cơm."
+        },
+        {
+          "hanzi": "你吃什么？",
+          "pinyin": "Nǐ chī shénme?",
+          "meaning_vi": "Bạn ăn gì?"
+        },
+        {
+          "hanzi": "他不吃肉。",
+          "pinyin": "Tā bù chī ròu.",
+          "meaning_vi": "Anh ấy không ăn thịt."
+        }
+      ],
+      "grammar": "动词 (Động từ) - Hành động ăn uống",
+      "usage": "吃 + 食物"
+    },
+    {
+      "hanzi": "出租车",
+      "pinyin": "chūzūchē",
+      "meaning_vi": "taxi",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "打电话",
+      "pinyin": "dǎ diànhuà",
+      "meaning_vi": "gọi điện thoại",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "大",
+      "pinyin": "dà",
+      "meaning_vi": "lớn, to",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "的",
+      "pinyin": "de",
+      "meaning_vi": "của (thuộc tính)",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "点",
+      "pinyin": "diǎn",
+      "meaning_vi": "giờ (trong thời gian)",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "电脑",
+      "pinyin": "diànnǎo",
+      "meaning_vi": "máy tính",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "电视",
+      "pinyin": "diànshì",
+      "meaning_vi": "ti vi",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "电影",
+      "pinyin": "diànyǐng",
+      "meaning_vi": "phim",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "东西",
+      "pinyin": "dōngxī",
+      "meaning_vi": "đồ vật, thứ",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "都",
+      "pinyin": "dōu",
+      "meaning_vi": "đều",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "读",
+      "pinyin": "dú",
+      "meaning_vi": "đọc",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我读书。",
+          "pinyin": "Wǒ dú shū.",
+          "meaning_vi": "Tôi đọc sách."
+        },
+        {
+          "hanzi": "他读大学。",
+          "pinyin": "Tā dú dàxué.",
+          "meaning_vi": "Anh ấy học đại học."
+        },
+        {
+          "hanzi": "读一读",
+          "pinyin": "dú yī dú",
+          "meaning_vi": "đọc thử"
+        }
+      ],
+      "grammar": "动词 (Động từ) - Đọc, học",
+      "usage": "读 + 宾语"
+    },
+    {
+      "hanzi": "对不起",
+      "pinyin": "duìbùqǐ",
+      "meaning_vi": "xin lỗi",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "多",
+      "pinyin": "duō",
+      "meaning_vi": "nhiều",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "多少",
+      "pinyin": "duōshǎo",
+      "meaning_vi": "bao nhiêu",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "儿子",
+      "pinyin": "érzi",
+      "meaning_vi": "con trai",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "二",
+      "pinyin": "èr",
+      "meaning_vi": "hai",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "饭馆",
+      "pinyin": "fànguǎn",
+      "meaning_vi": "nhà hàng",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "飞机",
+      "pinyin": "fēijī",
+      "meaning_vi": "máy bay",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "分钟",
+      "pinyin": "fēnzhōng",
+      "meaning_vi": "phút",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "高兴",
+      "pinyin": "gāoxìng",
+      "meaning_vi": "vui",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "个",
+      "pinyin": "gè",
+      "meaning_vi": "cái (đơn vị lượng từ)",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "工作",
+      "pinyin": "gōngzuò",
+      "meaning_vi": "công việc",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我在北京工作。",
+          "pinyin": "Wǒ zài Běijīng gōngzuò.",
+          "meaning_vi": "Tôi làm việc ở Bắc Kinh."
+        },
+        {
+          "hanzi": "他的工作很忙。",
+          "pinyin": "Tā de gōngzuò hěn máng.",
+          "meaning_vi": "Công việc của anh ấy rất bận."
+        },
+        {
+          "hanzi": "找工作",
+          "pinyin": "zhǎo gōngzuò",
+          "meaning_vi": "tìm việc"
+        }
+      ],
+      "grammar": "动词/名词 - Làm việc / Công việc",
+      "usage": "在 + 地点 + 工作 hoặc N的工作"
+    },
+    {
+      "hanzi": "狗",
+      "pinyin": "gǒu",
+      "meaning_vi": "chó",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "汉语",
+      "pinyin": "Hànyǔ",
+      "meaning_vi": "tiếng Hán",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "好",
+      "pinyin": "hǎo",
+      "meaning_vi": "tốt, khỏe",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "喝",
+      "pinyin": "hē",
+      "meaning_vi": "uống",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我喝水。",
+          "pinyin": "Wǒ hē shuǐ.",
+          "meaning_vi": "Tôi uống nước."
+        },
+        {
+          "hanzi": "他喝咖啡。",
+          "pinyin": "Tā hē kāfēi.",
+          "meaning_vi": "Anh ấy uống cà phê."
+        },
+        {
+          "hanzi": "你喝茶吗？",
+          "pinyin": "Nǐ hē chá ma?",
+          "meaning_vi": "Bạn uống trà không?"
+        }
+      ],
+      "grammar": "动词 (Động từ) - Hành động uống",
+      "usage": "喝 + 饮料"
+    },
+    {
+      "hanzi": "和",
+      "pinyin": "hé",
+      "meaning_vi": "và",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "很",
+      "pinyin": "hěn",
+      "meaning_vi": "rất",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "后面",
+      "pinyin": "hòumiàn",
+      "meaning_vi": "phía sau",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "回",
+      "pinyin": "huí",
+      "meaning_vi": "quay lại, về",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "会",
+      "pinyin": "huì",
+      "meaning_vi": "sẽ, biết (kỹ năng)",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我会说中文。",
+          "pinyin": "Wǒ huì shuō Zhōngwén.",
+          "meaning_vi": "Tôi biết nói tiếng Trung."
+        },
+        {
+          "hanzi": "他会开车。",
+          "pinyin": "Tā huì kāichē.",
+          "meaning_vi": "Anh ấy biết lái xe."
+        },
+        {
+          "hanzi": "你会不会？",
+          "pinyin": "Nǐ huì bu huì?",
+          "meaning_vi": "Bạn có biết không?"
+        }
+      ],
+      "grammar": "助动词 (Trợ động từ) - Biết (khả năng học được)",
+      "usage": "会 + 动词"
+    },
+    {
+      "hanzi": "火车站",
+      "pinyin": "huǒchēzhàn",
+      "meaning_vi": "ga tàu",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "几",
+      "pinyin": "jǐ",
+      "meaning_vi": "mấy",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "家",
+      "pinyin": "jiā",
+      "meaning_vi": "gia đình, nhà",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "叫",
+      "pinyin": "jiào",
+      "meaning_vi": "gọi, tên gọi",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "今天",
+      "pinyin": "jīntiān",
+      "meaning_vi": "hôm nay",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "九",
+      "pinyin": "jiǔ",
+      "meaning_vi": "chín",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "开",
+      "pinyin": "kāi",
+      "meaning_vi": "mở, khởi động",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "看",
+      "pinyin": "kàn",
+      "meaning_vi": "xem",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我看书。",
+          "pinyin": "Wǒ kàn shū.",
+          "meaning_vi": "Tôi đọc sách."
+        },
+        {
+          "hanzi": "看电视",
+          "pinyin": "kàn diànshì",
+          "meaning_vi": "xem TV"
+        },
+        {
+          "hanzi": "我看看。",
+          "pinyin": "Wǒ kànkan.",
+          "meaning_vi": "Để tôi xem."
+        }
+      ],
+      "grammar": "动词 (Động từ) - Nhìn, xem, đọc",
+      "usage": "看 + 宾语"
+    },
+    {
+      "hanzi": "看见",
+      "pinyin": "kànjiàn",
+      "meaning_vi": "nhìn thấy",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "块",
+      "pinyin": "kuài",
+      "meaning_vi": "miếng, đồng (tiền)",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "来",
+      "pinyin": "lái",
+      "meaning_vi": "đến",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我来了。",
+          "pinyin": "Wǒ lái le.",
+          "meaning_vi": "Tôi đến rồi."
+        },
+        {
+          "hanzi": "他来中国。",
+          "pinyin": "Tā lái Zhōngguó.",
+          "meaning_vi": "Anh ấy đến Trung Quốc."
+        },
+        {
+          "hanzi": "你来吗？",
+          "pinyin": "Nǐ lái ma?",
+          "meaning_vi": "Bạn đến không?"
+        }
+      ],
+      "grammar": "动词 (Động từ) - Hành động đến",
+      "usage": "来 + 地点 hoặc 来 + 动词"
+    },
+    {
+      "hanzi": "老师",
+      "pinyin": "lǎoshī",
+      "meaning_vi": "giáo viên",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "了",
+      "pinyin": "le",
+      "meaning_vi": "đã (dùng để chỉ sự thay đổi)",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "冷",
+      "pinyin": "lěng",
+      "meaning_vi": "lạnh",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "里",
+      "pinyin": "lǐ",
+      "meaning_vi": "trong",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "零",
+      "pinyin": "líng",
+      "meaning_vi": "không (số 0)",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "六",
+      "pinyin": "liù",
+      "meaning_vi": "sáu",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "妈妈",
+      "pinyin": "māma",
+      "meaning_vi": "mẹ",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "吗",
+      "pinyin": "ma",
+      "meaning_vi": "không (dùng trong câu hỏi)",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "买",
+      "pinyin": "mǎi",
+      "meaning_vi": "mua",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我买书。",
+          "pinyin": "Wǒ mǎi shū.",
+          "meaning_vi": "Tôi mua sách."
+        },
+        {
+          "hanzi": "他买了一件衣服。",
+          "pinyin": "Tā mǎi le yí jiàn yīfu.",
+          "meaning_vi": "Anh ấy đã mua một bộ quần áo."
+        },
+        {
+          "hanzi": "在哪儿买？",
+          "pinyin": "Zài nǎr mǎi?",
+          "meaning_vi": "Mua ở đâu?"
+        }
+      ],
+      "grammar": "动词 (Động từ) - Mua",
+      "usage": "买 + 商品"
+    },
+    {
+      "hanzi": "猫",
+      "pinyin": "māo",
+      "meaning_vi": "mèo",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "没",
+      "pinyin": "méi",
+      "meaning_vi": "không có, chưa",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "没关系",
+      "pinyin": "méi guānxi",
+      "meaning_vi": "không sao, không có gì",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "米饭",
+      "pinyin": "mǐfàn",
+      "meaning_vi": "cơm",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "明天",
+      "pinyin": "míngtiān",
+      "meaning_vi": "ngày mai",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "名字",
+      "pinyin": "míngzi",
+      "meaning_vi": "tên",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "哪里 (哪儿)",
+      "pinyin": "nǎlǐ (nǎr)",
+      "meaning_vi": "đâu, chỗ nào",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "那",
+      "pinyin": "nà",
+      "meaning_vi": "đó, kia",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "呢",
+      "pinyin": "ne",
+      "meaning_vi": "thì sao? (dùng để hỏi thêm)",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "能",
+      "pinyin": "néng",
+      "meaning_vi": "có thể",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我能帮你。",
+          "pinyin": "Wǒ néng bāng nǐ.",
+          "meaning_vi": "Tôi có thể giúp bạn."
+        },
+        {
+          "hanzi": "这里不能抽烟。",
+          "pinyin": "Zhèlǐ bù néng chōuyān.",
+          "meaning_vi": "Ở đây không được hút thuốc."
+        },
+        {
+          "hanzi": "你能来吗？",
+          "pinyin": "Nǐ néng lái ma?",
+          "meaning_vi": "Bạn có thể đến không?"
+        }
+      ],
+      "grammar": "助动词 (Trợ động từ) - Có thể, được phép",
+      "usage": "能 + 动词"
+    },
+    {
+      "hanzi": "你",
+      "pinyin": "nǐ",
+      "meaning_vi": "bạn",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "年",
+      "pinyin": "nián",
+      "meaning_vi": "năm",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "女儿",
+      "pinyin": "nǚ'ér",
+      "meaning_vi": "con gái",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "朋友",
+      "pinyin": "péngyou",
+      "meaning_vi": "bạn",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "漂亮",
+      "pinyin": "piàoliang",
+      "meaning_vi": "đẹp",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "苹果",
+      "pinyin": "píngguǒ",
+      "meaning_vi": "táo",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "七",
+      "pinyin": "qī",
+      "meaning_vi": "bảy",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "钱",
+      "pinyin": "qián",
+      "meaning_vi": "tiền",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "前面",
+      "pinyin": "qiánmiàn",
+      "meaning_vi": "phía trước",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "请",
+      "pinyin": "qǐng",
+      "meaning_vi": "xin vui lòng, mời",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "去",
+      "pinyin": "qù",
+      "meaning_vi": "đi",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我去学校。",
+          "pinyin": "Wǒ qù xuéxiào.",
+          "meaning_vi": "Tôi đi học."
+        },
+        {
+          "hanzi": "他去中国。",
+          "pinyin": "Tā qù Zhōngguó.",
+          "meaning_vi": "Anh ấy đi Trung Quốc."
+        },
+        {
+          "hanzi": "你去哪儿？",
+          "pinyin": "Nǐ qù nǎr?",
+          "meaning_vi": "Bạn đi đâu?"
+        }
+      ],
+      "grammar": "动词 (Động từ) - Hành động đi đến",
+      "usage": "去 + 地点"
+    },
+    {
+      "hanzi": "热",
+      "pinyin": "rè",
+      "meaning_vi": "nóng",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "人",
+      "pinyin": "rén",
+      "meaning_vi": "người",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "认识",
+      "pinyin": "rènshi",
+      "meaning_vi": "quen biết",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "日",
+      "pinyin": "rì",
+      "meaning_vi": "ngày",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "三",
+      "pinyin": "sān",
+      "meaning_vi": "ba",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "商店",
+      "pinyin": "shāngdiàn",
+      "meaning_vi": "cửa hàng",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "上",
+      "pinyin": "shàng",
+      "meaning_vi": "lên",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "上午",
+      "pinyin": "shàngwǔ",
+      "meaning_vi": "buổi sáng",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "少",
+      "pinyin": "shǎo",
+      "meaning_vi": "ít",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "谁",
+      "pinyin": "shuí/ shéi",
+      "meaning_vi": "ai",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "什么",
+      "pinyin": "shénme",
+      "meaning_vi": "cái gì",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "十",
+      "pinyin": "shí",
+      "meaning_vi": "mười",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "时候",
+      "pinyin": "shíhòu",
+      "meaning_vi": "lúc, khi",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "是",
+      "pinyin": "shì",
+      "meaning_vi": "là, thì",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我是学生。",
+          "pinyin": "Wǒ shì xuéshēng.",
+          "meaning_vi": "Tôi là sinh viên."
+        },
+        {
+          "hanzi": "他是老师。",
+          "pinyin": "Tā shì lǎoshī.",
+          "meaning_vi": "Anh ấy là giáo viên."
+        },
+        {
+          "hanzi": "这是书。",
+          "pinyin": "Zhè shì shū.",
+          "meaning_vi": "Đây là sách."
+        }
+      ],
+      "grammar": "系动词 (Động từ \"là\") - Cấu trúc A是B",
+      "usage": "主语 + 是 + 名词"
+    },
+    {
+      "hanzi": "书",
+      "pinyin": "shū",
+      "meaning_vi": "sách",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "水",
+      "pinyin": "shuǐ",
+      "meaning_vi": "nước",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "水果",
+      "pinyin": "shuǐguǒ",
+      "meaning_vi": "trái cây",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "睡觉",
+      "pinyin": "shuìjiào",
+      "meaning_vi": "ngủ",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "说话",
+      "pinyin": "shuōhuà",
+      "meaning_vi": "nói chuyện",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "四",
+      "pinyin": "sì",
+      "meaning_vi": "bốn",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "岁",
+      "pinyin": "suì",
+      "meaning_vi": "tuổi",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "他",
+      "pinyin": "tā",
+      "meaning_vi": "anh ấy, ông ấy",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "她",
+      "pinyin": "tā",
+      "meaning_vi": "cô ấy, bà ấy",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "太",
+      "pinyin": "tài",
+      "meaning_vi": "quá",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "天气",
+      "pinyin": "tiānqì",
+      "meaning_vi": "thời tiết",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "听",
+      "pinyin": "tīng",
+      "meaning_vi": "nghe",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我听音乐。",
+          "pinyin": "Wǒ tīng yīnyuè.",
+          "meaning_vi": "Tôi nghe nhạc."
+        },
+        {
+          "hanzi": "听老师说",
+          "pinyin": "tīng lǎoshī shuō",
+          "meaning_vi": "nghe thầy nói"
+        },
+        {
+          "hanzi": "你听我说。",
+          "pinyin": "Nǐ tīng wǒ shuō.",
+          "meaning_vi": "Bạn nghe tôi nói."
+        }
+      ],
+      "grammar": "动词 (Động từ) - Nghe",
+      "usage": "听 + 宾语"
+    },
+    {
+      "hanzi": "同学",
+      "pinyin": "tóngxué",
+      "meaning_vi": "bạn học",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "喂",
+      "pinyin": "wèi",
+      "meaning_vi": "alo",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "我",
+      "pinyin": "wǒ",
+      "meaning_vi": "tôi",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "我们",
+      "pinyin": "wǒmen",
+      "meaning_vi": "chúng tôi",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "五",
+      "pinyin": "wǔ",
+      "meaning_vi": "năm",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "喜欢",
+      "pinyin": "xǐhuān",
+      "meaning_vi": "thích",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "下",
+      "pinyin": "xià",
+      "meaning_vi": "xuống",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "下午",
+      "pinyin": "xiàwǔ",
+      "meaning_vi": "buổi chiều",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "下雨",
+      "pinyin": "xià yǔ",
+      "meaning_vi": "mưa",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "先生",
+      "pinyin": "xiānshēng",
+      "meaning_vi": "ông, ngài",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "现在",
+      "pinyin": "xiànzài",
+      "meaning_vi": "bây giờ",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "想",
+      "pinyin": "xiǎng",
+      "meaning_vi": "nghĩ, muốn",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我想学中文。",
+          "pinyin": "Wǒ xiǎng xué Zhōngwén.",
+          "meaning_vi": "Tôi muốn học tiếng Trung."
+        },
+        {
+          "hanzi": "他想去中国。",
+          "pinyin": "Tā xiǎng qù Zhōngguó.",
+          "meaning_vi": "Anh ấy muốn đi Trung Quốc."
+        },
+        {
+          "hanzi": "你想吃什么？",
+          "pinyin": "Nǐ xiǎng chī shénme?",
+          "meaning_vi": "Bạn muốn ăn gì?"
+        }
+      ],
+      "grammar": "助动词 (Trợ động từ) - Muốn, nghĩ",
+      "usage": "想 + 动词"
+    },
+    {
+      "hanzi": "小",
+      "pinyin": "xiǎo",
+      "meaning_vi": "nhỏ",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "小姐",
+      "pinyin": "xiǎojiě",
+      "meaning_vi": "cô (trong cách gọi)",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "些",
+      "pinyin": "xiē",
+      "meaning_vi": "vài",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "写",
+      "pinyin": "xiě",
+      "meaning_vi": "viết",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我写字。",
+          "pinyin": "Wǒ xiě zì.",
+          "meaning_vi": "Tôi viết chữ."
+        },
+        {
+          "hanzi": "写作业",
+          "pinyin": "xiě zuòyè",
+          "meaning_vi": "làm bài tập"
+        },
+        {
+          "hanzi": "他写了一本书。",
+          "pinyin": "Tā xiě le yì běn shū.",
+          "meaning_vi": "Anh ấy đã viết một cuốn sách."
+        }
+      ],
+      "grammar": "动词 (Động từ) - Viết",
+      "usage": "写 + 宾语"
+    },
+    {
+      "hanzi": "谢谢",
+      "pinyin": "xièxiè",
+      "meaning_vi": "cảm ơn",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "星期",
+      "pinyin": "xīngqī",
+      "meaning_vi": "tuần",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "学生",
+      "pinyin": "xuéshēng",
+      "meaning_vi": "học sinh",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "学习",
+      "pinyin": "xuéxí",
+      "meaning_vi": "học tập",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我学习中文。",
+          "pinyin": "Wǒ xuéxí Zhōngwén.",
+          "meaning_vi": "Tôi học tiếng Trung."
+        },
+        {
+          "hanzi": "他很爱学习。",
+          "pinyin": "Tā hěn ài xuéxí.",
+          "meaning_vi": "Anh ấy rất thích học."
+        },
+        {
+          "hanzi": "学习汉语很有意思。",
+          "pinyin": "Xuéxí Hànyǔ hěn yǒuyìsi.",
+          "meaning_vi": "Học tiếng Hán rất thú vị."
+        }
+      ],
+      "grammar": "动词 (Động từ) - Học tập",
+      "usage": "学习 + 科目/内容"
+    },
+    {
+      "hanzi": "学校",
+      "pinyin": "xuéxiào",
+      "meaning_vi": "trường học",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "一",
+      "pinyin": "yī",
+      "meaning_vi": "một",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "衣服",
+      "pinyin": "yīfu",
+      "meaning_vi": "quần áo",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "医生",
+      "pinyin": "yīshēng",
+      "meaning_vi": "bác sĩ",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "医院",
+      "pinyin": "yīyuàn",
+      "meaning_vi": "bệnh viện",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "椅子",
+      "pinyin": "yǐzi",
+      "meaning_vi": "ghế",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "月",
+      "pinyin": "yuè",
+      "meaning_vi": "tháng, mặt trăng",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "在",
+      "pinyin": "zài",
+      "meaning_vi": "ở, tại",
+      "level": "HSK1",
+      "examples": [
+        {
+          "hanzi": "我在家。",
+          "pinyin": "Wǒ zài jiā.",
+          "meaning_vi": "Tôi ở nhà."
+        },
+        {
+          "hanzi": "他在北京工作。",
+          "pinyin": "Tā zài Běijīng gōngzuò.",
+          "meaning_vi": "Anh ấy làm việc ở Bắc Kinh."
+        },
+        {
+          "hanzi": "书在桌子上。",
+          "pinyin": "Shū zài zhuōzi shàng.",
+          "meaning_vi": "Sách ở trên bàn."
+        }
+      ],
+      "grammar": "动词/介词 - Biểu thị vị trí hoặc đang làm gì",
+      "usage": "在 + 地点 hoặc 在 + 动词"
+    },
+    {
+      "hanzi": "再见",
+      "pinyin": "zàijiàn",
+      "meaning_vi": "tạm biệt",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "怎么",
+      "pinyin": "zěnme",
+      "meaning_vi": "làm sao",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "怎么样",
+      "pinyin": "zěnmeyàng",
+      "meaning_vi": "như thế nào",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "这",
+      "pinyin": "zhè",
+      "meaning_vi": "Đây, này",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "中国",
+      "pinyin": "Zhōngguó",
+      "meaning_vi": "Trung Quốc",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "中午",
+      "pinyin": "zhōngwǔ",
+      "meaning_vi": "buổi trưa",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "住",
+      "pinyin": "zhù",
+      "meaning_vi": "sống, cư trú",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "桌子",
+      "pinyin": "zhuōzi",
+      "meaning_vi": "bàn",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "字",
+      "pinyin": "zì",
+      "meaning_vi": "chữ",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "昨天",
+      "pinyin": "zuótiān",
+      "meaning_vi": "hôm qua",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "坐",
+      "pinyin": "zuò",
+      "meaning_vi": "ngồi",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    },
+    {
+      "hanzi": "做",
+      "pinyin": "zuò",
+      "meaning_vi": "làm",
+      "level": "HSK1",
+      "examples": [],
+      "grammar": "",
+      "usage": ""
+    }
+  ]
+}

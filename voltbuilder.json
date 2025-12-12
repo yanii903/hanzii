@@ -1,0 +1,24 @@
+{
+  "title": "Yanii",
+  "id": "com.example.Yanii",
+  "version": "1.0.0",
+  "description": "A Chinese language learning application",
+  "platforms": [
+    "android",
+    "ios"
+  ],
+  "androidKeystore": "certificates/android.keystore",
+  "androidKeystorePassword": "",
+  "androidAlias": "Yanii",
+  "androidAliasPassword": "",
+  "androidPackageType": "apk",
+  "iosDevP12": "certificates/ios_development.p12",
+  "iosDevP12Password": "",
+  "iosDevelopment": "certificates/development.mobileprovision",
+  "iosDistP12": "certificates/ios_distribution.p12",
+  "iosDistP12Password": "",
+  "iosDistribution": "certificates/distribution.mobileprovision",
+  "iosPackageType": "development",
+  "release": "debug",
+  "verbose": true
+}
